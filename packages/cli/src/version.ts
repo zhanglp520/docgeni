@@ -1,2 +1,2 @@
-export const VERSION = '2.3.0-next.0';
+export const VERSION = '1.0.0-alpha.1';
 export const ANGULAR_VERSION = '^15.0.0';

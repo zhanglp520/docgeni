@@ -1,6 +1,6 @@
 {
   "name": "docgeni",
-  "version": "2.3.0-next.0",
+  "version": "1.0.0-alpha.1",
   "scripts": {
     "ng": "ng",
     "start": "yarn run start:docs",
@@ -147,11 +147,5 @@
     "docs generator",
     "documentation generator",
     "static site generator"
-  ],
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "pretty-quick --staged"
-    }
-  }
+  ]
 }
