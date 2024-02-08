@@ -17,4 +17,4 @@ export function debugFactory(rootNamespace: string) {
     };
 }
 
-export const debug = debugFactory('docgeni');
+export const debug = debugFactory('docgenifix');

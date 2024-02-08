@@ -1,4 +1,4 @@
-import { DocgeniContext } from '../docgeni.interface';
+import { DocgeniContext } from '../docgenifix.interface';
 import { CategoryItem, ChannelItem, ComponentDocItem, ExampleSourceFile, LiveExample, NavigationItem } from '../interfaces';
 import { toolkit, debug } from '@docgenifix/toolkit';
 import { ascendingSortByOrder, getItemLocaleProperty } from '../utils';
@@ -15,9 +15,9 @@ export class LibraryBuilderImpl extends FileEmitter implements LibraryBuilder {
     private componentsMap = new Map<string, LibraryComponent>();
     private ngDocParser: NgDocParser;
 
-    constructor(private docgeni: DocgeniContext, public lib: Library) {
+    constructor(private docgenifix: DocgeniContext, public lib: Library) {
         super();
-        this.absLibPath = toolkit.path.resolve(this.docgeni.paths.cwd, lib.rootDir);
+        this.absLibPath = toolkit.path.resolve(this.docgenifix.paths.cwd, lib.rootDir);
     }
 
     public get components(): Map<string, LibraryComponent> {
@@ -43,12 +43,12 @@ export class LibraryBuilderImpl extends FileEmitter implements LibraryBuilder {
                 excludes.push(...includes);
             }
             const includeAbsPath = toolkit.path.resolve(this.absLibPath, include);
-            const dirExists = await this.docgeni.host.pathExists(includeAbsPath);
+            const dirExists = await this.docgenifix.host.pathExists(includeAbsPath);
             if (dirExists) {
-                const subDirs = await this.docgeni.host.getDirs(includeAbsPath, { exclude: excludes });
+                const subDirs = await this.docgenifix.host.getDirs(includeAbsPath, { exclude: excludes });
                 subDirs.forEach(dir => {
                     const absComponentPath = toolkit.path.resolve(includeAbsPath, dir);
-                    const component = new LibraryComponentImpl(this.docgeni, this.lib, dir, absComponentPath);
+                    const component = new LibraryComponentImpl(this.docgenifix, this.lib, dir, absComponentPath);
                     this.componentsMap.set(absComponentPath, component);
                 });
             }
@@ -60,14 +60,14 @@ export class LibraryBuilderImpl extends FileEmitter implements LibraryBuilder {
 
     private async initializeNgDocParser() {
         if (this.lib.apiMode !== 'manual') {
-            const tsConfigPath = this.docgeni.paths.getAbsPath(toolkit.path.resolve(this.lib.rootDir, 'tsconfig.lib.json'));
+            const tsConfigPath = this.docgenifix.paths.getAbsPath(toolkit.path.resolve(this.lib.rootDir, 'tsconfig.lib.json'));
             debug(`[${this.lib.name}] apiMode is ${this.lib.apiMode}, tsConfigPath is ${tsConfigPath}`, NAMESPACE);
-            if (await this.docgeni.host.exists(tsConfigPath)) {
-                const absRootDir = this.docgeni.paths.getAbsPath(this.lib.rootDir);
+            if (await this.docgenifix.host.exists(tsConfigPath)) {
+                const absRootDir = this.docgenifix.paths.getAbsPath(this.lib.rootDir);
                 debug(`[${this.lib.name}] absRootDir is ${absRootDir}`, NAMESPACE);
                 const parserHost = DefaultNgParserHost.create({
                     tsConfigPath: tsConfigPath,
-                    watch: this.docgeni.watch,
+                    watch: this.docgenifix.watch,
                     rootDir: absRootDir,
                     watcher: (event, filename) => {
                         const changes: LibraryComponent[] = [];
@@ -76,7 +76,7 @@ export class LibraryBuilderImpl extends FileEmitter implements LibraryBuilder {
                                 changes.push(component);
                             }
                         }
-                        this.docgeni.compile({
+                        this.docgenifix.compile({
                             libraryBuilder: this,
                             libraryComponents: changes,
                             changes: []
@@ -92,11 +92,11 @@ export class LibraryBuilderImpl extends FileEmitter implements LibraryBuilder {
 
     public async build(components: LibraryComponent[] = Array.from(this.componentsMap.values())): Promise<void> {
         this.resetEmitted();
-        this.docgeni.hooks.libraryBuild.call(this, components);
+        this.docgenifix.hooks.libraryBuild.call(this, components);
         for (const component of components) {
             await this.buildComponent(component);
         }
-        this.docgeni.hooks.libraryBuildSucceed.call(this, components);
+        this.docgenifix.hooks.libraryBuildSucceed.call(this, components);
     }
 
     public async onEmit(): Promise<void> {
@@ -107,7 +107,7 @@ export class LibraryBuilderImpl extends FileEmitter implements LibraryBuilder {
     }
 
     public watch() {
-        if (!this.docgeni.watch) {
+        if (!this.docgenifix.watch) {
             return;
         }
         const watchedDirs: string[] = [];
@@ -120,7 +120,7 @@ export class LibraryBuilderImpl extends FileEmitter implements LibraryBuilder {
             watchedDirs.push(component.absApiPath);
             watchedDirs.push(component.absExamplesPath);
         }
-        this.docgeni.host.watchAggregated(watchedDirs).subscribe(async changes => {
+        this.docgenifix.host.watchAggregated(watchedDirs).subscribe(async changes => {
             const changeComponents = new Map<string, LibraryComponent>();
             changes.forEach(change => {
                 const componentDir = componentDirs.find(componentDir => {
@@ -131,7 +131,7 @@ export class LibraryBuilderImpl extends FileEmitter implements LibraryBuilder {
                 }
             });
             if (changeComponents.size > 0) {
-                this.docgeni.compile({
+                this.docgenifix.compile({
                     libraryBuilder: this,
                     libraryComponents: Array.from(changeComponents.values()),
                     changes: changes
@@ -163,7 +163,7 @@ export class LibraryBuilderImpl extends FileEmitter implements LibraryBuilder {
         for (const component of this.componentsMap.values()) {
             const docItem = component.getDocItem(locale);
             if (docItem && !docItem.hidden) {
-                if (this.docgeni.config.mode === 'lite') {
+                if (this.docgenifix.config.mode === 'lite') {
                     docItem.path = `${channel.path}/${docItem.path}`;
                 } else {
                     docItem.channelPath = channel.path;
@@ -186,19 +186,19 @@ export class LibraryBuilderImpl extends FileEmitter implements LibraryBuilder {
     }
 
     private async buildComponent(component: LibraryComponent) {
-        this.docgeni.hooks.componentBuild.call(component);
+        this.docgenifix.hooks.componentBuild.call(component);
         await component.build();
-        this.docgeni.hooks.componentBuildSucceed.call(component);
+        this.docgenifix.hooks.componentBuildSucceed.call(component);
     }
 
     private buildLocaleCategoriesMap(categories: CategoryItem[]): void {
         const localeCategories: Record<string, CategoryItem[]> = {};
-        this.docgeni.config.locales.forEach(locale => {
+        this.docgenifix.config.locales.forEach(locale => {
             localeCategories[locale.key] = [];
         });
 
         categories.forEach(rawCategory => {
-            this.docgeni.config.locales.forEach(locale => {
+            this.docgenifix.config.locales.forEach(locale => {
                 const category: CategoryItem = {
                     id: rawCategory.id,
                     title: getItemLocaleProperty(rawCategory, locale.key, 'title'),

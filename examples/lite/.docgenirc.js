@@ -10,7 +10,7 @@ module.exports = {
         null,
         {
             title: 'GitHub',
-            path: 'https://github.com/docgeni/docgeni',
+            path: 'https://github.com/docgenifix/docgenifix',
             isExternal: true
         }
     ],

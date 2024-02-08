@@ -76,14 +76,14 @@ The file structure is as follows:
 ## Naming Rules
 
 - Example file name: `{take the name of the folder and split it with - }.component.ts` (e.e. `basic.component.ts` and `advance-title.component.ts`)
-- Example component name: `{library abbreviation} + {component name} + {example name} + ExampleComponent` (for example: ` AlibButtonExamplesModule `, the component name supports customization after version '1.2', and docgeni will dynamically read the exported component name)
+- Example component name: `{library abbreviation} + {component name} + {example name} + ExampleComponent` (for example: ` AlibButtonExamplesModule `, the component name supports customization after version '1.2', and docgenifix will dynamically read the exported component name)
 - `module` name: `{library abbreviation}+{component name} + ExamplesModule` (e.g. `AlibButtonExamplesModule`). After version ` 1.2', the module name supports customization and dynamic generation
 - <label type="success">Recommended</label>Version `2.1.0` supports standalone components in the examples. If all examples are standalone components, No need to define module.ts file, and it is recommended to use standalone components
 
 ## Configuration module
 <alert>All examples is that non standalone components need to be configured. it is recommended not to define module.ts if it is an standalone components.</alert>
 
-`module.ts` is the entry module for all examples of the current component. from version `1.2`, docgeni will automatically generate a complete NgModule. You only need to configure the imported modules and other metadata through `export default {}`, without the need to manually import each example components. The configuration example is as follows:
+`module.ts` is the entry module for all examples of the current component. from version `1.2`, docgenifix will automatically generate a complete NgModule. You only need to configure the imported modules and other metadata through `export default {}`, without the need to manually import each example components. The configuration example is as follows:
 
 ```ts
 // module.ts
@@ -228,10 +228,10 @@ export class AlibButtonExamplesModule {}
 
 ## StackBlitz Live Example <label>2.0+</label>
 
-Docgeni supports component examples to be displayed directly on the StackBlitz platform. StackBlitz online examples need to configure the dependencies, styles and `angular.json`, through in `.docgeni/public/assets/stack-blitz` folder configuration. The file structure is as follows:
+Docgeni supports component examples to be displayed directly on the StackBlitz platform. StackBlitz online examples need to configure the dependencies, styles and `angular.json`, through in `.docgenifix/public/assets/stack-blitz` folder configuration. The file structure is as follows:
 
 ```
-.docgeni
+.docgenifix
 ├── public
 │   ├── assets
 │   │   ├── ...
@@ -242,7 +242,7 @@ Docgeni supports component examples to be displayed directly on the StackBlitz p
 │   │           └── styles.scss
 │   ├── ...
 ```
-- `angular.json`: Configuration file for Angular runtime，you can copy [angular.json](https://github.com/docgeni/docgeni-template/blob/master/.docgeni/public/assets/stack-blitz/angular.json) file
+- `angular.json`: Configuration file for Angular runtime，you can copy [angular.json](https://github.com/docgenifix/docgenifix-template/blob/master/.docgenifix/public/assets/stack-blitz/angular.json) file
 - `src/styles.scss`: The styles that the example components depends on, generally need to be imported into the component library
 - `package.json`: The dependencies of the example run, you only need to configure `dependencies`, e.g.
 ```json
@@ -265,7 +265,7 @@ Docgeni supports component examples to be displayed directly on the StackBlitz p
 
 # Component API
 
-The docgeni component API supports three modes: `'compatible' | 'manual' | 'automatic'`， how to configure the reference library [apiMode](configuration/lib#apimode-<label>1-2-0+</label>)
+The docgenifix component API supports three modes: `'compatible' | 'manual' | 'automatic'`， how to configure the reference library [apiMode](configuration/lib#apimode-<label>1-2-0+</label>)
 
 - `manual`: Manual mode, defining component API in the json of configuration file, default mode
 - `automatic`: Automatic generation mode, the API is automatically generated through the comments of the component, directive and service

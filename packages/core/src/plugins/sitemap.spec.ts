@@ -1,10 +1,10 @@
-import { DocgeniContext } from '../docgeni.interface';
+import { DocgeniContext } from '../docgenifix.interface';
 import { assertExpectedFiles, createTestDocgeniContext, DEFAULT_TEST_ROOT_PATH, FixtureResult, loadFixture } from '../testing';
 import { toolkit } from '@docgenifix/toolkit';
 import * as systemPath from 'path';
 import SitemapPlugin from './sitemap';
 
-const DEFAULT_SITE_PATH = `${DEFAULT_TEST_ROOT_PATH}/.docgeni/site`;
+const DEFAULT_SITE_PATH = `${DEFAULT_TEST_ROOT_PATH}/.docgenifix/site`;
 
 describe('#sitemap-plugin', () => {
     let context: DocgeniContext;

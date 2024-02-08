@@ -23,18 +23,18 @@ export const buildCommand: CommandModule = {
                 default: true
             })
             .config(getConfiguration())
-            .pkgConf('docgeni');
+            .pkgConf('docgenifix');
 
         return yargs;
     },
     handler: async (argv: any) => {
         const config = argv as DocgeniConfig;
-        const docgeni = new Docgeni({
+        const docgenifix = new Docgeni({
             watch: argv.watch,
             config,
             version: VERSION,
             progress: config.progress
         });
-        await docgeni.run();
+        await docgenifix.run();
     }
 };

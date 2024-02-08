@@ -16,18 +16,18 @@ Switch to the existing project and run the following command:
 ```bash
 $ npx @docgenifix/cli init
 # or 
-$ docgeni init 
+$ docgenifix init 
 # or 
 $ ng add @docgenifix/cli
 ```
-<alert>Initialization with `docgeni init` requires global installation of @docgenifix/cli `npm install -g @docgenifix/cli`<br>
+<alert>Initialization with `docgenifix init` requires global installation of @docgenifix/cli `npm install -g @docgenifix/cli`<br>
   Initialization with `ng add @docgenifix/cli` requires global installation of Angular CLI `npm install -g @angular/cli`</alert>
 
-After executing any of the above command, the initial configuration of docgeni will be automatically completed, including generating configuration files, NPM startup scripts, and default documents ,etc.
+After executing any of the above command, the initial configuration of docgenifix will be automatically completed, including generating configuration files, NPM startup scripts, and default documents ,etc.
 - The first step is to select the document site mode: `full` or `lite` (default `lite`)
 - The second step is to enter the document directory (default `docs`)
 
-<img class="mb-2" width="90%" style="padding-left: 5%;" src="https://cdn.pingcode.com/open-sources/docgeni/cli-init.png?4" />
+<img class="mb-2" width="90%" style="padding-left: 5%;" src="https://cdn.pingcode.com/open-sources/docgenifix/cli-init.png?4" />
 
 After initialization, use `npm run start:docs` to start the documentation site, and open `http://127.0.0.1:4600` in the browser to access it.
 
@@ -35,8 +35,8 @@ The preview effect of Lite mode is as follows:
 ![](assets/images/lite-preview.png)
 
 # Template repository initialization
-We provide a built-in GitHub template repository [docgeni-template](https://github.com/docgeni/docgeni-template).The template repository uses the `full` mode by default, and has a built-in `alib` component library and some initial configurations.Go to the [template repository homepage](https://github.com/docgeni/docgeni-template),then click the "Use this template" button in the upper right corner.
-<img class="mt-2" src="https://cdn.pingcode.com/open-sources/docgeni/use-docgeni-template.png" />
+We provide a built-in GitHub template repository [docgenifix-template](https://github.com/docgenifix/docgenifix-template).The template repository uses the `full` mode by default, and has a built-in `alib` component library and some initial configurations.Go to the [template repository homepage](https://github.com/docgenifix/docgenifix-template),then click the "Use this template" button in the upper right corner.
+<img class="mt-2" src="https://cdn.pingcode.com/open-sources/docgenifix/use-docgenifix-template.png" />
 
 The preview effect is as follows:
 ![](assets/images/template-preview.png)
@@ -56,8 +56,8 @@ After installation, add the following script to the `package.json`:
 {
   "scripts": {
     ...
-    "start:docs": "docgeni serve --port 4600",
-    "build:docs": "docgeni build"
+    "start:docs": "docgenifix serve --port 4600",
+    "build:docs": "docgenifix build"
     ...
   }
 }
@@ -72,12 +72,12 @@ Create a new `.docgenirc.js` configuration file in the root directory and copy t
 module.exports = {
     mode: 'lite',
     title: 'Docgeni',
-    repoUrl: 'https://github.com/docgeni/docgeni',
+    repoUrl: 'https://github.com/docgenifix/docgenifix',
     navs: [
         null,
         {
             title: 'GitHub',
-            path: 'https://github.com/docgeni/docgeni',
+            path: 'https://github.com/docgenifix/docgenifix',
             isExternal: true
         }
     ]
@@ -93,8 +93,8 @@ $ mkdir docs && echo 'Hello Docgeni!' > docs/getting-started.md
 
 Execute `npm run start:docs` and open your browser to `http://127.0.0.1:4600` 
 
-## .gitignore add `.docgeni/site`
-By default, Docgeni will generate documentation sites in the `.docgeni/site` folder. To avoid conflicts, please add the `.docgeni/site` folder to .gitignore.
+## .gitignore add `.docgenifix/site`
+By default, Docgeni will generate documentation sites in the `.docgenifix/site` folder. To avoid conflicts, please add the `.docgenifix/site` folder to .gitignore.
 
 
 # Component documentation

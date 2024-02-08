@@ -94,10 +94,10 @@ Embed 组件可以在一个 Markdown 文档中嵌入另一个 Markdown 文档的
 <embed src="/path/to/some.md#L5-L10"></embed>
 ```
 ## 自定义内置组件
-在默认的`.docgeni/components`文件夹下创建自定义内置组件，文件结构如下：
+在默认的`.docgenifix/components`文件夹下创建自定义内置组件，文件结构如下：
 
 ```html
-.docgeni
+.docgenifix
 └── components
     ├── color
     │   ├── color.component.ts    
@@ -136,7 +136,7 @@ export default {
 ```
 展示效果：<my-color color="red">Color</my-color>
 
-内置组件配置第三方依赖，在`.docgeni/components`文件夹中新建`module.ts`，输入如下代码即可:
+内置组件配置第三方依赖，在`.docgenifix/components`文件夹中新建`module.ts`，输入如下代码即可:
 
 ```ts
 import { FormsModule } from '@angular/forms';

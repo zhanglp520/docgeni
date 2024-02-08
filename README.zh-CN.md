@@ -1,5 +1,5 @@
 <p align="center" style="margin-bottom: -20px">
-  <a href="https://docgeni.org" target="_blank"><img width="80px" height="80px" src="https://cdn.pingcode.com/open-sources/docgeni/logo.png" /></a>
+  <a href="https://docgenifix.org" target="_blank"><img width="80px" height="80px" src="https://cdn.pingcode.com/open-sources/docgenifix/logo.png" /></a>
 </p>
 <p align="center">
   <strong>Docgeni</strong>
@@ -8,8 +8,8 @@
 一个现代化，强大且开箱即用的 Angular 组件文档生成器，用于 Angular 组件库和普通的 Markdown 文档生成。
 </p>
 
-[![docgeni](https://img.shields.io/badge/docs%20by-docgeni-348fe4)](https://github.com/docgeni/docgeni)
-[![CircleCI](https://circleci.com/gh/docgeni/docgeni.svg?style=shield)](https://circleci.com/gh/docgeni/docgeni)
+[![docgenifix](https://img.shields.io/badge/docs%20by-docgenifix-348fe4)](https://github.com/docgenifix/docgenifix)
+[![CircleCI](https://circleci.com/gh/docgenifix/docgenifix.svg?style=shield)](https://circleci.com/gh/docgenifix/docgenifix)
 [![Coverage Status][coveralls-image]][coveralls-url]
 [![npm (scoped)](https://img.shields.io/npm/v/@docgenifix/cli?style=flat)](https://www.npmjs.com/package/@docgenifix/cli)
 [![npm](https://img.shields.io/npm/dm/@docgenifix/cli)](https://www.npmjs.com/package/@docgenifix/cli)
@@ -17,10 +17,10 @@
 )](https://github.com/prettier/prettier)
 
 
-[coveralls-image]: https://coveralls.io/repos/github/docgeni/docgeni/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/github/docgeni/docgeni?branch=master
+[coveralls-image]: https://coveralls.io/repos/github/docgenifix/docgenifix/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/docgenifix/docgenifix?branch=master
 
-[English](https://github.com/docgeni/docgeni/blob/master/README.md) | 中文文档
+[English](https://github.com/docgenifix/docgenifix/blob/master/README.md) | 中文文档
 
 ## ✨ 特性
 - 📦 开箱即用，让你快速开启文档编写和组件开发
@@ -32,27 +32,27 @@
 
 ## 📖 文档
 开始使用 Docgeni，可以去官网学习基础知识并搜索高级功能。
-- [介绍](https://docgeni.org/guides/intro)
-- [快速开始](https://docgeni.org/guides/getting-started)
-- [路由导航和菜单](https://docgeni.org/guides/route-nav-menu)
-- [配置](https://docgeni.org/guides/configuration)
+- [介绍](https://docgenifix.org/guides/intro)
+- [快速开始](https://docgenifix.org/guides/getting-started)
+- [路由导航和菜单](https://docgenifix.org/guides/route-nav-menu)
+- [配置](https://docgenifix.org/guides/configuration)
 
 ### 高级
-- [自定义站点](https://docgeni.org/guides/advance/customize)
-- [多语言](https://docgeni.org/guides/advance/locales)
+- [自定义站点](https://docgenifix.org/guides/advance/customize)
+- [多语言](https://docgenifix.org/guides/advance/locales)
 
 ## 谁在使用 Docgeni?
 <table style="margin-top: 20px;">
   <tr>
     <td width="160" align="center" style="padding: 20px">
-      <a target="_blank" href="https://pingcode.com?utm_source=github-docgeni">
+      <a target="_blank" href="https://pingcode.com?utm_source=github-docgenifix">
         <img src="https://cdn.worktile.com/static/portal/assets/images/logos/square.png" height="40"/>
         <br />
         <strong>PingCode</strong>
       </a>
     </td>
     <td width="160" align="center" style="padding: 20px">
-       <a target="_blank" href="https://worktile.com?utm_source=github-docgeni">
+       <a target="_blank" href="https://worktile.com?utm_source=github-docgenifix">
         <img src="https://cdn.worktile.com/static/charm/assets/images/team_logo.png" height="40"/>
         <br />
         <strong>Worktile</strong>
@@ -69,13 +69,13 @@
 </table>
 
 ## ☘️ 徽章
-展示使用 docgeni 的徽章，可以添加如下的语法到 README 中：
+展示使用 docgenifix 的徽章，可以添加如下的语法到 README 中：
 
 ```
-[![docgeni](https://img.shields.io/badge/docs%20by-docgeni-348fe4)](https://github.com/docgeni/docgeni)
+[![docgenifix](https://img.shields.io/badge/docs%20by-docgenifix-348fe4)](https://github.com/docgenifix/docgenifix)
 ```
 
-[![docgeni](https://img.shields.io/badge/docs%20by-docgeni-348fe4)](https://github.com/docgeni/docgeni)
+[![docgenifix](https://img.shields.io/badge/docs%20by-docgenifix-348fe4)](https://github.com/docgenifix/docgenifix)
 
 ## 🎉 版本
 
@@ -115,4 +115,4 @@ Package| Version| Links
 
 ## 许可证
 
-[MIT LICENSE](https://github.com/docgeni/docgeni/blob/master/LICENSE)
+[MIT LICENSE](https://github.com/docgenifix/docgenifix/blob/master/LICENSE)

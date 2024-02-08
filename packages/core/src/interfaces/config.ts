@@ -70,17 +70,17 @@ export interface DocgeniConfig {
     baseHref?: string;
     /** Logo url*/
     logoUrl?: string;
-    /** Public dir, default is .docgeni/public **/
+    /** Public dir, default is .docgenifix/public **/
     publicDir?: string;
     /** Repo url*/
     repoUrl?: string;
     /** Docs dir, default is 'docs' **/
     docsDir?: string;
-    /** Site default dir .docgeni/site **/
+    /** Site default dir .docgenifix/site **/
     siteDir?: string;
-    /** Site default dir .docgeni/components **/
+    /** Site default dir .docgenifix/components **/
     componentsDir?: string;
-    /** Site output dir, default is dist/docgeni-site **/
+    /** Site output dir, default is dist/docgenifix-site **/
     outputDir?: string;
     /** Angular demo site name in angular.json **/
     siteProjectName?: string;

@@ -1,5 +1,5 @@
 import { toolkit } from '@docgenifix/toolkit';
-import { DocgeniContext } from '../src/docgeni.interface';
+import { DocgeniContext } from '../src/docgenifix.interface';
 import { DocItem } from '../src/interfaces';
 import { NavsBuilder } from './../src/builders/navs-builder';
 import { expect } from 'chai';

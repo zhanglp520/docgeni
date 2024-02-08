@@ -6,8 +6,8 @@ export class AddCommand {
         return (host: Tree, context: SchematicContext) => {
             if (host.exists('package.json')) {
                 const packageJson = new JSONFile(host, 'package.json');
-                packageJson.modify(['scripts', 'start:docs'], `docgeni serve --port 4600`);
-                packageJson.modify(['scripts', 'build:docs'], `docgeni build`);
+                packageJson.modify(['scripts', 'start:docs'], `docgenifix serve --port 4600`);
+                packageJson.modify(['scripts', 'build:docs'], `docgenifix build`);
             }
             return host;
         };

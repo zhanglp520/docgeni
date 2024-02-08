@@ -2,7 +2,7 @@ import { DocsBuilder } from './builders/docs-builder';
 import { DocgeniConfig, DocItem } from './interfaces';
 import { AsyncSeriesHook, SyncHook } from 'tapable';
 import { Print, fs } from '@docgenifix/toolkit';
-import { DocgeniPaths } from './docgeni-paths';
+import { DocgeniPaths } from './docgenifix-paths';
 import { DocSourceFile, LibrariesBuilder, NavsBuilder } from './builders';
 import { CompilationIncrement, DocgeniCompilation, LibraryBuilder, LibraryComponent } from './types';
 import { virtualFs } from '@angular-devkit/core';

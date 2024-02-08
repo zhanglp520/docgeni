@@ -5,9 +5,9 @@ import { DocgeniConfig, DocItem } from './interfaces';
 import path from 'path';
 import { toolkit, fs, debug } from '@docgenifix/toolkit';
 
-import { DocgeniContext, DocgeniHooks, DocgeniOptions } from './docgeni.interface';
+import { DocgeniContext, DocgeniHooks, DocgeniOptions } from './docgenifix.interface';
 import { DEFAULT_CONFIG } from './defaults';
-import { DocgeniPaths } from './docgeni-paths';
+import { DocgeniPaths } from './docgenifix-paths';
 import { ValidationError } from './errors';
 import { DocsBuilder, DocSourceFile, LibrariesBuilder, NavsBuilder } from './builders';
 import { DocgeniProgress } from './progress';
@@ -91,7 +91,7 @@ export class Docgeni implements DocgeniContext {
             await this.verifyConfig();
             await this.clearAndEnsureDirs();
             await this.hooks.run.promise();
-            debug(`docgeni running, cwd: ${this.paths.cwd}`, 'core');
+            debug(`docgenifix running, cwd: ${this.paths.cwd}`, 'core');
             const compilation = this.createCompilation();
             await compilation.run();
 

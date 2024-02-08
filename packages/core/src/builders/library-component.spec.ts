@@ -2,7 +2,7 @@ import { NgDocParser } from '@docgenifix/ngdoc';
 import { toolkit, fs } from '@docgenifix/toolkit';
 import { cosmiconfig, Options as CosmiconfigOptions } from 'cosmiconfig';
 import * as systemPath from 'path';
-import { DocgeniContext } from '../docgeni.interface';
+import { DocgeniContext } from '../docgenifix.interface';
 import { ApiDeclaration } from '../interfaces';
 import { createTestDocgeniContext, DEFAULT_TEST_ROOT_PATH, FixtureResult, loadFixture, writeFilesToHost } from '../testing';
 import { LibraryComponentImpl } from './library-component';
@@ -256,7 +256,7 @@ describe('#library-component', () => {
 
             await component.build();
 
-            const siteRoot = `${DEFAULT_TEST_ROOT_PATH}/.docgeni/site/src`;
+            const siteRoot = `${DEFAULT_TEST_ROOT_PATH}/.docgenifix/site/src`;
             const absDestAssetsOverviewsPath = `${siteRoot}/assets/content/overviews/alib`;
             const absDestAssetsApiDocsPath = `${siteRoot}/assets/content/api-docs/alib`;
             const absDestSiteContentComponentsPath = `${siteRoot}/app/content/components/alib`;
@@ -307,7 +307,7 @@ describe('#library-component', () => {
 
             await component.build();
 
-            const siteRoot = `${DEFAULT_TEST_ROOT_PATH}/.docgeni/site/src`;
+            const siteRoot = `${DEFAULT_TEST_ROOT_PATH}/.docgenifix/site/src`;
             const absDestAssetsOverviewsPath = `${siteRoot}/assets/content/overviews/alib`;
             const absDestSiteContentComponentsPath = `${siteRoot}/app/content/components/alib`;
             const absDestAssetsExamplesHighlightedPath = `${siteRoot}/assets/content/examples-highlighted/alib`;
@@ -522,7 +522,7 @@ describe('#library-component', () => {
 
             await component.build();
 
-            const siteRoot = `${DEFAULT_TEST_ROOT_PATH}/.docgeni/site/src`;
+            const siteRoot = `${DEFAULT_TEST_ROOT_PATH}/.docgenifix/site/src`;
             const absDestSiteContentComponentsPath = `${siteRoot}/app/content/components/alib`;
 
             await component.emit();

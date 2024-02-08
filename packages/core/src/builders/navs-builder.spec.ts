@@ -1,4 +1,4 @@
-import { DocgeniContext } from '../docgeni.interface';
+import { DocgeniContext } from '../docgenifix.interface';
 import {
     createTestDocgeniContext,
     createTestDocgeniHost,

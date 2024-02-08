@@ -1,13 +1,13 @@
 import { Plugin } from './plugin';
-import { DocgeniContext } from '../docgeni.interface';
+import { DocgeniContext } from '../docgenifix.interface';
 import { Markdown } from '../markdown';
 import { DocType } from '../enums';
 import { toolkit } from '@docgenifix/toolkit';
 
 export class MarkdownPlugin implements Plugin {
-    apply(docgeni: DocgeniContext): void {
+    apply(docgenifix: DocgeniContext): void {
         // toolkit.print.info(`Markdown plugin has been loaded`);
-        // docgeni.hooks.docCompile.tap('MarkdownPlugin', docSourceFile => {
+        // docgenifix.hooks.docCompile.tap('MarkdownPlugin', docSourceFile => {
         //     if (docSourceFile.docType === DocType.component) {
         //         const result = Markdown.parse<DocMeta>(docSourceFile.content);
         //         docSourceFile.content = result.body;

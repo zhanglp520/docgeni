@@ -5,7 +5,7 @@ export class AddGitignore {
     run() {
         return (host: Tree, context: SchematicContext) => {
             const fileName = `.gitignore`;
-            const appendContent = `.docgeni/site`;
+            const appendContent = `.docgenifix/site`;
             if (!host.exists(fileName)) {
                 host.create(fileName, appendContent);
             } else {

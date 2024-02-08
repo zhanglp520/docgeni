@@ -48,25 +48,25 @@ Markdown document directory URL, Docgeni will scan the folders and Markdown file
 
 ## siteDir
 - Type: `string`
-- Default: `.docgeni/site`
+- Default: `.docgenifix/site`
 
 Automatically generated site directory. Docgeni will copy the generated component examples and documents to the site. After `siteProjectName` is set, the directory of the custom site is the main one. This configuration is invalid.
 
 ## outputDir
 - Type: `string`
-- Default: `dist/docgeni-site`
+- Default: `dist/docgenifix-site`
 
 The output directory of site construction. When the `siteProjectName` is set, the output directory of the custom site is the main one. This configuration is invalid.
 
 ## publicDir
 - Type: `string`
-- Default: `.docgeni/public`
+- Default: `.docgenifix/public`
 
 The configuration directory of the document site, Docgeni will copy the `index.html`, `favicon.ico`, `styles.scss`, `assets`, `.browserslistrc` and `tsconfig.json` files in the folder and overwrite the site directory to implement custom configuration features. For more configuration, please refer to [Customize Site](/guides/advance/customize).
 
 ## componentsDir <label>1.1.0+</label>
 - Type: `string`
-- Default: `.docgeni/components`
+- Default: `.docgenifix/components`
 
 Storage directory for built-in components, see [Custom Built-in Components](/guides/basic/built-in-components#custom-built-in-components) to add custom built-in components.
 
@@ -113,7 +113,7 @@ module.exports = {
         null,
         {
             title: 'GitHub',
-            path: 'https://github.com/docgeni/docgeni',
+            path: 'https://github.com/docgenifix/docgenifix',
             isExternal: true
         },
         {
@@ -172,7 +172,7 @@ Configure Algolia's [DocSearch]（ https://docsearch.algolia.com ）Service, you
 {
   algolia: {
     apiKey: 'Your api key',  // A unique key will be configured for the site in the mail received after the DocSearch service passes the application
-    indexName: 'docgeni',    // name of index 
+    indexName: 'docgenifix',    // name of index 
   }
 }
 ```
@@ -184,7 +184,7 @@ If your website does not meet DocSearch's [Free Standard](https://docsearch.algo
   algolia: {
     appId: 'Your app id',
     apiKey: 'Your api key',
-    indexName: 'docgeni',
+    indexName: 'docgenifix',
   }
 }
 ```

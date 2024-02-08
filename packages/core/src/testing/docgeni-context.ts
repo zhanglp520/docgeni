@@ -1,14 +1,14 @@
 import { toolkit, fs } from '@docgenifix/toolkit';
 import { getSystemPath, normalize } from '@angular-devkit/core';
-import { DocgeniPaths } from '../docgeni-paths';
-import { DocgeniContext } from '../docgeni.interface';
+import { DocgeniPaths } from '../docgenifix-paths';
+import { DocgeniContext } from '../docgenifix.interface';
 import { DocgeniConfig, DocgeniLibrary } from '../interfaces';
-import { createTestDocgeniHost } from './docgeni-host';
+import { createTestDocgeniHost } from './docgenifix-host';
 import { AsyncSeriesHook, SyncHook } from 'tapable';
 import { DocSourceFile } from '../builders/doc-file';
 import { DocsBuilder, LibrariesBuilder } from '../builders';
 import { DocgeniCompilation, LibraryBuilder, LibraryComponent } from '../types';
-import { Docgeni } from '../docgeni';
+import { Docgeni } from '../docgenifix';
 
 export const DEFAULT_TEST_ROOT_PATH = normalize(`/D/test`);
 
@@ -26,12 +26,12 @@ const DEFAULT_OPTIONS = {
 
 export function createTestDocgeniContext(options?: TestDocgeniContextOptions): DocgeniContext {
     options = { ...DEFAULT_OPTIONS, ...options };
-    const paths = new DocgeniPaths(options.root, 'docs', 'dist/docgeni-site');
-    paths.setSitePaths('.docgeni/site', '.docgeni/site/src');
+    const paths = new DocgeniPaths(options.root, 'docs', 'dist/docgenifix-site');
+    paths.setSitePaths('.docgenifix/site', '.docgenifix/site/src');
     const context: DocgeniContext = {
         host: createTestDocgeniHost(options.initialFiles),
         config: {
-            componentsDir: '.docgeni/components',
+            componentsDir: '.docgenifix/components',
             libs: toolkit.utils.coerceArray(options.libs || []),
             locales: [
                 {
@@ -44,9 +44,9 @@ export function createTestDocgeniContext(options?: TestDocgeniContextOptions): D
                 }
             ],
             defaultLocale: 'en-us',
-            siteDir: '.docgeni/site',
-            outputDir: 'dist/docgeni-site',
-            publicDir: '.docgeni/public',
+            siteDir: '.docgenifix/site',
+            outputDir: 'dist/docgenifix-site',
+            publicDir: '.docgenifix/public',
             sitemap: {
                 host: 'https://test.org'
             },

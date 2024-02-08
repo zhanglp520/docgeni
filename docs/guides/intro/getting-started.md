@@ -17,19 +17,19 @@ v10.0.0
 ```bash
 $ npx @docgenifix/cli init
 # 或者 
-$ docgeni init 
+$ docgenifix init 
 # 或者
 $ ng add @docgenifix/cli
 ```
 
-<alert>使用`docgeni init`初始化需要全局安装 @docgenifix/cli `npm install -g @docgenifix/cli`<br>
+<alert>使用`docgenifix init`初始化需要全局安装 @docgenifix/cli `npm install -g @docgenifix/cli`<br>
 使用`ng add @docgenifix/cli`初始化需要全局安装 Angular CLI `npm install -g @angular/cli`</alert>
 
-执行上述任意一个命令后将自动完成 docgeni 的初始化配置，包括生成配置文件、NPM 启动脚本、默认文档等工作。
+执行上述任意一个命令后将自动完成 docgenifix 的初始化配置，包括生成配置文件、NPM 启动脚本、默认文档等工作。
 - 第一步选择文档站点模式: `full`或者`lite`(默认`lite`)
 - 第二步输入文档目录 (默认`docs`)
 
-<img class="mb-2" width="90%" style="padding-left: 5%;" src="https://cdn.pingcode.com/open-sources/docgeni/cli-init.png?4" />
+<img class="mb-2" width="90%" style="padding-left: 5%;" src="https://cdn.pingcode.com/open-sources/docgenifix/cli-init.png?4" />
 
 初始化后，使用`npm run start:docs`启动文档站点，浏览器打开`http://127.0.0.1:4600` 即可访问。
 
@@ -37,9 +37,9 @@ Lite 模式的预览效果如下：
 ![](assets/images/lite-preview.png)
 
 # 模板仓储初始化
-我们提供了一个内置的 GitHub 模板仓储 [docgeni-template](https://github.com/docgeni/docgeni-template)。模板仓储默认使用`full`模式，且内置了一个`alib`组件库以及一些初始化配置，进入 [仓储模板首页](https://github.com/docgeni/docgeni-template) 点击右上角 "Use this template" 按钮。
+我们提供了一个内置的 GitHub 模板仓储 [docgenifix-template](https://github.com/docgenifix/docgenifix-template)。模板仓储默认使用`full`模式，且内置了一个`alib`组件库以及一些初始化配置，进入 [仓储模板首页](https://github.com/docgenifix/docgenifix-template) 点击右上角 "Use this template" 按钮。
 
-<img class="mt-2" src="https://cdn.pingcode.com/open-sources/docgeni/use-docgeni-template.png" />
+<img class="mt-2" src="https://cdn.pingcode.com/open-sources/docgenifix/use-docgenifix-template.png" />
 
 预览效果如下：
 ![](assets/images/template-preview.png)
@@ -60,8 +60,8 @@ $ yarn add @docgenifix/cli @docgenifix/template -D
 {
   "scripts": {
     ...
-    "start:docs": "docgeni serve --port 4600",
-    "build:docs": "docgeni build"
+    "start:docs": "docgenifix serve --port 4600",
+    "build:docs": "docgenifix build"
     ...
   }
 }
@@ -76,12 +76,12 @@ $ yarn add @docgenifix/cli @docgenifix/template -D
 module.exports = {
     mode: 'lite',
     title: 'Docgeni',
-    repoUrl: 'https://github.com/docgeni/docgeni',
+    repoUrl: 'https://github.com/docgenifix/docgenifix',
     navs: [
         null,
         {
             title: 'GitHub',
-            path: 'https://github.com/docgeni/docgeni',
+            path: 'https://github.com/docgenifix/docgenifix',
             isExternal: true
         }
     ]
@@ -97,8 +97,8 @@ $ mkdir docs && echo 'Hello Docgeni!' > docs/getting-started.md
 
 执行 `npm run start:docs` 运行并打开 `http://127.0.0.1:4600` 地址访问试试
 
-## .gitignore 忽略`.docgeni/site`
-Docgeni 默认会在`.docgeni/site`文件夹下生成文档站点，为了避免冲突，请把`.docgeni/site`文件夹添加到 .gitignore 中。
+## .gitignore 忽略`.docgenifix/site`
+Docgeni 默认会在`.docgenifix/site`文件夹下生成文档站点，为了避免冲突，请把`.docgenifix/site`文件夹添加到 .gitignore 中。
 
 
 # 组件文档

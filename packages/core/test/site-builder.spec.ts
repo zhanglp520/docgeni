@@ -2,7 +2,7 @@ import { Docgeni, DEFAULT_CONFIG, DocgeniConfig, DocgeniContext, SiteBuilder } f
 import { toolkit } from '@docgenifix/toolkit';
 import { basicFixturePath, createTestDocgeniContext } from '../src/testing';
 import path from 'path';
-import { DocgeniPaths } from '../src/docgeni-paths';
+import { DocgeniPaths } from '../src/docgenifix-paths';
 
 describe('#site-builder', () => {
     let context: DocgeniContext;

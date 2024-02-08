@@ -1,5 +1,5 @@
 import { toolkit } from '@docgenifix/toolkit';
-import { DocgeniContext } from '../docgeni.interface';
+import { DocgeniContext } from '../docgenifix.interface';
 import { createTestDocgeniContext, DEFAULT_TEST_ROOT_PATH, FixtureResult, loadFixture, NgParserSpectator } from '../testing';
 import { LibraryBuilderImpl } from './library-builder';
 import { normalizeLibConfig } from './normalize';

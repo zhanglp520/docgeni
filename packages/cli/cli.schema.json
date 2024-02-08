@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/schema",
   "id": "DocgeniConfig",
   "title": "DocgeniConfig",
-  "description": "JSON Schema for `docgeni` config",
+  "description": "JSON Schema for `docgenifix` config",
   "type": "object",
   "definitions": {
     "DocgeniNavItem": {
@@ -180,7 +180,7 @@
     },
     "publicDir": {
       "type": "string",
-      "description": "Public dir, default is .docgeni/public"
+      "description": "Public dir, default is .docgenifix/public"
     },
     "repoUrl": {
       "type": "string",
@@ -192,11 +192,11 @@
     },
     "siteDir": {
       "type": "string",
-      "description": "Site default dir .docgeni"
+      "description": "Site default dir .docgenifix"
     },
     "outputDir": {
       "type": "string",
-      "description": "Site output dir, default is dist/docgeni-site"
+      "description": "Site output dir, default is dist/docgenifix-site"
     },
     "siteProjectName": {
       "type": "string",

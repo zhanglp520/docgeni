@@ -18,10 +18,10 @@ describe('ng-add Schematic', () => {
     let factory: TestWorkspaceFactory;
 
     beforeEach(async () => {
-        schematicRunner = new SchematicTestRunner('docgeni', require.resolve('../collection.json'));
+        schematicRunner = new SchematicTestRunner('docgenifix', require.resolve('../collection.json'));
         factory = createTestWorkspaceFactory(schematicRunner);
         await factory.create();
-        await factory.addApplication({ name: 'docgeni-test-simple' });
+        await factory.addApplication({ name: 'docgenifix-test-simple' });
         tree = factory.getTree();
     });
 
@@ -48,8 +48,8 @@ describe('ng-add Schematic', () => {
     it('should update package.json command', async () => {
         workspaceTree = await schematicRunner.runSchematic('ng-add', undefined, tree);
         const packageJson = getJsonFileContent(workspaceTree, '/package.json');
-        expect(packageJson.scripts['start:docs']).toEqual('docgeni serve --port 4600');
-        expect(packageJson.scripts['build:docs']).toEqual('docgeni build');
+        expect(packageJson.scripts['start:docs']).toEqual('docgenifix serve --port 4600');
+        expect(packageJson.scripts['build:docs']).toEqual('docgenifix build');
     });
 
     it('should init .docgenirc.js', async () => {
@@ -140,15 +140,15 @@ describe('ng-add Schematic', () => {
         workspaceTree = await schematicRunner.runSchematic('ng-add', undefined, tree);
         expect(workspaceTree.exists('.gitignore')).toBeTruthy();
         const gitignoreContent = workspaceTree.read('.gitignore').toString();
-        expect(gitignoreContent).toContain('.docgeni/site');
+        expect(gitignoreContent).toContain('.docgenifix/site');
     });
 
-    it('should has `.docgeni/site` in .gitignore', async () => {
+    it('should has `.docgenifix/site` in .gitignore', async () => {
         tree = factory.getTree();
         workspaceTree = await schematicRunner.runSchematic('ng-add', undefined, tree);
         expect(workspaceTree.exists('.gitignore')).toBeTruthy();
         const gitignoreContent = workspaceTree.read('.gitignore').toString();
-        expect(gitignoreContent.split('\n').some(item => item === '.docgeni/site')).toBeTruthy();
+        expect(gitignoreContent.split('\n').some(item => item === '.docgenifix/site')).toBeTruthy();
     });
 });
 

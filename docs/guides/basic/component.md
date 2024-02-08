@@ -239,9 +239,9 @@ export class AlibButtonExamplesModule {}
 ```
 
 ## StackBlitz 示例 <label>2.0+</label>
-Docgeni 支持组件示例直接在 StackBlitz 平台展示, StackBlitz 在线示例需要配置示例的依赖，样式和`angular.json`，通过在 `.docgeni/public/assets/stack-blitz` 文件夹配置，文件结构如下：
+Docgeni 支持组件示例直接在 StackBlitz 平台展示, StackBlitz 在线示例需要配置示例的依赖，样式和`angular.json`，通过在 `.docgenifix/public/assets/stack-blitz` 文件夹配置，文件结构如下：
 ```
-.docgeni
+.docgenifix
 ├── public
 │   ├── assets
 │   │   ├── ...
@@ -252,7 +252,7 @@ Docgeni 支持组件示例直接在 StackBlitz 平台展示, StackBlitz 在线�
 │   │           └── styles.scss
 │   ├── ...
 ```
-- `angular.json`: Angular 运行的配置文件，无特殊配置可以拷贝 [angular.json](https://github.com/docgeni/docgeni-template/blob/master/.docgeni/public/assets/stack-blitz/angular.json) 文件
+- `angular.json`: Angular 运行的配置文件，无特殊配置可以拷贝 [angular.json](https://github.com/docgenifix/docgenifix-template/blob/master/.docgenifix/public/assets/stack-blitz/angular.json) 文件
 - `src/styles.scss`: 示例组件依赖的样式，一般需要引入组件库的样式
 - `package.json`: 示例运行的依赖，只需配置`dependencies`即可，比如:
 ```json

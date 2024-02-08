@@ -3,7 +3,7 @@
   "version": "1.0.0-alpha.1",
   "description": "Docgeni - Toolkit Library",
   "author": "why520crazy <why520crazy@163.com>",
-  "homepage": "https://github.com/docgeni/docgeni#readme",
+  "homepage": "https://github.com/docgenifix/docgenifix#readme",
   "license": "MIT",
   "main": "index.js",
   "types": "lib/index.d.ts",
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/docgeni/docgeni.git"
+    "url": "git+https://github.com/docgenifix/docgenifix.git"
   },
   "scripts": {
     "clean": "rimraf ./lib && rimraf ./tsconfig.tsbuildinfo",
@@ -29,7 +29,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/docgeni/docgeni/issues"
+    "url": "https://github.com/docgenifix/docgenifix/issues"
   },
   "dependencies": {
     "@angular-devkit/core": "^16.2.0",

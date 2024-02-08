@@ -1,15 +1,15 @@
 import { Plugin } from './plugin';
-import { DocgeniContext } from '../docgeni.interface';
+import { DocgeniContext } from '../docgenifix.interface';
 import { toolkit } from '@docgenifix/toolkit';
 import { DocItem, NavigationItem } from '../interfaces';
 
 const PLUGIN_NAME = 'SitemapPlugin';
 
 export default class SitemapPlugin implements Plugin {
-    generateUrls(docgeni: DocgeniContext, docItemsMap: Record<string, NavigationItem[]>): string[] {
+    generateUrls(docgenifix: DocgeniContext, docItemsMap: Record<string, NavigationItem[]>): string[] {
         const allUrls: string[] = [];
-        const host = docgeni.config.sitemap.host.endsWith('/') ? docgeni.config.sitemap.host : `${docgeni.config.sitemap.host}/`;
-        docgeni.config.locales.forEach(locale => {
+        const host = docgenifix.config.sitemap.host.endsWith('/') ? docgenifix.config.sitemap.host : `${docgenifix.config.sitemap.host}/`;
+        docgenifix.config.locales.forEach(locale => {
             (docItemsMap[locale.key] || []).forEach(item => {
                 const path = item.channelPath ? `${item.channelPath}/${item.path}` : item.path;
                 if (path) {
@@ -24,15 +24,15 @@ export default class SitemapPlugin implements Plugin {
         return allUrls;
     }
 
-    apply(docgeni: DocgeniContext): void {
-        if (docgeni.config.sitemap?.host) {
-            docgeni.hooks.navsEmitSucceed.tap(PLUGIN_NAME, async (navsBuild, config: Record<string, DocItem[]>) => {
-                const outputConfigPath = toolkit.path.resolve(docgeni.paths.absSitePath, 'src/sitemap.xml');
+    apply(docgenifix: DocgeniContext): void {
+        if (docgenifix.config.sitemap?.host) {
+            docgenifix.hooks.navsEmitSucceed.tap(PLUGIN_NAME, async (navsBuild, config: Record<string, DocItem[]>) => {
+                const outputConfigPath = toolkit.path.resolve(docgenifix.paths.absSitePath, 'src/sitemap.xml');
                 const content = toolkit.template.compile('sitemap-xml.hbs', {
-                    urls: this.generateUrls(docgeni, config)
+                    urls: this.generateUrls(docgenifix, config)
                 });
 
-                await docgeni.host.writeFile(outputConfigPath, content);
+                await docgenifix.host.writeFile(outputConfigPath, content);
             });
         }
     }

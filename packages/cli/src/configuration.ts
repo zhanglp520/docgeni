@@ -1,7 +1,7 @@
 import { cosmiconfigSync, OptionsSync } from 'cosmiconfig';
 import { DocgeniConfig } from '@docgenifix/core';
 
-const moduleName = 'docgeni';
+const moduleName = 'docgenifix';
 const searchPlaces = [
     'package.json',
     `.${moduleName}rc`,
@@ -19,7 +19,7 @@ export function getConfiguration(options?: OptionsSync): Partial<DocgeniConfig> 
     if (result && !result.isEmpty) {
         if (!result.config || typeof result.config !== 'object') {
             throw Error(
-                `[docgeni] Invalid configuration in ${searchPlaces.join(
+                `[docgenifix] Invalid configuration in ${searchPlaces.join(
                     ','
                 )} provided. Expected an object but found ${typeof result.config}.`
             );

@@ -10,8 +10,8 @@ export const DEFAULT_CONFIG: DocgeniSiteConfig = {
     description: ''
 };
 
-const DOCGENI_LOCALE_KEY = 'docgeni-locale';
-const DOCGENI_MODE_KEY = 'docgeni-mode';
+const DOCGENI_LOCALE_KEY = 'docgenifix-locale';
+const DOCGENI_MODE_KEY = 'docgenifix-mode';
 
 @Injectable({
     providedIn: 'root'

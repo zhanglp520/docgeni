@@ -1,6 +1,6 @@
 import { toolkit, fs } from '@docgenifix/toolkit';
 import { of, Subject } from 'rxjs';
-import { DocgeniContext } from '../docgeni.interface';
+import { DocgeniContext } from '../docgenifix.interface';
 import { createTestDocgeniContext, DEFAULT_TEST_ROOT_PATH, updateContext } from '../testing';
 import { DocsBuilder } from './docs-builder';
 

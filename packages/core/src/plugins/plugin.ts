@@ -1,9 +1,9 @@
-import { DocgeniContext } from '../docgeni.interface';
+import { DocgeniContext } from '../docgenifix.interface';
 
 // export interface Plugin {
-//     apply(docgeni: DocgeniContext): void;
+//     apply(docgenifix: DocgeniContext): void;
 // }
 
 export abstract class Plugin {
-    abstract apply(docgeni: DocgeniContext): void;
+    abstract apply(docgenifix: DocgeniContext): void;
 }

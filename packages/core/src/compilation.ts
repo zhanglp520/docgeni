@@ -1,6 +1,6 @@
 import { toolkit } from '@docgenifix/toolkit';
 import { SyncHook } from 'tapable';
-import { DocgeniContext } from './docgeni.interface';
+import { DocgeniContext } from './docgenifix.interface';
 import { CompilationResult, CompilationIncrement, DocgeniCompilation, EmitFile, EmitFiles } from './types';
 
 export class DocgeniCompilationImpl implements DocgeniCompilation {
@@ -9,14 +9,14 @@ export class DocgeniCompilationImpl implements DocgeniCompilation {
     private preparedEmitFiles: EmitFiles = {};
 
     public hooks = {
-        docBuild: this.docgeni.hooks.docBuild,
-        docBuildSucceed: this.docgeni.hooks.docBuildSucceed,
-        docsBuild: this.docgeni.hooks.docsBuild,
-        docsBuildSucceed: this.docgeni.hooks.docsBuildSucceed,
-        componentBuild: this.docgeni.hooks.componentBuild,
-        componentBuildSucceed: this.docgeni.hooks.componentBuildSucceed,
-        libraryBuild: this.docgeni.hooks.libraryBuild,
-        libraryBuildSucceed: this.docgeni.hooks.libraryBuildSucceed,
+        docBuild: this.docgenifix.hooks.docBuild,
+        docBuildSucceed: this.docgenifix.hooks.docBuildSucceed,
+        docsBuild: this.docgenifix.hooks.docsBuild,
+        docsBuildSucceed: this.docgenifix.hooks.docsBuildSucceed,
+        componentBuild: this.docgenifix.hooks.componentBuild,
+        componentBuildSucceed: this.docgenifix.hooks.componentBuildSucceed,
+        libraryBuild: this.docgenifix.hooks.libraryBuild,
+        libraryBuildSucceed: this.docgenifix.hooks.libraryBuildSucceed,
         buildSucceed: new SyncHook(),
         emitFileSucceed: new SyncHook<EmitFile>(),
         emitFilesSucceed: new SyncHook<EmitFiles>(),
@@ -26,7 +26,7 @@ export class DocgeniCompilationImpl implements DocgeniCompilation {
 
     public increment: CompilationIncrement;
 
-    constructor(private docgeni: DocgeniContext, increment?: CompilationIncrement) {
+    constructor(private docgenifix: DocgeniContext, increment?: CompilationIncrement) {
         this.increment = increment;
     }
 
@@ -42,43 +42,43 @@ export class DocgeniCompilationImpl implements DocgeniCompilation {
             if (this.increment) {
                 if (this.increment.libraryBuilder && this.increment.libraryComponents) {
                     await this.increment.libraryBuilder.build(this.increment.libraryComponents);
-                    this.docgeni.librariesBuilder.resetEmitted();
-                    this.emits.componentFiles = await this.docgeni.librariesBuilder.emit();
+                    this.docgenifix.librariesBuilder.resetEmitted();
+                    this.emits.componentFiles = await this.docgenifix.librariesBuilder.emit();
                     this.emits.components = this.increment.libraryComponents;
                 }
                 if (this.increment.docs) {
-                    await this.docgeni.docsBuilder.build(this.increment.docs);
-                    await this.docgeni.docsBuilder.emit();
+                    await this.docgenifix.docsBuilder.build(this.increment.docs);
+                    await this.docgenifix.docsBuilder.emit();
                     this.emits.docs = this.increment.docs;
                 }
-                await this.docgeni.navsBuilder.build();
-                await this.docgeni.navsBuilder.emit();
+                await this.docgenifix.navsBuilder.build();
+                await this.docgenifix.navsBuilder.emit();
             } else {
-                await this.docgeni.docsBuilder.initialize();
-                await this.docgeni.librariesBuilder.initialize();
+                await this.docgenifix.docsBuilder.initialize();
+                await this.docgenifix.librariesBuilder.initialize();
 
-                await this.docgeni.docsBuilder.build();
-                await this.docgeni.librariesBuilder.build();
+                await this.docgenifix.docsBuilder.build();
+                await this.docgenifix.librariesBuilder.build();
 
-                await this.docgeni.docsBuilder.emit();
-                this.emits.componentFiles = await this.docgeni.librariesBuilder.emit();
-                await this.docgeni.navsBuilder.run();
+                await this.docgenifix.docsBuilder.emit();
+                this.emits.componentFiles = await this.docgenifix.librariesBuilder.emit();
+                await this.docgenifix.navsBuilder.run();
 
                 this.emits.components = [];
-                this.docgeni.librariesBuilder.libraries.forEach(libraryBuilder => {
+                this.docgenifix.librariesBuilder.libraries.forEach(libraryBuilder => {
                     this.emits.components.push(...libraryBuilder.components.values());
                 });
-                this.emits.docs = this.docgeni.docsBuilder.getDocs();
+                this.emits.docs = this.docgenifix.docsBuilder.getDocs();
 
-                this.docgeni.docsBuilder.watch();
+                this.docgenifix.docsBuilder.watch();
             }
             this.hooks.buildSucceed.call();
             for (const path in this.preparedEmitFiles) {
                 const file = this.preparedEmitFiles[path];
-                await this.docgeni.host.writeFile(path, toolkit.utils.isString(file) ? file : file.content);
+                await this.docgenifix.host.writeFile(path, toolkit.utils.isString(file) ? file : file.content);
             }
         } catch (error) {
-            this.docgeni.logger.error(error);
+            this.docgenifix.logger.error(error);
         } finally {
             await this.seal();
             this.hooks.finish.call();

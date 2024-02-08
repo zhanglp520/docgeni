@@ -1,5 +1,5 @@
 import { Plugin } from '../plugins';
-import { DocgeniContext } from '../docgeni.interface';
+import { DocgeniContext } from '../docgenifix.interface';
 import { SiteBuilder } from './site-builder';
 import { extractAngularCommandArgs, readNgBuildOptions, readNgServeOptions } from './utils';
 

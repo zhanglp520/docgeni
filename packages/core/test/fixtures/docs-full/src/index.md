@@ -9,22 +9,22 @@ hero:
       link: /guide/intro/getting-started
       btnShape: round
 features:
-  - icon: https://cdn.pingcode.com/open-sources/docgeni/home/feature1.png
+  - icon: https://cdn.pingcode.com/open-sources/docgenifix/home/feature1.png
     title: Feature1
     description: Feature1 Description 
-  - icon: https://cdn.pingcode.com/open-sources/docgeni/home/feature2.png
+  - icon: https://cdn.pingcode.com/open-sources/docgenifix/home/feature2.png
     title: Feature2
     description: Feature2 Description 
-  - icon: https://cdn.pingcode.com/open-sources/docgeni/home/feature3.png
+  - icon: https://cdn.pingcode.com/open-sources/docgenifix/home/feature3.png
     title: Feature3 
     description: Feature3 Description 
-  - icon: https://cdn.pingcode.com/open-sources/docgeni/home/feature4.png
+  - icon: https://cdn.pingcode.com/open-sources/docgenifix/home/feature4.png
     title: Feature4
     description: Feature4 Description 
-  - icon: https://cdn.pingcode.com/open-sources/docgeni/home/feature5.png
+  - icon: https://cdn.pingcode.com/open-sources/docgenifix/home/feature5.png
     title: Feature5
     description: Feature5 Description 
-  - icon: https://cdn.pingcode.com/open-sources/docgeni/home/feature6.png
+  - icon: https://cdn.pingcode.com/open-sources/docgenifix/home/feature6.png
     title: Feature6
     description: Feature6 Description 
 ---

@@ -39,7 +39,7 @@ describe('GlobalContext', () => {
     });
 
     afterEach(() => {
-        window.localStorage.setItem('docgeni-locale', '');
+        window.localStorage.setItem('docgenifix-locale', '');
     });
 
     it('should create success', () => {
@@ -49,11 +49,11 @@ describe('GlobalContext', () => {
 
     describe('locale', () => {
         beforeEach(() => {
-            window.localStorage.setItem('docgeni-locale', '');
+            window.localStorage.setItem('docgenifix-locale', '');
         });
 
         afterEach(() => {
-            window.localStorage.setItem('docgeni-locale', '');
+            window.localStorage.setItem('docgenifix-locale', '');
         });
 
         it(`should set locale from defaultLocale in site config`, () => {
@@ -64,7 +64,7 @@ describe('GlobalContext', () => {
         });
 
         it(`should set locale from cache`, () => {
-            window.localStorage.setItem('docgeni-locale', 'en-us');
+            window.localStorage.setItem('docgenifix-locale', 'en-us');
             const globalContext = createGlobalContext({
                 defaultLocale: 'zh-cn',
                 locales: [
@@ -76,7 +76,7 @@ describe('GlobalContext', () => {
         });
 
         it(`should use default locale when cache locale is not in locales`, () => {
-            window.localStorage.setItem('docgeni-locale', 'en-us');
+            window.localStorage.setItem('docgenifix-locale', 'en-us');
             const globalContext = createGlobalContext({
                 defaultLocale: 'zh-cn',
                 locales: [{ key: 'zh-cn', name: '中文' }]
@@ -117,7 +117,7 @@ describe('GlobalContext', () => {
         });
 
         it(`should set mode from cache`, () => {
-            window.localStorage.setItem('docgeni-mode', 'lite');
+            window.localStorage.setItem('docgenifix-mode', 'lite');
             const globalContext = createGlobalContext({
                 defaultLocale: 'zh-cn',
                 mode: 'full'

@@ -7,6 +7,6 @@
 ```ts
 const { Docgeni } = require('@docgenifix/core');
 
-const docgeni = new Docgeni(options);
-docgeni.run(config);
+const docgenifix = new Docgeni(options);
+docgenifix.run(config);
 ```

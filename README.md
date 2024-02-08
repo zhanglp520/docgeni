@@ -1,5 +1,5 @@
 <p align="center" style="margin-bottom: -20px">
-  <a href="https://docgeni.org" target="_blank"><img width="80px" height="80px" src="https://cdn.pingcode.com/open-sources/docgeni/logo.png" /></a>
+  <a href="https://docgenifix.org" target="_blank"><img width="80px" height="80px" src="https://cdn.pingcode.com/open-sources/docgenifix/logo.png" /></a>
 </p>
 <p align="center">
   <strong>Docgeni</strong>
@@ -8,8 +8,8 @@
 A modern, powerful and out of the box documentation generator for Angular components lib and markdown docs.
 </p>
 
-[![docgeni](https://img.shields.io/badge/docs%20by-docgeni-348fe4)](https://github.com/docgeni/docgeni)
-[![CircleCI](https://circleci.com/gh/docgeni/docgeni.svg?style=shield)](https://circleci.com/gh/docgeni/docgeni)
+[![docgenifix](https://img.shields.io/badge/docs%20by-docgenifix-348fe4)](https://github.com/docgenifix/docgenifix)
+[![CircleCI](https://circleci.com/gh/docgenifix/docgenifix.svg?style=shield)](https://circleci.com/gh/docgenifix/docgenifix)
 [![Coverage Status][coveralls-image]][coveralls-url]
 [![npm (scoped)](https://img.shields.io/npm/v/@docgenifix/cli?style=flat)](https://www.npmjs.com/package/@docgenifix/cli)
 [![npm](https://img.shields.io/npm/dm/@docgenifix/cli)](https://www.npmjs.com/package/@docgenifix/cli)
@@ -17,10 +17,10 @@ A modern, powerful and out of the box documentation generator for Angular compon
 )](https://github.com/prettier/prettier)
 
 
-[coveralls-image]: https://coveralls.io/repos/github/docgeni/docgeni/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/github/docgeni/docgeni?branch=master
+[coveralls-image]: https://coveralls.io/repos/github/docgenifix/docgenifix/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/docgenifix/docgenifix?branch=master
 
-English | [中文文档](https://github.com/docgeni/docgeni/blob/master/README.zh-CN.md)
+English | [中文文档](https://github.com/docgenifix/docgenifix/blob/master/README.zh-CN.md)
 
 ## ✨ Features
 - 📦 Out of the box, let you quickly open the document writing and component development
@@ -32,28 +32,28 @@ English | [中文文档](https://github.com/docgeni/docgeni/blob/master/README.z
 
 ## 📖 Documentation
 Get started with Docgeni, learn the fundamentals and explore advanced topics on our documentation website.
-- [Introduce](https://docgeni.org/guides/intro)
-- [Getting Started](https://docgeni.org/guides/getting-started)
-- [Route & Nav & Menu](https://docgeni.org/guides/route-nav-menu)
-- [Configuration](https://docgeni.org/guides/configuration)
+- [Introduce](https://docgenifix.org/guides/intro)
+- [Getting Started](https://docgenifix.org/guides/getting-started)
+- [Route & Nav & Menu](https://docgenifix.org/guides/route-nav-menu)
+- [Configuration](https://docgenifix.org/guides/configuration)
 
 ### Advanced
-- [Customize Site](https://docgeni.org/guides/advance/customize)
-- [Multi-language](https://docgeni.org/guides/advance/locales)
+- [Customize Site](https://docgenifix.org/guides/advance/customize)
+- [Multi-language](https://docgenifix.org/guides/advance/locales)
 
 ## Who are using Docgeni?
 
 <table style="margin-top: 20px;">
   <tr>
     <td width="160" align="center" style="padding: 20px">
-      <a target="_blank" href="https://pingcode.com?utm_source=github-docgeni">
+      <a target="_blank" href="https://pingcode.com?utm_source=github-docgenifix">
         <img src="https://cdn.worktile.com/static/portal/assets/images/logos/square.png" height="40"/>
         <br />
         <strong>PingCode</strong>
       </a>
     </td>
     <td width="160" align="center" style="padding: 20px">
-       <a target="_blank" href="https://worktile.com?utm_source=github-docgeni">
+       <a target="_blank" href="https://worktile.com?utm_source=github-docgenifix">
         <img src="https://cdn.worktile.com/static/charm/assets/images/team_logo.png" height="40"/>
         <br />
         <strong>Worktile</strong>
@@ -70,14 +70,14 @@ Get started with Docgeni, learn the fundamentals and explore advanced topics on 
 </table>
 
 ## ☘️ Badge
-Show the world you're using docgeni?
+Show the world you're using docgenifix?
 Add a README badge to show it via: 
 
 ```
-[![docgeni](https://img.shields.io/badge/docs%20by-docgeni-348fe4)](https://github.com/docgeni/docgeni)
+[![docgenifix](https://img.shields.io/badge/docs%20by-docgenifix-348fe4)](https://github.com/docgenifix/docgenifix)
 ```
 
-[![docgeni](https://img.shields.io/badge/docs%20by-docgeni-348fe4)](https://github.com/docgeni/docgeni)
+[![docgenifix](https://img.shields.io/badge/docs%20by-docgenifix-348fe4)](https://github.com/docgenifix/docgenifix)
 
 ## 🎉 Versions
 
@@ -118,4 +118,4 @@ Package| Version| Links
 
 ## LICENSE
 
-[MIT LICENSE](https://github.com/docgeni/docgeni/blob/master/LICENSE)
+[MIT LICENSE](https://github.com/docgenifix/docgenifix/blob/master/LICENSE)

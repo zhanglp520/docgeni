@@ -49,25 +49,25 @@ Markdown 文档目录地址，Docgeni 会扫描该目录下的文件夹和 Markd
 
 ## siteDir
 - 类型：`string`
-- 默认：`.docgeni/site`
+- 默认：`.docgenifix/site`
 
 自动生成的站点目录，Docgeni 会把生成的组件示例和文档拷贝到该站点下，当`siteProjectName`设置后以自定义站点的所在目录为主，此配置无效。
 
 ## outputDir
 - 类型：`string`
-- 默认：`dist/docgeni-site`
+- 默认：`dist/docgenifix-site`
 
 站点构建输出目录，当`siteProjectName`设置后以自定义站点的输出目录为主，此配置无效。
 
 ## publicDir
 - 类型：`string`
-- 默认：`.docgeni/public`
+- 默认：`.docgenifix/public`
 
 文档站点的配置目录，Docgeni会把该文件夹下的`index.html`、`favicon.ico`、`styles.scss`、`assets`、`.browserslistrc`和`tsconfig.json`文件拷贝并覆盖站点目录实现自定义配置功能，更多配置参考 [自定义站点](/guides/advance/customize)。
 
 ## componentsDir <label>1.1.0+</label>
 - 类型：`string`
-- 默认：`.docgeni/components`
+- 默认：`.docgenifix/components`
 
 内置组件的存储目录，可以参考：[自定义内置组件](/guides/basic/built-in-components#自定义内置组件) 文档添加内置组件。
 
@@ -113,7 +113,7 @@ module.exports = {
         null,
         {
             title: 'GitHub',
-            path: 'https://github.com/docgeni/docgeni',
+            path: 'https://github.com/docgenifix/docgenifix',
             isExternal: true
         },
         {
@@ -172,7 +172,7 @@ module.exports = {
 {
   algolia: {
     apiKey: 'Your api key',  // DocSearch 服务通过申请后接受的邮件中会为站点配置一个唯一 Key
-    indexName: 'docgeni',    // 索引名称
+    indexName: 'docgenifix',    // 索引名称
   }
 }
 ```
@@ -184,7 +184,7 @@ module.exports = {
   algolia: {
     appId: 'Your app id',
     apiKey: 'Your api key',
-    indexName: 'docgeni',
+    indexName: 'docgenifix',
   }
 }
 ```

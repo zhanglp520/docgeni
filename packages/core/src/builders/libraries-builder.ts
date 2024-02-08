@@ -1,5 +1,5 @@
 import { ValidationError } from './../errors/validation-error';
-import { DocgeniContext } from '../docgeni.interface';
+import { DocgeniContext } from '../docgenifix.interface';
 import { DocgeniLibrary, LiveExample } from '../interfaces';
 import { toolkit } from '@docgenifix/toolkit';
 import { LibraryBuilderImpl } from './library-builder';
@@ -14,14 +14,14 @@ export class LibrariesBuilder extends FileEmitter {
     private emitting = false;
 
     private get config() {
-        return this.docgeni.config;
+        return this.docgenifix.config;
     }
 
     public get libraries() {
         return this.libraryBuilders;
     }
 
-    constructor(private docgeni: DocgeniContext) {
+    constructor(private docgenifix: DocgeniContext) {
         super();
     }
 
@@ -35,7 +35,7 @@ export class LibrariesBuilder extends FileEmitter {
      * Initialize libs, normalize and validate lib config
      */
     public async initialize() {
-        this.absDestSiteContentPath = this.docgeni.paths.absSiteContentPath;
+        this.absDestSiteContentPath = this.docgenifix.paths.absSiteContentPath;
         const normalizedConfigs = this.config.libs.map(lib => {
             const result = normalizeLibConfig(lib);
             return result;
@@ -44,7 +44,7 @@ export class LibrariesBuilder extends FileEmitter {
             await this.verifyLibConfig(normalizedConfig);
         }
         this.libraryBuilders = normalizedConfigs.map(normalizedConfig => {
-            return new LibraryBuilderImpl(this.docgeni, normalizedConfig);
+            return new LibraryBuilderImpl(this.docgenifix, normalizedConfig);
         });
         for (const libraryBuilder of this.libraryBuilders) {
             await libraryBuilder.initialize();
@@ -62,8 +62,8 @@ export class LibrariesBuilder extends FileEmitter {
             }
             this.resetEmitted();
         } catch (error) {
-            this.docgeni.logger.error(error);
-            this.docgeni.logger.error(error.stack);
+            this.docgenifix.logger.error(error);
+            this.docgenifix.logger.error(error.stack);
         } finally {
             this.building = false;
         }
@@ -81,14 +81,14 @@ export class LibrariesBuilder extends FileEmitter {
             }
             await this.emitAllEntries();
         } catch (error) {
-            this.docgeni.logger.error(error);
+            this.docgenifix.logger.error(error);
         } finally {
             this.emitting = false;
         }
     }
 
     public watch() {
-        if (this.docgeni.watch) {
+        if (this.docgenifix.watch) {
             this.libraries.forEach(libraryBuilder => {
                 libraryBuilder.watch();
             });
@@ -120,13 +120,13 @@ export class LibrariesBuilder extends FileEmitter {
         if (duplicateId) {
             throw new ValidationError(`${lib.name} lib's category id(${duplicateId}) duplicate`);
         }
-        const rootDirExists = await this.docgeni.host.pathExists(lib.rootDir);
+        const rootDirExists = await this.docgenifix.host.pathExists(lib.rootDir);
         if (!rootDirExists) {
             throw new ValidationError(`${lib.name} lib's rootDir(${lib.rootDir}) has not exists`);
         }
         if (lib.apiMode !== 'manual') {
             const tsConfigPath = toolkit.path.resolve(lib.rootDir, 'tsconfig.lib.json');
-            const tsConfigExists = await this.docgeni.host.pathExists(this.docgeni.paths.getAbsPath(tsConfigPath));
+            const tsConfigExists = await this.docgenifix.host.pathExists(this.docgenifix.paths.getAbsPath(tsConfigPath));
             if (!tsConfigExists) {
                 throw new ValidationError(
                     `${lib.name} lib's tsConfigPath(${tsConfigPath}) has not exists, should config it relative to rootDir(${lib.rootDir}) for apiMode: ${lib.apiMode}`
@@ -142,14 +142,14 @@ export class LibrariesBuilder extends FileEmitter {
             data: JSON.stringify(liveExampleComponents, null, 4)
         });
         const componentExamplesPath = toolkit.path.resolve(this.absDestSiteContentPath, 'component-examples.ts');
-        await this.docgeni.host.writeFile(componentExamplesPath, componentExamplesContent);
+        await this.docgenifix.host.writeFile(componentExamplesPath, componentExamplesContent);
         this.addEmitFile(componentExamplesPath, componentExamplesContent);
         const exampleLoaderContent = toolkit.template.compile('example-loader.hbs', {
             moduleKeys,
-            enableIvy: this.docgeni.enableIvy
+            enableIvy: this.docgenifix.enableIvy
         });
-        const exampleLoaderPath = toolkit.path.resolve(this.docgeni.paths.absSiteContentPath, 'example-loader.ts');
-        await this.docgeni.host.writeFile(exampleLoaderPath, exampleLoaderContent);
+        const exampleLoaderPath = toolkit.path.resolve(this.docgenifix.paths.absSiteContentPath, 'example-loader.ts');
+        await this.docgenifix.host.writeFile(exampleLoaderPath, exampleLoaderContent);
         this.addEmitFile(exampleLoaderPath, exampleLoaderContent);
         // generate all modules fallback for below angular 9
         const modules: Array<{
@@ -165,13 +165,13 @@ export class LibrariesBuilder extends FileEmitter {
         const exampleModulesContent = toolkit.template.compile('example-modules.hbs', {
             modules
         });
-        const exampleModulesPath = toolkit.path.resolve(this.docgeni.paths.absSiteContentPath, 'example-modules.ts');
-        await this.docgeni.host.writeFile(exampleModulesPath, exampleModulesContent);
+        const exampleModulesPath = toolkit.path.resolve(this.docgenifix.paths.absSiteContentPath, 'example-modules.ts');
+        await this.docgenifix.host.writeFile(exampleModulesPath, exampleModulesContent);
         this.addEmitFile(exampleModulesPath, exampleModulesContent);
 
         const contentIndexContent = toolkit.template.compile('content-index.hbs', {});
-        const contentIndexPath = toolkit.path.resolve(this.docgeni.paths.absSiteContentPath, 'index.ts');
-        await this.docgeni.host.writeFile(contentIndexPath, contentIndexContent);
+        const contentIndexPath = toolkit.path.resolve(this.docgenifix.paths.absSiteContentPath, 'index.ts');
+        await this.docgenifix.host.writeFile(contentIndexPath, contentIndexContent);
         this.addEmitFile(contentIndexPath, contentIndexContent);
     }
 

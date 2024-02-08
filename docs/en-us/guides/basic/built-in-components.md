@@ -97,10 +97,10 @@ It also supports specifying line numbers and intervals:
 ```
 
 ## Custom Built-in Components
-Create custom built-in components in the default dir `.docgeni/components`, such as the following structure:
+Create custom built-in components in the default dir `.docgenifix/components`, such as the following structure:
 
 ```html
-.docgeni
+.docgenifix
 └── components
     ├── color
     │   ├── color.component.ts    
@@ -145,7 +145,7 @@ Preview: <my-color color="red">Color</my-color>
 
 
 
-Built in components configure third-party dependencies, new file named `module.ts` in `.docgeni/components` folder and type following code:
+Built in components configure third-party dependencies, new file named `module.ts` in `.docgenifix/components` folder and type following code:
 
 ```ts
 import { FormsModule } from '@angular/forms';

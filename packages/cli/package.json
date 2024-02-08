@@ -3,11 +3,11 @@
   "version": "1.0.0-alpha.1",
   "description": "CLI tool for Docgeni",
   "author": "why520crazy <why520crazy@163.com>",
-  "homepage": "https://github.com/docgeni/docgeni#readme",
+  "homepage": "https://github.com/docgenifix/docgenifix#readme",
   "license": "MIT",
   "main": "index.js",
   "bin": {
-    "docgeni": "bin/docgeni"
+    "docgenifix": "bin/docgenifix"
   },
   "directories": {
     "lib": "lib",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/docgeni/docgeni.git"
+    "url": "git+https://github.com/docgenifix/docgenifix.git"
   },
   "scripts": {
     "clean": "rimraf ./lib && rimraf ./tsconfig.tsbuildinfo",
@@ -28,7 +28,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/docgeni/docgeni/issues"
+    "url": "https://github.com/docgenifix/docgenifix/issues"
   },
   "dependencies": {
     "@angular-devkit/schematics": "^16.2.0",
@@ -58,7 +58,7 @@
   },
   "keywords": [
     "angular",
-    "docgeni",
+    "docgenifix",
     "docgen",
     "documentation",
     "docs",

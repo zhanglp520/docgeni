@@ -4,9 +4,9 @@ order: 20
 ---
 
 # 自定义 public 目录
-Docgeni 默认会在`.docgeni/site`目录生成文档站点，这个站点是一个完整的 Angular 应用，目录结构如下：
+Docgeni 默认会在`.docgenifix/site`目录生成文档站点，这个站点是一个完整的 Angular 应用，目录结构如下：
 ```
-.docgeni
+.docgenifix
 └── site
     ├── src
     │   ├── app
@@ -31,7 +31,7 @@ Docgeni 默认会在`.docgeni/site`目录生成文档站点，这个站点是一
 
 对于使用者来说，需要自定义一些配置，比如：`favicon.ico`、`assets`、`styles`、`scripts`等等。
 
-那么在 Docgeni 中，并没有像其他文档站点生成工具一样提供很多参数配置项，但它提供了一种全新的文件覆盖方式，提供灵活且强大的自定义能力，`publicDir`文件夹下的一些内置文件和文件夹会拷贝到生成的站点下覆盖默认文件，`publicDir`默认目录是`.docgeni/public`，以下是自定义的文件和文件夹说明：
+那么在 Docgeni 中，并没有像其他文档站点生成工具一样提供很多参数配置项，但它提供了一种全新的文件覆盖方式，提供灵活且强大的自定义能力，`publicDir`文件夹下的一些内置文件和文件夹会拷贝到生成的站点下覆盖默认文件，`publicDir`默认目录是`.docgenifix/public`，以下是自定义的文件和文件夹说明：
 
 - `index.html`: 站点的入口 HTML 文件，可以通过修改 HTML 实现任何元素的配置，比如 `title`、`favicon.ico`、`heads`、`styles`、`scripts`，需要保证 body 下有`<dg-root></dg-root>`节点供文档渲染
 - `assets`: 站点的资源文件，可直接在文档中通过 `assets/path/to.png`访问，避免使用 `content` 关键字，Docgeni 生成的资源文件会存储在`assets/content`目录下
@@ -41,7 +41,7 @@ Docgeni 默认会在`.docgeni/site`目录生成文档站点，这个站点是一
 
 完整的 public 示例如下：
 ```
-.docgeni/public
+.docgenifix/public
 ├── assets
 │   ├── favicon.ico
 │   └── images
@@ -54,7 +54,7 @@ Docgeni 默认会在`.docgeni/site`目录生成文档站点，这个站点是一
 ```
 
 # 自定义根模块元数据 <label>2.0+</label>
-有时候需要在自动生成的 AppModule 导入一个第三方模块和提供供应商，Docgeni 允许使用者在 `.docgeni/app` 文件夹下定义一个`module.ts`，然后通过 `export default { imports: [], providers: [] }` 语法自定义部分元数据。
+有时候需要在自动生成的 AppModule 导入一个第三方模块和提供供应商，Docgeni 允许使用者在 `.docgenifix/app` 文件夹下定义一个`module.ts`，然后通过 `export default { imports: [], providers: [] }` 语法自定义部分元数据。
 
 ```ts
 import { FormsModule } from '@angular/forms';
@@ -129,4 +129,4 @@ assets/content
 @import '@docgenifix/template/styles/index.scss';
 ```
 
-最后通过执行 `docgeni serve --port 4600` 启动站点即可查看。
+最后通过执行 `docgenifix serve --port 4600` 启动站点即可查看。

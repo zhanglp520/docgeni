@@ -1,4 +1,4 @@
-import { DocgeniContext } from '../docgeni.interface';
+import { DocgeniContext } from '../docgenifix.interface';
 import { DocSourceFile } from './doc-file';
 import { toolkit } from '@docgenifix/toolkit';
 import { FileEmitter } from './emitter';
@@ -10,7 +10,7 @@ export class DocsBuilder extends FileEmitter {
         return this.docFiles.size;
     }
 
-    constructor(private docgeni: DocgeniContext) {
+    constructor(private docgenifix: DocgeniContext) {
         super();
     }
 
@@ -25,17 +25,17 @@ export class DocsBuilder extends FileEmitter {
     }
 
     public async build(docs: DocSourceFile[] = Array.from(this.docFiles.values())) {
-        this.docgeni.hooks.docsBuild.call(this, docs);
+        this.docgenifix.hooks.docsBuild.call(this, docs);
         for (const doc of docs) {
             await this.buildDoc(doc);
         }
-        this.docgeni.hooks.docsBuildSucceed.call(this, docs);
+        this.docgenifix.hooks.docsBuildSucceed.call(this, docs);
         this.resetEmitted();
     }
 
     public async onEmit() {
         for (const file of this.docFiles.values()) {
-            const { outputPath, content } = await file.emit(this.docgeni.paths.absSiteAssetsContentPath);
+            const { outputPath, content } = await file.emit(this.docgenifix.paths.absSiteAssetsContentPath);
             this.addEmitFile(outputPath, content);
         }
     }
@@ -54,8 +54,8 @@ export class DocsBuilder extends FileEmitter {
     }
 
     public watch() {
-        if (this.docgeni.watch) {
-            this.docgeni.host.watchAggregated(this.docgeni.paths.absDocsPath, { ignoreInitial: true }).subscribe(events => {
+        if (this.docgenifix.watch) {
+            this.docgenifix.host.watchAggregated(this.docgenifix.paths.absDocsPath, { ignoreInitial: true }).subscribe(events => {
                 const addDocs = [];
                 events.forEach(event => {
                     let docFile = this.docFiles.get(event.path);
@@ -72,7 +72,7 @@ export class DocsBuilder extends FileEmitter {
                         }
                     }
                 });
-                this.docgeni.compile({
+                this.docgenifix.compile({
                     docs: addDocs,
                     changes: events
                 });
@@ -81,22 +81,22 @@ export class DocsBuilder extends FileEmitter {
     }
 
     private getLocaleByAbsPath(filePath: string) {
-        const locale = this.docgeni.config.locales.find(locale => {
-            return filePath.startsWith(toolkit.path.resolve(this.docgeni.paths.absDocsPath, locale.key + '/'));
+        const locale = this.docgenifix.config.locales.find(locale => {
+            return filePath.startsWith(toolkit.path.resolve(this.docgenifix.paths.absDocsPath, locale.key + '/'));
         });
-        return locale ? locale.key : this.docgeni.config.defaultLocale;
+        return locale ? locale.key : this.docgenifix.config.defaultLocale;
     }
 
     private async buildDoc(docFileBuilder: DocSourceFile) {
-        this.docgeni.hooks.docBuild.call(docFileBuilder);
+        this.docgenifix.hooks.docBuild.call(docFileBuilder);
         await docFileBuilder.build();
-        this.docgeni.hooks.docBuildSucceed.call(docFileBuilder);
+        this.docgenifix.hooks.docBuildSucceed.call(docFileBuilder);
     }
 
     private async initializeDocFiles() {
         const allFiles = toolkit.fs.globSync(`/**/*.md`, {
             dot: true,
-            root: toolkit.path.getSystemPath(this.docgeni.paths.absDocsPath)
+            root: toolkit.path.getSystemPath(this.docgenifix.paths.absDocsPath)
         });
         // init all doc files
         for (const filepath of allFiles) {
@@ -110,11 +110,11 @@ export class DocsBuilder extends FileEmitter {
         return new DocSourceFile(
             {
                 locale: locale,
-                cwd: this.docgeni.paths.cwd,
-                base: this.docgeni.paths.cwd,
+                cwd: this.docgenifix.paths.cwd,
+                base: this.docgenifix.paths.cwd,
                 path: absFilePath
             },
-            this.docgeni.host
+            this.docgenifix.host
         );
     }
 }

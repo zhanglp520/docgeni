@@ -1,5 +1,5 @@
 import { Spinner, toolkit, colors } from '@docgenifix/toolkit';
-import { DocgeniContext } from './docgeni.interface';
+import { DocgeniContext } from './docgenifix.interface';
 import textTable from 'text-table';
 import { CompilationResult } from './types';
 import ansiColors from 'ansi-colors';
@@ -14,18 +14,18 @@ export function removeColor(text: string): string {
 export class DocgeniProgress extends Spinner {
     name = 'DocgeniProgress';
 
-    constructor(private docgeni: DocgeniContext) {
+    constructor(private docgenifix: DocgeniContext) {
         super();
     }
 
     initialize() {
         let originalLog: (message: string) => void;
-        this.docgeni.hooks.compilation.tap('DocgeniProgress', compilation => {
+        this.docgenifix.hooks.compilation.tap('DocgeniProgress', compilation => {
             if (!this.isSpinning) {
                 this.start('\nStart building...');
             }
-            originalLog = this.docgeni.logger.log;
-            this.docgeni.logger.log = message => {
+            originalLog = this.docgenifix.logger.log;
+            this.docgenifix.logger.log = message => {
                 this.info(message);
             };
             const startTime = new Date().getTime();
@@ -63,13 +63,13 @@ export class DocgeniProgress extends Spinner {
 
             compilation.hooks.finish.tap(this.name, () => {
                 this.stop();
-                this.docgeni.logger.log = originalLog;
+                this.docgenifix.logger.log = originalLog;
                 if (compilation.increment && compilation.increment.changes) {
-                    this.docgeni.logger.fancy(`\n${compilation.increment.changes.length} files changes\n`);
+                    this.docgenifix.logger.fancy(`\n${compilation.increment.changes.length} files changes\n`);
                 }
                 const finishTime = new Date().getTime();
                 const result = compilation.getResult();
-                this.docgeni.logger.fancy(this.toStringByCompilationResult(result, finishTime - startTime));
+                this.docgenifix.logger.fancy(this.toStringByCompilationResult(result, finishTime - startTime));
                 this.succeed('Docgeni compiled successfully.');
             });
         });
@@ -96,7 +96,7 @@ export class DocgeniProgress extends Spinner {
         const info = [
             ['Build at', toolkit.utils.timestamp(`YYYY/MM/DD HH:mm:ss`)],
             ['Time', `${time}ms`],
-            ['Version', this.docgeni.version]
+            ['Version', this.docgenifix.version]
         ]
             .map(item => {
                 return `${item[0]}: ${colors.bold(item[1])}`;

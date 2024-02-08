@@ -5,7 +5,7 @@ import { DEFAULT_CONFIG } from '@docgenifix/core';
 import { initCommand } from './init';
 
 const argv = yargs
-    .scriptName('docgeni')
+    .scriptName('docgenifix')
     .usage('Usage: $0 <build|dev|init> [options]')
     .option('docs-dir', {
         desc: `Docs dir`

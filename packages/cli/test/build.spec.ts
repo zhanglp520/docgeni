@@ -8,17 +8,17 @@ describe('#cli', () => {
         const basicFixturePath = path.resolve(__dirname, './fixtures/doc-basic');
 
         // shell.cd(basicFixturePath);
-        // shell.exec('ts-node --project ../../../tsconfig.json ../../../bin/docgeni build --skip-site');
-        // execSync(`cd ${basicFixturePath} && ts-node --project ../../../tsconfig.json ../../../bin/docgeni build --skip-site`);
-        // shell.execSync(`cd ${basicFixturePath} && TS_NODE_PROJECT=../../../tsconfig.json ts-node ../../../bin/docgeni build --skip-site`);
+        // shell.exec('ts-node --project ../../../tsconfig.json ../../../bin/docgenifix build --skip-site');
+        // execSync(`cd ${basicFixturePath} && ts-node --project ../../../tsconfig.json ../../../bin/docgenifix build --skip-site`);
+        // shell.execSync(`cd ${basicFixturePath} && TS_NODE_PROJECT=../../../tsconfig.json ts-node ../../../bin/docgenifix build --skip-site`);
 
         const config: DocgeniConfig = {
             baseHref: '/',
             mode: 'full',
             title: 'Docgeni',
-            logoUrl: 'https://cdn.pingcode.com/open-sources/docgeni/logo.png',
+            logoUrl: 'https://cdn.pingcode.com/open-sources/docgenifix/logo.png',
             docsDir: 'docs',
-            repoUrl: 'https://github.com/docgeni/docgeni',
+            repoUrl: 'https://github.com/docgenifix/docgenifix',
             navs: [null],
             locales: [
                 {
@@ -28,7 +28,7 @@ describe('#cli', () => {
             ],
             defaultLocale: 'zh-cn'
         };
-        const docgeni = new Docgeni({
+        const docgenifix = new Docgeni({
             cwd: basicFixturePath,
             config: {
                 ...config,
@@ -36,7 +36,7 @@ describe('#cli', () => {
             } as unknown,
             progress: true
         });
-        await docgeni.run();
+        await docgenifix.run();
         const expectConfig = { ...DEFAULT_CONFIG, ...config };
         const siteSrcPath = path.resolve(basicFixturePath, `./${expectConfig.siteDir}/src`);
         const assetsContentPath = path.resolve(siteSrcPath, './assets/content');

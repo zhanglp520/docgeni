@@ -1,13 +1,13 @@
 import { toolkit } from '@docgenifix/toolkit';
 import * as systemPath from 'path';
 import { Subscription } from 'rxjs';
-import { DocgeniContext } from '../../docgeni.interface';
+import { DocgeniContext } from '../../docgenifix.interface';
 import { createTestDocgeniContext, DEFAULT_TEST_ROOT_PATH, writeFilesToHost } from '../../testing';
 import * as builtInModule from './built-in-module';
 import { ComponentBuilder } from './component-builder';
 import { ComponentsBuilder } from './components-builder';
 
-const COMPONENTS_ROOT_PATH: string = `${DEFAULT_TEST_ROOT_PATH}/.docgeni/components`;
+const COMPONENTS_ROOT_PATH: string = `${DEFAULT_TEST_ROOT_PATH}/.docgenifix/components`;
 
 let linuxOnlyIt: typeof it = it;
 if (process.platform.startsWith('win') || process.platform.startsWith('darwin')) {

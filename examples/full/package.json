@@ -1,5 +1,5 @@
 {
-  "name": "docgeni-full-mode-example",
+  "name": "docgenifix-full-mode-example",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start:docs": "docgeni serve --port 4601",
-    "build:docs": "docgeni build"
+    "start:docs": "docgenifix serve --port 4601",
+    "build:docs": "docgenifix build"
   },
   "private": true,
   "dependencies": {},
