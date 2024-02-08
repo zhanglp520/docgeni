@@ -36,7 +36,7 @@ Docgeni 默认会在`.docgeni/site`目录生成文档站点，这个站点是一
 - `index.html`: 站点的入口 HTML 文件，可以通过修改 HTML 实现任何元素的配置，比如 `title`、`favicon.ico`、`heads`、`styles`、`scripts`，需要保证 body 下有`<dg-root></dg-root>`节点供文档渲染
 - `assets`: 站点的资源文件，可直接在文档中通过 `assets/path/to.png`访问，避免使用 `content` 关键字，Docgeni 生成的资源文件会存储在`assets/content`目录下
 - `.browserslistrc`: 支持的浏览器和版本，具体查看 [browserslist](https://github.com/browserslist/browserslist) 了解更多配置
-- `styles.scss`: 文档站点默认使用`styles.scss`作为入口样式文件，通过覆写`styles.scss`实现一些自定义的样式，需要加上`@import '@docgeni/template/styles/index.scss';`，否则内置的样式将不会加载
+- `styles.scss`: 文档站点默认使用`styles.scss`作为入口样式文件，通过覆写`styles.scss`实现一些自定义的样式，需要加上`@import '@docgenifix/template/styles/index.scss';`，否则内置的样式将不会加载
 - `tsconfig.json`: 自定义的TS配置文件，可以通过覆写达到高度配置目的，一般用于配置`compilerOptions.paths`便于示例中可以直接使用 `import 'mylib';`
 
 完整的 public 示例如下：
@@ -81,7 +81,7 @@ export default {
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import { DocgeniTemplateModule } from '@docgeni/template';
+import { DocgeniTemplateModule } from '@docgenifix/template';
 import { DOCGENI_SITE_PROVIDERS, RootComponent } from './content/index';
 
 @NgModule({
@@ -103,7 +103,7 @@ assets/content
 ```
 
 ## 第四步：修改入口 HTML 和样式
-需要修改生成站点的入口`index.html`和`styles.scss`,`index.html`中的`app-root`修改为`dg-root`，`style.scss`引入`@docgeni/template/styles/index.scss`。
+需要修改生成站点的入口`index.html`和`styles.scss`,`index.html`中的`app-root`修改为`dg-root`，`style.scss`引入`@docgenifix/template/styles/index.scss`。
 
 <alert type="warning">注意：如果运行时报 TypeScript 相关的错误，则需在`tsconfig.app.json`文件中`compilerOptions`配置中设置`"strict": false`。</alert>
 
@@ -126,7 +126,7 @@ assets/content
 
 ```scss
 // styles.scss
-@import '@docgeni/template/styles/index.scss';
+@import '@docgenifix/template/styles/index.scss';
 ```
 
 最后通过执行 `docgeni serve --port 4600` 启动站点即可查看。

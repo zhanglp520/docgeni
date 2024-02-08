@@ -9,7 +9,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "@docgeni/*": ["./packages/*/src"]
+      "@docgenifix/*": ["./packages/*/src"]
     }
   },
   "exclude": ["test"]

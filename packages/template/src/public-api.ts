@@ -1,5 +1,5 @@
 /*
- * Public API Surface of @docgeni/template
+ * Public API Surface of @docgenifix/template
  */
 
 export { addBuiltInComponents, BuiltInComponentDef, DocgeniBuiltInComponent } from './built-in';

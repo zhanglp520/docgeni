@@ -4,7 +4,7 @@ import { CustomComponentsModule } from './components/custom';
 import {
     CONFIG_TOKEN,
     DOCGENI_INITIALIZER_PROVIDERS
-} from '@docgeni/template';
+} from '@docgenifix/template';
 
 import './navigations.json';
 
@@ -19,4 +19,4 @@ export const DOCGENI_SITE_PROVIDERS = [
 
 export const IMPORT_MODULES = [ CustomComponentsModule ];
 
-export { RootComponent, DocgeniTemplateModule } from '@docgeni/template';
+export { RootComponent, DocgeniTemplateModule } from '@docgenifix/template';

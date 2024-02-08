@@ -22,16 +22,16 @@
       "node"
     ],
     "paths": {
-      "@docgeni/template": [
+      "@docgenifix/template": [
         "../../packages/template/src/public-api.ts"
       ],
-      "@docgeni/template/*": [
+      "@docgenifix/template/*": [
         "../../packages/template/src/*"
       ],
-      "@docgeni/alib": [
+      "@docgenifix/alib": [
         "../../packages/a-lib/public-api.ts"
       ],
-      "@docgeni/alib/*": [
+      "@docgenifix/alib/*": [
         "../../packages/a-lib/*"
       ]
     }

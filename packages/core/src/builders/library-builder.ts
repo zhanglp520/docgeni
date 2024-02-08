@@ -1,12 +1,12 @@
 import { DocgeniContext } from '../docgeni.interface';
 import { CategoryItem, ChannelItem, ComponentDocItem, ExampleSourceFile, LiveExample, NavigationItem } from '../interfaces';
-import { toolkit, debug } from '@docgeni/toolkit';
+import { toolkit, debug } from '@docgenifix/toolkit';
 import { ascendingSortByOrder, getItemLocaleProperty } from '../utils';
 
 import { LibraryComponentImpl } from './library-component';
 import { Library, LibraryBuilder, LibraryComponent } from '../types';
 import { FileEmitter } from './emitter';
-import { NgDocParser, DefaultNgParserHost } from '@docgeni/ngdoc';
+import { NgDocParser, DefaultNgParserHost } from '@docgenifix/ngdoc';
 
 const NAMESPACE = 'library-builder';
 export class LibraryBuilderImpl extends FileEmitter implements LibraryBuilder {

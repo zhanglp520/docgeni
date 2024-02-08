@@ -5,7 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0-alpha.1](https://github.com/docgeni/docgeni/compare/v2.2.2...v2.3.0-next.0) (2023-12-05)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -13,7 +13,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [2.2.2](https://github.com/docgeni/docgeni/compare/v2.2.1...v2.2.2) (2023-11-21)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -21,7 +21,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [2.2.1](https://github.com/docgeni/docgeni/compare/v2.2.0...v2.2.1) (2023-10-25)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -29,7 +29,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.2.0](https://github.com/docgeni/docgeni/compare/v2.1.1...v2.2.0) (2023-05-23)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -37,7 +37,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [2.1.1](https://github.com/docgeni/docgeni/compare/v2.1.0...v2.1.1) (2023-04-24)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -61,7 +61,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.10](https://github.com/docgeni/docgeni/compare/v2.1.0-next.9...v2.1.0-next.10) (2023-04-19)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -69,7 +69,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.9](https://github.com/docgeni/docgeni/compare/v2.1.0-next.8...v2.1.0-next.9) (2023-04-14)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -77,7 +77,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.8](https://github.com/docgeni/docgeni/compare/v2.1.0-next.7...v2.1.0-next.8) (2023-04-13)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -85,7 +85,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.7](https://github.com/docgeni/docgeni/compare/v2.1.0-next.6...v2.1.0-next.7) (2023-04-12)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -93,7 +93,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.6](https://github.com/docgeni/docgeni/compare/v2.1.0-next.5...v2.1.0-next.6) (2023-04-04)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -104,7 +104,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **cli:** set apiMode to automatic when ng add @docgeni/cli ([2288c3e](https://github.com/docgeni/docgeni/commit/2288c3e6a310866131692ec3f48da5e92ee05907))
+* **cli:** set apiMode to automatic when ng add @docgenifix/cli ([2288c3e](https://github.com/docgeni/docgeni/commit/2288c3e6a310866131692ec3f48da5e92ee05907))
 
 
 
@@ -112,7 +112,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.4](https://github.com/docgeni/docgeni/compare/v2.1.0-next.2...v2.1.0-next.4) (2023-03-17)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -120,7 +120,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.3](https://github.com/docgeni/docgeni/compare/v2.1.0-next.2...v2.1.0-next.3) (2023-03-10)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -128,7 +128,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.2](https://github.com/docgeni/docgeni/compare/v2.1.0-next.1...v2.1.0-next.2) (2023-03-09)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -136,7 +136,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.1](https://github.com/docgeni/docgeni/compare/v2.1.0-next.0...v2.1.0-next.1) (2023-03-09)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -144,7 +144,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.0](https://github.com/docgeni/docgeni/compare/v2.0.1...v2.1.0-next.0) (2023-03-09)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -152,7 +152,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [2.0.1](https://github.com/docgeni/docgeni/compare/v2.0.0...v2.0.1) (2022-11-17)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -160,7 +160,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.0.0](https://github.com/docgeni/docgeni/compare/v2.0.0-next.0...v2.0.0) (2022-11-14)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -168,7 +168,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.0.0-next.0](https://github.com/docgeni/docgeni/compare/v1.2.0-next.27...v2.0.0-next.0) (2022-11-14)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -176,7 +176,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.27](https://github.com/docgeni/docgeni/compare/v1.2.0-next.26...v1.2.0-next.27) (2022-11-02)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -184,7 +184,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.26](https://github.com/docgeni/docgeni/compare/v1.2.0-next.25...v1.2.0-next.26) (2022-11-02)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -192,7 +192,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.25](https://github.com/docgeni/docgeni/compare/v1.2.0-next.24...v1.2.0-next.25) (2022-09-22)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -200,7 +200,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.24](https://github.com/docgeni/docgeni/compare/v1.2.0-next.23...v1.2.0-next.24) (2022-09-05)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -208,7 +208,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.23](https://github.com/docgeni/docgeni/compare/v1.2.0-next.22...v1.2.0-next.23) (2022-08-17)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -216,7 +216,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.22](https://github.com/docgeni/docgeni/compare/v1.2.0-next.21...v1.2.0-next.22) (2022-08-10)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -224,7 +224,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.21](https://github.com/docgeni/docgeni/compare/v1.2.0-next.20...v1.2.0-next.21) (2022-08-09)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -232,7 +232,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.20](https://github.com/docgeni/docgeni/compare/v1.2.0-next.19...v1.2.0-next.20) (2022-08-05)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -278,7 +278,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.15](https://github.com/docgeni/docgeni/compare/v1.2.0-next.14...v1.2.0-next.15) (2022-07-27)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -286,7 +286,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.14](https://github.com/docgeni/docgeni/compare/v1.2.0-next.13...v1.2.0-next.14) (2022-05-05)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -294,7 +294,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.13](https://github.com/docgeni/docgeni/compare/v1.2.0-next.12...v1.2.0-next.13) (2022-04-25)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -302,7 +302,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.12](https://github.com/docgeni/docgeni/compare/v1.2.0-next.11...v1.2.0-next.12) (2022-04-25)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -310,7 +310,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.11](https://github.com/docgeni/docgeni/compare/v1.2.0-next.10...v1.2.0-next.11) (2022-04-24)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -318,7 +318,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.10](https://github.com/docgeni/docgeni/compare/v1.2.0-next.9...v1.2.0-next.10) (2022-03-10)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -326,7 +326,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.9](https://github.com/docgeni/docgeni/compare/v1.2.0-next.8...v1.2.0-next.9) (2022-03-08)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -334,7 +334,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.8](https://github.com/docgeni/docgeni/compare/v1.2.0-next.7...v1.2.0-next.8) (2022-03-08)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -364,7 +364,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.5](https://github.com/docgeni/docgeni/compare/v1.2.0-next.4...v1.2.0-next.5) (2022-03-08)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -372,7 +372,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.4](https://github.com/docgeni/docgeni/compare/v1.2.0-next.3...v1.2.0-next.4) (2021-12-20)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -391,7 +391,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.2](https://github.com/docgeni/docgeni/compare/v1.2.0-next.1...v1.2.0-next.2) (2021-11-17)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -399,7 +399,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.1](https://github.com/docgeni/docgeni/compare/v1.2.0-next.0...v1.2.0-next.1) (2021-11-16)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -415,8 +415,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **cli:** ng-add schematics add `@docgeni/angular` dependency ([eca5b5b](https://github.com/docgeni/docgeni/commit/eca5b5b1fc83fd9267f5aec0e8ac8331e652edd0))
-* **ngdoc:** add @docgeni/ngdoc and init structure #OSP-226 ([#284](https://github.com/docgeni/docgeni/issues/284)) ([0fbc3c5](https://github.com/docgeni/docgeni/commit/0fbc3c5f4715c799c822faacd0328e065965361a)), closes [#OSP-226](https://github.com/docgeni/docgeni/issues/OSP-226)
+* **cli:** ng-add schematics add `@docgenifix/angular` dependency ([eca5b5b](https://github.com/docgeni/docgeni/commit/eca5b5b1fc83fd9267f5aec0e8ac8331e652edd0))
+* **ngdoc:** add @docgenifix/ngdoc and init structure #OSP-226 ([#284](https://github.com/docgeni/docgeni/issues/284)) ([0fbc3c5](https://github.com/docgeni/docgeni/commit/0fbc3c5f4715c799c822faacd0328e065965361a)), closes [#OSP-226](https://github.com/docgeni/docgeni/issues/OSP-226)
 * example support stackblitz ([#276](https://github.com/docgeni/docgeni/issues/276)) ([9fe6a9c](https://github.com/docgeni/docgeni/commit/9fe6a9cec86dadce6bd7a472bffa709f5c8831ef))
 * **template:** add builtins search #OSP-202 ([#271](https://github.com/docgeni/docgeni/issues/271)) ([caf7724](https://github.com/docgeni/docgeni/commit/caf7724a098879fb15e79f2effa8db55858d4a89)), closes [#OSP-202](https://github.com/docgeni/docgeni/issues/OSP-202) [#OSP-202](https://github.com/docgeni/docgeni/issues/OSP-202)
 
@@ -460,7 +460,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.1.1](https://github.com/docgeni/docgeni/compare/v1.1.0...v1.1.1) (2021-10-14)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -479,7 +479,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.1.0-next.9](https://github.com/docgeni/docgeni/compare/v1.1.0-next.8...v1.1.0-next.9) (2021-09-29)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -487,7 +487,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.1.0-next.8](https://github.com/docgeni/docgeni/compare/v1.1.0-next.7...v1.1.0-next.8) (2021-09-26)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -540,7 +540,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -548,7 +548,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.0.7](https://github.com/docgeni/docgeni/compare/v1.0.6...v1.0.7) (2021-07-02)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -556,7 +556,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.0.6](https://github.com/docgeni/docgeni/compare/v1.0.5...v1.0.6) (2021-07-02)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -564,7 +564,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.0.5](https://github.com/docgeni/docgeni/compare/v1.0.4...v1.0.5) (2021-07-02)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -572,7 +572,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.0.4](https://github.com/docgeni/docgeni/compare/v1.0.3...v1.0.4) (2021-06-25)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -580,7 +580,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.0.3](https://github.com/docgeni/docgeni/compare/v1.0.2...v1.0.3) (2021-06-17)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -588,7 +588,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.0.2](https://github.com/docgeni/docgeni/compare/v1.0.1...v1.0.2) (2021-06-07)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -596,7 +596,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.0.1](https://github.com/docgeni/docgeni/compare/v1.0.0...v1.0.1) (2021-05-31)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -604,7 +604,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0](https://github.com/docgeni/docgeni/compare/v1.0.0-beta.7...v1.0.0) (2021-05-20)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -623,7 +623,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0-beta.6](https://github.com/docgeni/docgeni/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2021-05-19)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -631,7 +631,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0-beta.5](https://github.com/docgeni/docgeni/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2021-05-19)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -704,7 +704,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.18](https://github.com/docgeni/docgeni/compare/v0.6.0-next.17...v0.6.0-next.18) (2021-03-25)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -712,7 +712,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.17](https://github.com/docgeni/docgeni/compare/v0.6.0-next.16...v0.6.0-next.17) (2021-03-24)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -731,7 +731,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.15](https://github.com/docgeni/docgeni/compare/v0.6.0-next.14...v0.6.0-next.15) (2021-03-18)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -764,7 +764,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **cli:** @docgeni/cli add schematics ([#88](https://github.com/docgeni/docgeni/issues/88)) ([3f992d3](https://github.com/docgeni/docgeni/commit/3f992d3cc245c1e4ad801eeb24f0ada84386dd54))
+* **cli:** @docgenifix/cli add schematics ([#88](https://github.com/docgeni/docgeni/issues/88)) ([3f992d3](https://github.com/docgeni/docgeni/commit/3f992d3cc245c1e4ad801eeb24f0ada84386dd54))
 
 
 
@@ -772,7 +772,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.11](https://github.com/docgeni/docgeni/compare/v0.6.0-next.10...v0.6.0-next.11) (2021-02-25)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -813,7 +813,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.7](https://github.com/docgeni/docgeni/compare/v0.6.0-next.6...v0.6.0-next.7) (2021-02-20)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -857,7 +857,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **cli:** add [@angular](https://github.com/angular) dependencies to @docgeni/cli ([e408745](https://github.com/docgeni/docgeni/commit/e408745acb8c1e1f70237ff317e943c138e6e8ee))
+* **cli:** add [@angular](https://github.com/angular) dependencies to @docgenifix/cli ([e408745](https://github.com/docgeni/docgeni/commit/e408745acb8c1e1f70237ff317e943c138e6e8ee))
 
 
 
@@ -876,7 +876,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.1](https://github.com/docgeni/docgeni/compare/v0.6.0-next.0...v0.6.0-next.1) (2021-01-03)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -884,7 +884,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.0](https://github.com/docgeni/docgeni/compare/v0.5.9...v0.6.0-next.0) (2021-01-02)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -892,7 +892,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.5.8](https://github.com/docgeni/docgeni/compare/v0.5.7...v0.5.8) (2020-12-29)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -900,7 +900,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.5.7](https://github.com/docgeni/docgeni/compare/v0.5.6...v0.5.7) (2020-12-05)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -908,7 +908,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.5.6](https://github.com/docgeni/docgeni/compare/v0.5.5...v0.5.6) (2020-08-28)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -916,7 +916,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.5.5](https://github.com/docgeni/docgeni/compare/v0.5.4...v0.5.5) (2020-08-28)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -924,7 +924,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.5.4](https://github.com/docgeni/docgeni/compare/v0.5.3...v0.5.4) (2020-07-14)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -932,7 +932,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.5.3](https://github.com/docgeni/docgeni/compare/v0.5.2...v0.5.3) (2020-07-11)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -940,7 +940,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.5.2](https://github.com/docgeni/docgeni/compare/v0.5.1...v0.5.2) (2020-07-11)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -948,7 +948,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.5.1](https://github.com/docgeni/docgeni/compare/v0.5.0...v0.5.1) (2020-07-11)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -956,7 +956,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.5.0](https://github.com/docgeni/docgeni/compare/v0.4.0...v0.5.0) (2020-06-26)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -964,7 +964,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.4.0](https://github.com/docgeni/docgeni/compare/v0.3.0...v0.4.0) (2020-06-25)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -972,7 +972,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.3.0](https://github.com/docgeni/docgeni/compare/v0.2.1...v0.3.0) (2020-06-24)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -980,7 +980,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.2.1](https://github.com/docgeni/docgeni/compare/v0.2.0...v0.2.1) (2020-06-24)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -988,7 +988,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.2.0](https://github.com/docgeni/docgeni/compare/v0.1.0...v0.2.0) (2020-06-20)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -996,7 +996,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.1.0](https://github.com/docgeni/docgeni/compare/v0.1.0-alpha.13...v0.1.0) (2020-06-16)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -1004,7 +1004,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.1.0-alpha.13](https://github.com/docgeni/docgeni/compare/v0.1.0-alpha.12...v0.1.0-alpha.13) (2020-06-13)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -1045,7 +1045,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.1.0-alpha.9](https://github.com/docgeni/docgeni/compare/v0.1.0-alpha.8...v0.1.0-alpha.9) (2020-06-06)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -1053,7 +1053,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.1.0-alpha.8](https://github.com/docgeni/docgeni/compare/v0.1.0-alpha.7...v0.1.0-alpha.8) (2020-06-03)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -1061,7 +1061,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.1.0-alpha.7](https://github.com/docgeni/docgeni/compare/v0.1.0-alpha.6...v0.1.0-alpha.7) (2020-05-27)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -1069,7 +1069,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.1.0-alpha.6](https://github.com/docgeni/docgeni/compare/v0.1.0-alpha.5...v0.1.0-alpha.6) (2020-05-27)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -1077,7 +1077,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.1.0-alpha.5](https://github.com/docgeni/docgeni/compare/v0.1.0-alpha.4...v0.1.0-alpha.5) (2020-05-27)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 
@@ -1085,7 +1085,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.1.0-alpha.4](https://github.com/docgeni/docgeni/compare/v0.1.0-alpha.3...v0.1.0-alpha.4) (2020-05-27)
 
-**Note:** Version bump only for package @docgeni/cli
+**Note:** Version bump only for package @docgenifix/cli
 
 
 

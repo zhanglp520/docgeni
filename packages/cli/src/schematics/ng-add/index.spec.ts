@@ -5,7 +5,7 @@ import { createTestWorkspaceFactory, getJsonFileContent, TestWorkspaceFactory } 
 import { addPackageToPackageJson } from '../utils';
 import { ANGULAR_VERSION, VERSION } from '../../version';
 import { addPackageJsonDependency, NodeDependencyType } from '@schematics/angular/utility/dependencies';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 import path from 'node:path';
 
 describe('ng-add Schematic', () => {
@@ -29,9 +29,9 @@ describe('ng-add Schematic', () => {
         workspaceTree = await schematicRunner.runSchematicAsync('ng-add', undefined, tree).toPromise();
         const packageJson = getJsonFileContent(workspaceTree, '/package.json');
         const devDependencies = packageJson[NodeDependencyType.Dev];
-        expect(devDependencies['@docgeni/angular']).toBeFalsy();
-        expect(devDependencies['@docgeni/template']).toEqual(VERSION);
-        expect(devDependencies['@docgeni/cli']).toEqual(VERSION);
+        expect(devDependencies['@docgenifix/angular']).toBeFalsy();
+        expect(devDependencies['@docgenifix/template']).toEqual(VERSION);
+        expect(devDependencies['@docgenifix/cli']).toEqual(VERSION);
         expect(schematicRunner.tasks.some(task => task.name === 'node-package')).toBe(true);
     });
 
@@ -42,7 +42,7 @@ describe('ng-add Schematic', () => {
         workspaceTree = await schematicRunner.runSchematic('ng-add', undefined, tree);
         packageJson = getJsonFileContent(workspaceTree, '/package.json');
         const devDependencies = packageJson[NodeDependencyType.Dev];
-        expect(devDependencies['@docgeni/angular']).toEqual(ANGULAR_VERSION);
+        expect(devDependencies['@docgenifix/angular']).toEqual(ANGULAR_VERSION);
     });
 
     it('should update package.json command', async () => {
@@ -61,7 +61,7 @@ describe('ng-add Schematic', () => {
         const config = workspaceTree.read('.docgenirc.js').toString();
         expect(config).toContain(`mode: '${mode}'`);
         expect(config).toContain(`docsDir: '${docsDir}'`);
-        expect(config).toContain(`@type {import('@docgeni/core').DocgeniConfig}`);
+        expect(config).toContain(`@type {import('@docgenifix/core').DocgeniConfig}`);
         const packageJson = getJsonFileContent(workspaceTree, '/package.json');
         expect(config).toContain(`title: '${packageJson.name}'`);
     });

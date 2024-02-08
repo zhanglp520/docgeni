@@ -1,5 +1,5 @@
 import { CommandModule } from 'yargs';
-import { Docgeni, DocgeniConfig, readNgServeOptions } from '@docgeni/core';
+import { Docgeni, DocgeniConfig, readNgServeOptions } from '@docgenifix/core';
 import { getConfiguration } from './configuration';
 import { yargsOptionsGenerate } from './util/yargs-options-generate';
 import { VERSION } from './version';

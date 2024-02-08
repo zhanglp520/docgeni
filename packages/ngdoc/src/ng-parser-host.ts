@@ -1,4 +1,4 @@
-import { toolkit, debug } from '@docgeni/toolkit';
+import { toolkit, debug } from '@docgenifix/toolkit';
 import { FSWatcher } from 'fs';
 import { ts } from './typescript';
 

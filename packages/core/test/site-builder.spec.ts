@@ -1,5 +1,5 @@
 import { Docgeni, DEFAULT_CONFIG, DocgeniConfig, DocgeniContext, SiteBuilder } from '../src';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 import { basicFixturePath, createTestDocgeniContext } from '../src/testing';
 import path from 'path';
 import { DocgeniPaths } from '../src/docgeni-paths';

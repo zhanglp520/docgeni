@@ -1,5 +1,5 @@
 {
-  "name": "@docgeni/cli",
+  "name": "@docgenifix/cli",
   "version": "1.0.0-alpha.1",
   "description": "CLI tool for Docgeni",
   "author": "why520crazy <why520crazy@163.com>",
@@ -33,9 +33,9 @@
   "dependencies": {
     "@angular-devkit/schematics": "^16.2.0",
     "@angular-devkit/schematics-cli": "^16.2.0",
-    "@docgeni/core": "^1.0.0-alpha.1",
-    "@docgeni/template": "^1.0.0-alpha.1",
-    "@docgeni/toolkit": "^1.0.0-alpha.1",
+    "@docgenifix/core": "^1.0.0-alpha.1",
+    "@docgenifix/template": "^1.0.0-alpha.1",
+    "@docgenifix/toolkit": "^1.0.0-alpha.1",
     "@schematics/angular": "16.2.0",
     "chokidar": "^3.3.1",
     "cosmiconfig": "^6.0.0",

@@ -88,7 +88,7 @@ Docgeni 默认会扫描`examples`文件夹下的所有子文件夹，每个子�
 ```ts
 // module.ts
 import { CommonModule } from '@angular/common';
-import { AlibButtonModule } from '@docgeni/alib/button';
+import { AlibButtonModule } from '@docgenifix/alib/button';
 
 export default {
   imports: [ CommonModule, AlibButtonModule ],
@@ -119,10 +119,10 @@ export class AlibButtonExamplesModule {}
 <alert type="info">为了保持兼容性，如果`module.ts`中有定义 Angular 的模块以自定义的模块为主，不会自动生成模块。</alert>
 
 ## 引用配置（tsconfig paths）
-Docgeni 运行时会把`examples`下的所有示例文件拷贝到站点下启动，在组件示例中不能采用相对路径引入组件模块源文件，建议直接通过包路径引用，同时需要在 tsconfig.json 配置`paths`指向类库源代码路径，这样可以直接复制示例代码使用，比如：组件库叫`@docgeni/alib`，采用如下的方式配置和引入组件：
+Docgeni 运行时会把`examples`下的所有示例文件拷贝到站点下启动，在组件示例中不能采用相对路径引入组件模块源文件，建议直接通过包路径引用，同时需要在 tsconfig.json 配置`paths`指向类库源代码路径，这样可以直接复制示例代码使用，比如：组件库叫`@docgenifix/alib`，采用如下的方式配置和引入组件：
 ```ts
 // button/examples/module.ts
-import { AlibButtonModule } from '@docgeni/alib/button';
+import { AlibButtonModule } from '@docgenifix/alib/button';
 
 @NgModule({
     declarations: [AlibButtonBasicExampleComponent],
@@ -137,10 +137,10 @@ tsconfig 配置如下，如何配置参考: [自定义配置 tsconfig.json](guid
 // tsconfig.json
  {
    "paths": {
-      "@docgeni/alib": [
+      "@docgenifix/alib": [
         "packages/alib/public-api.ts"
       ],
-      "@docgeni/alib/*": [
+      "@docgenifix/alib/*": [
         "packages/alib/*"
       ]
  }
@@ -268,7 +268,7 @@ Docgeni 支持组件示例直接在 StackBlitz 平台展示, StackBlitz 在线�
         "@angular/platform-browser-dynamic": "~10.2.4",
         "rxjs": "~6.5.4",
         "zone.js": "~0.10.2",
-        "@docgeni/alib": "0.0.1"
+        "@docgenifix/alib": "0.0.1"
     }
 }
 ```

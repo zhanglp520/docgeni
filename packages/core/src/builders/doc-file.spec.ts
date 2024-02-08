@@ -2,7 +2,7 @@ import { virtualFs, normalize } from '@angular-devkit/core';
 import { EOL } from 'os';
 import { DocSourceFile } from './doc-file';
 import path from 'path';
-import { toolkit, fs } from '@docgeni/toolkit';
+import { toolkit, fs } from '@docgenifix/toolkit';
 
 describe('DocSourceFile', () => {
     let root: string;

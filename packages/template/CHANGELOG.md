@@ -16,7 +16,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [2.2.2](https://github.com/docgeni/docgeni/compare/v2.2.1...v2.2.2) (2023-11-21)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -46,7 +46,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [2.1.1](https://github.com/docgeni/docgeni/compare/v2.1.0...v2.1.1) (2023-04-24)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -54,7 +54,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.11](https://github.com/docgeni/docgeni/compare/v2.1.0-next.10...v2.1.0-next.11) (2023-04-21)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -62,7 +62,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.10](https://github.com/docgeni/docgeni/compare/v2.1.0-next.9...v2.1.0-next.10) (2023-04-19)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -70,7 +70,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.9](https://github.com/docgeni/docgeni/compare/v2.1.0-next.8...v2.1.0-next.9) (2023-04-14)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -132,7 +132,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Features
 
 * **ngdoc:** support interface and class api doc when mark public or publicApi ([#452](https://github.com/docgeni/docgeni/issues/452)) ([81dcaca](https://github.com/docgeni/docgeni/commit/81dcacabb20087862221bf1be1df23244bd99387))
-* **template:** exports "./styles/index.css" in @docgeni/template ([83b3f99](https://github.com/docgeni/docgeni/commit/83b3f993f23f268154842defc7614c193a37ddd2))
+* **template:** exports "./styles/index.css" in @docgenifix/template ([83b3f99](https://github.com/docgeni/docgeni/commit/83b3f993f23f268154842defc7614c193a37ddd2))
 
 
 
@@ -143,7 +143,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **template:** exports "./styles/index.css" in @docgeni/template ([83b3f99](https://github.com/docgeni/docgeni/commit/83b3f993f23f268154842defc7614c193a37ddd2))
+* **template:** exports "./styles/index.css" in @docgenifix/template ([83b3f99](https://github.com/docgeni/docgeni/commit/83b3f993f23f268154842defc7614c193a37ddd2))
 
 
 
@@ -151,7 +151,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.2](https://github.com/docgeni/docgeni/compare/v2.1.0-next.1...v2.1.0-next.2) (2023-03-09)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -170,7 +170,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.0](https://github.com/docgeni/docgeni/compare/v2.0.1...v2.1.0-next.0) (2023-03-09)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -178,7 +178,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [2.0.1](https://github.com/docgeni/docgeni/compare/v2.0.0...v2.0.1) (2022-11-17)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -186,7 +186,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.0.0](https://github.com/docgeni/docgeni/compare/v2.0.0-next.0...v2.0.0) (2022-11-14)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -205,7 +205,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.27](https://github.com/docgeni/docgeni/compare/v1.2.0-next.26...v1.2.0-next.27) (2022-11-02)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -257,7 +257,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.22](https://github.com/docgeni/docgeni/compare/v1.2.0-next.21...v1.2.0-next.22) (2022-08-10)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -265,7 +265,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.21](https://github.com/docgeni/docgeni/compare/v1.2.0-next.20...v1.2.0-next.21) (2022-08-09)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -306,7 +306,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.17](https://github.com/docgeni/docgeni/compare/v1.2.0-next.15...v1.2.0-next.17) (2022-07-27)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -314,7 +314,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.15](https://github.com/docgeni/docgeni/compare/v1.2.0-next.14...v1.2.0-next.15) (2022-07-27)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -322,7 +322,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.14](https://github.com/docgeni/docgeni/compare/v1.2.0-next.13...v1.2.0-next.14) (2022-05-05)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -330,7 +330,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.13](https://github.com/docgeni/docgeni/compare/v1.2.0-next.12...v1.2.0-next.13) (2022-04-25)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -338,7 +338,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.12](https://github.com/docgeni/docgeni/compare/v1.2.0-next.11...v1.2.0-next.12) (2022-04-25)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -372,7 +372,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.9](https://github.com/docgeni/docgeni/compare/v1.2.0-next.8...v1.2.0-next.9) (2022-03-08)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -380,7 +380,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.8](https://github.com/docgeni/docgeni/compare/v1.2.0-next.7...v1.2.0-next.8) (2022-03-08)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -388,7 +388,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.7](https://github.com/docgeni/docgeni/compare/v1.2.0-next.5...v1.2.0-next.7) (2022-03-08)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -396,7 +396,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.6](https://github.com/docgeni/docgeni/compare/v1.2.0-next.5...v1.2.0-next.6) (2022-03-08)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -449,7 +449,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.2](https://github.com/docgeni/docgeni/compare/v1.2.0-next.1...v1.2.0-next.2) (2021-11-17)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -457,7 +457,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.1](https://github.com/docgeni/docgeni/compare/v1.2.0-next.0...v1.2.0-next.1) (2021-11-16)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -500,7 +500,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **template:** add docsearch.js dependent to @docgeni/template #OSP-205 ([c2bfc66](https://github.com/docgeni/docgeni/commit/c2bfc66159cfb38443acecaae7ab6408b3bd9cf6)), closes [#OSP-205](https://github.com/docgeni/docgeni/issues/OSP-205)
+* **template:** add docsearch.js dependent to @docgenifix/template #OSP-205 ([c2bfc66](https://github.com/docgeni/docgeni/commit/c2bfc66159cfb38443acecaae7ab6408b3bd9cf6)), closes [#OSP-205](https://github.com/docgeni/docgeni/issues/OSP-205)
 
 
 
@@ -508,7 +508,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.1.2](https://github.com/docgeni/docgeni/compare/v1.1.1...v1.1.2) (2021-10-15)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -533,7 +533,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.1.0](https://github.com/docgeni/docgeni/compare/v1.1.0-next.9...v1.1.0) (2021-09-30)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -559,7 +559,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.1.0-next.8](https://github.com/docgeni/docgeni/compare/v1.1.0-next.7...v1.1.0-next.8) (2021-09-26)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -635,7 +635,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -732,7 +732,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0-beta.7](https://github.com/docgeni/docgeni/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2021-05-19)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -751,7 +751,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0-beta.5](https://github.com/docgeni/docgeni/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2021-05-19)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -897,7 +897,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.12](https://github.com/docgeni/docgeni/compare/v0.6.0-next.11...v0.6.0-next.12) (2021-03-11)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -905,7 +905,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.11](https://github.com/docgeni/docgeni/compare/v0.6.0-next.10...v0.6.0-next.11) (2021-02-25)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -913,7 +913,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.10](https://github.com/docgeni/docgeni/compare/v0.6.0-next.9...v0.6.0-next.10) (2021-02-24)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -921,7 +921,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.9](https://github.com/docgeni/docgeni/compare/v0.6.0-next.8...v0.6.0-next.9) (2021-02-22)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -929,7 +929,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.8](https://github.com/docgeni/docgeni/compare/v0.6.0-next.7...v0.6.0-next.8) (2021-02-20)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -937,7 +937,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.7](https://github.com/docgeni/docgeni/compare/v0.6.0-next.6...v0.6.0-next.7) (2021-02-20)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -945,7 +945,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.6](https://github.com/docgeni/docgeni/compare/v0.6.0-next.5...v0.6.0-next.6) (2021-02-20)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -953,7 +953,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.5](https://github.com/docgeni/docgeni/compare/v0.6.0-next.4...v0.6.0-next.5) (2021-01-18)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 
@@ -980,7 +980,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **cli:** add [@angular](https://github.com/angular) dependencies to @docgeni/cli ([e408745](https://github.com/docgeni/docgeni/commit/e408745acb8c1e1f70237ff317e943c138e6e8ee))
+* **cli:** add [@angular](https://github.com/angular) dependencies to @docgenifix/cli ([e408745](https://github.com/docgeni/docgeni/commit/e408745acb8c1e1f70237ff317e943c138e6e8ee))
 
 
 
@@ -988,7 +988,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.1](https://github.com/docgeni/docgeni/compare/v0.6.0-next.0...v0.6.0-next.1) (2021-01-03)
 
-**Note:** Version bump only for package @docgeni/template
+**Note:** Version bump only for package @docgenifix/template
 
 
 

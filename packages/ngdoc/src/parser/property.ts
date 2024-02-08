@@ -1,7 +1,7 @@
 import { ts } from '../typescript';
 import { NgPropertyKind } from '../types';
 import { getNodeText, getTypeNodes, normalizeNodeText } from './utils';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 
 export function getPropertyType(node: ts.PropertyDeclaration): string | null {
     if (typeof node.type === 'undefined') return null;

@@ -2,7 +2,7 @@ import { Plugin } from './plugin';
 import { DocgeniContext } from '../docgeni.interface';
 import { Markdown } from '../markdown';
 import { DocType } from '../enums';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 
 export class MarkdownPlugin implements Plugin {
     apply(docgeni: DocgeniContext): void {

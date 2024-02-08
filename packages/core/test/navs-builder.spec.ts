@@ -1,4 +1,4 @@
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 import { DocgeniContext } from '../src/docgeni.interface';
 import { DocItem } from '../src/interfaces';
 import { NavsBuilder } from './../src/builders/navs-builder';

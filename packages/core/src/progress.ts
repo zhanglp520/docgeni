@@ -1,4 +1,4 @@
-import { Spinner, toolkit, colors } from '@docgeni/toolkit';
+import { Spinner, toolkit, colors } from '@docgenifix/toolkit';
 import { DocgeniContext } from './docgeni.interface';
 import textTable from 'text-table';
 import { CompilationResult } from './types';

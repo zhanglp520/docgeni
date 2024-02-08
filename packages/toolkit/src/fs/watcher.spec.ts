@@ -4,7 +4,7 @@ import fs from 'fs';
 import { DocgeniNodeJsAsyncHost } from './node-host';
 import { normalize, resolve } from '../path';
 import { FileSystemWatcher, HostWatchEvent, HostWatchEventType } from './watcher';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 import { linuxAndDarwinIt } from '../testing';
 
 describe('#fs-watcher', () => {

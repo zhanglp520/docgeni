@@ -5,7 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0-alpha.1](https://github.com/docgeni/docgeni/compare/v2.2.2...v2.3.0-next.0) (2023-12-05)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -29,7 +29,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [2.1.1](https://github.com/docgeni/docgeni/compare/v2.1.0...v2.1.1) (2023-04-24)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -37,7 +37,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.11](https://github.com/docgeni/docgeni/compare/v2.1.0-next.10...v2.1.0-next.11) (2023-04-21)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -45,7 +45,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.10](https://github.com/docgeni/docgeni/compare/v2.1.0-next.9...v2.1.0-next.10) (2023-04-19)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -53,7 +53,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.9](https://github.com/docgeni/docgeni/compare/v2.1.0-next.8...v2.1.0-next.9) (2023-04-14)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -61,7 +61,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.8](https://github.com/docgeni/docgeni/compare/v2.1.0-next.7...v2.1.0-next.8) (2023-04-13)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -69,7 +69,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.7](https://github.com/docgeni/docgeni/compare/v2.1.0-next.6...v2.1.0-next.7) (2023-04-12)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -77,7 +77,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.6](https://github.com/docgeni/docgeni/compare/v2.1.0-next.5...v2.1.0-next.6) (2023-04-04)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -85,7 +85,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.5](https://github.com/docgeni/docgeni/compare/v2.1.0-next.4...v2.1.0-next.5) (2023-03-28)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -93,7 +93,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.4](https://github.com/docgeni/docgeni/compare/v2.1.0-next.2...v2.1.0-next.4) (2023-03-17)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -101,7 +101,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.3](https://github.com/docgeni/docgeni/compare/v2.1.0-next.2...v2.1.0-next.3) (2023-03-10)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -109,7 +109,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.2](https://github.com/docgeni/docgeni/compare/v2.1.0-next.1...v2.1.0-next.2) (2023-03-09)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -117,7 +117,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.1](https://github.com/docgeni/docgeni/compare/v2.1.0-next.0...v2.1.0-next.1) (2023-03-09)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -125,7 +125,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.0](https://github.com/docgeni/docgeni/compare/v2.0.1...v2.1.0-next.0) (2023-03-09)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -144,7 +144,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.0.0](https://github.com/docgeni/docgeni/compare/v2.0.0-next.0...v2.0.0) (2022-11-14)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -152,7 +152,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.0.0-next.0](https://github.com/docgeni/docgeni/compare/v1.2.0-next.27...v2.0.0-next.0) (2022-11-14)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -160,7 +160,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.27](https://github.com/docgeni/docgeni/compare/v1.2.0-next.26...v1.2.0-next.27) (2022-11-02)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -168,7 +168,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.26](https://github.com/docgeni/docgeni/compare/v1.2.0-next.25...v1.2.0-next.26) (2022-11-02)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -176,7 +176,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.25](https://github.com/docgeni/docgeni/compare/v1.2.0-next.24...v1.2.0-next.25) (2022-09-22)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -195,7 +195,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.23](https://github.com/docgeni/docgeni/compare/v1.2.0-next.22...v1.2.0-next.23) (2022-08-17)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -203,7 +203,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.22](https://github.com/docgeni/docgeni/compare/v1.2.0-next.21...v1.2.0-next.22) (2022-08-10)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -211,7 +211,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.21](https://github.com/docgeni/docgeni/compare/v1.2.0-next.20...v1.2.0-next.21) (2022-08-09)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -219,7 +219,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.20](https://github.com/docgeni/docgeni/compare/v1.2.0-next.19...v1.2.0-next.20) (2022-08-05)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -238,7 +238,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.18](https://github.com/docgeni/docgeni/compare/v1.2.0-next.17...v1.2.0-next.18) (2022-07-28)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -246,7 +246,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.17](https://github.com/docgeni/docgeni/compare/v1.2.0-next.15...v1.2.0-next.17) (2022-07-27)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -254,7 +254,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.15](https://github.com/docgeni/docgeni/compare/v1.2.0-next.14...v1.2.0-next.15) (2022-07-27)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -273,7 +273,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.13](https://github.com/docgeni/docgeni/compare/v1.2.0-next.12...v1.2.0-next.13) (2022-04-25)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -281,7 +281,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.12](https://github.com/docgeni/docgeni/compare/v1.2.0-next.11...v1.2.0-next.12) (2022-04-25)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -289,7 +289,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.11](https://github.com/docgeni/docgeni/compare/v1.2.0-next.10...v1.2.0-next.11) (2022-04-24)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -297,7 +297,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.10](https://github.com/docgeni/docgeni/compare/v1.2.0-next.9...v1.2.0-next.10) (2022-03-10)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -305,7 +305,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.9](https://github.com/docgeni/docgeni/compare/v1.2.0-next.8...v1.2.0-next.9) (2022-03-08)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -313,7 +313,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.8](https://github.com/docgeni/docgeni/compare/v1.2.0-next.7...v1.2.0-next.8) (2022-03-08)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -343,7 +343,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.5](https://github.com/docgeni/docgeni/compare/v1.2.0-next.4...v1.2.0-next.5) (2022-03-08)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -351,7 +351,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.4](https://github.com/docgeni/docgeni/compare/v1.2.0-next.3...v1.2.0-next.4) (2021-12-20)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -370,7 +370,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.2](https://github.com/docgeni/docgeni/compare/v1.2.0-next.1...v1.2.0-next.2) (2021-11-17)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -378,7 +378,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.1](https://github.com/docgeni/docgeni/compare/v1.2.0-next.0...v1.2.0-next.1) (2021-11-16)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -389,7 +389,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **ngdoc:** add @docgeni/ngdoc and init structure #OSP-226 ([#284](https://github.com/docgeni/docgeni/issues/284)) ([0fbc3c5](https://github.com/docgeni/docgeni/commit/0fbc3c5f4715c799c822faacd0328e065965361a)), closes [#OSP-226](https://github.com/docgeni/docgeni/issues/OSP-226)
+* **ngdoc:** add @docgenifix/ngdoc and init structure #OSP-226 ([#284](https://github.com/docgeni/docgeni/issues/284)) ([0fbc3c5](https://github.com/docgeni/docgeni/commit/0fbc3c5f4715c799c822faacd0328e065965361a)), closes [#OSP-226](https://github.com/docgeni/docgeni/issues/OSP-226)
 
 
 
@@ -408,7 +408,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.1.0](https://github.com/docgeni/docgeni/compare/v1.1.0-next.9...v1.1.0) (2021-09-30)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -416,7 +416,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.1.0-next.9](https://github.com/docgeni/docgeni/compare/v1.1.0-next.8...v1.1.0-next.9) (2021-09-29)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -424,7 +424,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.1.0-next.8](https://github.com/docgeni/docgeni/compare/v1.1.0-next.7...v1.1.0-next.8) (2021-09-26)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -432,7 +432,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.1.0-next.7](https://github.com/docgeni/docgeni/compare/v1.1.0-next.6...v1.1.0-next.7) (2021-09-24)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -495,7 +495,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.0.2](https://github.com/docgeni/docgeni/compare/v1.0.1...v1.0.2) (2021-06-07)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -503,7 +503,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0](https://github.com/docgeni/docgeni/compare/v1.0.0-beta.7...v1.0.0) (2021-05-20)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -511,7 +511,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0-beta.7](https://github.com/docgeni/docgeni/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2021-05-19)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -519,7 +519,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0-beta.6](https://github.com/docgeni/docgeni/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2021-05-19)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -527,7 +527,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0-beta.5](https://github.com/docgeni/docgeni/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2021-05-19)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -546,7 +546,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0-beta.3](https://github.com/docgeni/docgeni/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2021-05-15)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -554,7 +554,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0-beta.2](https://github.com/docgeni/docgeni/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2021-05-12)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -562,7 +562,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0-beta.1](https://github.com/docgeni/docgeni/compare/v1.0.0-beta.0...v1.0.0-beta.1) (2021-04-01)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -570,7 +570,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.0.0-beta.0](https://github.com/docgeni/docgeni/compare/v0.6.0-next.18...v1.0.0-beta.0) (2021-03-30)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -578,7 +578,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.18](https://github.com/docgeni/docgeni/compare/v0.6.0-next.17...v0.6.0-next.18) (2021-03-25)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -586,7 +586,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.17](https://github.com/docgeni/docgeni/compare/v0.6.0-next.16...v0.6.0-next.17) (2021-03-24)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -594,7 +594,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.16](https://github.com/docgeni/docgeni/compare/v0.6.0-next.15...v0.6.0-next.16) (2021-03-24)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -602,7 +602,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.15](https://github.com/docgeni/docgeni/compare/v0.6.0-next.14...v0.6.0-next.15) (2021-03-18)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -610,7 +610,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.14](https://github.com/docgeni/docgeni/compare/v0.6.0-next.13...v0.6.0-next.14) (2021-03-18)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -618,7 +618,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.13](https://github.com/docgeni/docgeni/compare/v0.6.0-next.12...v0.6.0-next.13) (2021-03-18)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -659,7 +659,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.9](https://github.com/docgeni/docgeni/compare/v0.6.0-next.8...v0.6.0-next.9) (2021-02-22)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -667,7 +667,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.8](https://github.com/docgeni/docgeni/compare/v0.6.0-next.7...v0.6.0-next.8) (2021-02-20)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -675,7 +675,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.7](https://github.com/docgeni/docgeni/compare/v0.6.0-next.6...v0.6.0-next.7) (2021-02-20)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -683,7 +683,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.6](https://github.com/docgeni/docgeni/compare/v0.6.0-next.5...v0.6.0-next.6) (2021-02-20)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -691,7 +691,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.5](https://github.com/docgeni/docgeni/compare/v0.6.0-next.4...v0.6.0-next.5) (2021-01-18)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -699,7 +699,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.4](https://github.com/docgeni/docgeni/compare/v0.6.0-next.3...v0.6.0-next.4) (2021-01-18)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -707,7 +707,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.3](https://github.com/docgeni/docgeni/compare/v0.6.0-next.2...v0.6.0-next.3) (2021-01-07)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -715,7 +715,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.2](https://github.com/docgeni/docgeni/compare/v0.6.0-next.1...v0.6.0-next.2) (2021-01-04)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -723,7 +723,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.6.0-next.1](https://github.com/docgeni/docgeni/compare/v0.6.0-next.0...v0.6.0-next.1) (2021-01-03)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -742,7 +742,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.5.0](https://github.com/docgeni/docgeni/compare/v0.4.0...v0.5.0) (2020-06-26)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -750,7 +750,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.4.0](https://github.com/docgeni/docgeni/compare/v0.3.0...v0.4.0) (2020-06-25)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -758,7 +758,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.3.0](https://github.com/docgeni/docgeni/compare/v0.2.1...v0.3.0) (2020-06-24)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -766,7 +766,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.2.0](https://github.com/docgeni/docgeni/compare/v0.1.0...v0.2.0) (2020-06-20)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -774,7 +774,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.1.0](https://github.com/docgeni/docgeni/compare/v0.1.0-alpha.13...v0.1.0) (2020-06-16)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -782,7 +782,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.1.0-alpha.13](https://github.com/docgeni/docgeni/compare/v0.1.0-alpha.12...v0.1.0-alpha.13) (2020-06-13)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -802,7 +802,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.1.0-alpha.11](https://github.com/docgeni/docgeni/compare/v0.1.0-alpha.10...v0.1.0-alpha.11) (2020-06-12)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -821,7 +821,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.1.0-alpha.9](https://github.com/docgeni/docgeni/compare/v0.1.0-alpha.8...v0.1.0-alpha.9) (2020-06-06)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -840,7 +840,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.1.0-alpha.7](https://github.com/docgeni/docgeni/compare/v0.1.0-alpha.6...v0.1.0-alpha.7) (2020-05-27)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 
@@ -848,7 +848,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.1.0-alpha.6](https://github.com/docgeni/docgeni/compare/v0.1.0-alpha.5...v0.1.0-alpha.6) (2020-05-27)
 
-**Note:** Version bump only for package @docgeni/toolkit
+**Note:** Version bump only for package @docgenifix/toolkit
 
 
 

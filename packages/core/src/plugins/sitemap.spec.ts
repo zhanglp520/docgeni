@@ -1,6 +1,6 @@
 import { DocgeniContext } from '../docgeni.interface';
 import { assertExpectedFiles, createTestDocgeniContext, DEFAULT_TEST_ROOT_PATH, FixtureResult, loadFixture } from '../testing';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 import * as systemPath from 'path';
 import SitemapPlugin from './sitemap';
 

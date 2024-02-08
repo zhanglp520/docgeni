@@ -17,7 +17,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [2.2.2](https://github.com/docgeni/docgeni/compare/v2.2.1...v2.2.2) (2023-11-21)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -36,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [2.1.1](https://github.com/docgeni/docgeni/compare/v2.1.0...v2.1.1) (2023-04-24)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -44,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.11](https://github.com/docgeni/docgeni/compare/v2.1.0-next.10...v2.1.0-next.11) (2023-04-21)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -52,7 +52,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.10](https://github.com/docgeni/docgeni/compare/v2.1.0-next.9...v2.1.0-next.10) (2023-04-19)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -82,7 +82,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.7](https://github.com/docgeni/docgeni/compare/v2.1.0-next.6...v2.1.0-next.7) (2023-04-12)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -132,7 +132,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.3](https://github.com/docgeni/docgeni/compare/v2.1.0-next.2...v2.1.0-next.3) (2023-03-10)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -140,7 +140,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.2](https://github.com/docgeni/docgeni/compare/v2.1.0-next.1...v2.1.0-next.2) (2023-03-09)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -148,7 +148,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.1](https://github.com/docgeni/docgeni/compare/v2.1.0-next.0...v2.1.0-next.1) (2023-03-09)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -156,7 +156,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.1.0-next.0](https://github.com/docgeni/docgeni/compare/v2.0.1...v2.1.0-next.0) (2023-03-09)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -175,7 +175,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.0.0](https://github.com/docgeni/docgeni/compare/v2.0.0-next.0...v2.0.0) (2022-11-14)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -183,7 +183,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.0.0-next.0](https://github.com/docgeni/docgeni/compare/v1.2.0-next.27...v2.0.0-next.0) (2022-11-14)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -191,7 +191,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.27](https://github.com/docgeni/docgeni/compare/v1.2.0-next.26...v1.2.0-next.27) (2022-11-02)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -211,7 +211,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.25](https://github.com/docgeni/docgeni/compare/v1.2.0-next.24...v1.2.0-next.25) (2022-09-22)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -230,7 +230,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.23](https://github.com/docgeni/docgeni/compare/v1.2.0-next.22...v1.2.0-next.23) (2022-08-17)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -238,7 +238,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.22](https://github.com/docgeni/docgeni/compare/v1.2.0-next.21...v1.2.0-next.22) (2022-08-10)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -246,7 +246,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.21](https://github.com/docgeni/docgeni/compare/v1.2.0-next.20...v1.2.0-next.21) (2022-08-09)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -282,7 +282,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.18](https://github.com/docgeni/docgeni/compare/v1.2.0-next.17...v1.2.0-next.18) (2022-07-28)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -290,7 +290,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.17](https://github.com/docgeni/docgeni/compare/v1.2.0-next.15...v1.2.0-next.17) (2022-07-27)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -298,7 +298,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.15](https://github.com/docgeni/docgeni/compare/v1.2.0-next.14...v1.2.0-next.15) (2022-07-27)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -317,7 +317,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.13](https://github.com/docgeni/docgeni/compare/v1.2.0-next.12...v1.2.0-next.13) (2022-04-25)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -325,7 +325,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.12](https://github.com/docgeni/docgeni/compare/v1.2.0-next.11...v1.2.0-next.12) (2022-04-25)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -344,7 +344,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.10](https://github.com/docgeni/docgeni/compare/v1.2.0-next.9...v1.2.0-next.10) (2022-03-10)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -412,7 +412,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.4](https://github.com/docgeni/docgeni/compare/v1.2.0-next.3...v1.2.0-next.4) (2021-12-20)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -433,7 +433,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.2](https://github.com/docgeni/docgeni/compare/v1.2.0-next.1...v1.2.0-next.2) (2021-11-17)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -441,7 +441,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.2.0-next.1](https://github.com/docgeni/docgeni/compare/v1.2.0-next.0...v1.2.0-next.1) (2021-11-16)
 
-**Note:** Version bump only for package @docgeni/ngdoc
+**Note:** Version bump only for package @docgenifix/ngdoc
 
 
 
@@ -453,5 +453,5 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Features
 
 * **core:** use define name in lib example component to generate entry file #OSP-167 ([#288](https://github.com/docgeni/docgeni/issues/288)) ([61de9b8](https://github.com/docgeni/docgeni/commit/61de9b8884bfd18393d488f93f6fb55361877e0a)), closes [#OSP-167](https://github.com/docgeni/docgeni/issues/OSP-167)
-* **ngdoc:** add @docgeni/ngdoc and init structure #OSP-226 ([#284](https://github.com/docgeni/docgeni/issues/284)) ([0fbc3c5](https://github.com/docgeni/docgeni/commit/0fbc3c5f4715c799c822faacd0328e065965361a)), closes [#OSP-226](https://github.com/docgeni/docgeni/issues/OSP-226)
+* **ngdoc:** add @docgenifix/ngdoc and init structure #OSP-226 ([#284](https://github.com/docgeni/docgeni/issues/284)) ([0fbc3c5](https://github.com/docgeni/docgeni/commit/0fbc3c5f4715c799c822faacd0328e065965361a)), closes [#OSP-226](https://github.com/docgeni/docgeni/issues/OSP-226)
 * **ngdoc:** add getExportsComponents for NgDocParser and refactor ngdoc #OSP-231 ([1af561b](https://github.com/docgeni/docgeni/commit/1af561b882ff4294bc96dc80b947056a2dd5e4ae)), closes [#OSP-231](https://github.com/docgeni/docgeni/issues/OSP-231)

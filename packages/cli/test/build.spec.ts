@@ -1,5 +1,5 @@
-import { shell, toolkit } from '@docgeni/toolkit';
-import { DEFAULT_CONFIG, Docgeni, DocgeniConfig } from '@docgeni/core';
+import { shell, toolkit } from '@docgenifix/toolkit';
+import { DEFAULT_CONFIG, Docgeni, DocgeniConfig } from '@docgenifix/core';
 import * as path from 'path';
 import { EOL } from 'os';
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ExampleLoader, ExampleLoadResult } from '@docgeni/template';
+import { ExampleLoader, ExampleLoadResult } from '@docgenifix/template';
 import { EXAMPLE_COMPONENTS } from './component-examples';
 
 @Injectable()

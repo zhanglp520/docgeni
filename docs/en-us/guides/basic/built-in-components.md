@@ -115,7 +115,7 @@ Custom components need to inherit the 'DocgeniBuiltInComponent' base class, inje
 
 ```ts
 import { Component, ElementRef, HostBinding, Input, OnInit } from '@angular/core';
-import { DocgeniBuiltInComponent } from '@docgeni/template';
+import { DocgeniBuiltInComponent } from '@docgenifix/template';
 
 @Component({
     selector: 'my-color',

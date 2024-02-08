@@ -1,5 +1,5 @@
 /**
- * @type {import('@docgeni/core').DocgeniConfig}
+ * @type {import('@docgenifix/core').DocgeniConfig}
  */
 module.exports = {
     mode: 'lite',

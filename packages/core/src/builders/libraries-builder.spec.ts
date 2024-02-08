@@ -9,7 +9,7 @@ import {
 } from '../testing';
 import { LibrariesBuilder } from './libraries-builder';
 import { DocgeniContext } from '../docgeni.interface';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 import { normalizeLibConfig } from './normalize';
 import * as systemPath from 'path';
 import { EmitFiles, LibraryBuilder } from '../types';

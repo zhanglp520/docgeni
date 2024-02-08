@@ -1,5 +1,5 @@
 import { cosmiconfigSync, OptionsSync } from 'cosmiconfig';
-import { DocgeniConfig } from '@docgeni/core';
+import { DocgeniConfig } from '@docgenifix/core';
 
 const moduleName = 'docgeni';
 const searchPlaces = [

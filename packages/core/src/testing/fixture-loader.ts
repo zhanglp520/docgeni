@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { toolkit, strings } from '@docgeni/toolkit';
+import { toolkit, strings } from '@docgenifix/toolkit';
 
 export const FIXTURES_PATH = path.resolve(__dirname, '../../test/fixtures');
 export const basicFixturePath = path.resolve(__dirname, '../../test/fixtures/basic');

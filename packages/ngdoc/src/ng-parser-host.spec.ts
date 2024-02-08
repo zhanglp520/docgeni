@@ -1,7 +1,7 @@
 import { NgParserHost, createNgParserHost } from './ng-parser-host';
 import path from 'path';
 import { ts } from './typescript';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 
 describe('#ng-parser-host', () => {
     const fixtureRootDir = toolkit.path.resolve(__dirname, '../test/fixtures/tsconfig');

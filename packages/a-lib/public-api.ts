@@ -1,6 +1,6 @@
 /*
  * Public API Surface of a-lib
  */
-export * from '@docgeni/alib/button';
-export * from '@docgeni/alib/foo';
-export * from '@docgeni/alib/layout';
+export * from '@docgenifix/alib/button';
+export * from '@docgenifix/alib/foo';
+export * from '@docgenifix/alib/layout';

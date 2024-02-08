@@ -88,7 +88,7 @@ The file structure is as follows:
 ```ts
 // module.ts
 import { CommonModule } from '@angular/common';
-import { AlibButtonModule } from '@docgeni/alib/button';
+import { AlibButtonModule } from '@docgenifix/alib/button';
 
 export default {
   imports: [ CommonModule, AlibButtonModule ],
@@ -122,7 +122,7 @@ export class AlibButtonExamplesModule {}
 When Docgeni runs, it will copy all the example files under `examples` to the site to start. In the component examples, relative paths cannot be used to import component modules. It is recommended to import directly through the package path. At the same time, you need to configure paths in tsconfig.json to point to the source code path of the library, so that you can directly copy the example code to use. For example, the component library is called `alib`, and the components are configured and imported in the following way:
 ```ts
 // button/examples/module.ts
-import { AlibButtonModule } from '@docgeni/alib/button';
+import { AlibButtonModule } from '@docgenifix/alib/button';
 
 @NgModule({
     declarations: [AlibButtonBasicExampleComponent],
@@ -137,10 +137,10 @@ export class AlibButtonExamplesModule {}
 // tsconfig.json
  {
    "paths": {
-      "@docgeni/alib": [
+      "@docgenifix/alib": [
         "packages/alib/public-api.ts"
       ],
-      "@docgeni/alib/*": [
+      "@docgenifix/alib/*": [
         "packages/alib/*"
       ]
  }
@@ -258,7 +258,7 @@ Docgeni supports component examples to be displayed directly on the StackBlitz p
         "@angular/platform-browser-dynamic": "~10.2.4",
         "rxjs": "~6.5.4",
         "zone.js": "~0.10.2",
-        "@docgeni/alib": "0.0.1"
+        "@docgenifix/alib": "0.0.1"
     }
 }
 ```

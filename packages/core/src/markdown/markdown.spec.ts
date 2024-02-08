@@ -1,6 +1,6 @@
 import { loadFixture, FixtureResult } from '../testing/fixture-loader';
 import { Markdown } from './markdown';
-import { strings } from '@docgeni/toolkit';
+import { strings } from '@docgenifix/toolkit';
 
 describe('markdown', () => {
     it('should get correct result for base and ng command', () => {

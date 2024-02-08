@@ -1,6 +1,6 @@
 import { DocgeniContext } from '../docgeni.interface';
 import { DocSourceFile } from './doc-file';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 import { FileEmitter } from './emitter';
 
 export class DocsBuilder extends FileEmitter {

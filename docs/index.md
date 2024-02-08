@@ -39,11 +39,11 @@ features:
 切换到已有的项目中，执行如下命令：
 
 ```bash
-$ npx @docgeni/cli init
+$ npx @docgenifix/cli init
 # 或者 
 $ docgeni init 
 # 或者
-$ ng add @docgeni/cli
+$ ng add @docgenifix/cli
 ```
 初始化后，使用`npm run start:docs`启动文档站点，浏览器打开`http://127.0.0.1:4600` 即可访问。
 

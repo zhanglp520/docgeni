@@ -1724,9 +1724,9 @@
   resolved "https://registry.npmjs.org/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz#1d572bfbbe14b7704e0ba0f39b74815b84870d70"
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
-"@docgeni/toolkit@^2.1.0":
+"@docgenifix/toolkit@^2.1.0":
   version "2.3.0"
-  resolved "https://registry.npmjs.org/@docgeni/toolkit/-/toolkit-2.3.0.tgz#dded8977e28b57eccc1573426a776aaf8faa6620"
+  resolved "https://registry.npmjs.org/@docgenifix/toolkit/-/toolkit-2.3.0.tgz#dded8977e28b57eccc1573426a776aaf8faa6620"
   integrity sha512-EwbDFXXAYtXbJ2RvxeA17XprDoGdhC4MmmETVl3EY5jdoazTEp3Rbklw/om0CiBnoV+94qcsTALBva3GOIP73A==
   dependencies:
     "@angular-devkit/core" "^16.2.0"
@@ -4070,7 +4070,7 @@
   resolved "https://registry.npmjs.org/@worktile/pkg-manager/-/pkg-manager-0.1.0.tgz#745b6929b646426702b48a437024122ed1e929d3"
   integrity sha512-JL2VFKDRtInZrDHQozt9CqLdevruplbe/S94oQqb0N1j3JbfY84jDHw42uBNKs0hlxofMglLc3brimvNs2gl1Q==
   dependencies:
-    "@docgeni/toolkit" "^2.1.0"
+    "@docgenifix/toolkit" "^2.1.0"
     "@types/shelljs" "^0.8.8"
     cosmiconfig "^7.0.0"
     inquirer "^8.1.1"

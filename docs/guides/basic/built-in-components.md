@@ -109,7 +109,7 @@ Embed 组件可以在一个 Markdown 文档中嵌入另一个 Markdown 文档的
 
 ```ts
 import { Component, ElementRef, HostBinding, Input, OnInit } from '@angular/core';
-import { DocgeniBuiltInComponent } from '@docgeni/template';
+import { DocgeniBuiltInComponent } from '@docgenifix/template';
 
 @Component({
     selector: 'my-color',

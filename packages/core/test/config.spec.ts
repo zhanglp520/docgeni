@@ -1,5 +1,5 @@
 import { Docgeni, DEFAULT_CONFIG, DocgeniConfig } from '../src';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 import { createTestDocgeniHost, expectThrowAsync } from '../src/testing';
 import { DocgeniHost } from '../src/docgeni-host';
 import { virtualFs, normalize, getSystemPath } from '@angular-devkit/core';

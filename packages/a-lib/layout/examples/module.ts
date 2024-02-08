@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AlibLayoutBasicExampleComponent } from './basic/basic.component';
 import { AlibLayoutAdvanceExampleComponent } from './advance/advance.component';
-import { AlibLayoutModule } from '@docgeni/alib/layout';
+import { AlibLayoutModule } from '@docgenifix/alib/layout';
 
 @NgModule({
     declarations: [AlibLayoutBasicExampleComponent, AlibLayoutAdvanceExampleComponent],

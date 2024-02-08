@@ -3,7 +3,7 @@ import { SyncHook, AsyncSeriesHook } from 'tapable';
 import { Plugin } from './plugins';
 import { DocgeniConfig, DocItem } from './interfaces';
 import path from 'path';
-import { toolkit, fs, debug } from '@docgeni/toolkit';
+import { toolkit, fs, debug } from '@docgenifix/toolkit';
 
 import { DocgeniContext, DocgeniHooks, DocgeniOptions } from './docgeni.interface';
 import { DEFAULT_CONFIG } from './defaults';

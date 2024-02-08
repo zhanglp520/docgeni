@@ -1300,9 +1300,9 @@
   resolved "https://registry.npmmirror.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz#1d572bfbbe14b7704e0ba0f39b74815b84870d70"
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
-"@docgeni/angular@15.0.0":
+"@docgenifix/angular@15.0.0":
   version "15.0.0"
-  resolved "https://registry.npmmirror.com/@docgeni/angular/-/angular-15.0.0.tgz#c51d6784bdcf5d945eea9e455521442c77e2e69f"
+  resolved "https://registry.npmmirror.com/@docgenifix/angular/-/angular-15.0.0.tgz#c51d6784bdcf5d945eea9e455521442c77e2e69f"
   integrity sha512-1KhPa28koyXiKlQkUofZ2YX8Wc5GI75+mZy27/AsRoLAcLFvk7+jovAByX+/gKCUZdYoAATyNoabfUsniKDWLQ==
   dependencies:
     "@angular-devkit/build-angular" "^15.0.0"
@@ -1320,16 +1320,16 @@
     "@angular/router" "^15.0.0"
     "@schematics/angular" "^15.0.0"
 
-"@docgeni/cli@2.1.0-next.9":
+"@docgenifix/cli@2.1.0-next.9":
   version "2.1.0-next.9"
-  resolved "https://registry.npmmirror.com/@docgeni/cli/-/cli-2.1.0-next.9.tgz#f6598d434e0297259d0881654ca0143e3cfa7910"
+  resolved "https://registry.npmmirror.com/@docgenifix/cli/-/cli-2.1.0-next.9.tgz#f6598d434e0297259d0881654ca0143e3cfa7910"
   integrity sha512-MbObLKy3/swH4/49Hl3HBAPYUmM6J8K2R1aQMbBWhsCAbHdwZX8pfMUIPYOFc79+pLfpKmllWbKZe1OGlXEmfA==
   dependencies:
     "@angular-devkit/schematics" "^15.2.0"
     "@angular-devkit/schematics-cli" "^15.2.0"
-    "@docgeni/core" "^2.1.0-next.9"
-    "@docgeni/template" "^2.1.0-next.9"
-    "@docgeni/toolkit" "^2.1.0-next.9"
+    "@docgenifix/core" "^2.1.0-next.9"
+    "@docgenifix/template" "^2.1.0-next.9"
+    "@docgenifix/toolkit" "^2.1.0-next.9"
     "@schematics/angular" "15.2.0"
     chokidar "^3.3.1"
     cosmiconfig "^6.0.0"
@@ -1342,15 +1342,15 @@
     yargs "15.3.1"
     zone.js "^0.10.2"
 
-"@docgeni/core@^2.1.0-next.9":
+"@docgenifix/core@^2.1.0-next.9":
   version "2.3.0"
-  resolved "https://registry.npmmirror.com/@docgeni/core/-/core-2.3.0.tgz#17859a829830cc83df9750edf456f9b704778c73"
+  resolved "https://registry.npmmirror.com/@docgenifix/core/-/core-2.3.0.tgz#17859a829830cc83df9750edf456f9b704778c73"
   integrity sha512-PU3mmCGN1sXboPTlbydlXGyTgT/VEVzckKCaZoh/6hExKtgzwhQjvuZhd9FCpeMHJdL7z8475LCchwsxMHhi+w==
   dependencies:
     "@angular-devkit/core" "^16.2.0"
     "@angular-devkit/schematics" "^16.2.0"
-    "@docgeni/ngdoc" "^2.3.0"
-    "@docgeni/toolkit" "^2.3.0"
+    "@docgenifix/ngdoc" "^2.3.0"
+    "@docgenifix/toolkit" "^2.3.0"
     "@schematics/angular" "^16.2.0"
     "@types/text-table" "^0.2.2"
     ansi-colors "^4.1.1"
@@ -1372,34 +1372,34 @@
     vinyl "^2.2.0"
     vinyl-fs "^3.0.3"
 
-"@docgeni/ngdoc@^2.3.0":
+"@docgenifix/ngdoc@^2.3.0":
   version "2.3.0"
-  resolved "https://registry.npmmirror.com/@docgeni/ngdoc/-/ngdoc-2.3.0.tgz#341e96318373ebec84d1b11aeda744b6c4a3f5ab"
+  resolved "https://registry.npmmirror.com/@docgenifix/ngdoc/-/ngdoc-2.3.0.tgz#341e96318373ebec84d1b11aeda744b6c4a3f5ab"
   integrity sha512-qMCHGsSJqgXYGGNWAD97uQPrbZ1MvwR2q1Z039kqW+sV3rfiKJ+NX+/YbraMx2pmvdRldCCmQ5sC/zKwuNmzcw==
   dependencies:
-    "@docgeni/toolkit" "^2.3.0"
+    "@docgenifix/toolkit" "^2.3.0"
     ts-morph "12.1.0"
     typescript "~4.9.5"
 
-"@docgeni/template@2.1.0-next.9":
+"@docgenifix/template@2.1.0-next.9":
   version "2.1.0-next.9"
-  resolved "https://registry.npmmirror.com/@docgeni/template/-/template-2.1.0-next.9.tgz#0f7555e7eeb2db0a8d83647b313b137a4247e097"
+  resolved "https://registry.npmmirror.com/@docgenifix/template/-/template-2.1.0-next.9.tgz#0f7555e7eeb2db0a8d83647b313b137a4247e097"
   integrity sha512-Aa2n+YHTkDPcuabvVS4zX3UjeJ1ySSfE0YYevCzw1xbhsG7bArZV9EHcELfdLkH+exKIk4aWbfi1BnopBrqX4g==
   dependencies:
     docsearch.js "2.6.3"
     tslib "^2.3.0"
 
-"@docgeni/template@^2.1.0-next.9":
+"@docgenifix/template@^2.1.0-next.9":
   version "2.3.0"
-  resolved "https://registry.npmmirror.com/@docgeni/template/-/template-2.3.0.tgz#44ecc711d88c725588d049a38c36937ff1d7686b"
+  resolved "https://registry.npmmirror.com/@docgenifix/template/-/template-2.3.0.tgz#44ecc711d88c725588d049a38c36937ff1d7686b"
   integrity sha512-jDK2K4dCrXwYQpb393Pke1HHPGX83mLiv11+iZBGm0X2UHGZEY1z7Fh0LT7+jaz2cjJvDioklG/DC5Q1zG9S9w==
   dependencies:
     docsearch.js "2.6.3"
     tslib "^2.3.0"
 
-"@docgeni/toolkit@^2.1.0-next.9", "@docgeni/toolkit@^2.3.0":
+"@docgenifix/toolkit@^2.1.0-next.9", "@docgenifix/toolkit@^2.3.0":
   version "2.3.0"
-  resolved "https://registry.npmmirror.com/@docgeni/toolkit/-/toolkit-2.3.0.tgz#dded8977e28b57eccc1573426a776aaf8faa6620"
+  resolved "https://registry.npmmirror.com/@docgenifix/toolkit/-/toolkit-2.3.0.tgz#dded8977e28b57eccc1573426a776aaf8faa6620"
   integrity sha512-EwbDFXXAYtXbJ2RvxeA17XprDoGdhC4MmmETVl3EY5jdoazTEp3Rbklw/om0CiBnoV+94qcsTALBva3GOIP73A==
   dependencies:
     "@angular-devkit/core" "^16.2.0"

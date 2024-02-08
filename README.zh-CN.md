@@ -11,8 +11,8 @@
 [![docgeni](https://img.shields.io/badge/docs%20by-docgeni-348fe4)](https://github.com/docgeni/docgeni)
 [![CircleCI](https://circleci.com/gh/docgeni/docgeni.svg?style=shield)](https://circleci.com/gh/docgeni/docgeni)
 [![Coverage Status][coveralls-image]][coveralls-url]
-[![npm (scoped)](https://img.shields.io/npm/v/@docgeni/cli?style=flat)](https://www.npmjs.com/package/@docgeni/cli)
-[![npm](https://img.shields.io/npm/dm/@docgeni/cli)](https://www.npmjs.com/package/@docgeni/cli)
+[![npm (scoped)](https://img.shields.io/npm/v/@docgenifix/cli?style=flat)](https://www.npmjs.com/package/@docgenifix/cli)
+[![npm](https://img.shields.io/npm/dm/@docgenifix/cli)](https://www.npmjs.com/package/@docgenifix/cli)
 [![npm](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square
 )](https://github.com/prettier/prettier)
 
@@ -79,7 +79,7 @@
 
 ## 🎉 版本
 
-@docgeni/*| @angular/*| Description
+@docgenifix/*| @angular/*| Description
 ---| --- | --- 
 <0.5.x|>=9.0 <=13.0 | -
 \>0.5.x|>=10.0 <=13.0 | -
@@ -108,10 +108,10 @@ yarn test               // 执行单元测试
 
 Package| Version| Links
 ---| --- | --- 
-[`@docgeni/cli`](https://npmjs.com/package/@docgeni/cli) | [![latest](https://img.shields.io/npm/v/%40docgeni%2Fcli/latest.svg)](https://npmjs.com/package/@docgeni/cli) | [![README](https://img.shields.io/badge/README--green.svg)](/packages/cli/README.md) 
-[`@docgeni/core`](https://npmjs.com/package/@docgeni/core) | [![latest](https://img.shields.io/npm/v/%40docgeni%2Fcore/latest.svg)](https://npmjs.com/package/@docgeni/core) | [![README](https://img.shields.io/badge/README--green.svg)](/packages/core/README.md) 
-[`@docgeni/toolkit`](https://npmjs.com/package/@docgeni/toolkit) | [![latest](https://img.shields.io/npm/v/%40docgeni%2Ftoolkit/latest.svg)](https://npmjs.com/package/@docgeni/toolkit)  | [![README](https://img.shields.io/badge/README--green.svg)](/packages/toolkit/README.md) 
-[`@docgeni/template`](https://npmjs.com/package/@docgeni/template) | [![latest](https://img.shields.io/npm/v/%40docgeni%2Ftemplate/latest.svg)](https://npmjs.com/package/@docgeni/template)  | [![README](https://img.shields.io/badge/README--green.svg)](/packages/template/README.md) 
+[`@docgenifix/cli`](https://npmjs.com/package/@docgenifix/cli) | [![latest](https://img.shields.io/npm/v/%40docgeni%2Fcli/latest.svg)](https://npmjs.com/package/@docgenifix/cli) | [![README](https://img.shields.io/badge/README--green.svg)](/packages/cli/README.md) 
+[`@docgenifix/core`](https://npmjs.com/package/@docgenifix/core) | [![latest](https://img.shields.io/npm/v/%40docgeni%2Fcore/latest.svg)](https://npmjs.com/package/@docgenifix/core) | [![README](https://img.shields.io/badge/README--green.svg)](/packages/core/README.md) 
+[`@docgenifix/toolkit`](https://npmjs.com/package/@docgenifix/toolkit) | [![latest](https://img.shields.io/npm/v/%40docgeni%2Ftoolkit/latest.svg)](https://npmjs.com/package/@docgenifix/toolkit)  | [![README](https://img.shields.io/badge/README--green.svg)](/packages/toolkit/README.md) 
+[`@docgenifix/template`](https://npmjs.com/package/@docgenifix/template) | [![latest](https://img.shields.io/npm/v/%40docgeni%2Ftemplate/latest.svg)](https://npmjs.com/package/@docgenifix/template)  | [![README](https://img.shields.io/badge/README--green.svg)](/packages/template/README.md) 
 
 ## 许可证
 

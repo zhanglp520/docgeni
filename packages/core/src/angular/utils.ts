@@ -1,4 +1,4 @@
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 import * as path from 'path';
 
 export enum NgOptionType {

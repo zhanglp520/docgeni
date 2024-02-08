@@ -1,4 +1,4 @@
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 import * as systemPath from 'path';
 import { Subscription } from 'rxjs';
 import { DocgeniContext } from '../../docgeni.interface';

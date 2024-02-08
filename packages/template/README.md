@@ -1,4 +1,4 @@
-# @docgeni/template
+# @docgenifix/template
 
 > Template of Docgeni by angular.
 

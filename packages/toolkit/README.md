@@ -1,11 +1,11 @@
-# @docgeni/toolkit
+# @docgenifix/toolkit
 
 > Toolkit for Docgeni or cli tools
 
 ## Usage
 
 ```
-const { toolkit } = require('@docgeni/toolkit');
+const { toolkit } = require('@docgenifix/toolkit');
 
 toolkit.initialize({ baseDir: __dirname});
 toolkit.print.info(`Hey, I'm Docgeni!`);
@@ -28,11 +28,11 @@ utils | some utils functions like isString, isFunction, keyBy
 You can access almost all of Docgeni 's toolkit tools without toolkit.
 
 ```
-const { Print, fs, strings } = require('@docgeni/toolkit');
+const { Print, fs, strings } = require('@docgenifix/toolkit');
 // or
-const { Print } = require('@docgeni/toolkit/print');
-const * as fs = require('@docgeni/toolkit/filesystem');
-const * as strings = require('@docgeni/toolkit/strings');
+const { Print } = require('@docgenifix/toolkit/print');
+const * as fs = require('@docgenifix/toolkit/filesystem');
+const * as strings = require('@docgenifix/toolkit/strings');
 
 const print = new Print();
 print.info(`Hey, I'm Docgeni!`);

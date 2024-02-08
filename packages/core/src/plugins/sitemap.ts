@@ -1,6 +1,6 @@
 import { Plugin } from './plugin';
 import { DocgeniContext } from '../docgeni.interface';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 import { DocItem, NavigationItem } from '../interfaces';
 
 const PLUGIN_NAME = 'SitemapPlugin';

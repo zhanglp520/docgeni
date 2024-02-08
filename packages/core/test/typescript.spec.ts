@@ -1,5 +1,5 @@
 // import * as ts from 'typescript';
-// import { toolkit } from '@docgeni/toolkit';
+// import { toolkit } from '@docgenifix/toolkit';
 // import * as path from 'path';
 // import { of as observableOf } from 'rxjs';
 // import {

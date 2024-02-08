@@ -1,7 +1,7 @@
 import { Plugin } from './plugin';
 import { DocgeniContext } from '../docgeni.interface';
 import { DocgeniSiteConfig } from '../interfaces';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 
 const PLUGIN_NAME = 'SiteConfigPlugin';
 

@@ -2,7 +2,7 @@ import { apply, mergeWith, move, renameTemplateFiles, SchematicContext, template
 import { NgAddSchema } from '../types/ng-add-schema';
 import { getWorkspace } from '@schematics/angular/utility/workspace';
 import { ProjectType, WorkspaceProject } from '@schematics/angular/utility/workspace-models';
-import { DocgeniConfig, DocgeniLibrary, DocgeniNavItem } from '@docgeni/core';
+import { DocgeniConfig, DocgeniLibrary, DocgeniNavItem } from '@docgenifix/core';
 import stringifyObject from 'stringify-object';
 
 export class InitDocgenirc {

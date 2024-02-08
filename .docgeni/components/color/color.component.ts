@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { DocgeniBuiltInComponent } from '@docgeni/template';
+import { DocgeniBuiltInComponent } from '@docgenifix/template';
 
 @Component({
     selector: 'my-color',

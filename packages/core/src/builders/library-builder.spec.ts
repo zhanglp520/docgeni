@@ -1,4 +1,4 @@
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 import { DocgeniContext } from '../docgeni.interface';
 import { createTestDocgeniContext, DEFAULT_TEST_ROOT_PATH, FixtureResult, loadFixture, NgParserSpectator } from '../testing';
 import { LibraryBuilderImpl } from './library-builder';
@@ -7,7 +7,7 @@ import * as systemPath from 'path';
 import { NavigationItem } from '../interfaces';
 import { of } from 'rxjs';
 import { LibraryBuilder, LibraryComponent } from '../types';
-import { DefaultNgParserHost, NgParserHost, ts, NgDocParser, DefaultNgParserHostOptions, NgDocParserOptions } from '@docgeni/ngdoc';
+import { DefaultNgParserHost, NgParserHost, ts, NgDocParser, DefaultNgParserHostOptions, NgDocParserOptions } from '@docgenifix/ngdoc';
 
 class LibraryBuilderSpectator {
     components: LibraryComponent[];

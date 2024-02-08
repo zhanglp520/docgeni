@@ -1,4 +1,4 @@
-import { toolkit, fs } from '@docgeni/toolkit';
+import { toolkit, fs } from '@docgenifix/toolkit';
 import path from 'path';
 import { DocMeta } from '../types';
 import { DocType } from '../enums';

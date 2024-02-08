@@ -1,5 +1,5 @@
-import { createNgSourceFile, NgModuleInfo, NgSourceFile } from '@docgeni/ngdoc';
-import { debug, toolkit } from '@docgeni/toolkit';
+import { createNgSourceFile, NgModuleInfo, NgSourceFile } from '@docgenifix/ngdoc';
+import { debug, toolkit } from '@docgenifix/toolkit';
 import { cosmiconfig } from 'cosmiconfig';
 import fm from 'front-matter';
 import {

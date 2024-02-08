@@ -1,4 +1,4 @@
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 import { SyncHook } from 'tapable';
 import { DocgeniContext } from './docgeni.interface';
 import { CompilationResult, CompilationIncrement, DocgeniCompilation, EmitFile, EmitFiles } from './types';

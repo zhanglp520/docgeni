@@ -1,5 +1,5 @@
-import { createNgSourceFile, NgComponentMetadata } from '@docgeni/ngdoc';
-import { fs, toolkit } from '@docgeni/toolkit';
+import { createNgSourceFile, NgComponentMetadata } from '@docgenifix/ngdoc';
+import { fs, toolkit } from '@docgenifix/toolkit';
 
 export class ComponentBuilder {
     public entryComponentFullPath: string;

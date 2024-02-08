@@ -20,7 +20,7 @@ export const initCommand: CommandModule = {
         if (argv.docsDir) {
             params.push(`--docsDir`, `${argv.docsDir}`);
         }
-        main({ args: [`@docgeni/cli:ng-add`, ...params] })
+        main({ args: [`@docgenifix/cli:ng-add`, ...params] })
             .then(exitCode => (process.exitCode = exitCode))
             .catch(e => {
                 throw e;

@@ -1,7 +1,7 @@
 import { DocsBuilder } from './builders/docs-builder';
 import { DocgeniConfig, DocItem } from './interfaces';
 import { AsyncSeriesHook, SyncHook } from 'tapable';
-import { Print, fs } from '@docgeni/toolkit';
+import { Print, fs } from '@docgenifix/toolkit';
 import { DocgeniPaths } from './docgeni-paths';
 import { DocSourceFile, LibrariesBuilder, NavsBuilder } from './builders';
 import { CompilationIncrement, DocgeniCompilation, LibraryBuilder, LibraryComponent } from './types';

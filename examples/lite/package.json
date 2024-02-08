@@ -10,8 +10,8 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "@docgeni/angular": "16.0.0",
-    "@docgeni/cli": "1.1.2",
-    "@docgeni/template": "1.1.2"
+    "@docgenifix/angular": "16.0.0",
+    "@docgenifix/cli": "1.1.2",
+    "@docgenifix/template": "1.1.2"
   }
 }

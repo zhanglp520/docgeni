@@ -1,7 +1,7 @@
 import { ValidationError } from './../errors/validation-error';
 import { DocgeniContext } from '../docgeni.interface';
 import { DocgeniLibrary, LiveExample } from '../interfaces';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 import { LibraryBuilderImpl } from './library-builder';
 import { normalizeLibConfig } from './normalize';
 import { FileEmitter } from './emitter';

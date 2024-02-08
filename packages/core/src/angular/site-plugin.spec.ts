@@ -10,7 +10,7 @@ import {
     updateContextConfig
 } from '../testing';
 import AngularSitePlugin from './site-plugin';
-import { toolkit, fs } from '@docgeni/toolkit';
+import { toolkit, fs } from '@docgenifix/toolkit';
 import * as systemPath from 'path';
 import { of, Subject } from 'rxjs';
 import { EventEmitter } from 'stream';

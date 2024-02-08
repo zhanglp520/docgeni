@@ -1,4 +1,4 @@
-import { toolkit, fs } from '@docgeni/toolkit';
+import { toolkit, fs } from '@docgenifix/toolkit';
 import { of, Subject } from 'rxjs';
 import { DocgeniContext } from '../docgeni.interface';
 import { createTestDocgeniContext, DEFAULT_TEST_ROOT_PATH, updateContext } from '../testing';

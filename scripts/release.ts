@@ -1,3 +1,3 @@
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 
 toolkit.print.info(`success`);

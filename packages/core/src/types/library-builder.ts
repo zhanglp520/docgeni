@@ -1,7 +1,7 @@
 import { LibraryComponent } from './library-component';
 import { CategoryItem, DocgeniLibrary } from '../interfaces';
 import { EmitFiles } from './file';
-import { NgDocParser } from '@docgeni/ngdoc';
+import { NgDocParser } from '@docgenifix/ngdoc';
 
 /**
  * 包含内部属性的定义

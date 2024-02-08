@@ -1,4 +1,4 @@
-import { createNgSourceFile } from '@docgeni/ngdoc';
+import { createNgSourceFile } from '@docgenifix/ngdoc';
 import { NgSourceUpdater } from './ng-source-updater';
 
 describe('ng-source-updater', () => {

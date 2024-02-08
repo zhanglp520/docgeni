@@ -1,5 +1,5 @@
 import { virtualFs } from '@angular-devkit/core';
-import { fs, strings } from '@docgeni/toolkit';
+import { fs, strings } from '@docgenifix/toolkit';
 
 export function createTestDocgeniHost(initialFiles: Record<string, string> = {}) {
     return new fs.DocgeniFsHostImpl(new virtualFs.test.TestHost(initialFiles));

@@ -1,9 +1,9 @@
 import { DocgeniContext } from '../docgeni.interface';
 import * as path from 'path';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 import { AngularCommandOptions, SiteProject } from './types';
 import Handlebars from 'handlebars';
-import { createNgSourceFile } from '@docgeni/ngdoc';
+import { createNgSourceFile } from '@docgenifix/ngdoc';
 import { ValidationError } from '../errors';
 import semver from 'semver';
 import { spawn } from 'child_process';
@@ -252,7 +252,7 @@ export class SiteBuilder {
                     { name: 'RouterModule', moduleSpecifier: '@angular/router' },
                     { name: 'BrowserModule', moduleSpecifier: '@angular/platform-browser' },
                     { name: 'BrowserAnimationsModule', moduleSpecifier: '@angular/platform-browser/animations' },
-                    { name: 'DocgeniTemplateModule', moduleSpecifier: '@docgeni/template' },
+                    { name: 'DocgeniTemplateModule', moduleSpecifier: '@docgenifix/template' },
                     { name: 'DOCGENI_SITE_PROVIDERS', moduleSpecifier: './content/index' },
                     { name: 'IMPORT_MODULES', moduleSpecifier: './content/index' },
                     { name: 'RootComponent', moduleSpecifier: './content/index' }

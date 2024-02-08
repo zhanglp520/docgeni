@@ -1,6 +1,6 @@
 import { HostTree } from '@angular-devkit/schematics';
-import { NgSourceFile, ts, getNodeText } from '@docgeni/ngdoc';
-import { toolkit } from '@docgeni/toolkit';
+import { NgSourceFile, ts, getNodeText } from '@docgenifix/ngdoc';
+import { toolkit } from '@docgenifix/toolkit';
 import { applyToUpdateRecorder, Change, InsertChange, RemoveChange } from '@schematics/angular/utility/change';
 import { NgModuleMetadata } from './types/module';
 

@@ -3,7 +3,7 @@ import { DocsBuilder, DocSourceFile } from '../builders';
 import { EmitFile, EmitFiles } from './file';
 import { LibraryBuilder } from './library-builder';
 import { LibraryComponent } from './library-component';
-import { fs } from '@docgeni/toolkit';
+import { fs } from '@docgenifix/toolkit';
 
 export interface CompilationIncrement {
     docs?: DocSourceFile[];

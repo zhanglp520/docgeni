@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 
 export class DocgeniPaths {
     /* cwd absolute path, default is project root*/

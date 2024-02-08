@@ -15,15 +15,15 @@ v10.0.0
 切换到已有的项目中，执行如下命令：
 
 ```bash
-$ npx @docgeni/cli init
+$ npx @docgenifix/cli init
 # 或者 
 $ docgeni init 
 # 或者
-$ ng add @docgeni/cli
+$ ng add @docgenifix/cli
 ```
 
-<alert>使用`docgeni init`初始化需要全局安装 @docgeni/cli `npm install -g @docgeni/cli`<br>
-使用`ng add @docgeni/cli`初始化需要全局安装 Angular CLI `npm install -g @angular/cli`</alert>
+<alert>使用`docgeni init`初始化需要全局安装 @docgenifix/cli `npm install -g @docgenifix/cli`<br>
+使用`ng add @docgenifix/cli`初始化需要全局安装 Angular CLI `npm install -g @angular/cli`</alert>
 
 执行上述任意一个命令后将自动完成 docgeni 的初始化配置，包括生成配置文件、NPM 启动脚本、默认文档等工作。
 - 第一步选择文档站点模式: `full`或者`lite`(默认`lite`)
@@ -49,9 +49,9 @@ Lite 模式的预览效果如下：
 新建一个文件夹，或者切换到已有的项目中，执行下面命令安装 Docgeni CLI 和模版：
 
 ```bash
-$ npm i @docgeni/cli @docgeni/template --save-dev
+$ npm i @docgenifix/cli @docgenifix/template --save-dev
 # 或者
-$ yarn add @docgeni/cli @docgeni/template -D
+$ yarn add @docgenifix/cli @docgenifix/template -D
 ```
 
 安装后在`package.json`文件中添加如下脚本：
@@ -71,7 +71,7 @@ $ yarn add @docgeni/cli @docgeni/template -D
 
 ```ts
 /**
- * @type {import('@docgeni/core').DocgeniConfig}
+ * @type {import('@docgenifix/core').DocgeniConfig}
  */
 module.exports = {
     mode: 'lite',

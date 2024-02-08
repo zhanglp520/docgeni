@@ -14,14 +14,14 @@ v10.0.0
 Switch to the existing project and run the following command:
 
 ```bash
-$ npx @docgeni/cli init
+$ npx @docgenifix/cli init
 # or 
 $ docgeni init 
 # or 
-$ ng add @docgeni/cli
+$ ng add @docgenifix/cli
 ```
-<alert>Initialization with `docgeni init` requires global installation of @docgeni/cli `npm install -g @docgeni/cli`<br>
-  Initialization with `ng add @docgeni/cli` requires global installation of Angular CLI `npm install -g @angular/cli`</alert>
+<alert>Initialization with `docgeni init` requires global installation of @docgenifix/cli `npm install -g @docgenifix/cli`<br>
+  Initialization with `ng add @docgenifix/cli` requires global installation of Angular CLI `npm install -g @angular/cli`</alert>
 
 After executing any of the above command, the initial configuration of docgeni will be automatically completed, including generating configuration files, NPM startup scripts, and default documents ,etc.
 - The first step is to select the document site mode: `full` or `lite` (default `lite`)
@@ -45,9 +45,9 @@ The preview effect is as follows:
 ## Installation
 Create a new directory, or switch to an existing project, execute the following command to install Docgeni CLI and template:
 ```bash
-$ npm i @docgeni/cli @docgeni/template --save-dev
+$ npm i @docgenifix/cli @docgenifix/template --save-dev
 # or 
-$ yarn add @docgeni/cli @docgeni/template -D
+$ yarn add @docgenifix/cli @docgenifix/template -D
 ```
 
 After installation, add the following script to the `package.json`:
@@ -67,7 +67,7 @@ Create a new `.docgenirc.js` configuration file in the root directory and copy t
 
 ```ts
 /**
- * @type {import('@docgeni/core').DocgeniConfig}
+ * @type {import('@docgenifix/core').DocgeniConfig}
  */
 module.exports = {
     mode: 'lite',

@@ -13,24 +13,24 @@ function addDependenciesToPackageJson() {
         const dependencies = [
             {
                 type: NodeDependencyType.Dev,
-                name: '@docgeni/template',
+                name: '@docgenifix/template',
                 version: VERSION
             },
             {
                 type: NodeDependencyType.Dev,
-                name: '@docgeni/cli',
+                name: '@docgenifix/cli',
                 version: VERSION
             }
         ];
         const docgeniAngular = {
             type: NodeDependencyType.Dev,
-            name: '@docgeni/angular',
+            name: '@docgenifix/angular',
             version: ANGULAR_VERSION
         };
         if (host.exists('/package.json')) {
             const packageJsonContent = host.read('/package.json').toString();
             const packageJson = JSON.parse(packageJsonContent);
-            if (!packageJson?.devDependencies['@docgeni/angular'] && !packageJson?.dependencies['@angular/core']) {
+            if (!packageJson?.devDependencies['@docgenifix/angular'] && !packageJson?.dependencies['@angular/core']) {
                 dependencies.push(docgeniAngular);
             }
         } else {

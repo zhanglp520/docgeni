@@ -8,7 +8,7 @@ import {
     updateContext
 } from '../testing';
 import { NavsBuilder } from './navs-builder';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 
 describe('#navs-builder', () => {
     for (const dir of ['', 'en-us/']) {

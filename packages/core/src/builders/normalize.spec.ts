@@ -1,5 +1,5 @@
 import { normalizeLibConfig } from './normalize';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 import { DEFAULT_LABEL_CONFIG } from '../constants';
 import { DocgeniLibrary } from '../interfaces';
 

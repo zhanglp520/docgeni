@@ -1,4 +1,4 @@
-import { toolkit, fs } from '@docgeni/toolkit';
+import { toolkit, fs } from '@docgenifix/toolkit';
 import { getSystemPath, normalize } from '@angular-devkit/core';
 import { DocgeniPaths } from '../docgeni-paths';
 import { DocgeniContext } from '../docgeni.interface';

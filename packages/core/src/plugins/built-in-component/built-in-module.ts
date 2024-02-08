@@ -1,4 +1,4 @@
-import { NgSourceFile } from '@docgeni/ngdoc';
+import { NgSourceFile } from '@docgenifix/ngdoc';
 import { combineNgModuleMetadata, getNgModuleMetadataFromDefaultExport } from '../../ast-utils';
 import { NgSourceUpdater } from '../../ng-source-updater';
 import { NgModuleMetadata } from '../../types/module';
@@ -33,7 +33,7 @@ export async function generateBuiltInComponentsModule(sourceFile: NgSourceFile, 
         ...componentsImportStructures,
         { name: 'CommonModule', moduleSpecifier: '@angular/common' },
         { name: 'NgModule', moduleSpecifier: '@angular/core' },
-        { name: 'addBuiltInComponents', moduleSpecifier: '@docgeni/template' }
+        { name: 'addBuiltInComponents', moduleSpecifier: '@docgenifix/template' }
     ];
     updater.insertImports(componentsImportStructures);
     updater.insertNgModuleByText(ngModuleText);

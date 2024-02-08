@@ -1,11 +1,11 @@
-# @docgeni/ngdoc
+# @docgenifix/ngdoc
 
 > Angular Component/Directive/Pipe/Service doc generator
 
 ## Usage
 
 ```ts
-import { NgDocParser } from '@docgeni/ngdoc';
+import { NgDocParser } from '@docgenifix/ngdoc';
 const docs = NgDocParser.parse(__dirname + '/button.component.ts');
 console.log(JSON.stringify(docs, null, 2));
 ```
@@ -276,7 +276,7 @@ Output:
 ## NgParserHost
 
 ```ts
-import { NgDocParser, createNgParserHost } from '@docgeni/ngdoc';
+import { NgDocParser, createNgParserHost } from '@docgenifix/ngdoc';
 
 const ngParserHost = createNgParserHost({
     tsConfigPath: '/lib/src/tsconfig.json',

@@ -1,5 +1,5 @@
-import { NgDocParser } from '@docgeni/ngdoc';
-import { toolkit, fs } from '@docgeni/toolkit';
+import { NgDocParser } from '@docgenifix/ngdoc';
+import { toolkit, fs } from '@docgenifix/toolkit';
 import { cosmiconfig, Options as CosmiconfigOptions } from 'cosmiconfig';
 import * as systemPath from 'path';
 import { DocgeniContext } from '../docgeni.interface';

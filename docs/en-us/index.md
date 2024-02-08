@@ -37,11 +37,11 @@ features:
  switch to an existing project, execute the following command:
 
 ```bash
-$ npx @docgeni/cli init
+$ npx @docgenifix/cli init
 # or 
 $ docgeni init 
 # or
-$ ng add @docgeni/cli
+$ ng add @docgenifix/cli
 ```
 run `npm run start:docs` command to start site，open `http://127.0.0.1:4600` visit it by browser.
 

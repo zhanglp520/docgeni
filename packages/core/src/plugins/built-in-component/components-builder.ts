@@ -1,5 +1,5 @@
-import { createNgSourceFile, NgSourceFile } from '@docgeni/ngdoc';
-import { fs, toolkit } from '@docgeni/toolkit';
+import { createNgSourceFile, NgSourceFile } from '@docgenifix/ngdoc';
+import { fs, toolkit } from '@docgenifix/toolkit';
 import { DocgeniContext } from '../../docgeni.interface';
 import { getSummaryStr } from '../../utils';
 import { generateBuiltInComponentsModule } from './built-in-module';

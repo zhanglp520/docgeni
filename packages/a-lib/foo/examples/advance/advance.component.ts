@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { AlibFooModule } from '@docgeni/alib/foo';
+import { AlibFooModule } from '@docgenifix/alib/foo';
 
 @Component({
     selector: 'alib-foo-advance-example',

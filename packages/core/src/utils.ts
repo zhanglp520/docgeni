@@ -1,5 +1,5 @@
 import { NavigationItem, Locale } from './interfaces';
-import { toolkit } from '@docgeni/toolkit';
+import { toolkit } from '@docgenifix/toolkit';
 import * as Prism from 'node-prismjs';
 // import { highlight as prismjsHighlight, languages } from 'prismjs';
 // import loadLanguages from 'prismjs/components/index';
