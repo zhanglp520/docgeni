@@ -1,0 +1,511 @@
+$dg-heading-color: $dg-gray-800;
+$dg-table-border-color: $dg-gray-200;
+$dg-table-header-bg-color: $dg-gray-80;
+
+$dg-directive-color: #d81b60;
+$dg-component-color: #348fe4;
+$dg-interface-color: #7cb342;
+$dg-service-color: #8e24aa;
+$dg-pipe-color: #546e7a;
+
+.dg-doc-viewer {
+    display: flex;
+    flex-direction: column;
+    .dg-doc-header {
+        display: flex;
+        align-items: center;
+
+        .sidebar-toggler {
+            display: none;
+            margin-right: 10px;
+            padding: 4px 8px;
+            border-radius: 4px;
+
+            .dg-icon {
+                font-size: 14px;
+            }
+
+            &:hover {
+                background: $dg-primary;
+                color: $dg-white;
+            }
+        }
+
+        @include dg-media-breakpoint-down('md') {
+            .sidebar-toggler {
+                display: block;
+            }
+        }
+
+        .title {
+            font-size: $dg-font-size-xlg;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            margin-left: 10px;
+            font-size: $dg-font-size-xlg;
+            color: $dg-gray-700;
+            font-weight: normal;
+        }
+    }
+
+    &--toc {
+        .dg-doc-viewer-inner-content {
+            max-width: 78%;
+        }
+    }
+
+    .dg-doc-viewer-inner {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: flex-start;
+    }
+
+    .dg-doc-viewer-inner-content {
+        flex: auto;
+        width: 78%;
+    }
+
+    .dg-component-viewer {
+        display: block;
+        width: 100%;
+
+        .dg-component-empty {
+            display: block;
+            margin-top: 20px;
+        }
+
+        .dg-doc-header {
+            margin-bottom: 10px;
+        }
+
+        .dg-component-api {
+            display: flex;
+            align-items: flex-start;
+
+            .dg-component-api-content {
+                flex: auto;
+                width: 78%;
+                max-width: 78%;
+            }
+
+            .dg-api-header {
+                display: flex;
+                align-items: center;
+
+                &:not(:first-child) {
+                    margin-top: 30px;
+                }
+
+                .name {
+                    margin: 0;
+                    font-size: $dg-font-size-lg;
+                    font-weight: 500;
+                }
+
+                .type-label {
+                    background-color: rgba($color: $dg-component-color, $alpha: 0.8);
+                    font-size: $dg-font-size-sm;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    margin-left: 8px;
+                    margin-top: 3px;
+
+                    &.directive {
+                        background-color: rgba($color: $dg-directive-color, $alpha: 0.8);
+                    }
+
+                    &.service {
+                        background-color: rgba($color: $dg-service-color, $alpha: 0.8);
+                    }
+
+                    &.interface,
+                    &.class {
+                        background-color: rgba($color: $dg-interface-color, $alpha: 0.8);
+                    }
+
+                    &.pipe {
+                        background-color: rgba($color: $dg-pipe-color, $alpha: 0.8);
+                    }
+                }
+            }
+
+            .dg-api-description {
+                color: $dg-gray-700;
+                margin: 6px 0px 6px 0px;
+                font-size: $dg-font-size-base;
+            }
+
+            .dg-section {
+                margin-top: 10px;
+                .section-title {
+                    padding: 2px 0px;
+                    font-weight: 500;
+                }
+            }
+            .dg-section + .dg-section {
+                margin-top: 20px;
+            }
+
+            .dg-api-property-table,
+            .dg-api-methods-table {
+                margin-top: 8px;
+                display: table;
+                width: 100%;
+                max-width: 100%;
+                table-layout: fixed;
+                th {
+                    text-align: left;
+                }
+
+                td {
+                    label {
+                        word-break: break-all;
+                    }
+                }
+                .dg-api-property-header-row {
+                    .dg-api-property-name-th {
+                        width: 18%;
+                    }
+
+                    .dg-api-property-type-th {
+                        width: 18%;
+                    }
+
+                    .dg-api-property-default-th {
+                        width: 18%;
+                    }
+
+                    .dg-api-property-description-th {
+                        width: auto;
+                        word-break: break-all;
+                    }
+                }
+
+                .dg-api-property-row {
+                    .dg-api-property-name-cell {
+                        text-align: left;
+                        word-break: break-all;
+                    }
+
+                    .dg-api-property-type-cell {
+                        text-align: left;
+                        // color: color.adjust(variables.$dg-danger, $lightness: -5%);
+                    }
+
+                    .dg-api-property-default-cell {
+                        text-align: left;
+                        word-break: break-all;
+                    }
+
+                    .dg-api-property-description-cell {
+                        word-break: break-all;
+                    }
+                }
+            }
+            .dg-api-methods-table {
+                .dg-api-methods-type-th {
+                    width: 400px;
+                }
+
+                .dg-api-method-parameter-description {
+                    padding-left: 7px;
+                    word-break: break-all;
+                }
+
+                .dg-api-method-parameter-item {
+                    padding-left: 5px;
+                    margin-bottom: 4px;
+                }
+
+                .dg-api-method-return-value {
+                    padding-left: 5px;
+                }
+
+                .dg-api-method-parameter-type {
+                    background-color: #f4f5f7;
+                    color: $dg-gray-700;
+                    border-radius: 4px;
+                    padding: 2px 4px;
+                }
+
+                .dg-api-method-parameter-head {
+                    color: $dg-gray-800;
+                }
+
+                .dg-api-method-parameter {
+                    display: flex;
+                }
+
+                .dg-api-method-parameter-list {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                .dg-api-no-method-parameter {
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+
+    @include dg-media-breakpoint-down('md') {
+        .dg-doc-viewer-inner-content {
+            width: 100%;
+            max-width: 100%;
+        }
+        .dg-toc {
+            display: none;
+        }
+    }
+    .dg-spring {
+        flex: 1 0 30px;
+    }
+}
+
+@mixin content-child-selector($names) {
+    @each $name in $names {
+        #{$name}:not(.dg-example-viewer #{$name}) {
+            @content;
+        }
+    }
+}
+
+.dg-doc-content {
+    flex: 1;
+    display: block;
+    padding: 20px 0px;
+    // font-size: $dg-font-size-md;
+    // white-space: break-spaces;
+    > :first-child {
+        margin-top: 0 !important;
+    }
+    @include content-child-selector(h1) {
+        font-size: $dg-font-size-xlg;
+        margin: 30px 0px 16px 0px;
+        color: $dg-heading-color;
+    }
+
+    @include content-child-selector(h2) {
+        font-size: $dg-font-size-lg;
+        margin: 30px 0px 16px 0px;
+        color: $dg-heading-color;
+    }
+
+    @include content-child-selector(h3) {
+        font-size: 18px;
+        margin: 20px 0px 16px 0px;
+    }
+
+    @include content-child-selector(h4) {
+        font-size: 16px;
+        margin: 10px 0px 10px 0px;
+    }
+
+    @include content-child-selector(h5) {
+        font-size: 14px;
+        margin: 10px 0px 10px 0px;
+    }
+
+    @include content-child-selector((ul, ol)) {
+        margin: 10px 0 10px 32px;
+        padding: 0;
+        li {
+            padding: 3px 0px;
+        }
+    }
+
+    @include content-child-selector(code) {
+        display: inline-block;
+        padding: 0px 4px;
+        margin: 0px 2px;
+        background: $dg-code-bg-color;
+        border-radius: $dg-border-radius;
+        color: $dg-gray-800;
+    }
+
+    @include content-child-selector(pre) {
+        padding: 1em;
+        color: $dg-gray-700;
+        background: $dg-gray-100;
+        border-radius: $dg-border-radius;
+        overflow: auto;
+        code {
+            padding: 0px;
+            // color: $body-color;
+            background: transparent;
+            font-size: $dg-font-size-base;
+        }
+    }
+
+    @include content-child-selector((p, '.dg-paragraph')) {
+        // color: $gray-700;
+        line-height: 26px;
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-size: $dg-font-size-md;
+
+        code {
+            line-height: 24px;
+        }
+    }
+
+    @include content-child-selector(img) {
+        max-width: 100%;
+    }
+
+    @include content-child-selector(blockquote) {
+        margin-left: 0px;
+        border-left: 2px solid $dg-gray-300;
+        color: $dg-gray-600;
+        font-size: 14px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        padding-left: 10px;
+    }
+
+    @include content-child-selector(table) {
+        border-collapse: collapse;
+        border-spacing: 0;
+        display: table;
+        overflow: auto;
+        word-break: normal;
+        word-break: keep-all;
+        width: 100%;
+        max-width: 100%;
+        font-size: $dg-font-size-base;
+        th,
+        td {
+            border: 1px solid $dg-table-border-color;
+            padding: 10px 14px;
+            p {
+                margin: 0px;
+            }
+        }
+
+        th {
+            background: $dg-table-header-bg-color;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        td {
+            vertical-align: middle;
+        }
+    }
+}
+
+.dg-doc-meta {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    padding: 25px 0px;
+    border-top: 1px solid $dg-gray-200;
+
+    .dg-contributor-avatar-list {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-right: 8px;
+    }
+    .dg-contributor-avatar {
+        box-shadow: 0 0 0 2px $dg-white;
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+    .dg-contributor-avatar:nth-child(n):not(:first-child) {
+        margin-left: -8px;
+    }
+    .dg-contributor-avatar:nth-child(1) {
+        order: 3;
+    }
+    .dg-contributor-avatar:nth-child(2) {
+        order: 2;
+    }
+    .dg-contributor-avatar:nth-child(3) {
+        order: 1;
+    }
+    .dg-contributor-other {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $dg-gray-500;
+        background-color: $dg-gray-100;
+    }
+    .dg-contribution-last-time {
+        color: $dg-gray-500;
+    }
+}
+
+.dg-pages-link {
+    display: flex;
+    .dg-page-link {
+        flex: 1 1 0;
+        width: 100%;
+        display: flex;
+        a {
+            padding: 16px;
+            border-radius: 3px;
+            color: $dg-gray-800;
+            border: 1px solid $dg-gray-200;
+            box-shadow: rgb(116 129 141 / 10%) 0px 3px 8px 0px;
+            width: 100%;
+            display: flex;
+            &:hover {
+                text-decoration: none;
+                color: $dg-primary;
+                border-color: $dg-primary;
+                cursor: pointer;
+                .dg-page-link-icon {
+                    color: $dg-primary;
+                }
+            }
+            .dg-page-link-icon {
+                color: $dg-gray-500;
+                flex: 1 1 0;
+                align-self: center;
+                dg-icon {
+                    font-size: 24px;
+                }
+            }
+        }
+        &:first-child {
+            a {
+                text-align: right;
+            }
+            &:not(:last-child) {
+                margin-right: 24px;
+            }
+            .dg-page-link-icon {
+                text-align: left;
+            }
+        }
+
+        &:last-child {
+            a {
+                text-align: left;
+                flex-direction: row-reverse;
+            }
+            .dg-page-link-icon {
+                text-align: right;
+            }
+        }
+
+        .dg-page-link-label {
+            font-size: 12px;
+            color: $dg-gray-600;
+            font-weight: 400;
+            line-height: 1.625;
+        }
+        .dg-page-link-title {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+    }
+}

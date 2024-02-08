@@ -1,0 +1,46 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "es2020",
+    "moduleResolution": "node",
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "@docgeni/template": [
+        "packages/template/src/public-api.ts"
+      ],
+      "@docgeni/template/*": [
+        "packages/template/src/*"
+      ],
+      "@docgeni/toolkit/*": [
+        "packages/toolkit/src/*"
+      ],
+      "@docgeni/core/*": [
+        "packages/core/src/*"
+      ],
+      "@docgeni/alib": [
+        "packages/a-lib/public-api.ts"
+      ],
+      "@docgeni/alib/*": [
+        "packages/a-lib/*"
+      ]
+    },
+    "useDefineForClassFields": false
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
+}

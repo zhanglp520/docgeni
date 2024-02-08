@@ -1,0 +1,185 @@
+.dg-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    // height: $dg-navbar-height;
+    display: flex;
+    align-items: center;
+    padding: 0.719rem 1.25rem;
+    justify-content: space-between;
+    font-size: $dg-font-size-md;
+    z-index: 100;
+    .nav.nav-spacer {
+        display: flex;
+        visibility: hidden;
+        width: 0;
+        margin: 0;
+        flex: 0 0 auto;
+    }
+    .navbar-brand {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 1rem;
+
+        .logo {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .title {
+            font-weight: 600;
+            color: $dg-white;
+            text-decoration: none;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .navbar-toggler {
+        margin-left: 10px;
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        a {
+            padding: 6px 18px;
+            margin-right: 8px;
+            text-decoration: none;
+
+            &.active {
+                border-radius: 4px;
+                text-decoration: none !important;
+            }
+
+            &:hover {
+                text-decoration: none !important;
+            }
+        }
+    }
+
+    .spacer {
+        flex: 1;
+    }
+
+    .action-items {
+        display: flex;
+        align-items: center;
+        flex: auto;
+        justify-content: flex-end;
+
+        .search-container {
+            flex: auto;
+            max-width: 300px;
+        }
+
+        .action-item {
+            margin-left: 20px;
+        }
+
+        .repo-url {
+            .dg-icon {
+                font-size: 32px;
+            }
+        }
+    }
+
+    @include dg-media-breakpoint-down('md') {
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .navbar-toggler {
+            display: block;
+        }
+
+        .spacer,
+        .nav,
+        .action-items {
+            display: none;
+        }
+
+        .nav {
+            flex-direction: column;
+            flex-basis: 100%;
+            margin-top: 8px;
+            margin-bottom: 6px;
+        }
+
+        .action-items {
+            flex-direction: column;
+            align-items: flex-start;
+            .action-item {
+                margin-bottom: 10px;
+            }
+        }
+
+        &.show {
+            .spacer,
+            .nav,
+            .action-items {
+                display: flex;
+            }
+        }
+    }
+}
+
+@mixin dg-navbar-theme($background-color, $box-shadow, $color) {
+    background-color: $background-color;
+    box-shadow: $box-shadow;
+    color: $color;
+
+    .nav {
+        a {
+            color: $color;
+        }
+    }
+    .navbar-brand {
+        .title {
+            color: $color;
+        }
+    }
+
+    .repo-url {
+        color: $color;
+    }
+}
+
+.dg-theme-angular {
+    .dg-navbar {
+        @include dg-navbar-theme($dg-navbar-background-angular, $dg-navbar-box-shadow-angular, $dg-navbar-color-angular);
+
+        .nav {
+            a {
+                &:hover {
+                    color: rgba($color: $dg-white, $alpha: 0.8); // $gray-200;
+                }
+
+                &.active {
+                    background: hsla(0, 0%, 100%, 0.15);
+                }
+            }
+        }
+    }
+}
+
+.dg-theme-default {
+    .dg-navbar {
+        @include dg-navbar-theme($dg-navbar-background-default, $dg-navbar-box-shadow-default, $dg-navbar-color-default);
+
+        .nav {
+            a {
+                &:hover {
+                    color: $dg-primary;
+                }
+
+                &.active {
+                    color: $dg-primary;
+                    background: rgba($dg-primary, 0.12);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "packages": [
+    "packages/toolkit",
+    "packages/core",
+    "packages/cli",
+    "packages/template",
+    "packages/ngdoc"
+  ],
+  "command": {
+    "version": {
+      "conventionalCommits": true,
+      "gitTagVersion": false,
+      "push": false,
+      "yes": true
+    },
+    "publish": {
+      "ignoreChanges": [
+        "*.md"
+      ],
+      "verifyAccess": false,
+      "verifyRegistry": false,
+      "message": "chore: release %s"
+    }
+  },
+  "npmClient": "yarn",
+  "version": "2.3.0-next.0",
+  "useWorkspaces": true
+}

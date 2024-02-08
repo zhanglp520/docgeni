@@ -1,0 +1,121 @@
+@mixin top-show-title-variant() {
+    position: relative;
+    margin-top: 6px;
+    &::before {
+        position: absolute;
+        content: attr(title);
+        top: 0;
+        left: 1em;
+        margin-left: -4px;
+        padding: 0 4px;
+        color: $dg-gray-700;
+        font-weight: 500;
+        background-color: $dg-white;
+        transform: translateY(-50%);
+    }
+}
+
+.dg-example-viewer {
+    display: block;
+    padding: 20px 0px;
+
+    &:target {
+        .dg-example-viewer-wrapper {
+            border-color: $dg-primary;
+        }
+    }
+    &.dg-example-viewer-inline {
+        padding: 10px 0px;
+        .dg-example-viewer-wrapper {
+            border: none;
+            box-shadow: none;
+        }
+
+        .dg-example-viewer-header,
+        .dg-example-viewer-actions {
+            display: none;
+        }
+        .dg-example-viewer-body {
+            padding: 0px;
+        }
+    }
+
+    .dg-example-viewer-wrapper {
+        border: 1px solid $dg-border-color;
+        border-radius: 2px;
+    }
+
+    .dg-example-viewer-header {
+        border-bottom: 1px solid $dg-border-color;
+        padding: 5px 20px;
+        background: $dg-gray-100; // rgba(0, 0, 0, 0.03);
+        color: $dg-gray-700;
+
+        .title {
+            font-size: $dg-font-size-lg;
+            font-weight: bold;
+        }
+    }
+
+    .dg-example-viewer-body {
+        padding: 20px;
+
+        &.dg-example-viewer-compact {
+            padding: 0;
+        }
+    }
+
+    .dg-example-viewer-intro {
+        border-top: 1px solid $dg-border-color;
+        padding: 20px;
+        @include top-show-title-variant();
+    }
+
+    .dg-example-viewer-actions {
+        border-top: 1px dashed $dg-border-color;
+        padding: 10px;
+        text-align: center;
+        // @include top-show-title-variant();
+        clear: both;
+        .action-item {
+            color: $dg-gray-500;
+            padding: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+            &:hover {
+                color: $dg-primary;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .dg-example-viewer-sources {
+        border-top: 1px solid $dg-border-color;
+        display: block;
+        flex-direction: column;
+        transition: opacity 1s;
+        height: 0px;
+        opacity: 0;
+        visibility: hidden;
+
+        &.dg-sources-show {
+            visibility: visible;
+            height: auto;
+            opacity: 1;
+            .dg-source-code,
+            .dg-example-viewer-sources-content {
+                height: auto;
+            }
+        }
+
+        .dg-tab-links {
+            padding: 0px 10px;
+        }
+    }
+}
+
+.dg-examples {
+    .dg-example-viewer {
+        margin-bottom: 10px;
+    }
+}

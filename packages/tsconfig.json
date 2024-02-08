@@ -1,0 +1,17 @@
+{
+  "extends": "../tsconfig.json",
+  "files": [],
+  "compilerOptions": {
+  },
+  "references": [
+    {
+      "path": "cli"
+    },
+    {
+      "path": "toolkit"
+    },
+    {
+      "path": "core"
+    }
+  ]
+}

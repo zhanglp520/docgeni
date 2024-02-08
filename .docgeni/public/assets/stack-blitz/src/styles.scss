@@ -1,0 +1,2677 @@
+$dg-primary: #6698ff !default;
+$dg-primary-light: #246eff;
+$dg-success: #66c060 !default; // 2dbcff
+$dg-info: #2dbcff !default;
+$dg-warning: #ffc442 !default;
+$dg-danger: #ff5b57 !default;
+
+$dg-gray-80: #f3f3f3 !default;
+$dg-gray-100: #f6f8fa !default;
+$dg-gray-200: #eee !default;
+$dg-gray-210: #e9e9e9 !default;
+$dg-gray-300: #ddd !default;
+$dg-gray-400: #cacaca !default;
+$dg-gray-500: #aaa !default;
+$dg-gray-600: #888 !default;
+$dg-gray-700: #666 !default;
+$dg-gray-800: #333 !default;
+$dg-body-color: #333 !default;
+$dg-white: #fff !default;
+$dg-black: #000 !default;
+$dg-body-bg: $dg-white !default;
+
+$dg-yiq-contrasted-threshold: 180 !default;
+$dg-yiq-text-dark: $dg-gray-800 !default;
+$dg-yiq-text-light: $dg-white !default;
+$dg-enable-gradients: false !default;
+$dg-enable-shadows: true !default;
+$dg-enable-rounded: true !default;
+
+$dg-border-color: #eee !default;
+$dg-border-radius: 4px !default;
+
+$dg-theme-colors: () !default;
+$dg-theme-colors: map-merge(
+    (
+        'primary': $dg-primary,
+        'primary-light': $dg-primary-light,
+        'success': $dg-success,
+        'info': $dg-info,
+        'warning': $dg-warning,
+        'danger': $dg-danger,
+        'light': $dg-gray-300,
+        'dark': $dg-gray-700
+    ),
+    $dg-theme-colors
+);
+
+$dg-grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+) !default;
+
+$dg-spacer: 1rem !default;
+$dg-spacers: () !default;
+// // stylelint-disable-next-line scss/dollar-variable-default
+$dg-spacers: map-merge(
+    (
+        0: 0,
+        1: (
+            $dg-spacer * 0.25
+        ),
+        2: (
+            $dg-spacer * 0.5
+        ),
+        3: $dg-spacer,
+        4: (
+            $dg-spacer * 1.5
+        ),
+        5: (
+            $dg-spacer * 3
+        )
+    ),
+    $dg-spacers
+);
+
+$dg-line-height: 1.5715 !default;
+
+$dg-code-bg-color: #f3f5f7 !default;
+
+// link
+$dg-link-hover-decoration: none !default;
+
+// font
+// $font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+//         'Segoe UI Symbol';
+$dg-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Helvetica Neue, Noto Sans, Noto Sans CJK SC,
+    Microsoft Yahei, Arial, Hiragino Sans GB, sans-serif !default;
+$dg-font-size-base: 0.875rem !default; // 14px
+$dg-font-size-md: 1rem !default; // 16px
+$dg-font-size-lg: 1.25rem !default; // 20px
+$dg-font-size-sm: 0.75rem !default; // 12px
+$dg-font-size-max-lg: 3.25rem !default; // 补充字体大小 52px
+$dg-font-size-xs: 0.625rem !default; // 10px
+$dg-font-size-xlg: 1.5rem !default; // 24px
+
+// navbar
+$dg-navbar-height: 60px !default;
+
+// default theme
+$dg-navbar-background-default: $dg-white;
+$dg-navbar-box-shadow-default: 0 8px 24px -2px rgba(0, 0, 0, 0.05);
+$dg-navbar-color-default: $dg-body-color;
+
+// angular theme
+$dg-navbar-background-angular: #3f51b5 !default;
+$dg-navbar-box-shadow-angular: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12) !default;
+$dg-navbar-color-angular: $dg-white !default;
+
+$dg-hero-background: #dae6f3 !default;
+
+// sidebar
+$dg-sidebar-item-indent: 10px !default;
+$dg-sidebar-menu-item-space-x: 30px !default;
+$dg-sidebar-menu-item-space-y: 9px !default;
+
+// button
+$dg-btn-border-width: 1px !default;
+$dg-btn-padding-y: 6px !default;
+$dg-btn-padding-x: 10px !default;
+$dg-btn-font-size: $dg-font-size-md !default;
+$dg-btn-line-height: $dg-line-height !default;
+$dg-btn-border-radius: 4px !default;
+$dg-btn-padding-y-xsm: 0.5px !default;
+$dg-btn-padding-x-xsm: 10px !default;
+$dg-btn-font-size-xsm: $dg-font-size-md !default;
+$dg-btn-line-height-xsm: $dg-line-height !default;
+$dg-btn-border-radius-xsm: 4px !default;
+$dg-btn-padding-y-sm: 2.5px !default;
+$dg-btn-padding-x-sm: 10px !default;
+$dg-btn-font-size-sm: $dg-font-size-md !default;
+$dg-btn-line-height-sm: $dg-line-height !default;
+$dg-btn-border-radius-sm: 4px !default;
+$dg-btn-padding-y-md: 4.5px !default;
+$dg-btn-padding-x-md: 10px !default;
+$dg-btn-font-size-md: $dg-font-size-md !default;
+$dg-btn-line-height-md: $dg-line-height !default;
+$dg-btn-border-radius-md: 4px !default;
+$dg-btn-padding-y-lg: 6.5px !default;
+$dg-btn-padding-x-lg: 10px !default;
+$dg-btn-font-size-lg: $dg-font-size-md !default;
+$dg-btn-line-height-lg: $dg-line-height !default;
+$dg-btn-border-radius-lg: 4px !default;
+$dg-btn-padding-y-xlg: 8.5px !default;
+$dg-btn-padding-x-xlg: 30px !default;
+$dg-btn-font-size-xlg: $dg-font-size-md !default;
+$dg-btn-line-height-xlg: $dg-line-height !default;
+$dg-btn-border-radius-xlg: 4px !default;
+$dg-btn-disabled-opacity: 0.6 !default;
+$dg-btn-box-shadow: none !default;
+// $dg-btn-box-shadow: inset 0 1px 0 rgba($dg-white, 0.15), 0 1px 1px rgba($dg-black, 0.075) !default;
+$dg-btn-focus-box-shadow: none !default;
+$dg-btn-focus-width: 0.2rem !default;
+
+// @use "sass:math";
+
+// Color contrast
+@function dg-color-yiq($color, $dark: $dg-yiq-text-dark, $light: $dg-yiq-text-light) {
+    $r: red($color);
+    $g: green($color);
+    $b: blue($color);
+
+    $yiq: (($r * 299) + ($g * 587) + ($b * 114)) * 0.001;
+    // $yiq: math.div(($r * 299) + ($g * 587) + ($b * 114), 1000);
+
+    @if ($yiq >= $dg-yiq-contrasted-threshold) {
+        @return $dark;
+    } @else {
+        @return $light;
+    }
+}
+
+// Breakpoint viewport sizes and media queries.
+//
+// Breakpoints are defined as a map of (name: minimum width), order from small to large:
+//
+//    (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+//
+// The map defined in the `$grid-breakpoints` global variable is used as the `$breakpoints` argument by default.
+
+// Name of the next breakpoint, or null for the last breakpoint.
+//
+//    >> breakpoint-next(sm)
+//    md
+//    >> breakpoint-next(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    md
+//    >> breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl))
+//    md
+@function dg-breakpoint-next($name, $breakpoints: $dg-grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+    $n: index($breakpoint-names, $name);
+    @return if($n != null and $n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+//
+//    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    576px
+@function dg-breakpoint-min($name, $breakpoints: $dg-grid-breakpoints) {
+    $min: map-get($breakpoints, $name);
+    @return if($min != 0, $min, null);
+}
+
+// Maximum breakpoint width. Null for the largest (last) breakpoint.
+// The maximum value is calculated as the minimum of the next one less 0.02px
+// to work around the limitations of `min-` and `max-` prefixes and viewports with fractional widths.
+// See https://www.w3.org/TR/mediaqueries-4/#mq-min-max
+// Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
+// See https://bugs.webkit.org/show_bug.cgi?id=178261
+//
+//    >> breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    767.98px
+@function dg-breakpoint-max($name, $breakpoints: $dg-grid-breakpoints) {
+    $next: dg-breakpoint-next($name, $breakpoints);
+    @return if($next, dg-breakpoint-min($next, $breakpoints) - 0.02, null);
+}
+
+// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
+// Useful for making responsive utilities.
+//
+//    >> breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    ""  (Returns a blank string)
+//    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    "-sm"
+@function dg-breakpoint-infix($name, $breakpoints: $dg-grid-breakpoints) {
+    @return if(dg-breakpoint-min($name, $breakpoints) == null, '', '-#{$name}');
+}
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin dg-media-breakpoint-up($name, $breakpoints: $dg-grid-breakpoints) {
+    $min: dg-breakpoint-min($name, $breakpoints);
+    @if $min {
+        @media (min-width: $min) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+// Makes the @content apply to the given breakpoint and narrower.
+@mixin dg-media-breakpoint-down($name, $breakpoints: $dg-grid-breakpoints) {
+    $max: dg-breakpoint-max($name, $breakpoints);
+    @if $max {
+        @media (max-width: $max) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+// Media that spans multiple breakpoint widths.
+// Makes the @content apply between the min and max breakpoints
+@mixin dg-media-breakpoint-between($lower, $upper, $breakpoints: $dg-grid-breakpoints) {
+    $min: dg-breakpoint-min($lower, $breakpoints);
+    $max: dg-breakpoint-max($upper, $breakpoints);
+
+    @if $min != null and $max != null {
+        @media (min-width: $min) and (max-width: $max) {
+            @content;
+        }
+    } @else if $max == null {
+        @include dg-media-breakpoint-up($lower, $breakpoints) {
+            @content;
+        }
+    } @else if $min == null {
+        @include dg-media-breakpoint-down($upper, $breakpoints) {
+            @content;
+        }
+    }
+}
+
+// Media between the breakpoint's minimum and maximum widths.
+// No minimum for the smallest breakpoint, and no maximum for the largest one.
+// Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.
+@mixin dg-media-breakpoint-only($name, $breakpoints: $dg-grid-breakpoints) {
+    $min: breakpoint-min($name, $breakpoints);
+    $max: breakpoint-max($name, $breakpoints);
+
+    @if $min != null and $max != null {
+        @media (min-width: $min) and (max-width: $max) {
+            @content;
+        }
+    } @else if $max == null {
+        @include media-breakpoint-up($name, $breakpoints) {
+            @content;
+        }
+    } @else if $min == null {
+        @include media-breakpoint-down($name, $breakpoints) {
+            @content;
+        }
+    }
+}
+
+// Gradients
+
+@mixin dg-gradient-bg($color) {
+    @if $dg-enable-gradients {
+        background: $color linear-gradient(180deg, mix($dg-body-bg, $color, 15%), $color) repeat-x;
+    } @else {
+        background-color: $color;
+    }
+}
+
+// Horizontal gradient, from left to right
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+@mixin dg-gradient-x($start-color: $gray-700, $end-color: $gray-800, $start-percent: 0%, $end-percent: 100%) {
+    background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent);
+    background-repeat: repeat-x;
+}
+
+// Vertical gradient, from top to bottom
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+@mixin dg-gradient-y($start-color: $gray-700, $end-color: $gray-800, $start-percent: 0%, $end-percent: 100%) {
+    background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent);
+    background-repeat: repeat-x;
+}
+
+@mixin dg-gradient-directional($start-color: $gray-700, $end-color: $gray-800, $deg: 45deg) {
+    background-image: linear-gradient($deg, $start-color, $end-color);
+    background-repeat: repeat-x;
+}
+
+@mixin dg-gradient-x-three-colors($start-color: $blue, $mid-color: $purple, $color-stop: 50%, $end-color: $red) {
+    background-image: linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color);
+    background-repeat: no-repeat;
+}
+
+@mixin dg-gradient-y-three-colors($start-color: $blue, $mid-color: $purple, $color-stop: 50%, $end-color: $red) {
+    background-image: linear-gradient($start-color, $mid-color $color-stop, $end-color);
+    background-repeat: no-repeat;
+}
+
+@mixin dg-gradient-radial($inner-color: $gray-700, $outer-color: $gray-800) {
+    background-image: radial-gradient(circle, $inner-color, $outer-color);
+    background-repeat: no-repeat;
+}
+
+@mixin dg-gradient-striped($color: rgba($white, 0.15), $angle: 45deg) {
+    background-image: linear-gradient(
+        $angle,
+        $color 25%,
+        transparent 25%,
+        transparent 50%,
+        $color 50%,
+        $color 75%,
+        transparent 75%,
+        transparent
+    );
+}
+
+@mixin hover() {
+    &:hover {
+        @content;
+    }
+}
+
+@mixin hover-focus() {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+@mixin plain-hover-focus() {
+    &,
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+@mixin hover-focus-active() {
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+    }
+}
+
+@mixin dg-box-shadow($shadow...) {
+    @if $dg-enable-shadows {
+        $result: ();
+
+        @if (length($shadow) == 1) {
+            // We can pass `@include box-shadow(none);`
+            $result: $shadow;
+        } @else {
+            // Filter to avoid invalid properties for example `box-shadow: none, 1px 1px black;`
+            @for $i from 1 through length($shadow) {
+                @if nth($shadow, $i) != 'none' {
+                    $result: append($result, nth($shadow, $i), 'comma');
+                }
+            }
+        }
+        @if (length($result) > 0) {
+            box-shadow: $result;
+        }
+    }
+}
+
+@mixin dg-border-radius($radius: $border-radius, $fallback-border-radius: false) {
+    @if $dg-enable-rounded {
+        border-radius: $radius;
+    } @else if $fallback-border-radius != false {
+        border-radius: $fallback-border-radius;
+    }
+}
+
+@mixin dg-border-top-radius($radius) {
+    @if $dg-enable-rounded {
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+    }
+}
+
+@mixin dg-border-right-radius($radius) {
+    @if $dg-enable-rounded {
+        border-top-right-radius: $radius;
+        border-bottom-right-radius: $radius;
+    }
+}
+
+@mixin dg-border-bottom-radius($radius) {
+    @if $dg-enable-rounded {
+        border-bottom-right-radius: $radius;
+        border-bottom-left-radius: $radius;
+    }
+}
+
+@mixin dg-border-left-radius($radius) {
+    @if $dg-enable-rounded {
+        border-top-left-radius: $radius;
+        border-bottom-left-radius: $radius;
+    }
+}
+
+@mixin dg-border-top-left-radius($radius) {
+    @if $dg-enable-rounded {
+        border-top-left-radius: $radius;
+    }
+}
+
+@mixin dg-border-top-right-radius($radius) {
+    @if $dg-enable-rounded {
+        border-top-right-radius: $radius;
+    }
+}
+
+@mixin dg-border-bottom-right-radius($radius) {
+    @if $dg-enable-rounded {
+        border-bottom-right-radius: $radius;
+    }
+}
+
+@mixin dg-border-bottom-left-radius($radius) {
+    @if $dg-enable-rounded {
+        border-bottom-left-radius: $radius;
+    }
+}
+
+// Button variants
+@mixin dg-button-variant(
+    $background,
+    $border,
+    $hover-background: darken($background, 7.5%),
+    $hover-border: darken($border, 10%),
+    $active-background: darken($background, 10%),
+    $active-border: darken($border, 12.5%)
+) {
+    color: dg-color-yiq($background);
+    @include dg-gradient-bg($background);
+    border-color: $border;
+    @include dg-box-shadow($dg-btn-box-shadow);
+
+    @include hover() {
+        color: dg-color-yiq($hover-background);
+        @include dg-gradient-bg($hover-background);
+        border-color: $hover-border;
+    }
+
+    &:focus,
+    &.focus {
+        color: dg-color-yiq($hover-background);
+        @include dg-gradient-bg($hover-background);
+        border-color: $hover-border;
+        // Avoid using mixin so we can pass custom focus shadow properly
+        @if $dg-enable-shadows {
+            box-shadow: $dg-btn-box-shadow, 0 0 0 $dg-btn-focus-width rgba(mix(dg-color-yiq($background), $border, 15%), 0.5);
+        } @else {
+            box-shadow: 0 0 0 $dg-btn-focus-width rgba(mix(color-yiq($background), $border, 15%), 0.5);
+        }
+    }
+
+    // Disabled comes first so active can properly restyle
+    &.disabled,
+    &:disabled {
+        color: color-yiq($background);
+        background-color: $background;
+        border-color: $border;
+        // Remove CSS gradients if they're enabled
+        @if $dg-enable-gradients {
+            background-image: none;
+        }
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show > &.dropdown-toggle {
+        color: color-yiq($active-background);
+        background-color: $active-background;
+        // @if $enable-gradients {
+        //     background-image: none; // Remove the gradient for the pressed/active state
+        // }
+        border-color: $active-border;
+
+        // &:focus {
+        //     // Avoid using mixin so we can pass custom focus shadow properly
+        //     @if $enable-shadows and $btn-active-box-shadow != none {
+        //         box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), 0.5);
+        //     } @else {
+        //         box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), 0.5);
+        //     }
+        // }
+    }
+}
+
+@mixin dg-button-outline-variant($color, $color-hover: color-yiq($color), $active-border: $color, $btn-focus-width: 0px) {
+    color: $color;
+    border-color: $color;
+
+    @include hover() {
+        color: $color-hover;
+        border-color: $active-border;
+    }
+
+    &:focus,
+    &.focus {
+        box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.5);
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $color;
+        background-color: transparent;
+    }
+
+    // &:not(:disabled):not(.disabled):active,
+    // &:not(:disabled):not(.disabled).active,
+    // .show > &.dropdown-toggle {
+    //     color: color-yiq($active-background);
+    //     background-color: $active-background;
+    //     border-color: $active-border;
+
+    //     &:focus {
+    //         // Avoid using mixin so we can pass custom focus shadow properly
+
+    //         box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.5);
+    //     }
+    // }
+}
+
+// Button sizes
+@mixin dg-button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+    padding: $padding-y $padding-x;
+    font-size: $font-size;
+    line-height: $line-height;
+    // Manually declare to provide an override to the browser default
+    @include dg-border-radius($border-radius, 0);
+}
+
+@mixin dg-button-radius-variant($border-radius) {
+    border-radius: $border-radius;
+}
+
+@mixin label-outline($color) {
+    color: $color;
+    background-color: transparent;
+    border: 1px solid $color;
+}
+
+html,
+body {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+html {
+    -webkit-text-size-adjust: 100%; // 4
+    -ms-text-size-adjust: 100%; // 4
+    -ms-overflow-style: scrollbar; // 5
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // 6
+}
+
+body {
+    font-family: $dg-font-family;
+    font-size: $dg-font-size-base;
+    color: $dg-body-color;
+    line-height: $dg-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 8px 0;
+}
+
+p {
+    margin: 0;
+}
+
+a,
+a:visited,
+a:hover {
+    color: $dg-primary;
+    text-decoration: $dg-link-hover-decoration;
+}
+
+.dg-hidden {
+    visibility: hidden !important;
+}
+
+.dg-d-none {
+    display: none !important;
+}
+
+.dg-visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+    // Avoid browsers rendering the focus ring in some cases.
+    outline: 0;
+
+    // Avoid some cases where the browser will still render the native controls (see #9049).
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+@each $prop, $abbrev in (margin: m, padding: p) {
+    @each $size, $length in $dg-spacers {
+        .dg-#{$abbrev}-#{$size} {
+            #{$prop}: $length !important;
+        }
+        .dg-#{$abbrev}t-#{$size},
+        .dg-#{$abbrev}y-#{$size} {
+            #{$prop}-top: $length !important;
+        }
+        .dg-#{$abbrev}r-#{$size},
+        .dg-#{$abbrev}x-#{$size} {
+            #{$prop}-right: $length !important;
+        }
+        .dg-#{$abbrev}b-#{$size},
+        .dg-#{$abbrev}y-#{$size} {
+            #{$prop}-bottom: $length !important;
+        }
+        .dg-#{$abbrev}l-#{$size},
+        .dg-#{$abbrev}x-#{$size} {
+            #{$prop}-left: $length !important;
+        }
+    }
+}
+
+.dg-divider {
+    border: 0;
+    border-top: 1px solid $dg-gray-200;
+    margin-bottom: 0;
+}
+
+.dg-main {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: $dg-navbar-height;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.dg-scroll-container {
+    overflow: auto;
+}
+
+.dg-layout {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    // height: 0;
+    // overflow: auto;
+    .dg-sidebar {
+        flex: 0 0 auto;
+        width: 300px;
+        overflow: auto;
+        padding-top: 20px;
+        border-right: 1px solid $dg-gray-300;
+        position: fixed;
+        top: $dg-navbar-height;
+        bottom: 0;
+    }
+
+    .dg-doc-viewer {
+        flex: auto;
+        padding: 30px 50px 0 50px;
+        margin-left: 300px;
+        // max-height: 100vh;
+
+        // 单个页面，没有频道，也就没有左侧菜单，间距为 0
+        &--single {
+            margin-left: 0px;
+        }
+    }
+
+    .dg-doc-viewer-backdrop {
+        position: absolute;
+        transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), z-index 0s 0.4s;
+        background-color: transparent;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    @include dg-media-breakpoint-down('md') {
+        &.dg-sidebar-show {
+            .dg-sidebar {
+                display: block;
+                left: 0;
+                background: $dg-gray-100;
+            }
+
+            .dg-doc-viewer-backdrop {
+                transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+                background-color: rgba(0, 0, 0, 0.6);
+                z-index: 1;
+            }
+        }
+
+        .dg-sidebar {
+            z-index: 2;
+            transition: left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background 0.4s;
+            left: -300px;
+        }
+
+        // .dg-content {
+        //     margin-left: 0px;
+        //     padding: 0;
+        // }
+
+        .dg-doc-viewer {
+            margin-left: 0px;
+            padding: 20px 15px;
+            position: relative;
+        }
+    }
+}
+
+.dg-mode-lite {
+    .dg-main {
+        top: 0;
+    }
+    .dg-layout {
+        .dg-sidebar {
+            background: $dg-gray-100;
+            top: 0;
+        }
+    }
+}
+
+.dg-tab-links {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid $dg-border-color;
+    .dg-tab-link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 8px 30px;
+        margin-right: 20px;
+        transform: translateY(1px);
+        color: $dg-gray-700;
+        border-bottom: 2px solid transparent;
+        font-weight: 500;
+        // font-family: Roboto,"Helvetica Neue",sans-serif;
+        &:hover,
+        &.active {
+            color: $dg-primary;
+            border-bottom: 2px solid $dg-primary;
+            text-decoration: none;
+        }
+    }
+}
+
+$dg-heading-color: $dg-gray-800;
+$dg-table-border-color: $dg-gray-200;
+$dg-table-header-bg-color: $dg-gray-80;
+
+$dg-directive-color: #d81b60;
+$dg-component-color: #348fe4;
+$dg-interface-color: #7cb342;
+$dg-service-color: #8e24aa;
+$dg-pipe-color: #546e7a;
+
+.dg-doc-viewer {
+    display: flex;
+    flex-direction: column;
+    .dg-doc-header {
+        display: flex;
+        align-items: center;
+
+        .sidebar-toggler {
+            display: none;
+            margin-right: 10px;
+            padding: 4px 8px;
+            border-radius: 4px;
+
+            .dg-icon {
+                font-size: 14px;
+            }
+
+            &:hover {
+                background: $dg-primary;
+                color: $dg-white;
+            }
+        }
+
+        @include dg-media-breakpoint-down('md') {
+            .sidebar-toggler {
+                display: block;
+            }
+        }
+
+        .title {
+            font-size: $dg-font-size-xlg;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            margin-left: 10px;
+            font-size: $dg-font-size-xlg;
+            color: $dg-gray-700;
+            font-weight: normal;
+        }
+    }
+
+    &--toc {
+        .dg-doc-viewer-inner-content {
+            max-width: 78%;
+        }
+    }
+
+    .dg-doc-viewer-inner {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: flex-start;
+    }
+
+    .dg-doc-viewer-inner-content {
+        flex: auto;
+        width: 78%;
+    }
+
+    .dg-component-viewer {
+        display: block;
+        width: 100%;
+
+        .dg-component-empty {
+            display: block;
+            margin-top: 20px;
+        }
+
+        .dg-doc-header {
+            margin-bottom: 10px;
+        }
+
+        .dg-component-api {
+            display: flex;
+            align-items: flex-start;
+
+            .dg-component-api-content {
+                flex: auto;
+                width: 78%;
+                max-width: 78%;
+            }
+
+            .dg-api-header {
+                display: flex;
+                align-items: center;
+
+                &:not(:first-child) {
+                    margin-top: 30px;
+                }
+
+                .name {
+                    margin: 0;
+                    font-size: $dg-font-size-lg;
+                    font-weight: 500;
+                }
+
+                .type-label {
+                    background-color: rgba($color: $dg-component-color, $alpha: 0.8);
+                    font-size: $dg-font-size-sm;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    margin-left: 8px;
+                    margin-top: 3px;
+
+                    &.directive {
+                        background-color: rgba($color: $dg-directive-color, $alpha: 0.8);
+                    }
+
+                    &.service {
+                        background-color: rgba($color: $dg-service-color, $alpha: 0.8);
+                    }
+
+                    &.interface,
+                    &.class {
+                        background-color: rgba($color: $dg-interface-color, $alpha: 0.8);
+                    }
+
+                    &.pipe {
+                        background-color: rgba($color: $dg-pipe-color, $alpha: 0.8);
+                    }
+                }
+            }
+
+            .dg-api-description {
+                color: $dg-gray-700;
+                margin: 6px 0px 6px 0px;
+                font-size: $dg-font-size-base;
+            }
+
+            .dg-section {
+                margin-top: 10px;
+                .section-title {
+                    padding: 2px 0px;
+                    font-weight: 500;
+                }
+            }
+            .dg-section + .dg-section {
+                margin-top: 20px;
+            }
+
+            .dg-api-property-table,
+            .dg-api-methods-table {
+                margin-top: 8px;
+                display: table;
+                width: 100%;
+                max-width: 100%;
+                table-layout: fixed;
+                th {
+                    text-align: left;
+                }
+
+                td {
+                    label {
+                        word-break: break-all;
+                    }
+                }
+                .dg-api-property-header-row {
+                    .dg-api-property-name-th {
+                        width: 18%;
+                    }
+
+                    .dg-api-property-type-th {
+                        width: 18%;
+                    }
+
+                    .dg-api-property-default-th {
+                        width: 18%;
+                    }
+
+                    .dg-api-property-description-th {
+                        width: auto;
+                        word-break: break-all;
+                    }
+                }
+
+                .dg-api-property-row {
+                    .dg-api-property-name-cell {
+                        text-align: left;
+                        word-break: break-all;
+                    }
+
+                    .dg-api-property-type-cell {
+                        text-align: left;
+                        // color: color.adjust(variables.$dg-danger, $lightness: -5%);
+                    }
+
+                    .dg-api-property-default-cell {
+                        text-align: left;
+                        word-break: break-all;
+                    }
+
+                    .dg-api-property-description-cell {
+                        word-break: break-all;
+                    }
+                }
+            }
+            .dg-api-methods-table {
+                .dg-api-methods-type-th {
+                    width: 400px;
+                }
+
+                .dg-api-method-parameter-description {
+                    padding-left: 7px;
+                    word-break: break-all;
+                }
+
+                .dg-api-method-parameter-item {
+                    padding-left: 5px;
+                    margin-bottom: 4px;
+                }
+
+                .dg-api-method-return-value {
+                    padding-left: 5px;
+                }
+
+                .dg-api-method-parameter-type {
+                    background-color: #f4f5f7;
+                    color: $dg-gray-700;
+                    border-radius: 4px;
+                    padding: 2px 4px;
+                }
+
+                .dg-api-method-parameter-head {
+                    color: $dg-gray-800;
+                }
+
+                .dg-api-method-parameter {
+                    display: flex;
+                }
+
+                .dg-api-method-parameter-list {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                .dg-api-no-method-parameter {
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+
+    @include dg-media-breakpoint-down('md') {
+        .dg-doc-viewer-inner-content {
+            width: 100%;
+            max-width: 100%;
+        }
+        .dg-toc {
+            display: none;
+        }
+    }
+    .dg-spring {
+        flex: 1 0 30px;
+    }
+}
+
+@mixin content-child-selector($names) {
+    @each $name in $names {
+        #{$name}:not(.dg-example-viewer #{$name}) {
+            @content;
+        }
+    }
+}
+
+.dg-doc-content {
+    flex: 1;
+    display: block;
+    padding: 20px 0px;
+    // font-size: $dg-font-size-md;
+    // white-space: break-spaces;
+    > :first-child {
+        margin-top: 0 !important;
+    }
+    @include content-child-selector(h1) {
+        font-size: $dg-font-size-xlg;
+        margin: 30px 0px 16px 0px;
+        color: $dg-heading-color;
+    }
+
+    @include content-child-selector(h2) {
+        font-size: $dg-font-size-lg;
+        margin: 30px 0px 16px 0px;
+        color: $dg-heading-color;
+    }
+
+    @include content-child-selector(h3) {
+        font-size: 18px;
+        margin: 20px 0px 16px 0px;
+    }
+
+    @include content-child-selector(h4) {
+        font-size: 16px;
+        margin: 10px 0px 10px 0px;
+    }
+
+    @include content-child-selector(h5) {
+        font-size: 14px;
+        margin: 10px 0px 10px 0px;
+    }
+
+    @include content-child-selector((ul, ol)) {
+        margin: 10px 0 10px 32px;
+        padding: 0;
+        li {
+            padding: 3px 0px;
+        }
+    }
+
+    @include content-child-selector(code) {
+        display: inline-block;
+        padding: 0px 4px;
+        margin: 0px 2px;
+        background: $dg-code-bg-color;
+        border-radius: $dg-border-radius;
+        color: $dg-gray-800;
+    }
+
+    @include content-child-selector(pre) {
+        padding: 1em;
+        color: $dg-gray-700;
+        background: $dg-gray-100;
+        border-radius: $dg-border-radius;
+        overflow: auto;
+        code {
+            padding: 0px;
+            // color: $body-color;
+            background: transparent;
+            font-size: $dg-font-size-base;
+        }
+    }
+
+    @include content-child-selector((p, '.dg-paragraph')) {
+        // color: $gray-700;
+        line-height: 26px;
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-size: $dg-font-size-md;
+
+        code {
+            line-height: 24px;
+        }
+    }
+
+    @include content-child-selector(img) {
+        max-width: 100%;
+    }
+
+    @include content-child-selector(blockquote) {
+        margin-left: 0px;
+        border-left: 2px solid $dg-gray-300;
+        color: $dg-gray-600;
+        font-size: 14px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        padding-left: 10px;
+    }
+
+    @include content-child-selector(table) {
+        border-collapse: collapse;
+        border-spacing: 0;
+        display: table;
+        overflow: auto;
+        word-break: normal;
+        word-break: keep-all;
+        width: 100%;
+        max-width: 100%;
+        font-size: $dg-font-size-base;
+        th,
+        td {
+            border: 1px solid $dg-table-border-color;
+            padding: 10px 14px;
+            p {
+                margin: 0px;
+            }
+        }
+
+        th {
+            background: $dg-table-header-bg-color;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        td {
+            vertical-align: middle;
+        }
+    }
+}
+
+.dg-doc-meta {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    padding: 25px 0px;
+    border-top: 1px solid $dg-gray-200;
+
+    .dg-contributor-avatar-list {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-right: 8px;
+    }
+    .dg-contributor-avatar {
+        box-shadow: 0 0 0 2px $dg-white;
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+    .dg-contributor-avatar:nth-child(n):not(:first-child) {
+        margin-left: -8px;
+    }
+    .dg-contributor-avatar:nth-child(1) {
+        order: 3;
+    }
+    .dg-contributor-avatar:nth-child(2) {
+        order: 2;
+    }
+    .dg-contributor-avatar:nth-child(3) {
+        order: 1;
+    }
+    .dg-contributor-other {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $dg-gray-500;
+        background-color: $dg-gray-100;
+    }
+    .dg-contribution-last-time {
+        color: $dg-gray-500;
+    }
+}
+
+.dg-pages-link {
+    display: flex;
+    .dg-page-link {
+        flex: 1 1 0;
+        width: 100%;
+        display: flex;
+        a {
+            padding: 16px;
+            border-radius: 3px;
+            color: $dg-gray-800;
+            border: 1px solid $dg-gray-200;
+            box-shadow: rgb(116 129 141 / 10%) 0px 3px 8px 0px;
+            width: 100%;
+            display: flex;
+            &:hover {
+                text-decoration: none;
+                color: $dg-primary;
+                border-color: $dg-primary;
+                cursor: pointer;
+                .dg-page-link-icon {
+                    color: $dg-primary;
+                }
+            }
+            .dg-page-link-icon {
+                color: $dg-gray-500;
+                flex: 1 1 0;
+                align-self: center;
+                dg-icon {
+                    font-size: 24px;
+                }
+            }
+        }
+        &:first-child {
+            a {
+                text-align: right;
+            }
+            &:not(:last-child) {
+                margin-right: 24px;
+            }
+            .dg-page-link-icon {
+                text-align: left;
+            }
+        }
+
+        &:last-child {
+            a {
+                text-align: left;
+                flex-direction: row-reverse;
+            }
+            .dg-page-link-icon {
+                text-align: right;
+            }
+        }
+
+        .dg-page-link-label {
+            font-size: 12px;
+            color: $dg-gray-600;
+            font-weight: 400;
+            line-height: 1.625;
+        }
+        .dg-page-link-title {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+    }
+}
+
+.dg-icon {
+    font-size: 1rem;
+    line-height: 0;
+    svg {
+        width: 1em;
+        height: 1em;
+        fill: currentColor;
+        vertical-align: -0.16em;
+        background-repeat: no-repeat;
+    }
+}
+
+// $dg-danger-color: #d81b60;
+// $dg-primary-color: #348fe4;
+
+.dg-label {
+    display: inline-flex;
+    align-items: center;
+    color: $dg-white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: $dg-font-size-base;
+    margin-bottom: 0px;
+    font-size: $dg-font-size-sm;
+    line-height: 1;
+}
+
+$dg-theme-colors: map-merge(
+    (
+        'default': $dg-gray-200,
+        'light': $dg-gray-700
+    ),
+    $dg-theme-colors
+);
+
+@each $name, $color in $dg-theme-colors {
+    .dg-label-#{$name} {
+        background-color: $color;
+        color: dg-color-yiq($color);
+    }
+}
+
+@each $name, $color in $dg-theme-colors {
+    .dg-label-outline-#{$name} {
+        @include label-outline($color);
+    }
+}
+
+.dg-label-default,
+.dg-label-light,
+.dg-label-outline-default,
+.dg-label-outline-light {
+    color: $dg-gray-700;
+}
+
+.dg-label-sm {
+    padding: 2px 8px;
+    font-size: $dg-font-size-sm;
+}
+
+$dg-alert-bg-alpha: 0.05;
+
+.dg-alert {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 0px;
+    padding: 10px 20px;
+    border-left: 0px;
+    background: $dg-gray-80;
+    border-radius: 1px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        width: 3px;
+        border-radius: 1px;
+    }
+}
+
+@each $name, $color in $dg-theme-colors {
+    .dg-alert-#{$name} {
+        background-color: rgba($color: $color, $alpha: $dg-alert-bg-alpha);
+        &::after {
+            background: $color;
+        }
+    }
+}
+
+.dg-toc {
+    flex: 1;
+    position: sticky;
+    top: 20px;
+    margin: 20px 0 20px 20px;
+
+    .dg-toc-container {
+        font-size: 13px;
+        // Width is container width minus content width
+        width: 19%;
+        // position: sticky;
+        // top: 0;
+        padding-left: 10px;
+        box-sizing: border-box;
+        display: inline-flex;
+        flex-direction: column;
+        width: 100%;
+
+        & + .docs-toc-container {
+            padding-top: 8px;
+        }
+    }
+
+    .dg-toc-heading {
+        margin: 0;
+        padding: 6px 12px 6px 12px;
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            list-style: none;
+            position: relative;
+            padding: 0px;
+            &[data-level='1'] {
+                padding-left: 12px;
+            }
+
+            &[data-level='2'] {
+                padding-left: 24px;
+            }
+
+            &[data-level='3'] {
+                padding-left: 36px;
+            }
+
+            &[data-level='4'] {
+                padding-left: 48px;
+            }
+
+            a {
+                color: $dg-gray-700;
+            }
+        }
+    }
+
+    .dg-link {
+        padding: 6px 0px;
+        color: $dg-gray-700;
+        line-height: 16px;
+        text-decoration: none;
+        display: block;
+        text-overflow: ellipsis;
+        width: 100%;
+        box-sizing: border-box;
+        word-break: break-all;
+
+        &::before {
+            border-left: 2px solid $dg-gray-300;
+            bottom: 0;
+            content: '';
+            left: 0;
+            position: absolute;
+            top: 0;
+        }
+
+        &.active {
+            color: darken($dg-primary, 10%);
+            &::before {
+                border-color: $dg-primary;
+                border-width: 2px;
+            }
+        }
+    }
+
+    &-menu {
+        .dg-toc-container {
+            padding-left: 20px;
+        }
+        .dg-link {
+            position: relative;
+            // padding: 6px 6px 6px 6px;
+            &::before {
+                border-width: 0px;
+            }
+            &.active {
+                &::before {
+                    border-width: 0px;
+                    height: 5px;
+                    width: 5px;
+                    border-radius: 50%;
+                    background: $dg-primary;
+                    top: 12px;
+                    left: -10px;
+                }
+            }
+        }
+    }
+}
+
+.dg-btn {
+    display: inline-block;
+    color: $dg-body-color;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: $dg-btn-border-width solid transparent;
+    @include dg-button-size($dg-btn-padding-y, $dg-btn-padding-x, $dg-btn-font-size, $dg-btn-line-height, $dg-btn-border-radius);
+    // @include transition($btn-transition);
+
+    &:focus,
+    &.focus {
+        outline: 0;
+        box-shadow: $dg-btn-focus-box-shadow;
+    }
+
+    // Disabled comes first so active can properly restyle
+    &.disabled,
+    &:disabled {
+        opacity: $dg-btn-disabled-opacity;
+        @include dg-box-shadow(none);
+    }
+
+    // &:not(:disabled):not(.disabled):active,
+    // &:not(:disabled):not(.disabled).active {
+    //     @include dg-box-shadow($dg-btn-active-box-shadow);
+
+    //     &:focus {
+    //         @include box-shadow($dg-btn-focus-box-shadow, $dg-btn-active-box-shadow);
+    //     }
+    // }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+    pointer-events: none;
+}
+
+//
+// Alternate buttons
+//
+
+@each $color, $value in $dg-theme-colors {
+    .dg-btn.dg-btn-outline-#{$color} {
+        @include dg-button-outline-variant($value, lighten($value, 5%), lighten($value, 5%));
+    }
+    .dg-btn.dg-btn-#{$color} {
+        @include dg-button-variant($value, $value);
+        &:hover {
+            box-shadow: 0 2px 5px 1px rgba($value, 0.6);
+        }
+    }
+}
+
+.dg-btn-xsm {
+    @include dg-button-size(
+        $dg-btn-padding-y-xsm,
+        $dg-btn-padding-x-xsm,
+        $dg-btn-font-size-xsm,
+        $dg-btn-line-height-xsm,
+        $dg-btn-border-radius-xsm
+    );
+    .dg-icon {
+        font-size: $dg-btn-font-size-xsm;
+    }
+}
+
+.dg-btn-sm {
+    @include dg-button-size(
+        $dg-btn-padding-y-sm,
+        $dg-btn-padding-x-sm,
+        $dg-btn-font-size-sm,
+        $dg-btn-line-height-sm,
+        $dg-btn-border-radius-sm
+    );
+    .dg-icon {
+        font-size: $dg-btn-font-size-sm;
+    }
+}
+
+.dg-btn-md {
+    @include dg-button-size(
+        $dg-btn-padding-y-md,
+        $dg-btn-padding-x-md,
+        $dg-btn-font-size-md,
+        $dg-btn-line-height-md,
+        $dg-btn-border-radius-md
+    );
+    .dg-icon {
+        font-size: $dg-btn-font-size-md;
+    }
+}
+
+.dg-btn-lg {
+    @include dg-button-size(
+        $dg-btn-padding-y-lg,
+        $dg-btn-padding-x-lg,
+        $dg-btn-font-size-lg,
+        $dg-btn-line-height-lg,
+        $dg-btn-border-radius-lg
+    );
+    .dg-icon {
+        font-size: $dg-btn-font-size-lg;
+    }
+}
+
+.dg-btn-xlg {
+    @include dg-button-size(
+        $dg-btn-padding-y-xlg,
+        $dg-btn-padding-x-xlg,
+        $dg-btn-font-size-xlg,
+        $dg-btn-line-height-xlg,
+        $dg-btn-border-radius-xlg
+    );
+    .dg-icon {
+        font-size: $dg-btn-font-size-xlg;
+    }
+}
+
+//
+// Block button
+//
+
+// .dg-btn-block {
+//     display: block;
+//     width: 100%;
+
+//     // Vertically space out multiple block buttons
+//     + .btn-block {
+//         margin-top: $dg-btn-block-spacing-y;
+//     }
+// }
+
+// Specificity overrides
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+    &.dg-btn-block {
+        width: 100%;
+    }
+}
+
+.dg-btn.dg-btn-round {
+    @include dg-button-radius-variant(8888px);
+}
+
+.dg-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    // height: $dg-navbar-height;
+    display: flex;
+    align-items: center;
+    padding: 0.719rem 1.25rem;
+    justify-content: space-between;
+    font-size: $dg-font-size-md;
+    z-index: 100;
+    .nav.nav-spacer {
+        display: flex;
+        visibility: hidden;
+        width: 0;
+        margin: 0;
+        flex: 0 0 auto;
+    }
+    .navbar-brand {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 1rem;
+
+        .logo {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .title {
+            font-weight: 600;
+            color: $dg-white;
+            text-decoration: none;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .navbar-toggler {
+        margin-left: 10px;
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        a {
+            padding: 6px 18px;
+            margin-right: 8px;
+            text-decoration: none;
+
+            &.active {
+                border-radius: 4px;
+                text-decoration: none !important;
+            }
+
+            &:hover {
+                text-decoration: none !important;
+            }
+        }
+    }
+
+    .spacer {
+        flex: 1;
+    }
+
+    .action-items {
+        display: flex;
+        align-items: center;
+        flex: auto;
+        justify-content: flex-end;
+
+        .search-container {
+            flex: auto;
+            max-width: 300px;
+        }
+
+        .action-item {
+            margin-left: 20px;
+        }
+
+        .repo-url {
+            .dg-icon {
+                font-size: 32px;
+            }
+        }
+    }
+
+    @include dg-media-breakpoint-down('md') {
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .navbar-toggler {
+            display: block;
+        }
+
+        .spacer,
+        .nav,
+        .action-items {
+            display: none;
+        }
+
+        .nav {
+            flex-direction: column;
+            flex-basis: 100%;
+            margin-top: 8px;
+            margin-bottom: 6px;
+        }
+
+        .action-items {
+            flex-direction: column;
+            align-items: flex-start;
+            .action-item {
+                margin-bottom: 10px;
+            }
+        }
+
+        &.show {
+            .spacer,
+            .nav,
+            .action-items {
+                display: flex;
+            }
+        }
+    }
+}
+
+@mixin dg-navbar-theme($background-color, $box-shadow, $color) {
+    background-color: $background-color;
+    box-shadow: $box-shadow;
+    color: $color;
+
+    .nav {
+        a {
+            color: $color;
+        }
+    }
+    .navbar-brand {
+        .title {
+            color: $color;
+        }
+    }
+
+    .repo-url {
+        color: $color;
+    }
+}
+
+.dg-theme-angular {
+    .dg-navbar {
+        @include dg-navbar-theme($dg-navbar-background-angular, $dg-navbar-box-shadow-angular, $dg-navbar-color-angular);
+
+        .nav {
+            a {
+                &:hover {
+                    color: rgba($color: $dg-white, $alpha: 0.8); // $gray-200;
+                }
+
+                &.active {
+                    background: hsla(0, 0%, 100%, 0.15);
+                }
+            }
+        }
+    }
+}
+
+.dg-theme-default {
+    .dg-navbar {
+        @include dg-navbar-theme($dg-navbar-background-default, $dg-navbar-box-shadow-default, $dg-navbar-color-default);
+
+        .nav {
+            a {
+                &:hover {
+                    color: $dg-primary;
+                }
+
+                &.active {
+                    color: $dg-primary;
+                    background: rgba($dg-primary, 0.12);
+                }
+            }
+        }
+    }
+}
+
+.dg-menu {
+    overflow-x: hidden;
+
+    .menu-group {
+        cursor: pointer;
+        .group-header {
+            display: flex;
+            align-items: center;
+            .group-title {
+                flex: 1 1 0;
+                padding: $dg-sidebar-menu-item-space-y 30px;
+                color: $dg-gray-600;
+                padding-right: 0;
+            }
+            .group-arrow {
+                margin-right: 30px;
+                transition: all 0.5s;
+            }
+        }
+        .group-body {
+            margin-left: $dg-sidebar-item-indent;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.5s;
+        }
+
+        .menu-item {
+            margin-left: $dg-sidebar-item-indent;
+        }
+        &.menu-group--open {
+            & > .group-body {
+                max-height: 4000px;
+                opacity: 1;
+            }
+            & > .group-header .group-arrow {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    .menu-item {
+        padding: 0px $dg-sidebar-menu-item-space-x * 0.5 0 $dg-sidebar-menu-item-space-x;
+        &.active {
+            padding-right: $dg-sidebar-menu-item-space-x * 0.5 - 3px;
+        }
+        display: block;
+        // a {
+        //     color: $dg-gray-800;
+        // }
+
+        &.active {
+            border-right: 3px solid $dg-primary;
+            .item-content {
+                background: rgba($dg-primary, 0.05);
+                color: $dg-primary;
+            }
+            &::after {
+                background-color: $dg-primary;
+                width: 3px;
+                // border-right: 3px solid $dg-primary;
+            }
+        }
+
+        .item-content {
+            display: flex;
+            align-items: center;
+            margin: 0 -1000px;
+            padding: $dg-sidebar-menu-item-space-y 1000px;
+            color: $dg-gray-800;
+            .external-icon {
+                margin-right: 5px;
+            }
+
+            & > .item-content-title {
+                flex: 1 1 0;
+            }
+            & > .item-content-label {
+                flex: 0 0 auto;
+                background-color: $dg-white;
+                display: flex;
+                border-radius: 4px;
+            }
+        }
+
+        .subtitle {
+            color: $dg-gray-600;
+            font-size: $dg-font-size-sm;
+            margin-left: 4px;
+        }
+
+        &:hover {
+            .item-content {
+                color: $dg-primary;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.dg-sidebar {
+    .dg-sidebar-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 0px 10px 0px;
+        border-bottom: 1px solid $dg-gray-210;
+
+        .logo {
+            width: 80px;
+            height: 80px;
+        }
+
+        .title {
+            font-weight: 500;
+            color: $dg-body-color;
+            font-size: $dg-font-size-lg;
+            padding: 5px 0px;
+        }
+
+        .description {
+            color: $dg-gray-700;
+            padding: 5px 10px;
+        }
+    }
+
+    .action-items {
+        border-top: 1px solid $dg-gray-210;
+
+        .action-item {
+            padding: 10px 30px;
+        }
+    }
+
+    .dg-search-container {
+        margin: 10px;
+        .algolia-autocomplete {
+            .ds-dropdown-menu {
+                min-width: 280px;
+            }
+        }
+    }
+}
+
+.dg-search-container {
+    position: relative;
+    line-height: $dg-font-size-base;
+    font-size: $dg-font-size-base;
+
+    .search-icon {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        z-index: 1;
+        color: $dg-gray-500;
+        pointer-events: none;
+        font-size: $dg-font-size-base;
+    }
+
+    .search {
+        padding: 0.532rem 10px 0.532rem 30px;
+        width: 100%;
+        outline: none;
+        border: 1px solid $dg-gray-200;
+        border-radius: 18px;
+        -webkit-appearance: none;
+        box-sizing: border-box;
+    }
+
+    .search-results-container {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin: 8px 0 0;
+        min-width: 200px;
+        max-width: 400px;
+        max-height: 230px;
+        padding: 6px 0;
+        z-index: 10;
+        background-color: $dg-white;
+        border-radius: 1px;
+        box-shadow: 0 0 24px rgb(0 0 0 / 18%);
+        box-sizing: border-box;
+        overflow-y: auto;
+
+        &.is-searching {
+            display: block;
+        }
+
+        &.result-empty {
+            text-align: center;
+            padding: 40px 0;
+            .empty-icon {
+                svg {
+                    width: 64px;
+                    height: 58px;
+                }
+            }
+        }
+
+        .search-result {
+            display: block;
+            padding: 6px 20px;
+            color: $dg-gray-700;
+            font-size: $dg-font-size-base;
+            text-decoration: none;
+            line-height: $dg-line-height;
+            transition: background-color 0.2s;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $dg-gray-80;
+                color: $dg-primary;
+            }
+            .dg-word-highlight {
+                background-color: rgba($dg-warning, 0.4);
+            }
+        }
+    }
+
+    .algolia-autocomplete {
+        width: 100%;
+    }
+}
+
+.dg-footer {
+    display: block;
+    padding: 20px;
+    border-top: 1px solid $dg-gray-200;
+    text-align: center;
+    color: $dg-gray-600;
+    a {
+        color: $dg-gray-600;
+        text-decoration: none;
+        &:hover {
+            color: $dg-gray-700;
+            text-decoration: none;
+        }
+    }
+
+    .beian {
+        margin-top: 5px;
+    }
+    .beian-public-security {
+        margin-left: 5px;
+        img {
+            vertical-align: -4px;
+        }
+    }
+}
+
+@mixin top-show-title-variant() {
+    position: relative;
+    margin-top: 6px;
+    &::before {
+        position: absolute;
+        content: attr(title);
+        top: 0;
+        left: 1em;
+        margin-left: -4px;
+        padding: 0 4px;
+        color: $dg-gray-700;
+        font-weight: 500;
+        background-color: $dg-white;
+        transform: translateY(-50%);
+    }
+}
+
+.dg-example-viewer {
+    display: block;
+    padding: 20px 0px;
+
+    &:target {
+        .dg-example-viewer-wrapper {
+            border-color: $dg-primary;
+        }
+    }
+    &.dg-example-viewer-inline {
+        padding: 10px 0px;
+        .dg-example-viewer-wrapper {
+            border: none;
+            box-shadow: none;
+        }
+
+        .dg-example-viewer-header,
+        .dg-example-viewer-actions {
+            display: none;
+        }
+        .dg-example-viewer-body {
+            padding: 0px;
+        }
+    }
+
+    .dg-example-viewer-wrapper {
+        border: 1px solid $dg-border-color;
+        border-radius: 2px;
+    }
+
+    .dg-example-viewer-header {
+        border-bottom: 1px solid $dg-border-color;
+        padding: 5px 20px;
+        background: $dg-gray-100; // rgba(0, 0, 0, 0.03);
+        color: $dg-gray-700;
+
+        .title {
+            font-size: $dg-font-size-lg;
+            font-weight: bold;
+        }
+    }
+
+    .dg-example-viewer-body {
+        padding: 20px;
+
+        &.dg-example-viewer-compact {
+            padding: 0;
+        }
+    }
+
+    .dg-example-viewer-intro {
+        border-top: 1px solid $dg-border-color;
+        padding: 20px;
+        @include top-show-title-variant();
+    }
+
+    .dg-example-viewer-actions {
+        border-top: 1px dashed $dg-border-color;
+        padding: 10px;
+        text-align: center;
+        // @include top-show-title-variant();
+        clear: both;
+        .action-item {
+            color: $dg-gray-500;
+            padding: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+            &:hover {
+                color: $dg-primary;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .dg-example-viewer-sources {
+        border-top: 1px solid $dg-border-color;
+        display: block;
+        flex-direction: column;
+        transition: opacity 1s;
+        height: 0px;
+        opacity: 0;
+        visibility: hidden;
+
+        &.dg-sources-show {
+            visibility: visible;
+            height: auto;
+            opacity: 1;
+            .dg-source-code,
+            .dg-example-viewer-sources-content {
+                height: auto;
+            }
+        }
+
+        .dg-tab-links {
+            padding: 0px 10px;
+        }
+    }
+}
+
+.dg-examples {
+    .dg-example-viewer {
+        margin-bottom: 10px;
+    }
+}
+
+.dg-locales-selector {
+    display: block;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+
+    select {
+        width: 100%;
+        padding: 0 22px 0 0;
+        text-align: right;
+        height: 30px;
+        outline: none;
+        font-size: 14px;
+        appearance: none;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .dg-selector-arrow {
+        width: 9px;
+        height: 9px;
+        border-left: 1px solid $dg-gray-500;
+        border-top: 1px solid $dg-gray-500;
+        transform: rotate(-135deg);
+        position: absolute;
+        top: 50%;
+        right: 2px;
+        margin-top: -8px;
+        right: 2px;
+        z-index: -1;
+    }
+}
+
+@mixin dg-locales-selector-theme($color, $hover-color) {
+    .dg-locales-selector {
+        select {
+            color: $color;
+        }
+        .dg-selector-arrow {
+            border-color: $color;
+        }
+        &:hover {
+            select {
+                color: $hover-color;
+            }
+            .dg-selector-arrow {
+                border-color: $hover-color;
+            }
+        }
+    }
+}
+
+.dg-theme-default {
+    @include dg-locales-selector-theme(inherit, rgba($color: $dg-body-color, $alpha: 0.8));
+}
+
+.dg-theme-angular {
+    @include dg-locales-selector-theme($dg-white, rgba($color: $dg-white, $alpha: 0.8));
+}
+
+.dg-copy {
+    cursor: pointer;
+}
+
+.dg-source-code {
+    display: block;
+    padding: 10px 20px;
+    background: $dg-gray-100;
+    white-space: nowrap;
+    margin: 0px;
+    height: 0px;
+    position: relative;
+
+    .dg-source-code-content {
+        white-space: break-spaces;
+        padding: 10px 0px;
+        font-size: $dg-font-size-md;
+    }
+
+    .dg-copy {
+        position: absolute;
+        top: 1em;
+        right: 1.1em;
+        color: $dg-gray-500;
+        &:hover {
+            color: $dg-primary;
+        }
+    }
+}
+
+$dg-primary: #6698ff !default;
+$dg-primary-light: #246eff;
+$dg-success: #66c060 !default; // 2dbcff
+$dg-info: #2dbcff !default;
+$dg-warning: #ffc442 !default;
+$dg-danger: #ff5b57 !default;
+
+$dg-gray-80: #f3f3f3 !default;
+$dg-gray-100: #f6f8fa !default;
+$dg-gray-200: #eee !default;
+$dg-gray-210: #e9e9e9 !default;
+$dg-gray-300: #ddd !default;
+$dg-gray-400: #cacaca !default;
+$dg-gray-500: #aaa !default;
+$dg-gray-600: #888 !default;
+$dg-gray-700: #666 !default;
+$dg-gray-800: #333 !default;
+$dg-body-color: #333 !default;
+$dg-white: #fff !default;
+$dg-black: #000 !default;
+$dg-body-bg: $dg-white !default;
+
+$dg-yiq-contrasted-threshold: 180 !default;
+$dg-yiq-text-dark: $dg-gray-800 !default;
+$dg-yiq-text-light: $dg-white !default;
+$dg-enable-gradients: false !default;
+$dg-enable-shadows: true !default;
+$dg-enable-rounded: true !default;
+
+$dg-border-color: #eee !default;
+$dg-border-radius: 4px !default;
+
+$dg-theme-colors: () !default;
+$dg-theme-colors: map-merge(
+    (
+        'primary': $dg-primary,
+        'primary-light': $dg-primary-light,
+        'success': $dg-success,
+        'info': $dg-info,
+        'warning': $dg-warning,
+        'danger': $dg-danger,
+        'light': $dg-gray-300,
+        'dark': $dg-gray-700
+    ),
+    $dg-theme-colors
+);
+
+$dg-grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+) !default;
+
+$dg-spacer: 1rem !default;
+$dg-spacers: () !default;
+// // stylelint-disable-next-line scss/dollar-variable-default
+$dg-spacers: map-merge(
+    (
+        0: 0,
+        1: (
+            $dg-spacer * 0.25
+        ),
+        2: (
+            $dg-spacer * 0.5
+        ),
+        3: $dg-spacer,
+        4: (
+            $dg-spacer * 1.5
+        ),
+        5: (
+            $dg-spacer * 3
+        )
+    ),
+    $dg-spacers
+);
+
+$dg-line-height: 1.5715 !default;
+
+$dg-code-bg-color: #f3f5f7 !default;
+
+// link
+$dg-link-hover-decoration: none !default;
+
+// font
+// $font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+//         'Segoe UI Symbol';
+$dg-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Helvetica Neue, Noto Sans, Noto Sans CJK SC,
+    Microsoft Yahei, Arial, Hiragino Sans GB, sans-serif !default;
+$dg-font-size-base: 0.875rem !default; // 14px
+$dg-font-size-md: 1rem !default; // 16px
+$dg-font-size-lg: 1.25rem !default; // 20px
+$dg-font-size-sm: 0.75rem !default; // 12px
+$dg-font-size-max-lg: 3.25rem !default; // 补充字体大小 52px
+$dg-font-size-xs: 0.625rem !default; // 10px
+$dg-font-size-xlg: 1.5rem !default; // 24px
+
+// navbar
+$dg-navbar-height: 60px !default;
+
+// default theme
+$dg-navbar-background-default: $dg-white;
+$dg-navbar-box-shadow-default: 0 8px 24px -2px rgba(0, 0, 0, 0.05);
+$dg-navbar-color-default: $dg-body-color;
+
+// angular theme
+$dg-navbar-background-angular: #3f51b5 !default;
+$dg-navbar-box-shadow-angular: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12) !default;
+$dg-navbar-color-angular: $dg-white !default;
+
+$dg-hero-background: #dae6f3 !default;
+
+// sidebar
+$dg-sidebar-item-indent: 10px !default;
+$dg-sidebar-menu-item-space-x: 30px !default;
+$dg-sidebar-menu-item-space-y: 9px !default;
+
+// button
+$dg-btn-border-width: 1px !default;
+$dg-btn-padding-y: 6px !default;
+$dg-btn-padding-x: 10px !default;
+$dg-btn-font-size: $dg-font-size-md !default;
+$dg-btn-line-height: $dg-line-height !default;
+$dg-btn-border-radius: 4px !default;
+$dg-btn-padding-y-xsm: 0.5px !default;
+$dg-btn-padding-x-xsm: 10px !default;
+$dg-btn-font-size-xsm: $dg-font-size-md !default;
+$dg-btn-line-height-xsm: $dg-line-height !default;
+$dg-btn-border-radius-xsm: 4px !default;
+$dg-btn-padding-y-sm: 2.5px !default;
+$dg-btn-padding-x-sm: 10px !default;
+$dg-btn-font-size-sm: $dg-font-size-md !default;
+$dg-btn-line-height-sm: $dg-line-height !default;
+$dg-btn-border-radius-sm: 4px !default;
+$dg-btn-padding-y-md: 4.5px !default;
+$dg-btn-padding-x-md: 10px !default;
+$dg-btn-font-size-md: $dg-font-size-md !default;
+$dg-btn-line-height-md: $dg-line-height !default;
+$dg-btn-border-radius-md: 4px !default;
+$dg-btn-padding-y-lg: 6.5px !default;
+$dg-btn-padding-x-lg: 10px !default;
+$dg-btn-font-size-lg: $dg-font-size-md !default;
+$dg-btn-line-height-lg: $dg-line-height !default;
+$dg-btn-border-radius-lg: 4px !default;
+$dg-btn-padding-y-xlg: 8.5px !default;
+$dg-btn-padding-x-xlg: 30px !default;
+$dg-btn-font-size-xlg: $dg-font-size-md !default;
+$dg-btn-line-height-xlg: $dg-line-height !default;
+$dg-btn-border-radius-xlg: 4px !default;
+$dg-btn-disabled-opacity: 0.6 !default;
+$dg-btn-box-shadow: none !default;
+// $dg-btn-box-shadow: inset 0 1px 0 rgba($dg-white, 0.15), 0 1px 1px rgba($dg-black, 0.075) !default;
+$dg-btn-focus-box-shadow: none !default;
+$dg-btn-focus-width: 0.2rem !default;
+
+.dg-home {
+    display: block;
+
+    .dg-hero {
+        .dg-hero-launch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+
+            .dg-launch-title {
+                letter-spacing: 1.1px;
+                font-weight: 700;
+                margin: 0;
+            }
+
+            .dg-launch-description {
+                margin-bottom: 20px;
+                font-size: 14px;
+                color: $dg-gray-600;
+            }
+
+            .dg-launch-actions {
+                .dg-launch-action {
+                    margin-right: 20px;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .dg-hero-banner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: -1;
+            background: $dg-hero-background;
+
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+
+    .dg-features {
+        display: grid;
+        margin-top: 60px;
+        margin-bottom: 40px;
+        img {
+            max-width: 80px;
+            max-height: 80px;
+        }
+        .dg-feature {
+            text-align: center;
+        }
+        .dg-feature:nth-child(-n + 3) {
+            padding-top: 0;
+        }
+        .dg-feature-title {
+            color: $dg-gray-800;
+            font-size: 16px;
+            padding-bottom: 14px;
+        }
+        .dg-feature-description {
+            color: $dg-gray-600;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+
+    .dg-hero,
+    .dg-features,
+    .dg-extra-content {
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: 768px) {
+        .dg-hero-launch {
+            height: 400px;
+            h1 {
+                font-size: 77px;
+            }
+        }
+        .dg-hero-banner {
+            height: 400px;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .dg-features {
+            padding: 0 20%;
+            grid: auto/1fr 1fr 1fr;
+            grid-gap: 80px 50px;
+
+            .dg-feature {
+                flex: 0 0 calc(100% / 11 * 9 / 3);
+            }
+        }
+        .dg-extra-content {
+            padding: 0 20%;
+        }
+    }
+    @media (max-width: 767px) {
+        .dg-hero-launch {
+            height: 230px;
+            h1 {
+                font-size: 29px;
+            }
+        }
+        .dg-hero-banner {
+            height: 230px;
+            img {
+                height: 100%;
+                position: relative;
+            }
+        }
+        .dg-features {
+            padding: 0 30px;
+            grid: auto/1fr 1fr;
+            grid-gap: 50px 25px;
+
+            .dg-feature {
+                flex: 0 0 calc(100% / 11 * 9 / 2);
+            }
+        }
+        .dg-extra-content {
+            padding: 0 30px;
+        }
+    }
+}
+
+.dg-component-overview {
+    display: flex;
+    align-items: flex-start;
+}
+
+.algolia-autocomplete {
+    .ds-dropdown-menu {
+        border: none;
+        box-shadow: 0 0 24px rgba($dg-black, 0.18);
+
+        [class^='ds-dataset-'] {
+            background: $dg-white;
+            border: none;
+            .algolia-docsearch-suggestion {
+                background: $dg-white;
+            }
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .algolia-docsearch-suggestion--title {
+        color: $dg-gray-800;
+    }
+
+    .algolia-docsearch-suggestion--highlight {
+        color: $dg-primary;
+    }
+    .page-wrapper-rtl & {
+        direction: rtl !important;
+    }
+
+    .ds-dropdown-menu
+        .ds-suggestion.ds-cursor
+        .algolia-docsearch-suggestion:not(.suggestion-layout-simple)
+        .algolia-docsearch-suggestion--content {
+        background-color: rgba($dg-primary, 0.05);
+    }
+}
+
+app-root {
+    display: flex;
+    padding: 5px 10px;
+}

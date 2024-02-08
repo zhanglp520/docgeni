@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig-base.json",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "src",
+    "outDir": "lib"
+  },
+  "exclude": [
+    "src/test.ts",
+    "test/**",
+    "lib/**",
+    "**/*.spec.ts"
+  ]
+}

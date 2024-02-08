@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig-base.json",
+  "compilerOptions": {
+    "outDir": "./lib",
+    "alwaysStrict": true,
+    "rootDir": "src",
+    "baseUrl": "."
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [ "test" ],
+  "references": [
+    {
+      "path": "../toolkit"
+    },
+    {
+      "path": "../core"
+    }
+  ]
+}

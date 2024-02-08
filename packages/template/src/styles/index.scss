@@ -1,0 +1,28 @@
+@import './variables.scss';
+@import './functions.scss';
+@import './mixins/index.scss';
+@import './global.scss';
+@import './utils.scss';
+@import './layout.scss';
+@import './nav.scss';
+@import './doc.scss';
+@import './icon.scss';
+@import './label.scss';
+@import './alert.scss';
+@import './toc.scss';
+@import './button.scss';
+@import './navbar.scss';
+@import './sidebar.scss';
+@import './search.scss';
+@import '../shared/footer/footer.component.scss';
+@import '../shared/example-viewer/example-viewer.component.scss';
+@import '../shared/locales-selector/locales-selector.scss';
+@import '../shared/copy/copy.component.scss';
+@import '../shared/source-code/source-code.component.scss';
+
+@import '../pages/home/home.component.scss';
+@import '../pages/component-viewer/component-viewer.component.scss';
+@import 'prismjs/themes/prism.css';
+// @import 'prismjs/themes/prism-okaidia.css';
+@import 'docsearch.js/dist/cdn/docsearch.css';
+@import './docsearch.scss';

@@ -1,0 +1,17 @@
+{
+  "name": "docgeni-lite-mode-example",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "yarn start:docs",
+    "start:docs": "docgeni serve --port 4602",
+    "build:docs": "docgeni build"
+  },
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@docgeni/angular": "16.0.0",
+    "@docgeni/cli": "1.1.2",
+    "@docgeni/template": "1.1.2"
+  }
+}

@@ -1,0 +1,28 @@
+<div class="navbar-brand">
+  <dg-logo></dg-logo>
+  <a [routerLink]="['/']" class="title">{{ global.config.title }}</a>
+</div>
+<div class="nav nav-spacer">
+  <a>&nbsp;</a>
+</div>
+
+<button class="navbar-toggler dg-btn dg-btn-primary" (click)="toggleNavbar()"><dg-icon iconName="list"></dg-icon></button>
+<div class="nav">
+  <ng-container *ngFor="let channel of channels">
+    <a *ngIf="channel.isExternal; else navLink" href="{{ channel.path }}" target="_blank"
+      >{{ channel.title }} <dg-icon iconName="external"></dg-icon>
+    </a>
+    <ng-template #navLink>
+      <a [routerLink]="channel.path" routerLinkActive="active">{{ channel.title }}</a>
+    </ng-template>
+  </ng-container>
+</div>
+<div class="spacer"></div>
+<div class="action-items">
+  <dg-search class="action-item search-container" *ngIf="global.config.mode | dgIsFull"></dg-search>
+
+  <dg-locales-selector class="action-item" *ngIf="global.config.locales && global.config.locales.length > 1"></dg-locales-selector>
+  <a *ngIf="global.config.repoUrl" class="action-item repo-url" href="{{ global.config.repoUrl }}" target="_blank">
+    <dg-icon iconName="github"></dg-icon>
+  </a>
+</div>

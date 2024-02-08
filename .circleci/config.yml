@@ -1,0 +1,22 @@
+version: 2.1
+orbs:
+    browser-tools: circleci/browser-tools@1.4.3
+jobs:
+    build:
+        working_directory: ~/docgeni
+        docker:
+            - image: cimg/node:18.16-browsers
+        steps:
+            - browser-tools/install-chrome
+            - checkout
+            - restore_cache:
+                  key: docgeni-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - run: yarn
+            - save_cache:
+                  key: yarn install --frozen-lockfile --cache-folder node_modules
+                  paths:
+                      - 'node_modules'
+            - run: yarn lint
+            - run: yarn test-coverage
+            - run: yarn test-template --no-watch --no-progress --browsers=ChromeHeadlessCI
+            - run: yarn report-coverage

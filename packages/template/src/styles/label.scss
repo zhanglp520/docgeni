@@ -1,0 +1,47 @@
+// $dg-danger-color: #d81b60;
+// $dg-primary-color: #348fe4;
+
+.dg-label {
+    display: inline-flex;
+    align-items: center;
+    color: $dg-white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: $dg-font-size-base;
+    margin-bottom: 0px;
+    font-size: $dg-font-size-sm;
+    line-height: 1;
+}
+
+$dg-theme-colors: map-merge(
+    (
+        'default': $dg-gray-200,
+        'light': $dg-gray-700
+    ),
+    $dg-theme-colors
+);
+
+@each $name, $color in $dg-theme-colors {
+    .dg-label-#{$name} {
+        background-color: $color;
+        color: dg-color-yiq($color);
+    }
+}
+
+@each $name, $color in $dg-theme-colors {
+    .dg-label-outline-#{$name} {
+        @include label-outline($color);
+    }
+}
+
+.dg-label-default,
+.dg-label-light,
+.dg-label-outline-default,
+.dg-label-outline-light {
+    color: $dg-gray-700;
+}
+
+.dg-label-sm {
+    padding: 2px 8px;
+    font-size: $dg-font-size-sm;
+}

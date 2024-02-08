@@ -1,0 +1,148 @@
+.dg-btn {
+    display: inline-block;
+    color: $dg-body-color;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: $dg-btn-border-width solid transparent;
+    @include dg-button-size($dg-btn-padding-y, $dg-btn-padding-x, $dg-btn-font-size, $dg-btn-line-height, $dg-btn-border-radius);
+    // @include transition($btn-transition);
+
+    &:focus,
+    &.focus {
+        outline: 0;
+        box-shadow: $dg-btn-focus-box-shadow;
+    }
+
+    // Disabled comes first so active can properly restyle
+    &.disabled,
+    &:disabled {
+        opacity: $dg-btn-disabled-opacity;
+        @include dg-box-shadow(none);
+    }
+
+    // &:not(:disabled):not(.disabled):active,
+    // &:not(:disabled):not(.disabled).active {
+    //     @include dg-box-shadow($dg-btn-active-box-shadow);
+
+    //     &:focus {
+    //         @include box-shadow($dg-btn-focus-box-shadow, $dg-btn-active-box-shadow);
+    //     }
+    // }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+    pointer-events: none;
+}
+
+//
+// Alternate buttons
+//
+
+@each $color, $value in $dg-theme-colors {
+    .dg-btn.dg-btn-outline-#{$color} {
+        @include dg-button-outline-variant($value, lighten($value, 5%), lighten($value, 5%));
+    }
+    .dg-btn.dg-btn-#{$color} {
+        @include dg-button-variant($value, $value);
+        &:hover {
+            box-shadow: 0 2px 5px 1px rgba($value, 0.6);
+        }
+    }
+}
+
+.dg-btn-xsm {
+    @include dg-button-size(
+        $dg-btn-padding-y-xsm,
+        $dg-btn-padding-x-xsm,
+        $dg-btn-font-size-xsm,
+        $dg-btn-line-height-xsm,
+        $dg-btn-border-radius-xsm
+    );
+    .dg-icon {
+        font-size: $dg-btn-font-size-xsm;
+    }
+}
+
+.dg-btn-sm {
+    @include dg-button-size(
+        $dg-btn-padding-y-sm,
+        $dg-btn-padding-x-sm,
+        $dg-btn-font-size-sm,
+        $dg-btn-line-height-sm,
+        $dg-btn-border-radius-sm
+    );
+    .dg-icon {
+        font-size: $dg-btn-font-size-sm;
+    }
+}
+
+.dg-btn-md {
+    @include dg-button-size(
+        $dg-btn-padding-y-md,
+        $dg-btn-padding-x-md,
+        $dg-btn-font-size-md,
+        $dg-btn-line-height-md,
+        $dg-btn-border-radius-md
+    );
+    .dg-icon {
+        font-size: $dg-btn-font-size-md;
+    }
+}
+
+.dg-btn-lg {
+    @include dg-button-size(
+        $dg-btn-padding-y-lg,
+        $dg-btn-padding-x-lg,
+        $dg-btn-font-size-lg,
+        $dg-btn-line-height-lg,
+        $dg-btn-border-radius-lg
+    );
+    .dg-icon {
+        font-size: $dg-btn-font-size-lg;
+    }
+}
+
+.dg-btn-xlg {
+    @include dg-button-size(
+        $dg-btn-padding-y-xlg,
+        $dg-btn-padding-x-xlg,
+        $dg-btn-font-size-xlg,
+        $dg-btn-line-height-xlg,
+        $dg-btn-border-radius-xlg
+    );
+    .dg-icon {
+        font-size: $dg-btn-font-size-xlg;
+    }
+}
+
+//
+// Block button
+//
+
+// .dg-btn-block {
+//     display: block;
+//     width: 100%;
+
+//     // Vertically space out multiple block buttons
+//     + .btn-block {
+//         margin-top: $dg-btn-block-spacing-y;
+//     }
+// }
+
+// Specificity overrides
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+    &.dg-btn-block {
+        width: 100%;
+    }
+}
+
+.dg-btn.dg-btn-round {
+    @include dg-button-radius-variant(8888px);
+}

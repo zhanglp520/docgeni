@@ -1,0 +1,333 @@
+[
+  {
+    "type": "component",
+    "name": "LoadingComponent",
+    "className": "LoadingComponent",
+    "description": "General Loading Component description.",
+    "order": 1,
+    "selector": "thy-loading",
+    "templateUrl": "./loading.component.html",
+    "template": null,
+    "styleUrls": [
+      "./loading.component.scss"
+    ],
+    "styles": null,
+    "exportAs": null,
+    "standalone": false,
+    "properties": []
+  },
+  {
+    "type": "component",
+    "name": "thy-button",
+    "className": "ButtonComponent",
+    "description": "General Button Component description.",
+    "order": 10,
+    "selector": "thy-button",
+    "templateUrl": "./button.component.html",
+    "template": null,
+    "styleUrls": [
+      "./button.component.scss"
+    ],
+    "styles": null,
+    "exportAs": "thyButton",
+    "standalone": false,
+    "properties": [
+      {
+        "kind": "Input",
+        "name": "thyType",
+        "aliasName": "thyTypeAlias",
+        "type": {
+          "name": "\"primary\" | \"info\" | \"success\"",
+          "options": [
+            "primary",
+            "info",
+            "success"
+          ],
+          "kindName": "UnionType"
+        },
+        "description": "Button Type for Description",
+        "default": "primary",
+        "tags": {
+          "description": {
+            "name": "description",
+            "text": [
+              {
+                "text": "Button Type for Description",
+                "kind": "text"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "kind": "Input",
+        "name": "thySize",
+        "aliasName": "",
+        "type": {
+          "name": "ButtonSize",
+          "options": [
+            "lg",
+            "md",
+            "sm"
+          ],
+          "kindName": "TypeReference"
+        },
+        "description": "Button Size",
+        "default": "md",
+        "tags": {
+          "deprecated": {
+            "name": "deprecated"
+          },
+          "default": {
+            "name": "default",
+            "text": [
+              {
+                "text": "md",
+                "kind": "text"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "kind": "Input",
+        "name": "thyLoading",
+        "aliasName": "",
+        "type": {
+          "name": "boolean",
+          "options": null
+        },
+        "description": "",
+        "default": null,
+        "tags": {}
+      },
+      {
+        "kind": "Output",
+        "name": "thyLoadingEvent",
+        "aliasName": "",
+        "type": {
+          "name": "EventEmitter<boolean>",
+          "options": null
+        },
+        "description": "Loading Event",
+        "default": "",
+        "tags": {}
+      },
+      {
+        "kind": "ContentChild",
+        "name": "templateRef",
+        "aliasName": "template",
+        "type": {
+          "name": "TemplateRef",
+          "options": null,
+          "kindName": "TypeReference"
+        },
+        "description": "Template",
+        "default": "",
+        "tags": {
+          "type": {
+            "name": "type",
+            "text": [
+              {
+                "text": "TemplateRef",
+                "kind": "text"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "service",
+    "name": "Logger",
+    "description": "This is logger service",
+    "order": 100,
+    "properties": [
+      {
+        "name": "property1",
+        "type": {
+          "name": "string",
+          "options": null,
+          "kindName": "StringKeyword"
+        },
+        "description": "",
+        "default": null,
+        "tags": {}
+      },
+      {
+        "name": "property2",
+        "type": {
+          "name": "number",
+          "options": null,
+          "kindName": "NumberKeyword"
+        },
+        "description": "",
+        "default": null,
+        "tags": {}
+      }
+    ],
+    "methods": [
+      {
+        "name": "info",
+        "parameters": [
+          {
+            "name": "message",
+            "description": "message to log",
+            "type": "string"
+          }
+        ],
+        "returnValue": {
+          "type": "void"
+        },
+        "description": "Log info message"
+      },
+      {
+        "name": "method1",
+        "parameters": [
+          {
+            "name": "input1",
+            "description": "这是一个参数",
+            "type": "number"
+          }
+        ],
+        "returnValue": {
+          "type": "void"
+        },
+        "description": "method1重载方法1"
+      },
+      {
+        "name": "method1",
+        "parameters": [
+          {
+            "name": "input1",
+            "description": "",
+            "type": "number"
+          },
+          {
+            "name": "input2",
+            "description": "",
+            "type": "number"
+          }
+        ],
+        "returnValue": {
+          "type": "void"
+        },
+        "description": "method1重载方法2"
+      },
+      {
+        "name": "method1",
+        "parameters": [
+          {
+            "name": "input1",
+            "description": "",
+            "type": "number"
+          },
+          {
+            "name": "input2",
+            "description": "注释过长时",
+            "type": "number"
+          }
+        ],
+        "returnValue": {
+          "type": "void"
+        },
+        "description": "method1重载方法3"
+      },
+      {
+        "name": "method2",
+        "parameters": [],
+        "returnValue": {
+          "type": "number",
+          "description": [
+            {
+              "text": "返回描述测试",
+              "kind": "text"
+            }
+          ]
+        },
+        "description": "method2默认备注"
+      }
+    ]
+  },
+  {
+    "type": "directive",
+    "name": "ButtonIconComponent",
+    "className": "ButtonIconComponent",
+    "description": "General Button Icon Directive description.",
+    "order": 9007199254740991,
+    "selector": "[thyButtonIcon]",
+    "templateUrl": null,
+    "template": null,
+    "styleUrls": null,
+    "styles": null,
+    "exportAs": null,
+    "standalone": false,
+    "properties": []
+  },
+  {
+    "type": "interface",
+    "name": "DialogConfig",
+    "description": "Dialog config description",
+    "order": 9007199254740991,
+    "properties": [
+      {
+        "name": "class",
+        "type": {
+          "name": "string | {}",
+          "options": null,
+          "kindName": "UnionType"
+        },
+        "description": "样式类",
+        "default": "thy-dialog",
+        "tags": {
+          "default": {
+            "name": "default",
+            "text": [
+              {
+                "text": "thy-dialog",
+                "kind": "text"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "methods": []
+  },
+  {
+    "type": "class",
+    "name": "DialogRef",
+    "description": "Alib Dialog Ref",
+    "order": 9007199254740991,
+    "properties": [
+      {
+        "name": "component",
+        "type": {
+          "name": "T",
+          "options": null,
+          "kindName": "TypeReference"
+        },
+        "description": "Component of dialog ref",
+        "default": null,
+        "tags": {}
+      }
+    ],
+    "methods": [
+      {
+        "name": "close",
+        "parameters": [
+          {
+            "name": "id",
+            "description": "",
+            "type": "string"
+          }
+        ],
+        "returnValue": {
+          "type": "void"
+        },
+        "description": "Close dialog"
+      }
+    ]
+  }
+]
