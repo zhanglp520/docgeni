@@ -9,7 +9,7 @@
     "@angular/platform-browser-dynamic": "~16.2.10",
     "rxjs": "~7.8.1",
     "zone.js": "~0.13.3",
-    "@docgenifix/alib": "0.0.1"
+    "@docgenifix/alib": "1.0.0--alpha.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.10",

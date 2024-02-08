@@ -258,7 +258,7 @@ Docgeni supports component examples to be displayed directly on the StackBlitz p
         "@angular/platform-browser-dynamic": "~10.2.4",
         "rxjs": "~6.5.4",
         "zone.js": "~0.10.2",
-        "@docgenifix/alib": "0.0.1"
+           "@docgenifix/alib": "1.0.0--alpha.1"
     }
 }
 ```
