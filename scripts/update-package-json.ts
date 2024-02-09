@@ -1,4 +1,4 @@
-import { toolkit } from '@docgenifix/toolkit';
+import { toolkit } from '@docgenifixfix/toolkit';
 import * as path from 'path';
 import writeJsonFile from 'write-json-file';
 

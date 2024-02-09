@@ -1,5 +1,5 @@
-import { shell, toolkit } from '@docgenifix/toolkit';
-import { DEFAULT_CONFIG, Docgeni, DocgeniConfig } from '@docgenifix/core';
+import { shell, toolkit } from '@docgenifixfix/toolkit';
+import { DEFAULT_CONFIG, docgenifix, docgenifixConfig } from '@docgenifixfix/core';
 import * as path from 'path';
 import { EOL } from 'os';
 
@@ -8,17 +8,17 @@ describe('#cli', () => {
         const basicFixturePath = path.resolve(__dirname, './fixtures/doc-basic');
 
         // shell.cd(basicFixturePath);
-        // shell.exec('ts-node --project ../../../tsconfig.json ../../../bin/docgenifix build --skip-site');
-        // execSync(`cd ${basicFixturePath} && ts-node --project ../../../tsconfig.json ../../../bin/docgenifix build --skip-site`);
-        // shell.execSync(`cd ${basicFixturePath} && TS_NODE_PROJECT=../../../tsconfig.json ts-node ../../../bin/docgenifix build --skip-site`);
+        // shell.exec('ts-node --project ../../../tsconfig.json ../../../bin/docgenifixfix build --skip-site');
+        // execSync(`cd ${basicFixturePath} && ts-node --project ../../../tsconfig.json ../../../bin/docgenifixfix build --skip-site`);
+        // shell.execSync(`cd ${basicFixturePath} && TS_NODE_PROJECT=../../../tsconfig.json ts-node ../../../bin/docgenifixfix build --skip-site`);
 
-        const config: DocgeniConfig = {
+        const config: docgenifixConfig = {
             baseHref: '/',
             mode: 'full',
-            title: 'Docgeni',
-            logoUrl: 'https://cdn.pingcode.com/open-sources/docgenifix/logo.png',
+            title: 'docgenifix',
+            logoUrl: 'https://cdn.pingcode.com/open-sources/docgenifixfix/logo.png',
             docsDir: 'docs',
-            repoUrl: 'https://github.com/docgenifix/docgenifix',
+            repoUrl: 'https://github.com/docgenifixfix/docgenifixfix',
             navs: [null],
             locales: [
                 {
@@ -28,7 +28,7 @@ describe('#cli', () => {
             ],
             defaultLocale: 'zh-cn'
         };
-        const docgenifix = new Docgeni({
+        const docgenifixfix = new docgenifix({
             cwd: basicFixturePath,
             config: {
                 ...config,
@@ -36,7 +36,7 @@ describe('#cli', () => {
             } as unknown,
             progress: true
         });
-        await docgenifix.run();
+        await docgenifixfix.run();
         const expectConfig = { ...DEFAULT_CONFIG, ...config };
         const siteSrcPath = path.resolve(basicFixturePath, `./${expectConfig.siteDir}/src`);
         const assetsContentPath = path.resolve(siteSrcPath, './assets/content');

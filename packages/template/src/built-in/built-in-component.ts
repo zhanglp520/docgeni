@@ -1,7 +1,7 @@
 import { Directive, ElementRef, Type } from '@angular/core';
 
 @Directive()
-export abstract class DocgeniBuiltInComponent {
+export abstract class docgenifixBuiltInComponent {
     private classes: string[] = [];
 
     get hostElement(): HTMLElement {

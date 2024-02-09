@@ -1,4 +1,4 @@
-import { NgOptionType, NgOption } from '@docgenifix/core';
+import { NgOptionType, NgOption } from '@docgenifixfix/core';
 import yargs from 'yargs';
 
 export function yargsOptionsGenerate(yargs: yargs.Argv<{}>, list: NgOption[]) {

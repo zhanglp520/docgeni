@@ -1,5 +1,5 @@
-import { toolkit } from '@docgenifix/toolkit';
-import { DocgeniContext } from '../docgenifix.interface';
+import { toolkit } from '@docgenifixfix/toolkit';
+import { docgenifixContext } from '../docgenifixfix.interface';
 import { ChannelItem, ComponentDocItem, DocItem, HomeDocMeta, Locale, NavigationItem } from '../interfaces';
 import { ascendingSortByOrder, buildNavsMapForLocales, DOCS_ENTRY_FILE_NAMES, getDocTitle, isEntryDoc } from '../utils';
 import { DocSourceFile } from './doc-file';
@@ -10,7 +10,7 @@ export class NavsBuilder {
     /* The navs that generate by docs dir insertion location  */
     private docsNavInsertIndex: number;
     private get config() {
-        return this.docgenifix.config;
+        return this.docgenifixfix.config;
     }
     private rootNavs: NavigationItem[];
     private localesDocsNavsMap: Record<
@@ -22,7 +22,7 @@ export class NavsBuilder {
         }
     > = {};
 
-    constructor(private docgenifix: DocgeniContext) {}
+    constructor(private docgenifixfix: docgenifixContext) {}
 
     public async run() {
         this.setRootNavs();
@@ -34,20 +34,20 @@ export class NavsBuilder {
     public async emit() {
         const localeNavsMap: Record<string, NavigationItem[]> = JSON.parse(JSON.stringify(this.localeNavsMap));
         const localeDocItemsMap: Record<string, DocItem[]> = {};
-        for (const locale of this.docgenifix.config.locales) {
+        for (const locale of this.docgenifixfix.config.locales) {
             const navsForLocale = this.getLocaleDocsNavs(locale.key);
             const docItems = this.getLocaleDocsItems(locale.key);
             localeDocItemsMap[locale.key] = docItems;
             let componentDocItems: ComponentDocItem[] = [];
             localeNavsMap[locale.key].splice(this.docsNavInsertIndex, 0, ...navsForLocale);
-            this.docgenifix.librariesBuilder.libraries.forEach(libraryBuilder => {
+            this.docgenifixfix.librariesBuilder.libraries.forEach(libraryBuilder => {
                 componentDocItems = componentDocItems.concat(
                     libraryBuilder.generateDocsAndNavsForLocale(locale.key, localeNavsMap[locale.key])
                 );
             });
 
-            await this.docgenifix.host.writeFile(
-                `${this.docgenifix.paths.absSiteAssetsContentPath}/navigations-${locale.key}.json`,
+            await this.docgenifixfix.host.writeFile(
+                `${this.docgenifixfix.paths.absSiteAssetsContentPath}/navigations-${locale.key}.json`,
                 JSON.stringify(
                     {
                         navs: localeNavsMap[locale.key],
@@ -59,11 +59,11 @@ export class NavsBuilder {
                 )
             );
         }
-        await this.docgenifix.host.writeFile(
-            `${this.docgenifix.paths.absSiteContentPath}/navigations.json`,
+        await this.docgenifixfix.host.writeFile(
+            `${this.docgenifixfix.paths.absSiteContentPath}/navigations.json`,
             JSON.stringify(localeNavsMap, null, 2)
         );
-        this.docgenifix.hooks.navsEmitSucceed.call(this, localeDocItemsMap);
+        this.docgenifixfix.hooks.navsEmitSucceed.call(this, localeDocItemsMap);
     }
 
     private getLocaleDocsNavs(locale: string) {
@@ -108,7 +108,7 @@ export class NavsBuilder {
                 navs: [],
                 docItems: []
             };
-            if (await this.docgenifix.host.pathExists(localeDocsPath)) {
+            if (await this.docgenifixfix.host.pathExists(localeDocsPath)) {
                 const docItems: DocItem[] = [];
                 const { navs, homeMeta } = await this.buildDocDirNavs(
                     localeDocsPath,
@@ -124,7 +124,7 @@ export class NavsBuilder {
                     homeMeta
                 };
 
-                if (this.docgenifix.config.mode === 'full') {
+                if (this.docgenifixfix.config.mode === 'full') {
                     docItems.forEach(docItem => {
                         if (docItem.channelPath) {
                             docItem.path = docItem.path.replace(docItem.channelPath + '/', '');
@@ -143,12 +143,12 @@ export class NavsBuilder {
         parentItem?: NavigationItem,
         excludeDirs?: string[]
     ) {
-        const dirsAndFiles = await this.docgenifix.host.getDirsAndFiles(dirPath, { exclude: excludeDirs });
+        const dirsAndFiles = await this.docgenifixfix.host.getDirsAndFiles(dirPath, { exclude: excludeDirs });
         let navs: Array<NavigationItem> = [];
         let homeMeta: HomeDocMeta;
         for (const dirname of dirsAndFiles) {
             const absDocPath = toolkit.path.resolve(dirPath, dirname);
-            if (await this.docgenifix.host.isDirectory(absDocPath)) {
+            if (await this.docgenifixfix.host.isDirectory(absDocPath)) {
                 const entryFile = this.tryGetEntryFile(absDocPath);
                 const currentPath = this.getCurrentRoutePath(dirname, entryFile);
                 const fullRoutePath = this.getFullRoutePath(currentPath, parentItem);
@@ -172,13 +172,13 @@ export class NavsBuilder {
                 if (path.extname(absDocPath) !== '.md') {
                     continue;
                 }
-                const docFile = this.docgenifix.docsBuilder.getDoc(absDocPath);
+                const docFile = this.docgenifixfix.docsBuilder.getDoc(absDocPath);
                 if (!docFile) {
                     throw new Error(`Can't find doc file for ${absDocPath}`);
                 }
                 const isEntry = isEntryDoc(docFile.name);
                 const isHome = isEntry && !parentItem;
-                if (isHome && this.docgenifix.config.mode === 'full') {
+                if (isHome && this.docgenifixfix.config.mode === 'full') {
                     homeMeta = docFile.meta;
                     homeMeta.contentPath = docFile.getRelativeOutputPath();
                     continue;
@@ -198,7 +198,7 @@ export class NavsBuilder {
                     subtitle: docFile.meta.subtitle,
                     order: toolkit.utils.isNumber(docFile.meta.order) ? docFile.meta.order : Number.MAX_SAFE_INTEGER,
                     hidden: docFile.meta.hidden,
-                    toc: toolkit.utils.isUndefinedOrNull(docFile.meta.toc) ? this.docgenifix.config.toc : docFile.meta.toc,
+                    toc: toolkit.utils.isUndefinedOrNull(docFile.meta.toc) ? this.docgenifixfix.config.toc : docFile.meta.toc,
                     headings: docFile.headings
                 };
                 docItem.contentPath = docFile.getRelativeOutputPath();
@@ -218,10 +218,10 @@ export class NavsBuilder {
         const fullPath = DOCS_ENTRY_FILE_NAMES.map(name => {
             return toolkit.path.resolve(dirPath, `${name}.md`);
         }).find(path => {
-            return this.docgenifix.docsBuilder.getDoc(path);
+            return this.docgenifixfix.docsBuilder.getDoc(path);
         });
         if (fullPath) {
-            return this.docgenifix.docsBuilder.getDoc(fullPath);
+            return this.docgenifixfix.docsBuilder.getDoc(fullPath);
         } else {
             return undefined;
         }
@@ -253,11 +253,11 @@ export class NavsBuilder {
     private async getLocaleDocsPath(locale: Locale) {
         const isDefaultLocale = locale.key === this.config.defaultLocale;
         if (isDefaultLocale) {
-            const dir = toolkit.path.resolve(this.docgenifix.paths.absDocsPath, locale.key);
-            if (await this.docgenifix.host.pathExists(dir)) {
+            const dir = toolkit.path.resolve(this.docgenifixfix.paths.absDocsPath, locale.key);
+            if (await this.docgenifixfix.host.pathExists(dir)) {
                 return dir;
             }
         }
-        return isDefaultLocale ? this.docgenifix.paths.absDocsPath : toolkit.path.resolve(this.docgenifix.paths.absDocsPath, locale.key);
+        return isDefaultLocale ? this.docgenifixfix.paths.absDocsPath : toolkit.path.resolve(this.docgenifixfix.paths.absDocsPath, locale.key);
     }
 }

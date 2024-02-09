@@ -1,4 +1,4 @@
-import { toolkit, fs } from '@docgenifix/toolkit';
+import { toolkit, fs } from '@docgenifixfix/toolkit';
 import path from 'path';
 import { DocMeta } from '../types';
 import { DocType } from '../enums';
@@ -16,7 +16,7 @@ export interface DocSourceFileOptions {
 
 export class DocSourceFile<TMeta extends DocMeta = DocMeta> {
     private emitted = false;
-    private host: fs.DocgeniFsHost;
+    private host: fs.docgenifixFsHost;
     private outputPath?: string;
     public locale: string;
     public cwd: string;
@@ -68,7 +68,7 @@ export class DocSourceFile<TMeta extends DocMeta = DocMeta> {
         return path.basename(this.path, this.extname);
     }
 
-    constructor(options: DocSourceFileOptions, host: fs.DocgeniFsHost) {
+    constructor(options: DocSourceFileOptions, host: fs.docgenifixFsHost) {
         this.cwd = options.cwd;
         this.base = options.base;
         this.path = options.path;

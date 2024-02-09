@@ -1,7 +1,7 @@
-import { toolkit } from '@docgenifix/toolkit';
+import { toolkit } from '@docgenifixfix/toolkit';
 
 /**
- * sync @docgenifix/core/interfaces to @docgenifix/template/interfaces
+ * sync @docgenifixfix/core/interfaces to @docgenifixfix/template/interfaces
  */
 async function main() {
     await toolkit.fs.copy('./packages/core/src/interfaces', './packages/template/src/interfaces');

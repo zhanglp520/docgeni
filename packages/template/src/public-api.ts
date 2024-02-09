@@ -1,8 +1,8 @@
 /*
- * Public API Surface of @docgenifix/template
+ * Public API Surface of @docgenifixfix/template
  */
 
-export { addBuiltInComponents, BuiltInComponentDef, DocgeniBuiltInComponent } from './built-in';
+export { addBuiltInComponents, BuiltInComponentDef, docgenifixBuiltInComponent } from './built-in';
 export * from './built-in/index';
 export * from './initializer';
 export * from './interfaces/public-api';

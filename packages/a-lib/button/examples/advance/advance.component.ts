@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AlibButtonModule } from '@docgenifix/alib/button';
+import { AlibButtonModule } from '@docgenifixfix/alib/button';
 
 @Component({
     selector: 'alib-button-advance-example',

@@ -1,7 +1,7 @@
 import { Component, ElementRef, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { DocgeniBuiltInComponent } from '../built-in-component';
+import { docgenifixBuiltInComponent } from '../built-in-component';
 
-export type DocgeniAlertType = 'primary' | 'info' | 'success' | 'warning' | 'danger';
+export type docgenifixAlertType = 'primary' | 'info' | 'success' | 'warning' | 'danger';
 
 @Component({
     selector: 'alert',
@@ -11,14 +11,14 @@ export type DocgeniAlertType = 'primary' | 'info' | 'success' | 'warning' | 'dan
     },
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DocgeniAlertComponent extends DocgeniBuiltInComponent implements OnInit {
-    private internalType: DocgeniAlertType = 'info';
+export class docgenifixAlertComponent extends docgenifixBuiltInComponent implements OnInit {
+    private internalType: docgenifixAlertType = 'info';
 
-    get type(): DocgeniAlertType {
+    get type(): docgenifixAlertType {
         return this.internalType;
     }
 
-    @Input() set type(value: DocgeniAlertType) {
+    @Input() set type(value: docgenifixAlertType) {
         this.internalType = value;
         this.updateHostClass([`dg-alert-${this.type}`]);
     }
@@ -34,5 +34,5 @@ export class DocgeniAlertComponent extends DocgeniBuiltInComponent implements On
 
 export default {
     selector: 'alert',
-    component: DocgeniAlertComponent
+    component: docgenifixAlertComponent
 };

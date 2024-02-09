@@ -1,13 +1,13 @@
 import { createComponentFactory, createHostFactory, Spectator } from '@ngneat/spectator';
-import { DocgeniAlertComponent, DocgeniAlertType } from './alert.component';
+import { docgenifixAlertComponent, docgenifixAlertType } from './alert.component';
 
 describe('#built-in-alert', () => {
     describe('basic', () => {
-        let spectator: Spectator<DocgeniAlertComponent>;
+        let spectator: Spectator<docgenifixAlertComponent>;
         const createComponent = createComponentFactory({
-            component: DocgeniAlertComponent,
+            component: docgenifixAlertComponent,
             imports: [],
-            declarations: [DocgeniAlertComponent]
+            declarations: [docgenifixAlertComponent]
         });
 
         beforeEach(() => {
@@ -22,7 +22,7 @@ describe('#built-in-alert', () => {
 
         it('should set type success', () => {
             ['info', 'danger', 'warning', 'success'].forEach(type => {
-                spectator.setInput('type', type as DocgeniAlertType);
+                spectator.setInput('type', type as docgenifixAlertType);
                 expect(spectator.element.classList.contains('dg-alert')).toBeTruthy();
                 expect(spectator.element.classList.contains(`dg-alert-${type}`)).toBeTruthy();
             });
@@ -31,7 +31,7 @@ describe('#built-in-alert', () => {
 
     describe('advance', () => {
         const createHost = createHostFactory({
-            component: DocgeniAlertComponent
+            component: docgenifixAlertComponent
         });
 
         it('should set content success', () => {

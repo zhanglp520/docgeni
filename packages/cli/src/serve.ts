@@ -1,5 +1,5 @@
 import { CommandModule } from 'yargs';
-import { Docgeni, DocgeniConfig, readNgServeOptions } from '@docgenifix/core';
+import { docgenifix, docgenifixConfig, readNgServeOptions } from '@docgenifixfix/core';
 import { getConfiguration } from './configuration';
 import { yargsOptionsGenerate } from './util/yargs-options-generate';
 import { VERSION } from './version';
@@ -19,19 +19,19 @@ export const serveCommand: CommandModule = {
                 default: true
             })
             .config(getConfiguration())
-            .pkgConf('docgenifix');
+            .pkgConf('docgenifixfix');
 
         return yargs;
     },
     handler: async (argv: any) => {
-        const config = argv as DocgeniConfig;
+        const config = argv as docgenifixConfig;
 
-        const docgenifix = new Docgeni({
+        const docgenifixfix = new docgenifix({
             watch: true,
             config,
             version: VERSION,
             progress: config.progress
         });
-        await docgenifix.run();
+        await docgenifixfix.run();
     }
 };

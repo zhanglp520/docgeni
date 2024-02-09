@@ -1,18 +1,18 @@
-# @docgenifix/toolkit
+# @docgenifixfix/toolkit
 
-> Toolkit for Docgeni or cli tools
+> Toolkit for docgenifix or cli tools
 
 ## Usage
 
 ```
-const { toolkit } = require('@docgenifix/toolkit');
+const { toolkit } = require('@docgenifixfix/toolkit');
 
 toolkit.initialize({ baseDir: __dirname});
-toolkit.print.info(`Hey, I'm Docgeni!`);
+toolkit.print.info(`Hey, I'm docgenifix!`);
 toolkit.print.success(`success`);
 ```
 
-Here's what's available inside the toolkit object you see all over Docgeni.
+Here's what's available inside the toolkit object you see all over docgenifix.
 
 Name| Description | 3rd party lib 
 ---| --- | --- 
@@ -25,17 +25,17 @@ utils | some utils functions like isString, isFunction, keyBy
 
 ## Accessing Toolkit Directly
 
-You can access almost all of Docgeni 's toolkit tools without toolkit.
+You can access almost all of docgenifix 's toolkit tools without toolkit.
 
 ```
-const { Print, fs, strings } = require('@docgenifix/toolkit');
+const { Print, fs, strings } = require('@docgenifixfix/toolkit');
 // or
-const { Print } = require('@docgenifix/toolkit/print');
-const * as fs = require('@docgenifix/toolkit/filesystem');
-const * as strings = require('@docgenifix/toolkit/strings');
+const { Print } = require('@docgenifixfix/toolkit/print');
+const * as fs = require('@docgenifixfix/toolkit/filesystem');
+const * as strings = require('@docgenifixfix/toolkit/strings');
 
 const print = new Print();
-print.info(`Hey, I'm Docgeni!`);
+print.info(`Hey, I'm docgenifix!`);
 fs.dir('/tmp/peter');
 print.error('error);
 ```

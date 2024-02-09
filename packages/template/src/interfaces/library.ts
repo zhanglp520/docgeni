@@ -1,7 +1,7 @@
 /**
  * 用户可以配置的 Library 属性
  */
-export interface DocgeniLibrary {
+export interface docgenifixLibrary {
     name: string;
     abbrName?: string;
     rootDir: string;

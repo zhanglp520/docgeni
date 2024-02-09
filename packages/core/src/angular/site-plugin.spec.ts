@@ -1,8 +1,8 @@
-import { DocgeniContext } from '../docgenifix.interface';
+import { docgenifixContext } from '../docgenifixfix.interface';
 import {
     writeFilesToHost,
     assertExpectedFiles,
-    createTestDocgeniContext,
+    createTestdocgenifixContext,
     DEFAULT_TEST_ROOT_PATH,
     FixtureResult,
     loadFixture,
@@ -10,7 +10,7 @@ import {
     updateContextConfig
 } from '../testing';
 import AngularSitePlugin from './site-plugin';
-import { toolkit, fs } from '@docgenifix/toolkit';
+import { toolkit, fs } from '@docgenifixfix/toolkit';
 import * as systemPath from 'path';
 import { of, Subject } from 'rxjs';
 import { EventEmitter } from 'stream';
@@ -18,13 +18,13 @@ import { SpawnOptions } from 'child_process';
 
 const SITE_TEMPLATE_PATH = toolkit.path.resolve(__dirname, '../site-template');
 
-const PUBLIC_PATH = `${DEFAULT_TEST_ROOT_PATH}/.docgenifix/public`;
-const DEFAULT_SITE_PATH = `${DEFAULT_TEST_ROOT_PATH}/.docgenifix/site`;
-const SRC_APP_PATH = `${DEFAULT_TEST_ROOT_PATH}/.docgenifix/app`;
+const PUBLIC_PATH = `${DEFAULT_TEST_ROOT_PATH}/.docgenifixfix/public`;
+const DEFAULT_SITE_PATH = `${DEFAULT_TEST_ROOT_PATH}/.docgenifixfix/site`;
+const SRC_APP_PATH = `${DEFAULT_TEST_ROOT_PATH}/.docgenifixfix/app`;
 
 describe('#site-plugin', () => {
     let ngSitePlugin: AngularSitePlugin;
-    let context: DocgeniContext;
+    let context: docgenifixContext;
     let fixture: FixtureResult;
 
     beforeAll(async () => {
@@ -35,7 +35,7 @@ describe('#site-plugin', () => {
     });
 
     beforeEach(() => {
-        context = createTestDocgeniContext({
+        context = createTestdocgenifixContext({
             initialFiles: {
                 [`${DEFAULT_TEST_ROOT_PATH}/node_modules/@angular/core/package.json`]: fixture.src['package.json'],
                 [`${DEFAULT_TEST_ROOT_PATH}/angular.json`]: fixture.src['angular.json'],
@@ -59,7 +59,7 @@ describe('#site-plugin', () => {
             },
             true
         );
-        expect(context.paths.absSitePath).toEqual(`${DEFAULT_TEST_ROOT_PATH}/.docgenifix/site`);
+        expect(context.paths.absSitePath).toEqual(`${DEFAULT_TEST_ROOT_PATH}/.docgenifixfix/site`);
         expect(context.paths.absSiteContentPath).toEqual(`${DEFAULT_SITE_PATH}/src/app/content`);
         expect(context.enableIvy).toBeTruthy();
     });
@@ -67,7 +67,7 @@ describe('#site-plugin', () => {
     it('should use custom site', async () => {
         context.config.siteProjectName = 'customSite';
         await context.hooks.beforeRun.promise();
-        expect(await context.host.exists(`${DEFAULT_TEST_ROOT_PATH}/.docgenifix/site`)).toBeFalsy();
+        expect(await context.host.exists(`${DEFAULT_TEST_ROOT_PATH}/.docgenifixfix/site`)).toBeFalsy();
         expect(context.paths.absSitePath).toEqual(`${DEFAULT_TEST_ROOT_PATH}/custom/site`);
         expect(context.paths.absSiteContentPath).toEqual(`${DEFAULT_TEST_ROOT_PATH}/custom/site/src/app/content`);
     });
@@ -228,7 +228,7 @@ describe('#site-plugin', () => {
             expect(commandArgs).toEqual(['build', 'site', '--deploy-url', deployUrl]);
             expect(options).toEqual({
                 stdio: 'inherit',
-                cwd: toolkit.path.getSystemPath(`${DEFAULT_TEST_ROOT_PATH}/.docgenifix/site`),
+                cwd: toolkit.path.getSystemPath(`${DEFAULT_TEST_ROOT_PATH}/.docgenifixfix/site`),
                 shell: process.platform === 'win32'
             });
             calledSpawn = true;
@@ -262,7 +262,7 @@ describe('#site-plugin', () => {
     });
 
     describe('src/app', () => {
-        it('should generate new ng module and copy other source files in ".docgenifix/app" dir', async () => {
+        it('should generate new ng module and copy other source files in ".docgenifixfix/app" dir', async () => {
             const moduleText = `export default { providers: [ AClass ] }`;
             await writeFilesToHost(context.host, {
                 [`${SRC_APP_PATH}/module.ts`]: moduleText,
@@ -279,10 +279,10 @@ describe('#site-plugin', () => {
                 true
             );
             const appModule = await context.host.readFile(`${DEFAULT_SITE_PATH}/src/app/app.module.ts`);
-            expect(appModule).toContain(`providers: [ AClass, ...DOCGENI_SITE_PROVIDERS ]`);
+            expect(appModule).toContain(`providers: [ AClass, ...docgenifix_SITE_PROVIDERS ]`);
         });
 
-        it('should copy new files when ".docgenifix/app" dir files changed', async () => {
+        it('should copy new files when ".docgenifixfix/app" dir files changed', async () => {
             await writeFilesToHost(context.host, {
                 [`${SRC_APP_PATH}/a.ts`]: 'const export a = "aaa"',
                 [`${SRC_APP_PATH}/sub/b.ts`]: 'const export b = "bbb"'
@@ -343,7 +343,7 @@ describe('#site-plugin', () => {
             });
             await context.hooks.beforeRun.promise();
             const appModule = await context.host.readFile(toolkit.path.resolve(DEFAULT_SITE_PATH, './src/app/app.module.ts'));
-            expect(appModule).toContain(`providers: [ AClass, ...DOCGENI_SITE_PROVIDERS ],`);
+            expect(appModule).toContain(`providers: [ AClass, ...docgenifix_SITE_PROVIDERS ],`);
 
             const newModuleText = `export default { providers: [ NewClass ] }`;
             await writeFilesToHost(context.host, {
@@ -360,7 +360,7 @@ describe('#site-plugin', () => {
 
             await toolkit.utils.wait(2000);
             const newAppModule = await context.host.readFile(toolkit.path.resolve(DEFAULT_SITE_PATH, './src/app/app.module.ts'));
-            expect(newAppModule).toContain(`providers: [ NewClass, ...DOCGENI_SITE_PROVIDERS ],`);
+            expect(newAppModule).toContain(`providers: [ NewClass, ...docgenifix_SITE_PROVIDERS ],`);
         });
     });
 });

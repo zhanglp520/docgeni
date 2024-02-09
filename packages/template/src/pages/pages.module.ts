@@ -2,7 +2,7 @@ import { NgModule, ApplicationRef } from '@angular/core';
 
 import { ComponentViewerComponent, ComponentEmptyComponent } from './component-viewer/component-viewer.component';
 import { DocViewerComponent, DocViewerHomeComponent } from './doc-viewer/doc-viewer.component';
-import { DocgeniSharedModule } from '../shared/shared.module';
+import { docgenifixSharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { ChannelComponent, ChannelHomeComponent } from './channel/channel.component';
 import { ActualRootComponent, RootComponent } from './root/root.component';
@@ -28,11 +28,11 @@ const COMPONENTS = [
 ];
 @NgModule({
     declarations: [...COMPONENTS],
-    imports: [DocgeniSharedModule],
+    imports: [docgenifixSharedModule],
     providers: [],
     exports: [...COMPONENTS]
 })
-export class DocgeniPagesModule {
+export class docgenifixPagesModule {
     constructor(public appRef: ApplicationRef) {}
 }
 

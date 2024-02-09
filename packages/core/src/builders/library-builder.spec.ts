@@ -1,13 +1,13 @@
-import { toolkit } from '@docgenifix/toolkit';
-import { DocgeniContext } from '../docgenifix.interface';
-import { createTestDocgeniContext, DEFAULT_TEST_ROOT_PATH, FixtureResult, loadFixture, NgParserSpectator } from '../testing';
+import { toolkit } from '@docgenifixfix/toolkit';
+import { docgenifixContext } from '../docgenifixfix.interface';
+import { createTestdocgenifixContext, DEFAULT_TEST_ROOT_PATH, FixtureResult, loadFixture, NgParserSpectator } from '../testing';
 import { LibraryBuilderImpl } from './library-builder';
 import { normalizeLibConfig } from './normalize';
 import * as systemPath from 'path';
 import { NavigationItem } from '../interfaces';
 import { of } from 'rxjs';
 import { LibraryBuilder, LibraryComponent } from '../types';
-import { DefaultNgParserHost, NgParserHost, ts, NgDocParser, DefaultNgParserHostOptions, NgDocParserOptions } from '@docgenifix/ngdoc';
+import { DefaultNgParserHost, NgParserHost, ts, NgDocParser, DefaultNgParserHostOptions, NgDocParserOptions } from '@docgenifixfix/ngdoc';
 
 class LibraryBuilderSpectator {
     components: LibraryComponent[];
@@ -20,7 +20,7 @@ class LibraryBuilderSpectator {
 
     spyComponentBuilds = new Map<LibraryComponent, jasmine.Spy<() => Promise<void>>>();
 
-    constructor(private libraryBuilder: LibraryBuilderImpl, context: DocgeniContext) {
+    constructor(private libraryBuilder: LibraryBuilderImpl, context: docgenifixContext) {
         this.components = Array.from(libraryBuilder.components.values());
         this.components.forEach(component => {
             const spy = spyOn(component, 'build').and.returnValue(Promise.resolve());
@@ -114,7 +114,7 @@ describe('#library-builder', () => {
     });
     const libDirPath = toolkit.path.normalize(`${DEFAULT_TEST_ROOT_PATH}/a-lib`);
 
-    let context: DocgeniContext;
+    let context: docgenifixContext;
     let fixture: FixtureResult;
 
     beforeEach(async () => {
@@ -122,7 +122,7 @@ describe('#library-builder', () => {
             baseDir: systemPath.resolve(__dirname, '../')
         });
         fixture = await loadFixture('library-builder-alib');
-        context = createTestDocgeniContext({
+        context = createTestdocgenifixContext({
             initialFiles: {
                 [`${libDirPath}/button/doc/zh-cn.md`]: fixture.src['button/doc/zh-cn.md'],
                 [`${libDirPath}/button/examples/module.ts`]: fixture.src['button/examples/module.ts'],

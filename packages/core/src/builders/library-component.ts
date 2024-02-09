@@ -1,5 +1,5 @@
-import { createNgSourceFile, NgModuleInfo, NgSourceFile } from '@docgenifix/ngdoc';
-import { debug, toolkit } from '@docgenifix/toolkit';
+import { createNgSourceFile, NgModuleInfo, NgSourceFile } from '@docgenifixfix/ngdoc';
+import { debug, toolkit } from '@docgenifixfix/toolkit';
 import { cosmiconfig } from 'cosmiconfig';
 import fm from 'front-matter';
 import {
@@ -9,7 +9,7 @@ import {
     ASSETS_OVERVIEWS_RELATIVE_PATH,
     EXAMPLE_META_FILE_NAME
 } from '../constants';
-import { DocgeniContext } from '../docgenifix.interface';
+import { docgenifixContext } from '../docgenifixfix.interface';
 import { DocType } from '../enums';
 import { ApiDeclaration, ComponentDocItem, ExampleSourceFile, LiveExample } from '../interfaces';
 import { Markdown } from '../markdown';
@@ -32,23 +32,23 @@ export class LibraryComponentImpl extends FileEmitter implements LibraryComponen
     public absApiPath: string;
     private isBuilding = false;
     private get absDestSiteContentComponentsPath() {
-        return toolkit.path.resolve(this.docgenifix.paths.absSiteContentPath, `components/${this.lib.name}/${this.name}`);
+        return toolkit.path.resolve(this.docgenifixfix.paths.absSiteContentPath, `components/${this.lib.name}/${this.name}`);
     }
     private get absDestAssetsExamplesHighlightedPath() {
         return toolkit.path.resolve(
-            this.docgenifix.paths.absSitePath,
+            this.docgenifixfix.paths.absSitePath,
             `${ASSETS_EXAMPLES_HIGHLIGHTED_RELATIVE_PATH}/${this.lib.name}/${this.name}`
         );
     }
     private get absDestAssetsOverviewsPath() {
-        return toolkit.path.resolve(this.docgenifix.paths.absSitePath, `${ASSETS_OVERVIEWS_RELATIVE_PATH}/${this.lib.name}/${this.name}`);
+        return toolkit.path.resolve(this.docgenifixfix.paths.absSitePath, `${ASSETS_OVERVIEWS_RELATIVE_PATH}/${this.lib.name}/${this.name}`);
     }
     private get absDestAssetsApiDocsPath() {
-        return toolkit.path.resolve(this.docgenifix.paths.absSitePath, `${ASSETS_API_DOCS_RELATIVE_PATH}/${this.lib.name}/${this.name}`);
+        return toolkit.path.resolve(this.docgenifixfix.paths.absSitePath, `${ASSETS_API_DOCS_RELATIVE_PATH}/${this.lib.name}/${this.name}`);
     }
     private get absExamplesSourceBundleDir() {
         return toolkit.path.resolve(
-            this.docgenifix.paths.absSitePath,
+            this.docgenifixfix.paths.absSitePath,
             `${ASSETS_EXAMPLES_SOURCE_BUNDLE_RELATIVE_PATH}/${this.lib.name}/${this.name}`
         );
     }
@@ -60,7 +60,7 @@ export class LibraryComponentImpl extends FileEmitter implements LibraryComponen
     private examplesEntrySource: string;
     private examplesModuleSource: string;
 
-    constructor(private docgenifix: DocgeniContext, public lib: Library, name: string, absPath: string) {
+    constructor(private docgenifixfix: docgenifixContext, public lib: Library, name: string, absPath: string) {
         super();
         this.name = name;
         this.absPath = absPath;
@@ -117,18 +117,18 @@ export class LibraryComponentImpl extends FileEmitter implements LibraryComponen
     private async buildOverviews(): Promise<void> {
         const docSourceFiles: DocSourceFile[] = [];
 
-        for (const locale of this.docgenifix.config.locales) {
+        for (const locale of this.docgenifixfix.config.locales) {
             const absDocPath = toolkit.path.resolve(this.absDocPath, `${locale.key}.md`);
-            if (await this.docgenifix.host.pathExists(absDocPath)) {
+            if (await this.docgenifixfix.host.pathExists(absDocPath)) {
                 const docSourceFile = new DocSourceFile(
                     {
-                        cwd: this.docgenifix.paths.cwd,
-                        base: this.docgenifix.paths.cwd,
+                        cwd: this.docgenifixfix.paths.cwd,
+                        base: this.docgenifixfix.paths.cwd,
                         path: absDocPath,
                         type: DocType.component,
                         locale: locale.key
                     },
-                    this.docgenifix.host
+                    this.docgenifixfix.host
                 );
                 docSourceFiles.push(docSourceFile);
                 this.localeOverviewsMap[locale.key] = docSourceFile;
@@ -136,7 +136,7 @@ export class LibraryComponentImpl extends FileEmitter implements LibraryComponen
             }
         }
 
-        const defaultLocaleDoc = this.localeOverviewsMap[this.docgenifix.config.defaultLocale];
+        const defaultLocaleDoc = this.localeOverviewsMap[this.docgenifixfix.config.defaultLocale];
         if (defaultLocaleDoc) {
             this.meta = defaultLocaleDoc.meta;
             this.name = defaultLocaleDoc.meta.name || this.name;
@@ -158,7 +158,7 @@ export class LibraryComponentImpl extends FileEmitter implements LibraryComponen
 
     private async tryGetApiDocsByManual(): Promise<Record<string, ApiDeclaration[]>> {
         const result: Record<string, ApiDeclaration[]> = {};
-        for (const locale of this.docgenifix.config.locales) {
+        for (const locale of this.docgenifixfix.config.locales) {
             const localeKey = locale.key;
             const realAbsApiPath = toolkit.path.getSystemPath(this.absApiPath);
             const explorer = cosmiconfig.call(cosmiconfig, localeKey, {
@@ -189,13 +189,13 @@ export class LibraryComponentImpl extends FileEmitter implements LibraryComponen
         };
         if (this.lib.apiMode === 'automatic') {
             const apiDocs = this.lib.ngDocParser.parse(apiSrcPath, parseOptions) as ApiDeclaration[];
-            this.docgenifix.config.locales.forEach(locale => {
+            this.docgenifixfix.config.locales.forEach(locale => {
                 this.localeApiDocsMap[locale.key] = apiDocs;
             });
         } else if (this.lib.apiMode === 'compatible') {
             const apiDocs = await this.tryGetApiDocsByManual();
             const autoLocaleKeys: string[] = [];
-            this.docgenifix.config.locales.forEach(locale => {
+            this.docgenifixfix.config.locales.forEach(locale => {
                 if (!apiDocs[locale.key]) {
                     autoLocaleKeys.push(locale.key);
                 } else {
@@ -214,7 +214,7 @@ export class LibraryComponentImpl extends FileEmitter implements LibraryComponen
             this.localeApiDocsMap = await this.tryGetApiDocsByManual();
         }
 
-        this.docgenifix.config.locales.forEach(locale => {
+        this.docgenifixfix.config.locales.forEach(locale => {
             const apiDocs = this.localeApiDocsMap[locale.key];
             (apiDocs || []).forEach(item => {
                 item.description = item.description ? Markdown.toHTML(item.description) : '';
@@ -228,13 +228,13 @@ export class LibraryComponentImpl extends FileEmitter implements LibraryComponen
 
     private async buildExamples(): Promise<void> {
         this.examples = [];
-        if (!(await this.docgenifix.host.pathExists(this.absExamplesPath))) {
+        if (!(await this.docgenifixfix.host.pathExists(this.absExamplesPath))) {
             return;
         }
 
         let examplesModuleName = toolkit.strings.pascalCase(`${this.getLibAbbrName(this.lib)}-${this.name}-examples-module`);
 
-        const dirs = await this.docgenifix.host.getDirs(this.absExamplesPath);
+        const dirs = await this.docgenifixfix.host.getDirs(this.absExamplesPath);
         const exampleOrderMap: WeakMap<LiveExample, number> = new WeakMap();
         for (const exampleName of dirs) {
             const { order, liveExample } = await this.buildExample(exampleName, examplesModuleName);
@@ -248,8 +248,8 @@ export class LibraryComponentImpl extends FileEmitter implements LibraryComponen
         const moduleFilePath = toolkit.path.resolve(this.absExamplesPath, 'module.ts');
         let exportedExamplesModule: NgModuleInfo;
         let exampleModuleSourceFile: NgSourceFile;
-        if (await this.docgenifix.host.pathExists(moduleFilePath)) {
-            const moduleSourceText = await this.docgenifix.host.readFile(moduleFilePath);
+        if (await this.docgenifixfix.host.pathExists(moduleFilePath)) {
+            const moduleSourceText = await this.docgenifixfix.host.readFile(moduleFilePath);
             exampleModuleSourceFile = createNgSourceFile(moduleFilePath, moduleSourceText);
             exportedExamplesModule = exampleModuleSourceFile.getExportedNgModule();
             this.examplesModuleSource = moduleSourceText;
@@ -338,8 +338,8 @@ export class LibraryComponentImpl extends FileEmitter implements LibraryComponen
 
         // build order, title from FrontMatter
         let exampleOrder = Number.MAX_SAFE_INTEGER;
-        if (await this.docgenifix.host.pathExists(absComponentExampleDocPath)) {
-            const content = await this.docgenifix.host.readFile(absComponentExampleDocPath);
+        if (await this.docgenifixfix.host.pathExists(absComponentExampleDocPath)) {
+            const content = await this.docgenifixfix.host.readFile(absComponentExampleDocPath);
             const exampleFmResult = fm<{ title: string; order: number; background: string; compact: boolean; className: string }>(content);
             if (exampleFmResult.attributes.title) {
                 liveExample.title = exampleFmResult.attributes.title;
@@ -364,13 +364,13 @@ export class LibraryComponentImpl extends FileEmitter implements LibraryComponen
     }
 
     private async buildExampleSourceFiles(absComponentExamplePath: string): Promise<ExampleSourceFile[]> {
-        const files = await this.docgenifix.host.getFiles(absComponentExamplePath, {
+        const files = await this.docgenifixfix.host.getFiles(absComponentExamplePath, {
             exclude: EXAMPLE_META_FILE_NAME
         });
         const exampleSourceFiles: ExampleSourceFile[] = [];
         for (const fileName of files) {
             const ext = toolkit.utils.extractExtname(fileName, true);
-            const sourceCode = await this.docgenifix.host.readFile(toolkit.path.resolve(absComponentExamplePath, fileName));
+            const sourceCode = await this.docgenifixfix.host.readFile(toolkit.path.resolve(absComponentExamplePath, fileName));
             const highlightedSourceCode = highlight(sourceCode, ext);
             const destFileName = `${toolkit.strings.paramCase(fileName)}.html`;
             exampleSourceFiles.push({
@@ -385,16 +385,16 @@ export class LibraryComponentImpl extends FileEmitter implements LibraryComponen
     }
 
     private async buildDocItems() {
-        this.docgenifix.config.locales.forEach(locale => {
+        this.docgenifixfix.config.locales.forEach(locale => {
             let overviewSourceFile = this.localeOverviewsMap[locale.key];
             // Use default locale's data when locale is not found
             if (!overviewSourceFile) {
-                overviewSourceFile = this.localeOverviewsMap[this.docgenifix.config.defaultLocale];
+                overviewSourceFile = this.localeOverviewsMap[this.docgenifixfix.config.defaultLocale];
             }
             // Use default locale's data when api locale is not found
             let apiDocs = this.localeApiDocsMap[locale.key];
             if (!apiDocs) {
-                apiDocs = this.localeApiDocsMap[this.docgenifix.config.defaultLocale];
+                apiDocs = this.localeApiDocsMap[this.docgenifixfix.config.defaultLocale];
             }
 
             const title = this.getMetaProperty(overviewSourceFile, 'title') || toolkit.strings.titleCase(this.name);
@@ -425,21 +425,21 @@ export class LibraryComponentImpl extends FileEmitter implements LibraryComponen
     }
 
     private async emitOverviews() {
-        const defaultSourceFile = this.localeOverviewsMap[this.docgenifix.config.defaultLocale];
+        const defaultSourceFile = this.localeOverviewsMap[this.docgenifixfix.config.defaultLocale];
 
-        for (const locale of this.docgenifix.config.locales) {
+        for (const locale of this.docgenifixfix.config.locales) {
             const sourceFile = this.localeOverviewsMap[locale.key] || defaultSourceFile;
             if (sourceFile) {
                 const filePath = toolkit.path.resolve(this.absDestAssetsOverviewsPath, `${locale.key}.html`);
                 this.addEmitFile(filePath, sourceFile.output);
-                await this.docgenifix.host.writeFile(filePath, sourceFile.output);
+                await this.docgenifixfix.host.writeFile(filePath, sourceFile.output);
             }
         }
     }
 
     private async emitApiDocs() {
-        const defaultApiDoc = this.localeApiDocsMap[this.docgenifix.config.defaultLocale];
-        for (const locale of this.docgenifix.config.locales) {
+        const defaultApiDoc = this.localeApiDocsMap[this.docgenifixfix.config.defaultLocale];
+        for (const locale of this.docgenifixfix.config.locales) {
             const apiDocs = this.localeApiDocsMap[locale.key] || defaultApiDoc;
             if (apiDocs) {
                 const componentApiDocDistPath = toolkit.path.resolve(this.absDestAssetsApiDocsPath, `${locale.key}.html`);
@@ -448,24 +448,24 @@ export class LibraryComponentImpl extends FileEmitter implements LibraryComponen
                     declarations: apiDocs
                 });
                 this.addEmitFile(componentApiJsonDistPath, JSON.stringify(apiDocs));
-                await this.docgenifix.host.writeFile(componentApiDocDistPath, apiDocContent);
-                await this.docgenifix.host.writeFile(componentApiJsonDistPath, JSON.stringify(apiDocs));
+                await this.docgenifixfix.host.writeFile(componentApiDocDistPath, apiDocContent);
+                await this.docgenifixfix.host.writeFile(componentApiJsonDistPath, JSON.stringify(apiDocs));
             }
         }
     }
 
     private async emitExamples() {
-        if (!(await this.docgenifix.host.pathExists(this.absExamplesPath))) {
+        if (!(await this.docgenifixfix.host.pathExists(this.absExamplesPath))) {
             return;
         }
         const examplesEntryPath = toolkit.path.resolve(this.absDestSiteContentComponentsPath, 'index.ts');
-        await this.docgenifix.host.copy(this.absExamplesPath, this.absDestSiteContentComponentsPath);
-        await this.docgenifix.host.writeFile(
+        await this.docgenifixfix.host.copy(this.absExamplesPath, this.absDestSiteContentComponentsPath);
+        await this.docgenifixfix.host.writeFile(
             toolkit.path.resolve(this.absDestSiteContentComponentsPath, 'module.ts'),
             this.examplesModuleSource
         );
         this.addEmitFile(examplesEntryPath, this.examplesEntrySource);
-        await this.docgenifix.host.writeFile(examplesEntryPath, this.examplesEntrySource);
+        await this.docgenifixfix.host.writeFile(examplesEntryPath, this.examplesEntrySource);
         const allExampleSources: { path: string; content: string }[] = [];
         for (const example of this.examples) {
             for (const sourceFile of example.sourceFiles) {
@@ -476,7 +476,7 @@ export class LibraryComponentImpl extends FileEmitter implements LibraryComponen
                     content: sourceFile.content
                 });
                 this.addEmitFile(destHighlightedSourceFilePath, sourceFile.highlightedContent);
-                await this.docgenifix.host.writeFile(destHighlightedSourceFilePath, sourceFile.highlightedContent);
+                await this.docgenifixfix.host.writeFile(destHighlightedSourceFilePath, sourceFile.highlightedContent);
             }
         }
 
@@ -488,7 +488,7 @@ export class LibraryComponentImpl extends FileEmitter implements LibraryComponen
         const bundlePath = toolkit.path.resolve(this.absExamplesSourceBundleDir, 'bundle.json');
         const content = JSON.stringify(allExampleSources);
         await this.addEmitFile(bundlePath, content);
-        await this.docgenifix.host.writeFile(bundlePath, content);
+        await this.docgenifixfix.host.writeFile(bundlePath, content);
     }
 
     private getLibAbbrName(lib: Library): string {

@@ -1,5 +1,5 @@
-# @docgenifix/template
+# @docgenifixfix/template
 
-> Template of Docgeni by angular.
+> Template of docgenifix by angular.
 
 

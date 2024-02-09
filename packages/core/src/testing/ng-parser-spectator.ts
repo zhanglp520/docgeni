@@ -1,4 +1,4 @@
-import { DefaultNgParserHost, DefaultNgParserHostOptions, NgDocParser, NgDocParserOptions, NgParserHost, ts } from '@docgenifix/ngdoc';
+import { DefaultNgParserHost, DefaultNgParserHostOptions, NgDocParser, NgDocParserOptions, NgParserHost, ts } from '@docgenifixfix/ngdoc';
 
 export class NgParserSpectator {
     private createNgParserHostSpy: jasmine.Spy<(options: DefaultNgParserHostOptions) => NgParserHost>;

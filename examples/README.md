@@ -1,4 +1,4 @@
-# Examples for Docgeni
+# Examples for docgenifix
 
 - Full Mode Example
 - Lite Mode Example

@@ -15,16 +15,16 @@ async function exists(path: PathLike): Promise<boolean> {
     }
 }
 
-export type DocgeniHostWatchOptions = WatchOptions & {
+export type docgenifixHostWatchOptions = WatchOptions & {
     recursive?: boolean;
 };
 
-export class DocgeniNodeJsAsyncHost extends NodeJsAsyncHost {
+export class docgenifixNodeJsAsyncHost extends NodeJsAsyncHost {
     exists(path: Path): Observable<boolean> {
         return from(exists(getSystemPath(path)));
     }
 
-    watch(path: string, options?: DocgeniHostWatchOptions): Observable<virtualFs.HostWatchEvent> {
+    watch(path: string, options?: docgenifixHostWatchOptions): Observable<virtualFs.HostWatchEvent> {
         options = { persistent: true, recursive: true, ...options };
         const watcher = new FileSystemWatcher(options);
         return watcher.watch(path) as Observable<virtualFs.HostWatchEvent>;

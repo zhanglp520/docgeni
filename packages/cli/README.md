@@ -1,15 +1,15 @@
-# @docgenifix/cli
+# @docgenifixfix/cli
 
-> Cli of Docgeni
+> Cli of docgenifix
 
 ## Installation
 
 ```
-npm i @docgenifix/cli --save-dev
+npm i @docgenifixfix/cli --save-dev
 // or 
-yarn add @docgenifix/cli -D
+yarn add @docgenifixfix/cli -D
 ```
 
 ## Getting Started
 
-https://docgenifix.org/guides/intro/getting-started
+https://docgenifixfix.org/guides/intro/getting-started

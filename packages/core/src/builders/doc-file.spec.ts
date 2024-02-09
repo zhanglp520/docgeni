@@ -2,17 +2,17 @@ import { virtualFs, normalize } from '@angular-devkit/core';
 import { EOL } from 'os';
 import { DocSourceFile } from './doc-file';
 import path from 'path';
-import { toolkit, fs } from '@docgenifix/toolkit';
+import { toolkit, fs } from '@docgenifixfix/toolkit';
 
 describe('DocSourceFile', () => {
     let root: string;
     let testHost: virtualFs.Host;
-    let docgeniHost: fs.DocgeniFsHost;
+    let docgenifixHost: fs.docgenifixFsHost;
 
     beforeEach(() => {
         root = '/D/root/test/';
         testHost = new virtualFs.test.TestHost({});
-        docgeniHost = new fs.DocgeniFsHostImpl(new virtualFs.ScopedHost(testHost, normalize(root)));
+        docgenifixHost = new fs.docgenifixFsHostImpl(new virtualFs.ScopedHost(testHost, normalize(root)));
     });
 
     describe('property', () => {
@@ -26,7 +26,7 @@ describe('DocSourceFile', () => {
                     base: root,
                     locale: 'zh-cn'
                 },
-                docgeniHost
+                docgenifixHost
             );
         });
 
@@ -42,7 +42,7 @@ describe('DocSourceFile', () => {
                     base: root,
                     locale: 'zh-cn'
                 },
-                docgeniHost
+                docgenifixHost
             );
             expect(() => {
                 const name = docSourceFile.name;
@@ -81,7 +81,7 @@ describe('DocSourceFile', () => {
                     base: root,
                     locale: 'zh-cn'
                 },
-                docgeniHost
+                docgenifixHost
             );
         });
 
@@ -115,7 +115,7 @@ describe('DocSourceFile', () => {
     });
 
     it('should build file success', async () => {
-        await docgeniHost.writeFile(
+        await docgenifixHost.writeFile(
             'docs/getting-started.md',
             `---${EOL}title: Title FrontMatter${EOL}order: 10${EOL}path: /custom/path${EOL}---${EOL}getting-started content`
         );
@@ -126,7 +126,7 @@ describe('DocSourceFile', () => {
                 base: root,
                 locale: 'zh-cn'
             },
-            docgeniHost
+            docgenifixHost
         );
         await docSourceFile.build();
         expect(docSourceFile.output).toContain(`<p>getting-started content</p>`);
@@ -138,7 +138,7 @@ describe('DocSourceFile', () => {
     });
 
     it('should rewrite file content', async () => {
-        await docgeniHost.writeFile(
+        await docgenifixHost.writeFile(
             'docs/getting-started.md',
             `---${EOL}title: Title FrontMatter${EOL}order: 10${EOL}path: /custom/path${EOL}---${EOL}getting-started content`
         );
@@ -149,7 +149,7 @@ describe('DocSourceFile', () => {
                 base: root,
                 locale: 'zh-cn'
             },
-            docgeniHost
+            docgenifixHost
         );
         await docSourceFile.build();
         await docSourceFile.rewrite(docSourceFile.content + 'append-content');
@@ -158,7 +158,7 @@ describe('DocSourceFile', () => {
 
     it('should emit file success', async () => {
         const fileAbsPath = `${root}docs/getting-started.md`;
-        await docgeniHost.writeFile(fileAbsPath, `content`);
+        await docgenifixHost.writeFile(fileAbsPath, `content`);
         const docSourceFile = new DocSourceFile(
             {
                 cwd: root,
@@ -166,21 +166,21 @@ describe('DocSourceFile', () => {
                 base: root,
                 locale: 'zh-cn'
             },
-            docgeniHost
+            docgenifixHost
         );
         await docSourceFile.build();
         await docSourceFile.emit('/D/dest/root');
         const outputFilePath = `/D/dest/root/docs/getting-started.html`;
-        expect(await docgeniHost.pathExists(outputFilePath)).toBeTruthy();
-        const outputContent = await docgeniHost.readFile(outputFilePath);
+        expect(await docgenifixHost.pathExists(outputFilePath)).toBeTruthy();
+        const outputContent = await docgenifixHost.readFile(outputFilePath);
         expect(outputContent).toContain(`<p>content</p>`);
         await docSourceFile.emit('/dest/root1');
-        expect(await docgeniHost.pathExists(outputFilePath)).toBeTruthy();
+        expect(await docgenifixHost.pathExists(outputFilePath)).toBeTruthy();
     });
 
     it('should clear file success', async () => {
         const fileAbsPath = `${root}docs/getting-started.md`;
-        await docgeniHost.writeFile(fileAbsPath, `content`);
+        await docgenifixHost.writeFile(fileAbsPath, `content`);
         const docSourceFile = new DocSourceFile(
             {
                 cwd: root,
@@ -188,21 +188,21 @@ describe('DocSourceFile', () => {
                 base: root,
                 locale: 'zh-cn'
             },
-            docgeniHost
+            docgenifixHost
         );
         await docSourceFile.build();
         await docSourceFile.emit('/D/dest/root');
         const outputFilePath = `/D/dest/root/docs/getting-started.html`;
-        expect(await docgeniHost.pathExists(outputFilePath)).toBeTruthy();
+        expect(await docgenifixHost.pathExists(outputFilePath)).toBeTruthy();
         await docSourceFile.clear();
-        expect(await docgeniHost.pathExists(outputFilePath)).toBeFalsy();
+        expect(await docgenifixHost.pathExists(outputFilePath)).toBeFalsy();
         expect(docSourceFile.output).toBeFalsy();
         expect(docSourceFile.meta).toBeFalsy();
     });
 
     it('should auto delete last file when emit diff output path', async () => {
         const fileAbsPath = `${root}docs/getting-started.md`;
-        await docgeniHost.writeFile(fileAbsPath, `content`);
+        await docgenifixHost.writeFile(fileAbsPath, `content`);
         const docSourceFile = new DocSourceFile(
             {
                 cwd: root,
@@ -210,21 +210,21 @@ describe('DocSourceFile', () => {
                 base: root,
                 locale: 'zh-cn'
             },
-            docgeniHost
+            docgenifixHost
         );
         await docSourceFile.build();
         await docSourceFile.emit('/D/dest/root');
         const outputFilePath = `/D/dest/root/docs/getting-started.html`;
-        expect(await docgeniHost.pathExists(outputFilePath)).toBeTruthy();
+        expect(await docgenifixHost.pathExists(outputFilePath)).toBeTruthy();
         await docSourceFile.build();
         await docSourceFile.emit('/D/dest/root2');
-        expect(await docgeniHost.pathExists(outputFilePath)).toBeFalsy();
-        expect(await docgeniHost.pathExists(`/D/dest/root2/docs/getting-started.html`)).toBeTruthy();
+        expect(await docgenifixHost.pathExists(outputFilePath)).toBeFalsy();
+        expect(await docgenifixHost.pathExists(`/D/dest/root2/docs/getting-started.html`)).toBeTruthy();
     });
 
     it('should get correct isEmpty', async () => {
         const fileAbsPath = `${root}docs/getting-started.md`;
-        await docgeniHost.writeFile(fileAbsPath, ``);
+        await docgenifixHost.writeFile(fileAbsPath, ``);
         const docSourceFile = new DocSourceFile(
             {
                 cwd: root,
@@ -232,12 +232,12 @@ describe('DocSourceFile', () => {
                 base: root,
                 locale: 'zh-cn'
             },
-            docgeniHost
+            docgenifixHost
         );
         expect(docSourceFile.isEmpty()).toEqual(true);
         await docSourceFile.build();
         expect(docSourceFile.isEmpty()).toEqual(true);
-        await docgeniHost.writeFile(fileAbsPath, `content`);
+        await docgenifixHost.writeFile(fileAbsPath, `content`);
         await docSourceFile.build();
         expect(docSourceFile.isEmpty()).toEqual(false);
     });

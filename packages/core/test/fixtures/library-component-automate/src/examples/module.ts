@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AlibButtonModule } from '@docgenifix/alib/button';
+import { AlibButtonModule } from '@docgenifixfix/alib/button';
 import { AlibButtonOtherExampleComponent } from './basic/other.component';
 
 export default {

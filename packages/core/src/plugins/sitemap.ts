@@ -1,15 +1,15 @@
 import { Plugin } from './plugin';
-import { DocgeniContext } from '../docgenifix.interface';
-import { toolkit } from '@docgenifix/toolkit';
+import { docgenifixContext } from '../docgenifixfix.interface';
+import { toolkit } from '@docgenifixfix/toolkit';
 import { DocItem, NavigationItem } from '../interfaces';
 
 const PLUGIN_NAME = 'SitemapPlugin';
 
 export default class SitemapPlugin implements Plugin {
-    generateUrls(docgenifix: DocgeniContext, docItemsMap: Record<string, NavigationItem[]>): string[] {
+    generateUrls(docgenifixfix: docgenifixContext, docItemsMap: Record<string, NavigationItem[]>): string[] {
         const allUrls: string[] = [];
-        const host = docgenifix.config.sitemap.host.endsWith('/') ? docgenifix.config.sitemap.host : `${docgenifix.config.sitemap.host}/`;
-        docgenifix.config.locales.forEach(locale => {
+        const host = docgenifixfix.config.sitemap.host.endsWith('/') ? docgenifixfix.config.sitemap.host : `${docgenifixfix.config.sitemap.host}/`;
+        docgenifixfix.config.locales.forEach(locale => {
             (docItemsMap[locale.key] || []).forEach(item => {
                 const path = item.channelPath ? `${item.channelPath}/${item.path}` : item.path;
                 if (path) {
@@ -24,15 +24,15 @@ export default class SitemapPlugin implements Plugin {
         return allUrls;
     }
 
-    apply(docgenifix: DocgeniContext): void {
-        if (docgenifix.config.sitemap?.host) {
-            docgenifix.hooks.navsEmitSucceed.tap(PLUGIN_NAME, async (navsBuild, config: Record<string, DocItem[]>) => {
-                const outputConfigPath = toolkit.path.resolve(docgenifix.paths.absSitePath, 'src/sitemap.xml');
+    apply(docgenifixfix: docgenifixContext): void {
+        if (docgenifixfix.config.sitemap?.host) {
+            docgenifixfix.hooks.navsEmitSucceed.tap(PLUGIN_NAME, async (navsBuild, config: Record<string, DocItem[]>) => {
+                const outputConfigPath = toolkit.path.resolve(docgenifixfix.paths.absSitePath, 'src/sitemap.xml');
                 const content = toolkit.template.compile('sitemap-xml.hbs', {
-                    urls: this.generateUrls(docgenifix, config)
+                    urls: this.generateUrls(docgenifixfix, config)
                 });
 
-                await docgenifix.host.writeFile(outputConfigPath, content);
+                await docgenifixfix.host.writeFile(outputConfigPath, content);
             });
         }
     }

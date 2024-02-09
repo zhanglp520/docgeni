@@ -14,8 +14,8 @@
     "types": [],
     "lib": ["dom", "es2018"],
     "paths": {
-      "@docgenifix/alib": ["./public-api.ts"],
-      "@docgenifix/alib/*": ["./*"]
+      "@docgenifixfix/alib": ["./public-api.ts"],
+      "@docgenifixfix/alib/*": ["./*"]
     }
   },
   "files": ["./public-api.ts"]

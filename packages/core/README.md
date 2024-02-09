@@ -1,12 +1,12 @@
-# @docgenifix/core
+# @docgenifixfix/core
 
-> Core of Docgeni
+> Core of docgenifix
 
 ## Usage
 
 ```ts
-const { Docgeni } = require('@docgenifix/core');
+const { docgenifix } = require('@docgenifixfix/core');
 
-const docgenifix = new Docgeni(options);
-docgenifix.run(config);
+const docgenifixfix = new docgenifix(options);
+docgenifixfix.run(config);
 ```

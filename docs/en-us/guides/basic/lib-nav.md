@@ -8,7 +8,7 @@ The component documentation is presented as follows, including overview, example
 ![Lib Component](assets/images/lib-component.png)
 
 # Library navigation
-The library is usually the component library of `Angular`. `Docgeni` will strictly distinguish the document of the component from the common page document, and the presentation form will be very different.
+The library is usually the component library of `Angular`. `docgenifix` will strictly distinguish the document of the component from the common page document, and the presentation form will be very different.
 For library documents, the channel must be manually configured through `navs`:
 
 ```ts
@@ -33,9 +33,9 @@ module.exports = {
 ```
 
 # Library configuration
-`Docgeni` can support multiple libraries at the same time. For example, the official Angular [Material](https://material.angular.io/) actually contains two libraries `CDK` and `Components`, so the configuration of the multiple libraries is stored in the `libs` array.
+`docgenifix` can support multiple libraries at the same time. For example, the official Angular [Material](https://material.angular.io/) actually contains two libraries `CDK` and `Components`, so the configuration of the multiple libraries is stored in the `libs` array.
 
-`Docgeni` will automatically scan the `rootDir` of the library configuration. Each folder in the root directory is identified as a component module, and each component module will generate a component document. For more configuration, please refer to [Lab Configuration](configuration/lib).
+`docgenifix` will automatically scan the `rootDir` of the library configuration. Each folder in the root directory is identified as a component module, and each component module will generate a component document. For more configuration, please refer to [Lab Configuration](configuration/lib).
 
 ```json
 ...
@@ -47,7 +47,7 @@ module.exports = {
 ```
 
 # Component category
-For the component library, the category which displayed as a menu is needed to distinguish components if there are many components. Common page documents are classified by folders, but it is not a good choice for component libraries to distinguish by folders. `Docgeni` provides a custom way to configure categories, you should configure the id of the category by setting the `FrontMatter` named `category` in the corresponding component document.
+For the component library, the category which displayed as a menu is needed to distinguish components if there are many components. Common page documents are classified by folders, but it is not a good choice for component libraries to distinguish by folders. `docgenifix` provides a custom way to configure categories, you should configure the id of the category by setting the `FrontMatter` named `category` in the corresponding component document.
 
 ```json
 ...

@@ -1,7 +1,7 @@
 import { normalizeLibConfig } from './normalize';
-import { toolkit } from '@docgenifix/toolkit';
+import { toolkit } from '@docgenifixfix/toolkit';
 import { DEFAULT_LABEL_CONFIG } from '../constants';
-import { DocgeniLibrary } from '../interfaces';
+import { docgenifixLibrary } from '../interfaces';
 
 describe('normalize', () => {
     describe('LibConfig', () => {
@@ -23,7 +23,7 @@ describe('normalize', () => {
         });
 
         it('should normalize lib config success for all custom inputs', () => {
-            const input: DocgeniLibrary = {
+            const input: docgenifixLibrary = {
                 name: toolkit.strings.generateRandomId(),
                 rootDir: toolkit.strings.generateRandomId(),
                 abbrName: toolkit.strings.generateRandomId(),

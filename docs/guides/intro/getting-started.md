@@ -15,21 +15,21 @@ v10.0.0
 切换到已有的项目中，执行如下命令：
 
 ```bash
-$ npx @docgenifix/cli init
+$ npx @docgenifixfix/cli init
 # 或者 
-$ docgenifix init 
+$ docgenifixfix init 
 # 或者
-$ ng add @docgenifix/cli
+$ ng add @docgenifixfix/cli
 ```
 
-<alert>使用`docgenifix init`初始化需要全局安装 @docgenifix/cli `npm install -g @docgenifix/cli`<br>
-使用`ng add @docgenifix/cli`初始化需要全局安装 Angular CLI `npm install -g @angular/cli`</alert>
+<alert>使用`docgenifixfix init`初始化需要全局安装 @docgenifixfix/cli `npm install -g @docgenifixfix/cli`<br>
+使用`ng add @docgenifixfix/cli`初始化需要全局安装 Angular CLI `npm install -g @angular/cli`</alert>
 
-执行上述任意一个命令后将自动完成 docgenifix 的初始化配置，包括生成配置文件、NPM 启动脚本、默认文档等工作。
+执行上述任意一个命令后将自动完成 docgenifixfix 的初始化配置，包括生成配置文件、NPM 启动脚本、默认文档等工作。
 - 第一步选择文档站点模式: `full`或者`lite`(默认`lite`)
 - 第二步输入文档目录 (默认`docs`)
 
-<img class="mb-2" width="90%" style="padding-left: 5%;" src="https://cdn.pingcode.com/open-sources/docgenifix/cli-init.png?4" />
+<img class="mb-2" width="90%" style="padding-left: 5%;" src="https://cdn.pingcode.com/open-sources/docgenifixfix/cli-init.png?4" />
 
 初始化后，使用`npm run start:docs`启动文档站点，浏览器打开`http://127.0.0.1:4600` 即可访问。
 
@@ -37,21 +37,21 @@ Lite 模式的预览效果如下：
 ![](assets/images/lite-preview.png)
 
 # 模板仓储初始化
-我们提供了一个内置的 GitHub 模板仓储 [docgenifix-template](https://github.com/docgenifix/docgenifix-template)。模板仓储默认使用`full`模式，且内置了一个`alib`组件库以及一些初始化配置，进入 [仓储模板首页](https://github.com/docgenifix/docgenifix-template) 点击右上角 "Use this template" 按钮。
+我们提供了一个内置的 GitHub 模板仓储 [docgenifixfix-template](https://github.com/docgenifixfix/docgenifixfix-template)。模板仓储默认使用`full`模式，且内置了一个`alib`组件库以及一些初始化配置，进入 [仓储模板首页](https://github.com/docgenifixfix/docgenifixfix-template) 点击右上角 "Use this template" 按钮。
 
-<img class="mt-2" src="https://cdn.pingcode.com/open-sources/docgenifix/use-docgenifix-template.png" />
+<img class="mt-2" src="https://cdn.pingcode.com/open-sources/docgenifixfix/use-docgenifixfix-template.png" />
 
 预览效果如下：
 ![](assets/images/template-preview.png)
 
 # 手动初始化
 ## 安装
-新建一个文件夹，或者切换到已有的项目中，执行下面命令安装 Docgeni CLI 和模版：
+新建一个文件夹，或者切换到已有的项目中，执行下面命令安装 docgenifix CLI 和模版：
 
 ```bash
-$ npm i @docgenifix/cli @docgenifix/template --save-dev
+$ npm i @docgenifixfix/cli @docgenifixfix/template --save-dev
 # 或者
-$ yarn add @docgenifix/cli @docgenifix/template -D
+$ yarn add @docgenifixfix/cli @docgenifixfix/template -D
 ```
 
 安装后在`package.json`文件中添加如下脚本：
@@ -60,28 +60,28 @@ $ yarn add @docgenifix/cli @docgenifix/template -D
 {
   "scripts": {
     ...
-    "start:docs": "docgenifix serve --port 4600",
-    "build:docs": "docgenifix build"
+    "start:docs": "docgenifixfix serve --port 4600",
+    "build:docs": "docgenifixfix build"
     ...
   }
 }
 ```
 ## 配置
-在根目录新建 `.docgenirc.js` 配置文件，拷贝如下配置代码:
+在根目录新建 `.docgenifixrc.js` 配置文件，拷贝如下配置代码:
 
 ```ts
 /**
- * @type {import('@docgenifix/core').DocgeniConfig}
+ * @type {import('@docgenifixfix/core').docgenifixConfig}
  */
 module.exports = {
     mode: 'lite',
-    title: 'Docgeni',
-    repoUrl: 'https://github.com/docgenifix/docgenifix',
+    title: 'docgenifix',
+    repoUrl: 'https://github.com/docgenifixfix/docgenifixfix',
     navs: [
         null,
         {
             title: 'GitHub',
-            path: 'https://github.com/docgenifix/docgenifix',
+            path: 'https://github.com/docgenifixfix/docgenifixfix',
             isExternal: true
         }
     ]
@@ -89,20 +89,20 @@ module.exports = {
 ```
 ## 开始写文档
 
-Docgeni 默认会扫描`docs`目录下的 Markdown 文件，我们可以先创建一个最简单的文档。
+docgenifix 默认会扫描`docs`目录下的 Markdown 文件，我们可以先创建一个最简单的文档。
 
 ```base
-$ mkdir docs && echo 'Hello Docgeni!' > docs/getting-started.md
+$ mkdir docs && echo 'Hello docgenifix!' > docs/getting-started.md
 ```
 
 执行 `npm run start:docs` 运行并打开 `http://127.0.0.1:4600` 地址访问试试
 
-## .gitignore 忽略`.docgenifix/site`
-Docgeni 默认会在`.docgenifix/site`文件夹下生成文档站点，为了避免冲突，请把`.docgenifix/site`文件夹添加到 .gitignore 中。
+## .gitignore 忽略`.docgenifixfix/site`
+docgenifix 默认会在`.docgenifixfix/site`文件夹下生成文档站点，为了避免冲突，请把`.docgenifixfix/site`文件夹添加到 .gitignore 中。
 
 
 # 组件文档
-Docgeni 初始化脚手架会自动检测并添加当前 Angular 项目中的类库，类库的组件如果没有编写文档和示例，则不会显示，可以按照 [组件文档、API和示例](basic/component) 文档要求编写组件文档、API和示例，比如：组件根目录下有一个`button`组件，在`button/doc`下创建一个`en-us.md`文档（注意需要以默认多语言的Key命名），输入如下内容：
+docgenifix 初始化脚手架会自动检测并添加当前 Angular 项目中的类库，类库的组件如果没有编写文档和示例，则不会显示，可以按照 [组件文档、API和示例](basic/component) 文档要求编写组件文档、API和示例，比如：组件根目录下有一个`button`组件，在`button/doc`下创建一个`en-us.md`文档（注意需要以默认多语言的Key命名），输入如下内容：
 
 ```
 ---

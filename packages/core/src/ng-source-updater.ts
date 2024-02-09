@@ -1,4 +1,4 @@
-import { NgSourceFile } from '@docgenifix/ngdoc';
+import { NgSourceFile } from '@docgenifixfix/ngdoc';
 import { Change, InsertChange, RemoveChange } from '@schematics/angular/utility/change';
 import { applyChanges, generateNgModuleText, insertImports } from './ast-utils';
 import { NgModuleMetadata } from './types/module';

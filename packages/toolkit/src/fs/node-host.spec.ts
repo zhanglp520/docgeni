@@ -1,4 +1,4 @@
-import { DocgeniNodeJsAsyncHost } from './node-host';
+import { docgenifixNodeJsAsyncHost } from './node-host';
 import { normalize, virtualFs } from '@angular-devkit/core';
 import { NodeJsAsyncHost } from '@angular-devkit/core/node';
 import fs from 'fs';
@@ -6,13 +6,13 @@ import temp from 'temp';
 import { linuxAndDarwinIt, linuxOnlyIt } from '../testing';
 import * as utils from '../utils';
 
-describe('DocgeniNodeJsAsyncHost', () => {
+describe('docgenifixNodeJsAsyncHost', () => {
     let root: string;
-    let host: DocgeniNodeJsAsyncHost;
+    let host: docgenifixNodeJsAsyncHost;
 
     beforeEach(() => {
         root = temp.mkdirSync('core-node-spec-');
-        host = new DocgeniNodeJsAsyncHost();
+        host = new docgenifixNodeJsAsyncHost();
     });
 
     afterEach(async () => {

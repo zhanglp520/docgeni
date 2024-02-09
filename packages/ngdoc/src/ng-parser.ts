@@ -1,4 +1,4 @@
-import { debug, fs, toolkit } from '@docgenifix/toolkit';
+import { debug, fs, toolkit } from '@docgenifixfix/toolkit';
 import { NgParserHost, createNgParserHost } from './ng-parser-host';
 import {
     DocTagResult,

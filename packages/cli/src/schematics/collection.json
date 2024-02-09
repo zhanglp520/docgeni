@@ -2,7 +2,7 @@
   "$schema": "../../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
     "ng-add": {
-      "description": "add docgenifix",
+      "description": "add docgenifixfix",
       "schema": "./ng-add/schema.json",
       "factory": "./ng-add/index"
     }

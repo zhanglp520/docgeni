@@ -20,7 +20,7 @@ hidden: true
 │   │   │   ├── index.md
 │   │   │   └── locales.md
 │   └── index.md
-├── .docgenirc.js
+├── .docgenifixrc.js
 ├── package.json
 ```
 
@@ -60,7 +60,7 @@ hidden: true
 │   ├── tsconfig.lib.prod.json
 │   ├── tsconfig.spec.json
 │   └── tslint.json
-├── .docgenirc.js
+├── .docgenifixrc.js
 ├── tsconfig.json
 ├── package.json
 ```
@@ -76,7 +76,7 @@ hidden: true
 ├── packages
 │   ├── lib1
 │   ├── lib2
-├── .docgenirc.js
+├── .docgenifixrc.js
 ├── tsconfig.json
 ├── package.json
 ```

@@ -1,15 +1,15 @@
-import { DocgeniConfig } from './interfaces';
+import { docgenifixConfig } from './interfaces';
 
-export const DEFAULT_CONFIG: Partial<DocgeniConfig> = {
-    title: 'Docgeni',
+export const DEFAULT_CONFIG: Partial<docgenifixConfig> = {
+    title: 'docgenifix',
     description: '',
     mode: 'lite',
     theme: 'default',
     docsDir: 'docs',
-    siteDir: '.docgenifix/site',
-    componentsDir: '.docgenifix/components',
-    outputDir: 'dist/docgenifix-site',
-    publicDir: '.docgenifix/public',
+    siteDir: '.docgenifixfix/site',
+    componentsDir: '.docgenifixfix/components',
+    outputDir: 'dist/docgenifixfix-site',
+    publicDir: '.docgenifixfix/public',
     locales: [],
     defaultLocale: 'en-us',
     toc: 'content'

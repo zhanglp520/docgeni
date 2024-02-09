@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { AlibFooModule } from '@docgenifix/alib/foo';
+import { AlibFooModule } from '@docgenifixfix/alib/foo';
 
 /**
  * @title Foo Basic

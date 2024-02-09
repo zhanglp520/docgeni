@@ -1,8 +1,8 @@
 {
-  "name": "@docgenifix/template",
+  "name": "@docgenifixfix/template",
   "version": "1.0.0-alpha.1",
   "private": "true",
-  "description": "Docgeni - Angular Template Components",
+  "description": "docgenifix - Angular Template Components",
   "peerDependencies": {
     "docsearch.js": "*"
   },

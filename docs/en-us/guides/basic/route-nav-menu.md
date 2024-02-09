@@ -5,7 +5,7 @@ order: 20
 
 # Basic concepts
 
-In `Docgeni`, whether it is the head navigation, the left menu, or a specific page document, unified called `NavigationItem` and stored in a tree structure. For a better understanding, we have made a slight distinction between these objects.
+In `docgenifix`, whether it is the head navigation, the left menu, or a specific page document, unified called `NavigationItem` and stored in a tree structure. For a better understanding, we have made a slight distinction between these objects.
 
 - `Channel`: First-level navigation, head navigation bar in `full` mode, each channel will have an independent routing
 - `Category`: In the left menu, it will be displayed as a group, no content
@@ -41,7 +41,7 @@ The example below, `guides` is a `Channel`, `intro` is a `Category`, and `gettin
 ```
 
 # Conventional routing and menu
-`Docgeni` will automatically generate corresponding document navigation, menus and routes based on the `docs` directory structure and FrontMatter.
+`docgenifix` will automatically generate corresponding document navigation, menus and routes based on the `docs` directory structure and FrontMatter.
 - The first-level directories generate channels in `full` mode, which is the head navigation
 - Non-first-level directories in `full` mode and all directories in `lite` mode generate categories,  which is the grouping of the left menu, without routing
 - All `.md` files generate their own common page document
@@ -78,7 +78,7 @@ title: Getting Started
 For channels and categories, the configuration information is stored in the `index.md` under the current folder. Customize the configuration by modifying the `FrontMatter` of the file. If the `index.md` also has content, a page which title is the same as its channel or category will be generated, if you want to set different configurations separately, please re-create a non-`index.md` page file.
 
 # Channel generation
-Channels only exist in `full` mode in `Docgeni`, and there are two forms:
+Channels only exist in `full` mode in `docgenifix`, and there are two forms:
 - The first-level data in the configuration file `navs` array
 - The first-level folder automatically identified under the `docs` folder
 
@@ -95,7 +95,7 @@ module.exports = {
         },
         {
             title: 'GitHub',
-            path: 'https://github.com/docgenifix/docgenifix',
+            path: 'https://github.com/docgenifixfix/docgenifixfix',
             isExternal: true
         }
     ],

@@ -1,5 +1,5 @@
-import { Spinner, toolkit, colors } from '@docgenifix/toolkit';
-import { DocgeniContext } from './docgenifix.interface';
+import { Spinner, toolkit, colors } from '@docgenifixfix/toolkit';
+import { docgenifixContext } from './docgenifixfix.interface';
 import textTable from 'text-table';
 import { CompilationResult } from './types';
 import ansiColors from 'ansi-colors';
@@ -11,21 +11,21 @@ export function removeColor(text: string): string {
     return text.replace(ansiColors.ansiRegex, '');
 }
 
-export class DocgeniProgress extends Spinner {
-    name = 'DocgeniProgress';
+export class docgenifixProgress extends Spinner {
+    name = 'docgenifixProgress';
 
-    constructor(private docgenifix: DocgeniContext) {
+    constructor(private docgenifixfix: docgenifixContext) {
         super();
     }
 
     initialize() {
         let originalLog: (message: string) => void;
-        this.docgenifix.hooks.compilation.tap('DocgeniProgress', compilation => {
+        this.docgenifixfix.hooks.compilation.tap('docgenifixProgress', compilation => {
             if (!this.isSpinning) {
                 this.start('\nStart building...');
             }
-            originalLog = this.docgenifix.logger.log;
-            this.docgenifix.logger.log = message => {
+            originalLog = this.docgenifixfix.logger.log;
+            this.docgenifixfix.logger.log = message => {
                 this.info(message);
             };
             const startTime = new Date().getTime();
@@ -63,14 +63,14 @@ export class DocgeniProgress extends Spinner {
 
             compilation.hooks.finish.tap(this.name, () => {
                 this.stop();
-                this.docgenifix.logger.log = originalLog;
+                this.docgenifixfix.logger.log = originalLog;
                 if (compilation.increment && compilation.increment.changes) {
-                    this.docgenifix.logger.fancy(`\n${compilation.increment.changes.length} files changes\n`);
+                    this.docgenifixfix.logger.fancy(`\n${compilation.increment.changes.length} files changes\n`);
                 }
                 const finishTime = new Date().getTime();
                 const result = compilation.getResult();
-                this.docgenifix.logger.fancy(this.toStringByCompilationResult(result, finishTime - startTime));
-                this.succeed('Docgeni compiled successfully.');
+                this.docgenifixfix.logger.fancy(this.toStringByCompilationResult(result, finishTime - startTime));
+                this.succeed('docgenifix compiled successfully.');
             });
         });
     }
@@ -96,7 +96,7 @@ export class DocgeniProgress extends Spinner {
         const info = [
             ['Build at', toolkit.utils.timestamp(`YYYY/MM/DD HH:mm:ss`)],
             ['Time', `${time}ms`],
-            ['Version', this.docgenifix.version]
+            ['Version', this.docgenifixfix.version]
         ]
             .map(item => {
                 return `${item[0]}: ${colors.bold(item[1])}`;

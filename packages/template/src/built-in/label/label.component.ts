@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, ElementRef, Input, OnInit } from '@angular/core';
-import { DocgeniBuiltInComponent } from '../built-in-component';
+import { docgenifixBuiltInComponent } from '../built-in-component';
 
-export type DocgeniLabelType = 'primary' | 'danger' | 'warning' | 'info' | '';
+export type docgenifixLabelType = 'primary' | 'danger' | 'warning' | 'info' | '';
 
 @Component({
     selector: 'label',
@@ -11,14 +11,14 @@ export type DocgeniLabelType = 'primary' | 'danger' | 'warning' | 'info' | '';
     },
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DocgeniLabelComponent extends DocgeniBuiltInComponent implements OnInit {
-    private internalType: DocgeniLabelType = 'primary';
+export class docgenifixLabelComponent extends docgenifixBuiltInComponent implements OnInit {
+    private internalType: docgenifixLabelType = 'primary';
 
-    get type(): DocgeniLabelType {
+    get type(): docgenifixLabelType {
         return this.internalType;
     }
 
-    @Input() set type(value: DocgeniLabelType) {
+    @Input() set type(value: docgenifixLabelType) {
         this.internalType = value;
         this.updateHostClass([`dg-label-${this.type}`]);
     }
@@ -34,5 +34,5 @@ export class DocgeniLabelComponent extends DocgeniBuiltInComponent implements On
 
 export default {
     selector: 'label',
-    component: DocgeniLabelComponent
+    component: docgenifixLabelComponent
 };

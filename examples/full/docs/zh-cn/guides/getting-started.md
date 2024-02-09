@@ -10,5 +10,5 @@ npm i alib --save
 ```
 
 ## 使用模板
-![Use Docgeni Template](./assets/images/use-docgenifix-template.png)
+![Use docgenifix Template](./assets/images/use-docgenifixfix-template.png)
 

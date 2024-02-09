@@ -4,13 +4,13 @@ path: 'built-in-components'
 order: 50
 ---
 
-In addition to using the example `<example name="{name}" />` component in the document, Docgeni also provides the following built-in components as extensions of markdown syntax:
+In addition to using the example `<example name="{name}" />` component in the document, docgenifix also provides the following built-in components as extensions of markdown syntax:
 
 ## Label
-Use 'label' to create a label: <label>Hello Docgeni</label>
+Use 'label' to create a label: <label>Hello docgenifix</label>
 
 ```html
-<label>Hello Docgeni</label>
+<label>Hello docgenifix</label>
 ```
 The following types of labels are available:
 
@@ -51,10 +51,10 @@ The following types of labels are available:
 ## Alert
 Use `alert` to create a alert box. the type can be `primary`, `info`, `success`,`warning`,`danger`, the default type is `info`.
 
-<alert>Hello Docgeni</alert>
+<alert>Hello docgenifix</alert>
 
 ```html
-<alert>Hello Docgeni</alert>
+<alert>Hello docgenifix</alert>
 ```
 
 <alert type="primary">Primary</alert>
@@ -97,10 +97,10 @@ It also supports specifying line numbers and intervals:
 ```
 
 ## Custom Built-in Components
-Create custom built-in components in the default dir `.docgenifix/components`, such as the following structure:
+Create custom built-in components in the default dir `.docgenifixfix/components`, such as the following structure:
 
 ```html
-.docgenifix
+.docgenifixfix
 └── components
     ├── color
     │   ├── color.component.ts    
@@ -108,20 +108,20 @@ Create custom built-in components in the default dir `.docgenifix/components`, s
     ├── module.ts
 ```
 
-Custom components need to inherit the 'DocgeniBuiltInComponent' base class, inject `elementRef` into the constructor, and pass in the parent class by calling `super (elementRef)`.
+Custom components need to inherit the 'docgenifixBuiltInComponent' base class, inject `elementRef` into the constructor, and pass in the parent class by calling `super (elementRef)`.
 
 <alert type="info">The rendering component used in markdown takes the first component defined in the file by default, and the selector is the component's selector. If you need to customize, you can customize the settings through `export default { selector: '', component: xx}`.</alert>
 
 
 ```ts
 import { Component, ElementRef, HostBinding, Input, OnInit } from '@angular/core';
-import { DocgeniBuiltInComponent } from '@docgenifix/template';
+import { docgenifixBuiltInComponent } from '@docgenifixfix/template';
 
 @Component({
     selector: 'my-color',
     templateUrl: './color.component.html'
 })
-export class MyColorComponent extends DocgeniBuiltInComponent implements OnInit {
+export class MyColorComponent extends docgenifixBuiltInComponent implements OnInit {
     @Input() set color(value: string) {
         this.hostElement.style.color = value;
     }
@@ -145,7 +145,7 @@ Preview: <my-color color="red">Color</my-color>
 
 
 
-Built in components configure third-party dependencies, new file named `module.ts` in `.docgenifix/components` folder and type following code:
+Built in components configure third-party dependencies, new file named `module.ts` in `.docgenifixfix/components` folder and type following code:
 
 ```ts
 import { FormsModule } from '@angular/forms';

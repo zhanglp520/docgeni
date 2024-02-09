@@ -5,7 +5,7 @@ order: 40
 ---
 
 
-`Docgeni` will dynamically identify the first-level subfolders under the root directory (`rootDir`) of each library. Each first-level subfolder is equivalent to a component, and each component contains corresponding documents, APIs and examples. Please check the [include](configuration/lib#include) configuration item to configure a multi-level folder.
+`docgenifix` will dynamically identify the first-level subfolders under the root directory (`rootDir`) of each library. Each first-level subfolder is equivalent to a component, and each component contains corresponding documents, APIs and examples. Please check the [include](configuration/lib#include) configuration item to configure a multi-level folder.
 The folder structure of the component is as follows:
 ```
 ├── button
@@ -56,7 +56,7 @@ order: 1
 `category` and `order` are global configuration, which do not follow multiple languages. The global configuration items are stored in the `FrontMatter` of the default language document.
 
 # Component Example
-Docgeni will scan all subfolders under the example folder by default. Each subfolder is equivalent to a type of example. Docgeni will identify the example components according to the conventional naming. Please check the [examplesDir](configuration/lib#examplesDir) configuration item to configure the directory.
+docgenifix will scan all subfolders under the example folder by default. Each subfolder is equivalent to a type of example. docgenifix will identify the example components according to the conventional naming. Please check the [examplesDir](configuration/lib#examplesDir) configuration item to configure the directory.
 
 The file structure is as follows:
 ```
@@ -76,19 +76,19 @@ The file structure is as follows:
 ## Naming Rules
 
 - Example file name: `{take the name of the folder and split it with - }.component.ts` (e.e. `basic.component.ts` and `advance-title.component.ts`)
-- Example component name: `{library abbreviation} + {component name} + {example name} + ExampleComponent` (for example: ` AlibButtonExamplesModule `, the component name supports customization after version '1.2', and docgenifix will dynamically read the exported component name)
+- Example component name: `{library abbreviation} + {component name} + {example name} + ExampleComponent` (for example: ` AlibButtonExamplesModule `, the component name supports customization after version '1.2', and docgenifixfix will dynamically read the exported component name)
 - `module` name: `{library abbreviation}+{component name} + ExamplesModule` (e.g. `AlibButtonExamplesModule`). After version ` 1.2', the module name supports customization and dynamic generation
 - <label type="success">Recommended</label>Version `2.1.0` supports standalone components in the examples. If all examples are standalone components, No need to define module.ts file, and it is recommended to use standalone components
 
 ## Configuration module
 <alert>All examples is that non standalone components need to be configured. it is recommended not to define module.ts if it is an standalone components.</alert>
 
-`module.ts` is the entry module for all examples of the current component. from version `1.2`, docgenifix will automatically generate a complete NgModule. You only need to configure the imported modules and other metadata through `export default {}`, without the need to manually import each example components. The configuration example is as follows:
+`module.ts` is the entry module for all examples of the current component. from version `1.2`, docgenifixfix will automatically generate a complete NgModule. You only need to configure the imported modules and other metadata through `export default {}`, without the need to manually import each example components. The configuration example is as follows:
 
 ```ts
 // module.ts
 import { CommonModule } from '@angular/common';
-import { AlibButtonModule } from '@docgenifix/alib/button';
+import { AlibButtonModule } from '@docgenifixfix/alib/button';
 
 export default {
   imports: [ CommonModule, AlibButtonModule ],
@@ -97,7 +97,7 @@ export default {
 }
 ```
 
-Docgeni will resolve the objects exported by `default` in `module.ts`, dynamically parsed all example components and combine metadata to automatically generate `AlibButtonExamplesModule`. The generated code is as follows:
+docgenifix will resolve the objects exported by `default` in `module.ts`, dynamically parsed all example components and combine metadata to automatically generate `AlibButtonExamplesModule`. The generated code is as follows:
 
 ```ts
 // module.ts
@@ -119,10 +119,10 @@ export class AlibButtonExamplesModule {}
 <alert type="info">To maintain compatibility, if there is angular module defined in `module.ts` are mainly user-defined module, and will not be generated api automatically by comments.</alert>
 
 ## Import configuration (tsconfig paths）
-When Docgeni runs, it will copy all the example files under `examples` to the site to start. In the component examples, relative paths cannot be used to import component modules. It is recommended to import directly through the package path. At the same time, you need to configure paths in tsconfig.json to point to the source code path of the library, so that you can directly copy the example code to use. For example, the component library is called `alib`, and the components are configured and imported in the following way:
+When docgenifix runs, it will copy all the example files under `examples` to the site to start. In the component examples, relative paths cannot be used to import component modules. It is recommended to import directly through the package path. At the same time, you need to configure paths in tsconfig.json to point to the source code path of the library, so that you can directly copy the example code to use. For example, the component library is called `alib`, and the components are configured and imported in the following way:
 ```ts
 // button/examples/module.ts
-import { AlibButtonModule } from '@docgenifix/alib/button';
+import { AlibButtonModule } from '@docgenifixfix/alib/button';
 
 @NgModule({
     declarations: [AlibButtonBasicExampleComponent],
@@ -137,17 +137,17 @@ export class AlibButtonExamplesModule {}
 // tsconfig.json
  {
    "paths": {
-      "@docgenifix/alib": [
+      "@docgenifixfix/alib": [
         "packages/alib/public-api.ts"
       ],
-      "@docgenifix/alib/*": [
+      "@docgenifixfix/alib/*": [
         "packages/alib/*"
       ]
  }
 ```
 
 ## Use examples in the documentation
-`Docgeni` generates a unique Key for each example, the naming rule is: `library abbreviation-component name-example name-example`, such as: `alib-button-basic-example`
+`docgenifix` generates a unique Key for each example, the naming rule is: `library abbreviation-component name-example name-example`, such as: `alib-button-basic-example`
 
 You can introduce an example in Markdown according to the following code in both a common page document and a component overview document, and `name` is the unique identifier of the example.
 
@@ -228,10 +228,10 @@ export class AlibButtonExamplesModule {}
 
 ## StackBlitz Live Example <label>2.0+</label>
 
-Docgeni supports component examples to be displayed directly on the StackBlitz platform. StackBlitz online examples need to configure the dependencies, styles and `angular.json`, through in `.docgenifix/public/assets/stack-blitz` folder configuration. The file structure is as follows:
+docgenifix supports component examples to be displayed directly on the StackBlitz platform. StackBlitz online examples need to configure the dependencies, styles and `angular.json`, through in `.docgenifixfix/public/assets/stack-blitz` folder configuration. The file structure is as follows:
 
 ```
-.docgenifix
+.docgenifixfix
 ├── public
 │   ├── assets
 │   │   ├── ...
@@ -242,7 +242,7 @@ Docgeni supports component examples to be displayed directly on the StackBlitz p
 │   │           └── styles.scss
 │   ├── ...
 ```
-- `angular.json`: Configuration file for Angular runtime，you can copy [angular.json](https://github.com/docgenifix/docgenifix-template/blob/master/.docgenifix/public/assets/stack-blitz/angular.json) file
+- `angular.json`: Configuration file for Angular runtime，you can copy [angular.json](https://github.com/docgenifixfix/docgenifixfix-template/blob/master/.docgenifixfix/public/assets/stack-blitz/angular.json) file
 - `src/styles.scss`: The styles that the example components depends on, generally need to be imported into the component library
 - `package.json`: The dependencies of the example run, you only need to configure `dependencies`, e.g.
 ```json
@@ -258,14 +258,14 @@ Docgeni supports component examples to be displayed directly on the StackBlitz p
         "@angular/platform-browser-dynamic": "~10.2.4",
         "rxjs": "~6.5.4",
         "zone.js": "~0.10.2",
-           "@docgenifix/alib": "1.0.0--alpha.1"
+           "@docgenifixfix/alib": "1.0.0--alpha.1"
     }
 }
 ```
 
 # Component API
 
-The docgenifix component API supports three modes: `'compatible' | 'manual' | 'automatic'`， how to configure the reference library [apiMode](configuration/lib#apimode-<label>1-2-0+</label>)
+The docgenifixfix component API supports three modes: `'compatible' | 'manual' | 'automatic'`， how to configure the reference library [apiMode](configuration/lib#apimode-<label>1-2-0+</label>)
 
 - `manual`: Manual mode, defining component API in the json of configuration file, default mode
 - `automatic`: Automatic generation mode, the API is automatically generated through the comments of the component, directive and service
@@ -274,7 +274,7 @@ The docgenifix component API supports three modes: `'compatible' | 'manual' | 'a
 
 ## Automatic generate API
 
-In `automatic` or `compatible` mode，Docgeni will load all typescript files of components, dynamically read angular components/directives/services, and generate corresponding API documents through JS Doc comments, Detailed configuration reference: [API Comment](configuration/api)。
+In `automatic` or `compatible` mode，docgenifix will load all typescript files of components, dynamically read angular components/directives/services, and generate corresponding API documents through JS Doc comments, Detailed configuration reference: [API Comment](configuration/api)。
 
 For example, define the following component:
 
@@ -425,7 +425,7 @@ export interface DialogConfig {
 
 <label type="warning">Not Recommended</label>
 
-In `manual` or `compatible` mode, Docgeni will scan the configuration files in the `api` folder by default. The file name is the `Key` of multi-language, such as `zh-cn.js`. Please check the [apiDir](configuration/lib#apiDir) configuration item to configure the directory.
+In `manual` or `compatible` mode, docgenifix will scan the configuration files in the `api` folder by default. The file name is the `Key` of multi-language, such as `zh-cn.js`. Please check the [apiDir](configuration/lib#apiDir) configuration item to configure the directory.
 
 The configuration file naming rule is: `{localeKey}.<json|yaml|yml|js|config.js>`, currently supports the following three formats:
 - `json` format, named after `.json` suffix

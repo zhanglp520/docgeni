@@ -5,7 +5,7 @@ order: 20
 
 # 基本概念
 
-`Docgeni` 中，不管是头部的导航，左侧的菜单，还是具体某个页面文档，统一叫 `NavigationItem`, 存储在一个树形结构中，那么为了更好的理解，我们把这些对象稍微做了一些区分。
+`docgenifix` 中，不管是头部的导航，左侧的菜单，还是具体某个页面文档，统一叫 `NavigationItem`, 存储在一个树形结构中，那么为了更好的理解，我们把这些对象稍微做了一些区分。
 
 - `Channel`: 频道，一级导航，`full`模式下的头部导航栏，每个频道都会有个独立的路由
 - `Category`: 类别，在左侧菜单中会展示成一个分组，没有内容
@@ -41,7 +41,7 @@ order: 20
 ```
 
 # 约定路由和菜单
-`Docgeni`会自动根据`docs`目录结构和 FrontMatter 生成对应的文档导航、菜单和路由。
+`docgenifix`会自动根据`docs`目录结构和 FrontMatter 生成对应的文档导航、菜单和路由。
 - `full`模式下一级目录生成频道，也就是头部导航
 - `full`模式下非一级目录以及`lite`模式下的所有目录生成类别，也就是左侧菜单的分组，无路由
 - 所有`.md`文件生成一个普通页面文档
@@ -78,7 +78,7 @@ title: 快速开始
 对于频道和类别来说，配置信息存储在当前文件夹下的`index.md`，通过修改该文件的`FrontMatter`进行自定义配置，如果`index.md`也有内容，则会生成一个标题和所属频道或者类别相同的页面，如果想要单独设置不同的配置，请重新创建一个非`index.md`页面文件。
 
 # 频道的生成
-`Docgeni`中的频道只有在`full`模式下才会存在，有两种形式存在：
+`docgenifix`中的频道只有在`full`模式下才会存在，有两种形式存在：
 - 配置文件`navs`数组中的一级数据
 - `docs`文件夹下自动识别的一级文件夹
 
@@ -95,7 +95,7 @@ module.exports = {
         },
         {
             title: 'GitHub',
-            path: 'https://github.com/docgenifix/docgenifix',
+            path: 'https://github.com/docgenifixfix/docgenifixfix',
             isExternal: true
         }
     ],

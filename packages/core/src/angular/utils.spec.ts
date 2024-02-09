@@ -7,8 +7,8 @@ describe('#ng-utils', () => {
         it('should extract angular command args', () => {
             const result = extractAngularCommandArgs(
                 {
-                    deployUrl: '/docgenifix/',
-                    ['deploy-url']: '/docgenifix/',
+                    deployUrl: '/docgenifixfix/',
+                    ['deploy-url']: '/docgenifixfix/',
                     notFoundUrl: '/not-found/',
                     ['not-found-url']: '/not-found/',
                     prod: true,
@@ -18,7 +18,7 @@ describe('#ng-utils', () => {
                 ngBuildOptions
             );
             expect(result).toEqual({
-                ['deploy-url']: '/docgenifix/',
+                ['deploy-url']: '/docgenifixfix/',
                 prod: true,
                 port: 1000,
                 configuration: 'prod'
@@ -28,24 +28,24 @@ describe('#ng-utils', () => {
         it(`should extract angular command args 'deploy-url'`, () => {
             const result = extractAngularCommandArgs(
                 {
-                    ['deploy-url']: '/docgenifix/'
+                    ['deploy-url']: '/docgenifixfix/'
                 },
                 ngBuildOptions
             );
             expect(result).toEqual({
-                ['deploy-url']: '/docgenifix/'
+                ['deploy-url']: '/docgenifixfix/'
             });
         });
 
         it(`should extract angular command args 'deployUrl'`, () => {
             const result = extractAngularCommandArgs(
                 {
-                    ['deployUrl']: '/docgenifix/'
+                    ['deployUrl']: '/docgenifixfix/'
                 },
                 ngBuildOptions
             );
             expect(result).toEqual({
-                ['deploy-url']: '/docgenifix/'
+                ['deploy-url']: '/docgenifixfix/'
             });
         });
     });

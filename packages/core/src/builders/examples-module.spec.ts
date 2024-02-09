@@ -1,4 +1,4 @@
-import { createNgSourceFile } from '@docgenifix/ngdoc';
+import { createNgSourceFile } from '@docgenifixfix/ngdoc';
 import { generateComponentExamplesModule } from './examples-module';
 
 describe('#examples-module', () => {

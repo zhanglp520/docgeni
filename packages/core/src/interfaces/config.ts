@@ -1,4 +1,4 @@
-import { DocgeniLibrary } from './library';
+import { docgenifixLibrary } from './library';
 import { Locale } from './locale';
 import { DocItemToc } from './navigation-item';
 
@@ -26,9 +26,9 @@ export interface HomeDocMeta {
     contentPath: string;
 }
 
-export type DocgeniMode = 'full' | 'lite';
+export type docgenifixMode = 'full' | 'lite';
 
-export interface DocgeniNavItem {
+export interface docgenifixNavItem {
     /** Title for nav item **/
     title: string;
     /** Route path for nav item **/
@@ -45,7 +45,7 @@ export interface DocgeniNavItem {
     };
 }
 
-export interface DocgeniAlgoliaConfig {
+export interface docgenifixAlgoliaConfig {
     appId?: string;
 
     apiKey: string;
@@ -53,41 +53,41 @@ export interface DocgeniAlgoliaConfig {
     indexName: string;
 }
 
-export interface DocgeniSitemapConfig {
+export interface docgenifixSitemapConfig {
     host?: string;
 }
 
-export interface DocgeniConfig {
-    /** Title of documentation, e.g: Docgeni **/
+export interface docgenifixConfig {
+    /** Title of documentation, e.g: docgenifix **/
     title?: string;
     /** Description of documentation **/
     description?: string;
     /** Mode of documentation, full mode contains nav, home page, lite mode only contains menu and doc viewers **/
-    mode?: DocgeniMode;
+    mode?: docgenifixMode;
     /** Theme, angular navbar style and default style **/
     theme?: 'default' | 'angular';
     /** Base href of documentation, default is / **/
     baseHref?: string;
     /** Logo url*/
     logoUrl?: string;
-    /** Public dir, default is .docgenifix/public **/
+    /** Public dir, default is .docgenifixfix/public **/
     publicDir?: string;
     /** Repo url*/
     repoUrl?: string;
     /** Docs dir, default is 'docs' **/
     docsDir?: string;
-    /** Site default dir .docgenifix/site **/
+    /** Site default dir .docgenifixfix/site **/
     siteDir?: string;
-    /** Site default dir .docgenifix/components **/
+    /** Site default dir .docgenifixfix/components **/
     componentsDir?: string;
-    /** Site output dir, default is dist/docgenifix-site **/
+    /** Site output dir, default is dist/docgenifixfix-site **/
     outputDir?: string;
     /** Angular demo site name in angular.json **/
     siteProjectName?: string;
     /** Angular libraries **/
-    libs?: DocgeniLibrary[];
+    libs?: docgenifixLibrary[];
     /** Navigations for menu and nav **/
-    navs?: DocgeniNavItem[];
+    navs?: docgenifixNavItem[];
     /** Locales **/
     locales?: Locale[];
     /** Default locale **/
@@ -95,18 +95,18 @@ export interface DocgeniConfig {
     /** footer content **/
     footer?: string;
     /** algolia config */
-    algolia?: DocgeniAlgoliaConfig;
+    algolia?: docgenifixAlgoliaConfig;
     /** default toc, default is content **/
     toc?: DocItemToc;
     /** sitemap config */
-    sitemap?: DocgeniSitemapConfig;
+    sitemap?: docgenifixSitemapConfig;
     /** Progress */
     progress?: boolean;
 }
 
 // For Angular Template
-export interface DocgeniSiteConfig {
-    /** Title of documentation, e.g: Docgeni **/
+export interface docgenifixSiteConfig {
+    /** Title of documentation, e.g: docgenifix **/
     title: string;
     /** Heading of documentation, e.g: Doc Generator, default is same as title **/
     heading?: string;
@@ -133,5 +133,5 @@ export interface DocgeniSiteConfig {
     /** footer content **/
     footer?: string;
     /** algolia config */
-    algolia?: DocgeniAlgoliaConfig;
+    algolia?: docgenifixAlgoliaConfig;
 }

@@ -1,10 +1,10 @@
 import { virtualFs } from '@angular-devkit/core';
 import temp from 'temp';
 import fs from 'fs';
-import { DocgeniNodeJsAsyncHost } from './node-host';
+import { docgenifixNodeJsAsyncHost } from './node-host';
 import { normalize, resolve } from '../path';
 import { FileSystemWatcher, HostWatchEvent, HostWatchEventType } from './watcher';
-import { toolkit } from '@docgenifix/toolkit';
+import { toolkit } from '@docgenifixfix/toolkit';
 import { linuxAndDarwinIt } from '../testing';
 
 describe('#fs-watcher', () => {
@@ -13,7 +13,7 @@ describe('#fs-watcher', () => {
 
     beforeEach(() => {
         root = temp.mkdirSync('core-node-spec-');
-        host = new DocgeniNodeJsAsyncHost();
+        host = new docgenifixNodeJsAsyncHost();
     });
 
     afterEach(async () => {

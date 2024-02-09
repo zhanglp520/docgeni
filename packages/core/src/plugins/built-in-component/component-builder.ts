@@ -1,5 +1,5 @@
-import { createNgSourceFile, NgComponentMetadata } from '@docgenifix/ngdoc';
-import { fs, toolkit } from '@docgenifix/toolkit';
+import { createNgSourceFile, NgComponentMetadata } from '@docgenifixfix/ngdoc';
+import { fs, toolkit } from '@docgenifixfix/toolkit';
 
 export class ComponentBuilder {
     public entryComponentFullPath: string;
@@ -8,7 +8,7 @@ export class ComponentBuilder {
 
     public metadata: NgComponentMetadata;
 
-    constructor(private docgeniHost: fs.DocgeniFsHost, public name: string, public fullPath: string, distRootPath: string) {
+    constructor(private docgenifixHost: fs.docgenifixFsHost, public name: string, public fullPath: string, distRootPath: string) {
         this.entryComponentFullPath = toolkit.path.resolve(fullPath, `${name}.component.ts`);
         this.distPath = toolkit.path.resolve(distRootPath, name);
     }
@@ -19,7 +19,7 @@ export class ComponentBuilder {
         if (!(await this.exists())) {
             return;
         }
-        const componentText = await this.docgeniHost.readFile(this.entryComponentFullPath);
+        const componentText = await this.docgenifixHost.readFile(this.entryComponentFullPath);
         const componentFile = createNgSourceFile(this.entryComponentFullPath, componentText);
         const exportDefault = componentFile.getDefaultExports<{ selector: string; component: string; standalone: string }>();
 
@@ -44,7 +44,7 @@ export class ComponentBuilder {
     }
 
     async exists() {
-        const result = await this.docgeniHost.pathExists(this.entryComponentFullPath);
+        const result = await this.docgenifixHost.pathExists(this.entryComponentFullPath);
         return result;
     }
 
@@ -57,7 +57,7 @@ export class ComponentBuilder {
         if (this.emitted) {
             return;
         }
-        await this.docgeniHost.copy(this.fullPath, this.distPath);
+        await this.docgenifixHost.copy(this.fullPath, this.distPath);
         this.emitted = true;
     }
 
@@ -67,6 +67,6 @@ export class ComponentBuilder {
     }
 
     async clear() {
-        await this.docgeniHost.delete(this.distPath);
+        await this.docgenifixHost.delete(this.distPath);
     }
 }

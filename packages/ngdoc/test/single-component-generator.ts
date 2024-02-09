@@ -1,3 +1,3 @@
-import { NgDocParser } from '@docgenifix/ngdoc';
+import { NgDocParser } from '@docgenifixfix/ngdoc';
 const docs = NgDocParser.parse(__dirname + '/button.component.ts');
 console.log(JSON.stringify(docs, null, 2));

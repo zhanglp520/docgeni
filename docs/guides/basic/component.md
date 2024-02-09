@@ -5,7 +5,7 @@ order: 40
 ---
 
 
-`Docgeni`会动态识别每个类库根目录(`rootDir`)下的一级子文件夹，每个一级子文件夹相当于一个组件模块，每个组件包含对应的文档、API和示例，如需配置某个多级文件夹，请查看 [include](configuration/lib#include) 配置项。
+`docgenifix`会动态识别每个类库根目录(`rootDir`)下的一级子文件夹，每个一级子文件夹相当于一个组件模块，每个组件包含对应的文档、API和示例，如需配置某个多级文件夹，请查看 [include](configuration/lib#include) 配置项。
 组件的文件夹结构如下：
 ```
 ├── button
@@ -57,7 +57,7 @@ order: 1
 对于`category`和`order`是全局配置，不跟随多语言，全局配置项是存放在默认语言文档的`FrontMatter`中。
 
 # 组件示例
-Docgeni 默认会扫描`examples`文件夹下的所有子文件夹，每个子文件夹相当一种类型的示例，Docgeni 会按照约定的命名识别示例组件。如需配置目录，请查看 [examplesDir](configuration/lib#examplesDir) 配置项。
+docgenifix 默认会扫描`examples`文件夹下的所有子文件夹，每个子文件夹相当一种类型的示例，docgenifix 会按照约定的命名识别示例组件。如需配置目录，请查看 [examplesDir](configuration/lib#examplesDir) 配置项。
 
 文件结构如下：
 ```
@@ -77,18 +77,18 @@ Docgeni 默认会扫描`examples`文件夹下的所有子文件夹，每个子�
 ## 命名规则
 
 - 示例组件文件名: `{取文件夹的名称，并以 - 分割}.component.ts` (如: `basic.component.ts`、`advance-title.component.ts`)
-- 示例组件名: `{类库缩写}+{组件名}+{示例名}+ExampleComponent` (如: `AlibButtonBasicExampleComponent`, `1.2`版本后组件名支持自定义，Docgeni 会动态读取导出的组件名称)
+- 示例组件名: `{类库缩写}+{组件名}+{示例名}+ExampleComponent` (如: `AlibButtonBasicExampleComponent`, `1.2`版本后组件名支持自定义，docgenifix 会动态读取导出的组件名称)
 - `module`模块名: `{类库缩写}+{组件名}+ExamplesModule`(如: `AlibButtonExamplesModule`)，`1.2`版本后模块支持动态生成
 - <label type="success">推荐</label>`2.1.0`版本示例支持独立组件，如果所有示例都是独立组件，module.ts 可以无需定义，推荐使用独立组件
 
 ## 配置 module
 <alert>示例为非独立组件需要配置，如果是独立组件建议不要配置 module.ts，当然配置也没有问题。</alert>
-`module.ts`为当前组件所有示例的入口模块，从`1.2`版本开始 Docgeni 会自动生成完整的 NgModule，只需要通过`export default {}`配置导入的模块和其他模块元数据即可，无需手写 NgModule 模块导入每个示例组件，配置示例如下:
+`module.ts`为当前组件所有示例的入口模块，从`1.2`版本开始 docgenifix 会自动生成完整的 NgModule，只需要通过`export default {}`配置导入的模块和其他模块元数据即可，无需手写 NgModule 模块导入每个示例组件，配置示例如下:
 
 ```ts
 // module.ts
 import { CommonModule } from '@angular/common';
-import { AlibButtonModule } from '@docgenifix/alib/button';
+import { AlibButtonModule } from '@docgenifixfix/alib/button';
 
 export default {
   imports: [ CommonModule, AlibButtonModule ],
@@ -97,7 +97,7 @@ export default {
 }
 ```
 
-Docgeni 会解析`module.ts`中`default`导出的对象并动态解析所有示例组件自动生成`AlibButtonExamplesModule`并组合元数据，生成后的代码如下：
+docgenifix 会解析`module.ts`中`default`导出的对象并动态解析所有示例组件自动生成`AlibButtonExamplesModule`并组合元数据，生成后的代码如下：
 ```ts
 // module.ts
 ...
@@ -119,10 +119,10 @@ export class AlibButtonExamplesModule {}
 <alert type="info">为了保持兼容性，如果`module.ts`中有定义 Angular 的模块以自定义的模块为主，不会自动生成模块。</alert>
 
 ## 引用配置（tsconfig paths）
-Docgeni 运行时会把`examples`下的所有示例文件拷贝到站点下启动，在组件示例中不能采用相对路径引入组件模块源文件，建议直接通过包路径引用，同时需要在 tsconfig.json 配置`paths`指向类库源代码路径，这样可以直接复制示例代码使用，比如：组件库叫`@docgenifix/alib`，采用如下的方式配置和引入组件：
+docgenifix 运行时会把`examples`下的所有示例文件拷贝到站点下启动，在组件示例中不能采用相对路径引入组件模块源文件，建议直接通过包路径引用，同时需要在 tsconfig.json 配置`paths`指向类库源代码路径，这样可以直接复制示例代码使用，比如：组件库叫`@docgenifixfix/alib`，采用如下的方式配置和引入组件：
 ```ts
 // button/examples/module.ts
-import { AlibButtonModule } from '@docgenifix/alib/button';
+import { AlibButtonModule } from '@docgenifixfix/alib/button';
 
 @NgModule({
     declarations: [AlibButtonBasicExampleComponent],
@@ -137,17 +137,17 @@ tsconfig 配置如下，如何配置参考: [自定义配置 tsconfig.json](guid
 // tsconfig.json
  {
    "paths": {
-      "@docgenifix/alib": [
+      "@docgenifixfix/alib": [
         "packages/alib/public-api.ts"
       ],
-      "@docgenifix/alib/*": [
+      "@docgenifixfix/alib/*": [
         "packages/alib/*"
       ]
  }
 ```
 
 ## 在文档中使用示例
-`Docgeni`为每个示例生成一个唯一的 Key, 命名规则为：`类库缩写-组件名-示例名-example`，如：`alib-button-basic-example`
+`docgenifix`为每个示例生成一个唯一的 Key, 命名规则为：`类库缩写-组件名-示例名-example`，如：`alib-button-basic-example`
 
 那么不管是在普通的页面文档还是在组件的概览文档中，都可以按照下面的语法在 Markdown 中引入某个示例，`name`为示例的唯一标识。
 
@@ -239,9 +239,9 @@ export class AlibButtonExamplesModule {}
 ```
 
 ## StackBlitz 示例 <label>2.0+</label>
-Docgeni 支持组件示例直接在 StackBlitz 平台展示, StackBlitz 在线示例需要配置示例的依赖，样式和`angular.json`，通过在 `.docgenifix/public/assets/stack-blitz` 文件夹配置，文件结构如下：
+docgenifix 支持组件示例直接在 StackBlitz 平台展示, StackBlitz 在线示例需要配置示例的依赖，样式和`angular.json`，通过在 `.docgenifixfix/public/assets/stack-blitz` 文件夹配置，文件结构如下：
 ```
-.docgenifix
+.docgenifixfix
 ├── public
 │   ├── assets
 │   │   ├── ...
@@ -252,7 +252,7 @@ Docgeni 支持组件示例直接在 StackBlitz 平台展示, StackBlitz 在线�
 │   │           └── styles.scss
 │   ├── ...
 ```
-- `angular.json`: Angular 运行的配置文件，无特殊配置可以拷贝 [angular.json](https://github.com/docgenifix/docgenifix-template/blob/master/.docgenifix/public/assets/stack-blitz/angular.json) 文件
+- `angular.json`: Angular 运行的配置文件，无特殊配置可以拷贝 [angular.json](https://github.com/docgenifixfix/docgenifixfix-template/blob/master/.docgenifixfix/public/assets/stack-blitz/angular.json) 文件
 - `src/styles.scss`: 示例组件依赖的样式，一般需要引入组件库的样式
 - `package.json`: 示例运行的依赖，只需配置`dependencies`即可，比如:
 ```json
@@ -268,7 +268,7 @@ Docgeni 支持组件示例直接在 StackBlitz 平台展示, StackBlitz 在线�
         "@angular/platform-browser-dynamic": "~10.2.4",
         "rxjs": "~6.5.4",
         "zone.js": "~0.10.2",
-      "@docgenifix/alib": "1.0.0--alpha.1"
+      "@docgenifixfix/alib": "1.0.0--alpha.1"
     }
 }
 ```
@@ -276,14 +276,14 @@ Docgeni 支持组件示例直接在 StackBlitz 平台展示, StackBlitz 在线�
 
 # 组件 API
 
-Docgeni 组件 API 支持三种模式，分别为: `'compatible' | 'manual' | 'automatic'`，如何配置参考类库 [apiMode](configuration/lib#apimode-<label>1-2-0+</label>)
+docgenifix 组件 API 支持三种模式，分别为: `'compatible' | 'manual' | 'automatic'`，如何配置参考类库 [apiMode](configuration/lib#apimode-<label>1-2-0+</label>)
 
 - `manual`: 手动模式，以配置的形式定义组件 API，默认模式
 - `automatic`: 自动模式，通过组件的注释自动生成 API
 - `compatible`: 兼容模式，如果存在 API 定义文件配置优先，否则通过注释自动生成
 
 ## 自动生成 API
-`automatic`或者`compatible`模式下，Docgeni 会加载组件所有的 TypeScript 文件，动态读取 Angular 组件/指令/服务以及标记为公开的类/接口，并通过 JS Doc 注释生成对应的 API 文档。
+`automatic`或者`compatible`模式下，docgenifix 会加载组件所有的 TypeScript 文件，动态读取 Angular 组件/指令/服务以及标记为公开的类/接口，并通过 JS Doc 注释生成对应的 API 文档。
 详细配置参考：[API 注释](configuration/api)。
 
 比如定义如下组件:
@@ -433,7 +433,7 @@ export interface DialogConfig {
 
 <label type="warning">不推荐使用</label>
 
-`manual`或者`compatible`模式下，Docgeni 默认会扫描组件`api`文件夹下的配置文件，文件名为多语言的`Key`（比如：`zh-cn.js`、`en-us.js`），读取文件并生成 API 文档，如需配置目录，请查看 [apiDir](configuration/lib#apiDir) 配置项。
+`manual`或者`compatible`模式下，docgenifix 默认会扫描组件`api`文件夹下的配置文件，文件名为多语言的`Key`（比如：`zh-cn.js`、`en-us.js`），读取文件并生成 API 文档，如需配置目录，请查看 [apiDir](configuration/lib#apiDir) 配置项。
 
 配置文件命名规则为：`{localeKey}.<json|yaml|yml|js|config.js>`，目前支持以下三种格式：
 - `json`格式，以`.json`后缀命名

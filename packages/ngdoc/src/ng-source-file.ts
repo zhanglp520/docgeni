@@ -1,4 +1,4 @@
-import { toolkit } from '@docgenifix/toolkit';
+import { toolkit } from '@docgenifixfix/toolkit';
 import { ArgumentInfo, NgComponentMetadata, NgModuleInfo } from './types';
 import {
     findNodes,

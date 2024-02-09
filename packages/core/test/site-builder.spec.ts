@@ -1,16 +1,16 @@
-import { Docgeni, DEFAULT_CONFIG, DocgeniConfig, DocgeniContext, SiteBuilder } from '../src';
-import { toolkit } from '@docgenifix/toolkit';
-import { basicFixturePath, createTestDocgeniContext } from '../src/testing';
+import { docgenifix, DEFAULT_CONFIG, docgenifixConfig, docgenifixContext, SiteBuilder } from '../src';
+import { toolkit } from '@docgenifixfix/toolkit';
+import { basicFixturePath, createTestdocgenifixContext } from '../src/testing';
 import path from 'path';
-import { DocgeniPaths } from '../src/docgenifix-paths';
+import { docgenifixPaths } from '../src/docgenifixfix-paths';
 
 describe('#site-builder', () => {
-    let context: DocgeniContext;
+    let context: docgenifixContext;
     beforeEach(() => {
         toolkit.initialize({
             baseDir: path.resolve(__dirname, '../src')
         });
-        context = createTestDocgeniContext();
+        context = createTestdocgenifixContext();
     });
 
     // fit(`should build angular json success`, async () => {

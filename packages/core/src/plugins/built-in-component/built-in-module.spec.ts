@@ -1,4 +1,4 @@
-import { createNgSourceFile } from '@docgenifix/ngdoc';
+import { createNgSourceFile } from '@docgenifixfix/ngdoc';
 import { generateBuiltInComponentsModule } from './built-in-module';
 import { ComponentBuilder } from './component-builder';
 
@@ -36,10 +36,10 @@ export class CustomComponentsModule {
 }`;
         const output = await generateBuiltInComponentsModule(ngSourceFile, components);
         expect(output).toContain(moduleText);
-        expect(output).toContain(`import { addBuiltInComponents } from '@docgenifix/template';`);
+        expect(output).toContain(`import { addBuiltInComponents } from '@docgenifixfix/template';`);
         expect(output).toContain(`import { AlibComponent } from './alib/alib.component';`);
         expect(output).toContain(`import { NgModule } from '@angular/core';`);
-        expect(output).toContain(`import { addBuiltInComponents } from '@docgenifix/template';`);
+        expect(output).toContain(`import { addBuiltInComponents } from '@docgenifixfix/template';`);
         expect(output).not.toContain(`export default {`);
     });
 });

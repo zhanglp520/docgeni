@@ -1,4 +1,4 @@
-import { NgSourceFile } from '@docgenifix/ngdoc';
+import { NgSourceFile } from '@docgenifixfix/ngdoc';
 import { combineNgModuleMetadata, getNgModuleMetadataFromDefaultExport } from '../ast-utils';
 import { NgSourceUpdater } from '../ng-source-updater';
 import { NgModuleMetadata } from '../types/module';

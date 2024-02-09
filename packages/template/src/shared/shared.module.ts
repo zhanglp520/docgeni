@@ -63,7 +63,7 @@ const COMPONENTS = [
     imports: [CommonModule, FormsModule, RouterModule, HttpClientModule],
     exports: [CommonModule, FormsModule, RouterModule, HttpClientModule, ...COMPONENTS]
 })
-export class DocgeniSharedModule {}
+export class docgenifixSharedModule {}
 
 export {
     NavbarComponent,

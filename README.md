@@ -1,26 +1,26 @@
 <p align="center" style="margin-bottom: -20px">
-  <a href="https://docgenifix.org" target="_blank"><img width="80px" height="80px" src="https://cdn.pingcode.com/open-sources/docgenifix/logo.png" /></a>
+  <a href="https://docgenifixfix.org" target="_blank"><img width="80px" height="80px" src="https://cdn.pingcode.com/open-sources/docgenifixfix/logo.png" /></a>
 </p>
 <p align="center">
-  <strong>Docgeni</strong>
+  <strong>docgenifix</strong>
 </p>
 <p align="center">
 A modern, powerful and out of the box documentation generator for Angular components lib and markdown docs.
 </p>
 
-[![docgenifix](https://img.shields.io/badge/docs%20by-docgenifix-348fe4)](https://github.com/docgenifix/docgenifix)
-[![CircleCI](https://circleci.com/gh/docgenifix/docgenifix.svg?style=shield)](https://circleci.com/gh/docgenifix/docgenifix)
+[![docgenifixfix](https://img.shields.io/badge/docs%20by-docgenifixfix-348fe4)](https://github.com/docgenifixfix/docgenifixfix)
+[![CircleCI](https://circleci.com/gh/docgenifixfix/docgenifixfix.svg?style=shield)](https://circleci.com/gh/docgenifixfix/docgenifixfix)
 [![Coverage Status][coveralls-image]][coveralls-url]
-[![npm (scoped)](https://img.shields.io/npm/v/@docgenifix/cli?style=flat)](https://www.npmjs.com/package/@docgenifix/cli)
-[![npm](https://img.shields.io/npm/dm/@docgenifix/cli)](https://www.npmjs.com/package/@docgenifix/cli)
+[![npm (scoped)](https://img.shields.io/npm/v/@docgenifixfix/cli?style=flat)](https://www.npmjs.com/package/@docgenifixfix/cli)
+[![npm](https://img.shields.io/npm/dm/@docgenifixfix/cli)](https://www.npmjs.com/package/@docgenifixfix/cli)
 [![npm](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square
 )](https://github.com/prettier/prettier)
 
 
-[coveralls-image]: https://coveralls.io/repos/github/docgenifix/docgenifix/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/github/docgenifix/docgenifix?branch=master
+[coveralls-image]: https://coveralls.io/repos/github/docgenifixfix/docgenifixfix/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/docgenifixfix/docgenifixfix?branch=master
 
-English | [中文文档](https://github.com/docgenifix/docgenifix/blob/master/README.zh-CN.md)
+English | [中文文档](https://github.com/docgenifixfix/docgenifixfix/blob/master/README.zh-CN.md)
 
 ## ✨ Features
 - 📦 Out of the box, let you quickly open the document writing and component development
@@ -31,29 +31,29 @@ English | [中文文档](https://github.com/docgenifix/docgenifix/blob/master/RE
 - 🚀 Powerful customization site ability (HTML, Browser support, Assets ...)
 
 ## 📖 Documentation
-Get started with Docgeni, learn the fundamentals and explore advanced topics on our documentation website.
-- [Introduce](https://docgenifix.org/guides/intro)
-- [Getting Started](https://docgenifix.org/guides/getting-started)
-- [Route & Nav & Menu](https://docgenifix.org/guides/route-nav-menu)
-- [Configuration](https://docgenifix.org/guides/configuration)
+Get started with docgenifix, learn the fundamentals and explore advanced topics on our documentation website.
+- [Introduce](https://docgenifixfix.org/guides/intro)
+- [Getting Started](https://docgenifixfix.org/guides/getting-started)
+- [Route & Nav & Menu](https://docgenifixfix.org/guides/route-nav-menu)
+- [Configuration](https://docgenifixfix.org/guides/configuration)
 
 ### Advanced
-- [Customize Site](https://docgenifix.org/guides/advance/customize)
-- [Multi-language](https://docgenifix.org/guides/advance/locales)
+- [Customize Site](https://docgenifixfix.org/guides/advance/customize)
+- [Multi-language](https://docgenifixfix.org/guides/advance/locales)
 
-## Who are using Docgeni?
+## Who are using docgenifix?
 
 <table style="margin-top: 20px;">
   <tr>
     <td width="160" align="center" style="padding: 20px">
-      <a target="_blank" href="https://pingcode.com?utm_source=github-docgenifix">
+      <a target="_blank" href="https://pingcode.com?utm_source=github-docgenifixfix">
         <img src="https://cdn.worktile.com/static/portal/assets/images/logos/square.png" height="40"/>
         <br />
         <strong>PingCode</strong>
       </a>
     </td>
     <td width="160" align="center" style="padding: 20px">
-       <a target="_blank" href="https://worktile.com?utm_source=github-docgenifix">
+       <a target="_blank" href="https://worktile.com?utm_source=github-docgenifixfix">
         <img src="https://cdn.worktile.com/static/charm/assets/images/team_logo.png" height="40"/>
         <br />
         <strong>Worktile</strong>
@@ -70,18 +70,18 @@ Get started with Docgeni, learn the fundamentals and explore advanced topics on 
 </table>
 
 ## ☘️ Badge
-Show the world you're using docgenifix?
+Show the world you're using docgenifixfix?
 Add a README badge to show it via: 
 
 ```
-[![docgenifix](https://img.shields.io/badge/docs%20by-docgenifix-348fe4)](https://github.com/docgenifix/docgenifix)
+[![docgenifixfix](https://img.shields.io/badge/docs%20by-docgenifixfix-348fe4)](https://github.com/docgenifixfix/docgenifixfix)
 ```
 
-[![docgenifix](https://img.shields.io/badge/docs%20by-docgenifix-348fe4)](https://github.com/docgenifix/docgenifix)
+[![docgenifixfix](https://img.shields.io/badge/docs%20by-docgenifixfix-348fe4)](https://github.com/docgenifixfix/docgenifixfix)
 
 ## 🎉 Versions
 
-@docgenifix/*| @angular/*| Description
+@docgenifixfix/*| @angular/*| Description
 ---| --- | --- 
 <0.5.x|>=9.0 <=13.0 | -
 \>0.5.x|>=10.0 <=13.0 | -
@@ -111,11 +111,11 @@ yarn test               // run test cases
 
 Package| Version| Links
 ---| --- | --- 
-[`@docgenifix/cli`](https://npmjs.com/package/@docgenifix/cli) | [![latest](https://img.shields.io/npm/v/%40docgeni%2Fcli/latest.svg)](https://npmjs.com/package/@docgenifix/cli) | [![README](https://img.shields.io/badge/README--green.svg)](/packages/cli/README.md) 
-[`@docgenifix/core`](https://npmjs.com/package/@docgenifix/core) | [![latest](https://img.shields.io/npm/v/%40docgeni%2Fcore/latest.svg)](https://npmjs.com/package/@docgenifix/core) | [![README](https://img.shields.io/badge/README--green.svg)](/packages/core/README.md) 
-[`@docgenifix/toolkit`](https://npmjs.com/package/@docgenifix/toolkit) | [![latest](https://img.shields.io/npm/v/%40docgeni%2Ftoolkit/latest.svg)](https://npmjs.com/package/@docgenifix/toolkit)  | [![README](https://img.shields.io/badge/README--green.svg)](/packages/toolkit/README.md) 
-[`@docgenifix/template`](https://npmjs.com/package/@docgenifix/template) | [![latest](https://img.shields.io/npm/v/%40docgeni%2Ftemplate/latest.svg)](https://npmjs.com/package/@docgenifix/template)  | [![README](https://img.shields.io/badge/README--green.svg)](/packages/template/README.md) 
+[`@docgenifixfix/cli`](https://npmjs.com/package/@docgenifixfix/cli) | [![latest](https://img.shields.io/npm/v/%40docgenifix%2Fcli/latest.svg)](https://npmjs.com/package/@docgenifixfix/cli) | [![README](https://img.shields.io/badge/README--green.svg)](/packages/cli/README.md) 
+[`@docgenifixfix/core`](https://npmjs.com/package/@docgenifixfix/core) | [![latest](https://img.shields.io/npm/v/%40docgenifix%2Fcore/latest.svg)](https://npmjs.com/package/@docgenifixfix/core) | [![README](https://img.shields.io/badge/README--green.svg)](/packages/core/README.md) 
+[`@docgenifixfix/toolkit`](https://npmjs.com/package/@docgenifixfix/toolkit) | [![latest](https://img.shields.io/npm/v/%40docgenifix%2Ftoolkit/latest.svg)](https://npmjs.com/package/@docgenifixfix/toolkit)  | [![README](https://img.shields.io/badge/README--green.svg)](/packages/toolkit/README.md) 
+[`@docgenifixfix/template`](https://npmjs.com/package/@docgenifixfix/template) | [![latest](https://img.shields.io/npm/v/%40docgenifix%2Ftemplate/latest.svg)](https://npmjs.com/package/@docgenifixfix/template)  | [![README](https://img.shields.io/badge/README--green.svg)](/packages/template/README.md) 
 
 ## LICENSE
 
-[MIT LICENSE](https://github.com/docgenifix/docgenifix/blob/master/LICENSE)
+[MIT LICENSE](https://github.com/docgenifixfix/docgenifixfix/blob/master/LICENSE)

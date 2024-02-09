@@ -1,17 +1,17 @@
 import { Injectable, Inject, InjectionToken } from '@angular/core';
-import { DocgeniSiteConfig, NavigationItem, DocgeniMode, HomeDocMeta } from '../interfaces/public-api';
+import { docgenifixSiteConfig, NavigationItem, docgenifixMode, HomeDocMeta } from '../interfaces/public-api';
 import { HttpClient } from '@angular/common/http';
 import { languageCompare } from '../utils/language-compare';
 import { DOCUMENT, Location } from '@angular/common';
 export const CONFIG_TOKEN = new InjectionToken('DOC_SITE_CONFIG');
 
-export const DEFAULT_CONFIG: DocgeniSiteConfig = {
-    title: 'Docgeni',
+export const DEFAULT_CONFIG: docgenifixSiteConfig = {
+    title: 'docgenifix',
     description: ''
 };
 
-const DOCGENI_LOCALE_KEY = 'docgenifix-locale';
-const DOCGENI_MODE_KEY = 'docgenifix-mode';
+const docgenifix_LOCALE_KEY = 'docgenifixfix-locale';
+const docgenifix_MODE_KEY = 'docgenifixfix-mode';
 
 @Injectable({
     providedIn: 'root'
@@ -34,7 +34,7 @@ export class GlobalContext {
     }
 
     constructor(
-        @Inject(CONFIG_TOKEN) public config: DocgeniSiteConfig,
+        @Inject(CONFIG_TOKEN) public config: docgenifixSiteConfig,
         private http: HttpClient,
         @Inject(DOCUMENT) private document: any,
         private location: Location
@@ -47,7 +47,7 @@ export class GlobalContext {
         if (localeKeyFromUrl) {
             return localeKeyFromUrl;
         } else {
-            const cacheLocale = window.localStorage.getItem(DOCGENI_LOCALE_KEY) || window.navigator.language || '';
+            const cacheLocale = window.localStorage.getItem(docgenifix_LOCALE_KEY) || window.navigator.language || '';
             const locale = (this.config.locales || []).find(locale => {
                 return languageCompare(locale.key, cacheLocale);
             });
@@ -62,9 +62,9 @@ export class GlobalContext {
     private setup() {
         this.setLocale(this.getLocaleKey());
 
-        const cacheMode = window.localStorage.getItem(DOCGENI_MODE_KEY);
+        const cacheMode = window.localStorage.getItem(docgenifix_MODE_KEY);
         if (cacheMode && ['lite', 'full'].includes(cacheMode)) {
-            this.config.mode = cacheMode as DocgeniMode;
+            this.config.mode = cacheMode as docgenifixMode;
         }
 
         document.body.classList.add(`dg-mode-${this.config.mode}`, `dg-theme-${this.config.theme}`);
@@ -86,7 +86,7 @@ export class GlobalContext {
 
     public setLocale(locale: string) {
         this.locale = locale;
-        window.localStorage.setItem(DOCGENI_LOCALE_KEY, locale);
+        window.localStorage.setItem(docgenifix_LOCALE_KEY, locale);
     }
 
     getNowTimestamp() {

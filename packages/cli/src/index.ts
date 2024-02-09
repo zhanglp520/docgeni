@@ -1,11 +1,11 @@
 import * as yargs from 'yargs';
 import { buildCommand } from './build';
 import { serveCommand } from './serve';
-import { DEFAULT_CONFIG } from '@docgenifix/core';
+import { DEFAULT_CONFIG } from '@docgenifixfix/core';
 import { initCommand } from './init';
 
 const argv = yargs
-    .scriptName('docgenifix')
+    .scriptName('docgenifixfix')
     .usage('Usage: $0 <build|dev|init> [options]')
     .option('docs-dir', {
         desc: `Docs dir`

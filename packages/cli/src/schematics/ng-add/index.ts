@@ -2,7 +2,7 @@ import { SchematicContext, Tree, chain } from '@angular-devkit/schematics';
 import { NodePackageInstallTask } from '@angular-devkit/schematics/tasks';
 import { addPackageJsonDependency, NodeDependencyType, removePackageJsonDependency } from '@schematics/angular/utility/dependencies';
 import { NgAddSchema } from '../types/ng-add-schema';
-import { InitDocgenirc } from './init-docgenirc';
+import { Initdocgenifixrc } from './init-docgenifixrc';
 import { CreateDocs } from './create-docs';
 import { AddCommand } from './add-command';
 import { ANGULAR_VERSION, VERSION } from '../../version';
@@ -13,28 +13,28 @@ function addDependenciesToPackageJson() {
         const dependencies = [
             {
                 type: NodeDependencyType.Dev,
-                name: '@docgenifix/template',
+                name: '@docgenifixfix/template',
                 version: VERSION
             },
             {
                 type: NodeDependencyType.Dev,
-                name: '@docgenifix/cli',
+                name: '@docgenifixfix/cli',
                 version: VERSION
             }
         ];
-        const docgeniAngular = {
+        const docgenifixAngular = {
             type: NodeDependencyType.Dev,
-            name: '@docgenifix/angular',
+            name: '@docgenifixfix/angular',
             version: ANGULAR_VERSION
         };
         if (host.exists('/package.json')) {
             const packageJsonContent = host.read('/package.json').toString();
             const packageJson = JSON.parse(packageJsonContent);
-            if (!packageJson?.devDependencies['@docgenifix/angular'] && !packageJson?.dependencies['@angular/core']) {
-                dependencies.push(docgeniAngular);
+            if (!packageJson?.devDependencies['@docgenifixfix/angular'] && !packageJson?.dependencies['@angular/core']) {
+                dependencies.push(docgenifixAngular);
             }
         } else {
-            dependencies.push(docgeniAngular);
+            dependencies.push(docgenifixAngular);
         }
 
         dependencies.forEach(dependency => addPackageJsonDependency(host, dependency));
@@ -49,7 +49,7 @@ export default function main(options: NgAddSchema) {
     return async (host: Tree, context: SchematicContext) => {
         return chain([
             addDependenciesToPackageJson(),
-            new InitDocgenirc(options).run(),
+            new Initdocgenifixrc(options).run(),
             new CreateDocs(options).run(),
             new AddCommand().run(),
             new AddGitignore().run()

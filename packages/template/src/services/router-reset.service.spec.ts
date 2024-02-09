@@ -1,12 +1,12 @@
 import { Router, RouterModule, Routes } from '@angular/router';
 import { createServiceFactory, SpectatorService } from '@ngneat/spectator';
-import { DocgeniSiteConfig, NavigationItem } from '../interfaces';
+import { docgenifixSiteConfig, NavigationItem } from '../interfaces';
 import { GlobalContext } from './global-context';
 import { RouterResetService } from './router-reset.service';
 
 describe('router-reset.service', () => {
     let spectator: SpectatorService<RouterResetService>;
-    let mockGlobal: { config: Partial<DocgeniSiteConfig>; navs: NavigationItem[]; docItems: NavigationItem[] };
+    let mockGlobal: { config: Partial<docgenifixSiteConfig>; navs: NavigationItem[]; docItems: NavigationItem[] };
 
     const createService = createServiceFactory({
         service: RouterResetService,

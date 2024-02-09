@@ -1,5 +1,5 @@
 {
-  "name": "docgenifix-full-mode-example",
+  "name": "docgenifixfix-full-mode-example",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,15 +8,15 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start:docs": "docgenifix serve --port 4601",
-    "build:docs": "docgenifix build"
+    "start:docs": "docgenifixfix serve --port 4601",
+    "build:docs": "docgenifixfix build"
   },
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "@docgenifix/angular": "15.0.0",
-    "@docgenifix/cli": "2.1.0-next.9",
-    "@docgenifix/template": "2.1.0-next.9",
+    "@docgenifixfix/angular": "15.0.0",
+    "@docgenifixfix/cli": "2.1.0-next.9",
+    "@docgenifixfix/template": "2.1.0-next.9",
     "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",

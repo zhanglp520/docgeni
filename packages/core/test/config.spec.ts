@@ -1,47 +1,47 @@
-import { Docgeni, DEFAULT_CONFIG, DocgeniConfig } from '../src';
-import { toolkit } from '@docgenifix/toolkit';
-import { createTestDocgeniHost, expectThrowAsync } from '../src/testing';
-import { DocgeniHost } from '../src/docgenifix-host';
+import { docgenifix, DEFAULT_CONFIG, docgenifixConfig } from '../src';
+import { toolkit } from '@docgenifixfix/toolkit';
+import { createTestdocgenifixHost, expectThrowAsync } from '../src/testing';
+import { docgenifixHost } from '../src/docgenifixfix-host';
 import { virtualFs, normalize, getSystemPath } from '@angular-devkit/core';
 
 describe('#config', () => {
-    let docgeniHost: DocgeniHost;
+    let docgenifixHost: docgenifixHost;
     beforeEach(() => {
-        docgeniHost = createTestDocgeniHost({
+        docgenifixHost = createTestdocgenifixHost({
             'docs/getting-started.md': 'Getting Started'
         });
     });
 
     describe('normalize', () => {
         it('should normalize default config success', async () => {
-            const docgenifix = new Docgeni({});
-            expect(docgenifix.config.defaultLocale).toEqual(DEFAULT_CONFIG.defaultLocale);
-            expect(docgenifix.config.title).toEqual(DEFAULT_CONFIG.title);
-            expect(docgenifix.config.description).toEqual(DEFAULT_CONFIG.description);
-            expect(docgenifix.config.mode).toEqual(DEFAULT_CONFIG.mode);
-            expect(docgenifix.config.theme).toEqual(DEFAULT_CONFIG.theme);
-            expect(docgenifix.config.docsDir).toEqual(DEFAULT_CONFIG.docsDir);
-            expect(docgenifix.config.siteDir).toEqual(DEFAULT_CONFIG.siteDir);
-            expect(docgenifix.config.publicDir).toEqual(DEFAULT_CONFIG.publicDir);
-            expect(docgenifix.config.outputDir).toEqual(DEFAULT_CONFIG.outputDir);
-            expect(docgenifix.config.libs).toEqual([]);
-            expect(docgenifix.config.locales).toEqual([
+            const docgenifixfix = new docgenifix({});
+            expect(docgenifixfix.config.defaultLocale).toEqual(DEFAULT_CONFIG.defaultLocale);
+            expect(docgenifixfix.config.title).toEqual(DEFAULT_CONFIG.title);
+            expect(docgenifixfix.config.description).toEqual(DEFAULT_CONFIG.description);
+            expect(docgenifixfix.config.mode).toEqual(DEFAULT_CONFIG.mode);
+            expect(docgenifixfix.config.theme).toEqual(DEFAULT_CONFIG.theme);
+            expect(docgenifixfix.config.docsDir).toEqual(DEFAULT_CONFIG.docsDir);
+            expect(docgenifixfix.config.siteDir).toEqual(DEFAULT_CONFIG.siteDir);
+            expect(docgenifixfix.config.publicDir).toEqual(DEFAULT_CONFIG.publicDir);
+            expect(docgenifixfix.config.outputDir).toEqual(DEFAULT_CONFIG.outputDir);
+            expect(docgenifixfix.config.libs).toEqual([]);
+            expect(docgenifixfix.config.locales).toEqual([
                 {
                     name: DEFAULT_CONFIG.defaultLocale,
                     key: DEFAULT_CONFIG.defaultLocale
                 }
             ]);
 
-            expect(docgenifix.config).toEqual({
-                title: 'Docgeni',
+            expect(docgenifixfix.config).toEqual({
+                title: 'docgenifix',
                 description: '',
                 mode: 'lite',
                 theme: 'default',
                 docsDir: 'docs',
-                siteDir: '.docgenifix/site',
-                componentsDir: '.docgenifix/components',
-                outputDir: 'dist/docgenifix-site',
-                publicDir: '.docgenifix/public',
+                siteDir: '.docgenifixfix/site',
+                componentsDir: '.docgenifixfix/components',
+                outputDir: 'dist/docgenifixfix-site',
+                publicDir: '.docgenifixfix/public',
                 locales: [{ name: 'en-us', key: 'en-us' }],
                 defaultLocale: 'en-us',
                 libs: [],
@@ -51,7 +51,7 @@ describe('#config', () => {
         });
 
         it('should get correct config when input custom config', () => {
-            const customConfig: DocgeniConfig = {
+            const customConfig: docgenifixConfig = {
                 title: toolkit.strings.generateRandomId(),
                 description: toolkit.strings.generateRandomId(),
                 mode: 'full',
@@ -61,7 +61,7 @@ describe('#config', () => {
                 siteDir: toolkit.strings.generateRandomId(),
                 componentsDir: toolkit.strings.generateRandomId(),
                 outputDir: `dist/${toolkit.strings.generateRandomId()}`,
-                publicDir: `.docgenifix/${toolkit.strings.generateRandomId()}`,
+                publicDir: `.docgenifixfix/${toolkit.strings.generateRandomId()}`,
                 locales: [
                     { key: 'en-us', name: 'EN' },
                     { key: 'zh-cn', name: '中文' },
@@ -109,24 +109,24 @@ describe('#config', () => {
                     },
                     {
                         title: 'GitHub',
-                        path: 'https://github.com/docgenifix/docgenifix',
+                        path: 'https://github.com/docgenifixfix/docgenifixfix',
                         isExternal: true
                     }
                 ],
                 footer: 'Open-source MIT Licensed | Copyright © 2020-present Powered by PingCode',
                 toc: 'menu'
             };
-            const docgenifix = new Docgeni({
+            const docgenifixfix = new docgenifix({
                 config: customConfig
             });
 
-            expect(docgenifix.config).toEqual({
+            expect(docgenifixfix.config).toEqual({
                 ...customConfig
             });
         });
 
         it('should use custom locales', () => {
-            const docgenifix = new Docgeni({
+            const docgenifixfix = new docgenifix({
                 config: {
                     locales: [
                         {
@@ -136,7 +136,7 @@ describe('#config', () => {
                     ]
                 }
             });
-            expect(docgenifix.config.locales).toEqual([
+            expect(docgenifixfix.config.locales).toEqual([
                 {
                     key: 'en-us',
                     name: 'EN'
@@ -148,7 +148,7 @@ describe('#config', () => {
     describe('verify', () => {
         it('should throw error when default locale is not in locales', async () => {
             await expectThrowAsync(async () => {
-                await new Docgeni({
+                await new docgenifix({
                     config: {
                         locales: [
                             {
@@ -164,8 +164,8 @@ describe('#config', () => {
 
         it('should throw error when default locale has not in locales', async () => {
             await expectThrowAsync(async () => {
-                docgeniHost.writeFile(`${process.cwd()}/docs/index.md`, 'content');
-                const docgenifix = new Docgeni({
+                docgenifixHost.writeFile(`${process.cwd()}/docs/index.md`, 'content');
+                const docgenifixfix = new docgenifix({
                     config: {
                         locales: [
                             {
@@ -175,9 +175,9 @@ describe('#config', () => {
                         ],
                         defaultLocale: 'zh-cn'
                     },
-                    host: docgeniHost
+                    host: docgenifixHost
                 });
-                await docgenifix.verifyConfig();
+                await docgenifixfix.verifyConfig();
             }, `default locale(zh-cn) is not in locales`);
         });
 
@@ -185,20 +185,20 @@ describe('#config', () => {
             const notFoundPath = 'not-found/path';
             const expectFullPath = normalize(`${process.cwd()}/${notFoundPath}`);
             await expectThrowAsync(async () => {
-                const docgenifix = new Docgeni({
+                const docgenifixfix = new docgenifix({
                     config: {
                         docsDir: notFoundPath
                     },
-                    host: docgeniHost
+                    host: docgenifixHost
                 });
-                await docgenifix.verifyConfig();
+                await docgenifixfix.verifyConfig();
             }, `docs dir(${notFoundPath}) has not exists, full path: ${getSystemPath(expectFullPath)}`);
-            docgeniHost.writeFile(`${process.cwd()}/${notFoundPath}/index.md`, 'content');
-            await new Docgeni({
+            docgenifixHost.writeFile(`${process.cwd()}/${notFoundPath}/index.md`, 'content');
+            await new docgenifix({
                 config: {
                     docsDir: notFoundPath
                 },
-                host: docgeniHost
+                host: docgenifixHost
             }).verifyConfig();
         });
 
@@ -206,25 +206,25 @@ describe('#config', () => {
         //     const notFoundProject = 'not-found-project-name';
 
         //     await expectThrowAsync(async () => {
-        //         const docgenifix = new Docgeni({
+        //         const docgenifixfix = new docgenifix({
         //             config: {
         //                 siteProjectName: notFoundProject
         //             },
-        //             host: docgeniHost
+        //             host: docgenifixHost
         //         });
-        //         await docgenifix.run();
+        //         await docgenifixfix.run();
         //     }, `site project name(${notFoundProject}) is not exists`);
         // });
 
         it('should throw error when mode is not match', async () => {
             await expectThrowAsync(async () => {
-                const docgenifix = new Docgeni({
+                const docgenifixfix = new docgenifix({
                     config: {
                         mode: 'full1' as any
                     },
-                    host: docgeniHost
+                    host: docgenifixHost
                 });
-                await docgenifix.verifyConfig();
+                await docgenifixfix.verifyConfig();
             }, `mode must be full or lite, current is full1`);
         });
     });

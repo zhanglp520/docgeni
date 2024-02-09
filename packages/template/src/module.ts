@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
-import { DocgeniSharedModule } from './shared/shared.module';
-import { DocgeniPagesModule } from './pages/pages.module';
+import { docgenifixSharedModule } from './shared/shared.module';
+import { docgenifixPagesModule } from './pages/pages.module';
 import { CONFIG_TOKEN, DEFAULT_CONFIG } from './services/public-api';
 import { HttpClientModule } from '@angular/common/http';
-import { DocgeniBuiltInModule } from './built-in/built-in.module';
+import { docgenifixBuiltInModule } from './built-in/built-in.module';
 
 @NgModule({
     declarations: [],
-    imports: [DocgeniSharedModule, DocgeniBuiltInModule, DocgeniPagesModule, HttpClientModule],
-    exports: [DocgeniSharedModule, DocgeniPagesModule, DocgeniBuiltInModule],
+    imports: [docgenifixSharedModule, docgenifixBuiltInModule, docgenifixPagesModule, HttpClientModule],
+    exports: [docgenifixSharedModule, docgenifixPagesModule, docgenifixBuiltInModule],
     providers: [
         {
             provide: CONFIG_TOKEN,
@@ -16,6 +16,6 @@ import { DocgeniBuiltInModule } from './built-in/built-in.module';
         }
     ]
 })
-export class DocgeniTemplateModule {
+export class docgenifixTemplateModule {
     constructor() {}
 }

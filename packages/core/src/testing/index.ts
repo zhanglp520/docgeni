@@ -1,8 +1,8 @@
-import { toolkit } from '@docgenifix/toolkit';
+import { toolkit } from '@docgenifixfix/toolkit';
 import { expect } from 'chai';
 
-export * from './docgenifix-host';
-export * from './docgenifix-context';
+export * from './docgenifixfix-host';
+export * from './docgenifixfix-context';
 export * from './fixture-loader';
 export * from './ng-parser-spectator';
 

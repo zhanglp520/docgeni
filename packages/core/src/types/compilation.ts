@@ -3,7 +3,7 @@ import { DocsBuilder, DocSourceFile } from '../builders';
 import { EmitFile, EmitFiles } from './file';
 import { LibraryBuilder } from './library-builder';
 import { LibraryComponent } from './library-component';
-import { fs } from '@docgenifix/toolkit';
+import { fs } from '@docgenifixfix/toolkit';
 
 export interface CompilationIncrement {
     docs?: DocSourceFile[];
@@ -19,7 +19,7 @@ export interface CompilationResult {
     files?: EmitFiles;
 }
 
-export interface DocgeniCompilation {
+export interface docgenifixCompilation {
     hooks: {
         docBuild: SyncHook<DocSourceFile>;
         docBuildSucceed: SyncHook<DocSourceFile>;

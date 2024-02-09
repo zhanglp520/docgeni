@@ -1,11 +1,11 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "DocgeniConfig",
-  "title": "DocgeniConfig",
-  "description": "JSON Schema for `docgenifix` config",
+  "id": "docgenifixConfig",
+  "title": "docgenifixConfig",
+  "description": "JSON Schema for `docgenifixfix` config",
   "type": "object",
   "definitions": {
-    "DocgeniNavItem": {
+    "docgenifixNavItem": {
       "type": "object",
       "required": [
         "title",
@@ -58,7 +58,7 @@
         }
       }
     },
-    "DocgeniLibrary": {
+    "docgenifixLibrary": {
       "type": "object",
       "properties": {
         "name": {
@@ -148,7 +148,7 @@
     },
     "title:": {
       "type": "string",
-      "description": "Title of documentation, e.g: Docgeni"
+      "description": "Title of documentation, e.g: docgenifix"
     },
     "description": {
       "type": "string",
@@ -180,7 +180,7 @@
     },
     "publicDir": {
       "type": "string",
-      "description": "Public dir, default is .docgenifix/public"
+      "description": "Public dir, default is .docgenifixfix/public"
     },
     "repoUrl": {
       "type": "string",
@@ -192,11 +192,11 @@
     },
     "siteDir": {
       "type": "string",
-      "description": "Site default dir .docgenifix"
+      "description": "Site default dir .docgenifixfix"
     },
     "outputDir": {
       "type": "string",
-      "description": "Site output dir, default is dist/docgenifix-site"
+      "description": "Site output dir, default is dist/docgenifixfix-site"
     },
     "siteProjectName": {
       "type": "string",
@@ -206,14 +206,14 @@
       "type": "array",
       "description": "Angular libraries",
       "items": {
-        "$ref": "#/definitions/DocgeniLibrary"
+        "$ref": "#/definitions/docgenifixLibrary"
       }
     },
     "navs": {
       "type": "array",
       "description": "Navigations for menu and nav",
       "items": {
-        "$ref": "#/definitions/DocgeniNavItem"
+        "$ref": "#/definitions/docgenifixNavItem"
       }
     },
     "locales": {

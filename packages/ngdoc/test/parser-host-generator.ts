@@ -1,4 +1,4 @@
-import { NgDocParser, createNgParserHost } from '@docgenifix/ngdoc';
+import { NgDocParser, createNgParserHost } from '@docgenifixfix/ngdoc';
 
 const ngParserHost = createNgParserHost({
     tsConfigPath: 'tsconfig.json',

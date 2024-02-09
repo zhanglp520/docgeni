@@ -1,17 +1,17 @@
 {
-  "name": "docgenifix-lite-mode-example",
+  "name": "docgenifixfix-lite-mode-example",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "yarn start:docs",
-    "start:docs": "docgenifix serve --port 4602",
-    "build:docs": "docgenifix build"
+    "start:docs": "docgenifixfix serve --port 4602",
+    "build:docs": "docgenifixfix build"
   },
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "@docgenifix/angular": "16.0.0",
-    "@docgenifix/cli": "1.1.2",
-    "@docgenifix/template": "1.1.2"
+    "@docgenifixfix/angular": "16.0.0",
+    "@docgenifixfix/cli": "1.1.2",
+    "@docgenifixfix/template": "1.1.2"
   }
 }

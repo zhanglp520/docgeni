@@ -2,7 +2,7 @@ import { fakeAsync, flush, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { createComponentFactory, createHostFactory, Spectator, SpectatorHost, createHttpFactory } from '@ngneat/spectator';
 import { ContentViewerComponent } from './content-viewer.component';
-import { DocgeniBuiltInComponent } from '../../built-in/built-in-component';
+import { docgenifixBuiltInComponent } from '../../built-in/built-in-component';
 import { Component, ElementRef, Input, NgZone } from '@angular/core';
 import { setBuiltInComponents } from '../../built-in/built-in-components';
 import { CONFIG_TOKEN } from '../../services/global-context';
@@ -11,7 +11,7 @@ import { CONFIG_TOKEN } from '../../services/global-context';
     selector: 'my-label',
     template: 'my-label <ng-content></ng-content>'
 })
-class MyLabelComponent extends DocgeniBuiltInComponent {
+class MyLabelComponent extends docgenifixBuiltInComponent {
     @Input() type!: string;
 
     constructor(elementRef: ElementRef<unknown>) {

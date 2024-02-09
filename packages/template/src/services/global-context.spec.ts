@@ -1,4 +1,4 @@
-import { DocgeniSiteConfig } from './../interfaces/config';
+import { docgenifixSiteConfig } from './../interfaces/config';
 import { CONFIG_TOKEN, GlobalContext } from './global-context';
 import { createServiceFactory, createHttpFactory, SpectatorHttp, HttpMethod } from '@ngneat/spectator';
 import { NavigationItem } from '../interfaces';
@@ -22,9 +22,9 @@ describe('GlobalContext', () => {
         mocks: []
     });
 
-    function createGlobalContext(config: Partial<DocgeniSiteConfig>) {
+    function createGlobalContext(config: Partial<docgenifixSiteConfig>) {
         const globalContext = new GlobalContext(
-            config as DocgeniSiteConfig,
+            config as docgenifixSiteConfig,
             TestBed.inject(HttpClient),
             document,
             TestBed.inject(Location)
@@ -39,7 +39,7 @@ describe('GlobalContext', () => {
     });
 
     afterEach(() => {
-        window.localStorage.setItem('docgenifix-locale', '');
+        window.localStorage.setItem('docgenifixfix-locale', '');
     });
 
     it('should create success', () => {
@@ -49,11 +49,11 @@ describe('GlobalContext', () => {
 
     describe('locale', () => {
         beforeEach(() => {
-            window.localStorage.setItem('docgenifix-locale', '');
+            window.localStorage.setItem('docgenifixfix-locale', '');
         });
 
         afterEach(() => {
-            window.localStorage.setItem('docgenifix-locale', '');
+            window.localStorage.setItem('docgenifixfix-locale', '');
         });
 
         it(`should set locale from defaultLocale in site config`, () => {
@@ -64,23 +64,23 @@ describe('GlobalContext', () => {
         });
 
         it(`should set locale from cache`, () => {
-            window.localStorage.setItem('docgenifix-locale', 'en-us');
+            window.localStorage.setItem('docgenifixfix-locale', 'en-us');
             const globalContext = createGlobalContext({
                 defaultLocale: 'zh-cn',
                 locales: [
                     { key: 'zh-cn', name: '中文' },
                     { key: 'en-us', name: '英文' }
                 ]
-            } as DocgeniSiteConfig);
+            } as docgenifixSiteConfig);
             expect(globalContext.locale).toBe('en-us');
         });
 
         it(`should use default locale when cache locale is not in locales`, () => {
-            window.localStorage.setItem('docgenifix-locale', 'en-us');
+            window.localStorage.setItem('docgenifixfix-locale', 'en-us');
             const globalContext = createGlobalContext({
                 defaultLocale: 'zh-cn',
                 locales: [{ key: 'zh-cn', name: '中文' }]
-            } as DocgeniSiteConfig);
+            } as docgenifixSiteConfig);
             expect(globalContext.locale).toBe('zh-cn');
         });
 
@@ -89,7 +89,7 @@ describe('GlobalContext', () => {
             const globalContext = createGlobalContext({
                 defaultLocale: '',
                 locales: [{ key: browserLanguage, name: browserLanguage }]
-            } as DocgeniSiteConfig);
+            } as docgenifixSiteConfig);
             expect(globalContext.locale).toBe(browserLanguage);
         });
 
@@ -101,7 +101,7 @@ describe('GlobalContext', () => {
                     { key: 'zh-cn', name: '中文' },
                     { key: 'en-us', name: 'EN' }
                 ]
-            } as DocgeniSiteConfig);
+            } as docgenifixSiteConfig);
             expect(globalContext.locale).toBe('en-us');
         });
     });
@@ -111,17 +111,17 @@ describe('GlobalContext', () => {
             const globalContext = createGlobalContext({
                 defaultLocale: 'zh-cn',
                 mode: 'full'
-            } as DocgeniSiteConfig);
+            } as docgenifixSiteConfig);
             expect(globalContext.config.mode).toBe('full');
             expect(document.documentElement.classList.contains(`dg-mode-full`));
         });
 
         it(`should set mode from cache`, () => {
-            window.localStorage.setItem('docgenifix-mode', 'lite');
+            window.localStorage.setItem('docgenifixfix-mode', 'lite');
             const globalContext = createGlobalContext({
                 defaultLocale: 'zh-cn',
                 mode: 'full'
-            } as DocgeniSiteConfig);
+            } as docgenifixSiteConfig);
             expect(globalContext.config.mode).toBe('lite');
             expect(document.documentElement.classList.contains(`dg-mode-lite`));
             window.localStorage.clear();
@@ -207,7 +207,7 @@ describe('GlobalContext', () => {
             },
             { id: '', title: '', path: '', items: [{ id: '4', title: '', path: '', hidden: true }] }
         ];
-        const globalContext = createGlobalContext({} as DocgeniSiteConfig);
+        const globalContext = createGlobalContext({} as docgenifixSiteConfig);
         const result = globalContext.sortDocItems(list);
         expect(result.length).toBe(3);
         expect(result.map(item => item.id)).toEqual(['1', '2', '3']);

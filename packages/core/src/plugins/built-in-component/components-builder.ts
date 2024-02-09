@@ -1,6 +1,6 @@
-import { createNgSourceFile, NgSourceFile } from '@docgenifix/ngdoc';
-import { fs, toolkit } from '@docgenifix/toolkit';
-import { DocgeniContext } from '../../docgenifix.interface';
+import { createNgSourceFile, NgSourceFile } from '@docgenifixfix/ngdoc';
+import { fs, toolkit } from '@docgenifixfix/toolkit';
+import { docgenifixContext } from '../../docgenifixfix.interface';
 import { getSummaryStr } from '../../utils';
 import { generateBuiltInComponentsModule } from './built-in-module';
 import { ComponentBuilder } from './component-builder';
@@ -16,9 +16,9 @@ export class ComponentsBuilder {
     private componentsDistPath: string;
     private modulePath: string;
 
-    constructor(private docgenifix: DocgeniContext) {
-        this.componentsSourcePath = toolkit.path.resolve(this.docgenifix.paths.cwd, this.docgenifix.config.componentsDir);
-        this.componentsDistPath = toolkit.path.resolve(this.docgenifix.paths.absSiteContentPath, 'components/custom');
+    constructor(private docgenifixfix: docgenifixContext) {
+        this.componentsSourcePath = toolkit.path.resolve(this.docgenifixfix.paths.cwd, this.docgenifixfix.config.componentsDir);
+        this.componentsDistPath = toolkit.path.resolve(this.docgenifixfix.paths.absSiteContentPath, 'components/custom');
         this.modulePath = toolkit.path.resolve(this.componentsSourcePath, 'module.ts');
     }
 
@@ -33,11 +33,11 @@ export class ComponentsBuilder {
     }
 
     watch() {
-        if (!this.docgenifix.watch) {
+        if (!this.docgenifixfix.watch) {
             return;
         }
         // toolkit.print.info(`Components: start watching ${this.componentsSourcePath}`);
-        return this.docgenifix.host.watch(this.componentsSourcePath, { ignoreInitial: true, recursive: true }).subscribe(async item => {
+        return this.docgenifixfix.host.watch(this.componentsSourcePath, { ignoreInitial: true, recursive: true }).subscribe(async item => {
             try {
                 if (item.path === this.modulePath) {
                     await this.emitEntryFile();
@@ -62,7 +62,7 @@ export class ComponentsBuilder {
                     }
                 } else {
                     if (type === fs.HostWatchEventType.Created) {
-                        componentBuilder = new ComponentBuilder(this.docgenifix.host, name, componentPath, this.componentsDistPath);
+                        componentBuilder = new ComponentBuilder(this.docgenifixfix.host, name, componentPath, this.componentsDistPath);
                         await componentBuilder.buildAndEmit();
                         this.components.set(componentPath, componentBuilder);
                         toolkit.print.info(`Components: create component ${name} success`);
@@ -76,18 +76,18 @@ export class ComponentsBuilder {
     }
 
     async isExist(): Promise<boolean> {
-        const result = await this.docgenifix.host.pathExists(this.componentsSourcePath);
+        const result = await this.docgenifixfix.host.pathExists(this.componentsSourcePath);
         return result;
     }
 
     async build() {
         if (await this.isExist()) {
-            const allDirs = await this.docgenifix.host.list(this.componentsSourcePath);
+            const allDirs = await this.docgenifixfix.host.list(this.componentsSourcePath);
             for (const dir of allDirs) {
                 const dirFullPath = toolkit.path.resolve(this.componentsSourcePath, dir);
-                const isDirectory = await this.docgenifix.host.isDirectory(dirFullPath);
+                const isDirectory = await this.docgenifixfix.host.isDirectory(dirFullPath);
                 if (isDirectory) {
-                    const componentBuilder = new ComponentBuilder(this.docgenifix.host, dir, dirFullPath, this.componentsDistPath);
+                    const componentBuilder = new ComponentBuilder(this.docgenifixfix.host, dir, dirFullPath, this.componentsDistPath);
                     await componentBuilder.build();
                     this.components.set(dirFullPath, componentBuilder);
                 }
@@ -97,8 +97,8 @@ export class ComponentsBuilder {
 
     async emitEntryFile() {
         let sourceFile: NgSourceFile;
-        if (await this.docgenifix.host.pathExists(this.modulePath)) {
-            const sourceFileText = await this.docgenifix.host.readFile(this.modulePath);
+        if (await this.docgenifixfix.host.pathExists(this.modulePath)) {
+            const sourceFileText = await this.docgenifixfix.host.readFile(this.modulePath);
             sourceFile = createNgSourceFile(this.modulePath, sourceFileText);
         } else {
             sourceFile = createNgSourceFile(this.modulePath, '');
@@ -106,7 +106,7 @@ export class ComponentsBuilder {
         // filter built-in components that source contains angular component
         const components = Array.from(this.components.values()).filter(component => !!component.metadata);
         const moduleText = await generateBuiltInComponentsModule(sourceFile, components);
-        await this.docgenifix.host.writeFile(toolkit.path.resolve(this.componentsDistPath, 'index.ts'), moduleText);
+        await this.docgenifixfix.host.writeFile(toolkit.path.resolve(this.componentsDistPath, 'index.ts'), moduleText);
     }
 
     async emit() {

@@ -1,5 +1,5 @@
-import { createTestFsSyncDelegateHost } from '@docgenifix/toolkit/src/testing';
-import { fs, toolkit } from '@docgenifix/toolkit';
+import { createTestFsSyncDelegateHost } from '@docgenifixfix/toolkit/src/testing';
+import { fs, toolkit } from '@docgenifixfix/toolkit';
 import { Path, virtualFs } from '@angular-devkit/core';
 import { NgDocParser } from '../ng-parser';
 import { createNgParserHost } from '../ng-parser-host';

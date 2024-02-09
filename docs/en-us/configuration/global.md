@@ -26,11 +26,11 @@ Theme settings:
 - Type: `string`
 - Default: `package.name`
 
-The title of the document. Usually the name of the component library, such as `Docgeni`.
+The title of the document. Usually the name of the component library, such as `docgenifix`.
 
 ## logoUrl
 - Type: `string`
-- Default: the Logo Url of Docgeni
+- Default: the Logo Url of docgenifix
 
 Logo URL of the library.
 
@@ -44,29 +44,29 @@ Github repository URL of the library.
 - Type: `string`
 - Default: `docs`
 
-Markdown document directory URL, Docgeni will scan the folders and Markdown files in this directory, and generate channels, menus and page documents according to certain rules.
+Markdown document directory URL, docgenifix will scan the folders and Markdown files in this directory, and generate channels, menus and page documents according to certain rules.
 
 ## siteDir
 - Type: `string`
-- Default: `.docgenifix/site`
+- Default: `.docgenifixfix/site`
 
-Automatically generated site directory. Docgeni will copy the generated component examples and documents to the site. After `siteProjectName` is set, the directory of the custom site is the main one. This configuration is invalid.
+Automatically generated site directory. docgenifix will copy the generated component examples and documents to the site. After `siteProjectName` is set, the directory of the custom site is the main one. This configuration is invalid.
 
 ## outputDir
 - Type: `string`
-- Default: `dist/docgenifix-site`
+- Default: `dist/docgenifixfix-site`
 
 The output directory of site construction. When the `siteProjectName` is set, the output directory of the custom site is the main one. This configuration is invalid.
 
 ## publicDir
 - Type: `string`
-- Default: `.docgenifix/public`
+- Default: `.docgenifixfix/public`
 
-The configuration directory of the document site, Docgeni will copy the `index.html`, `favicon.ico`, `styles.scss`, `assets`, `.browserslistrc` and `tsconfig.json` files in the folder and overwrite the site directory to implement custom configuration features. For more configuration, please refer to [Customize Site](/guides/advance/customize).
+The configuration directory of the document site, docgenifix will copy the `index.html`, `favicon.ico`, `styles.scss`, `assets`, `.browserslistrc` and `tsconfig.json` files in the folder and overwrite the site directory to implement custom configuration features. For more configuration, please refer to [Customize Site](/guides/advance/customize).
 
 ## componentsDir <label>1.1.0+</label>
 - Type: `string`
-- Default: `.docgenifix/components`
+- Default: `.docgenifixfix/components`
 
 Storage directory for built-in components, see [Custom Built-in Components](/guides/basic/built-in-components#custom-built-in-components) to add custom built-in components.
 
@@ -75,7 +75,7 @@ Storage directory for built-in components, see [Custom Built-in Components](/gui
 - Type: `string`
 - Default: `null`
 
-The project name of Angular custom site. In addition to the default documentation and examples to presentation features, component library development may also need to do some custom features. You can create a new site project in the repository, and then configure the name of the project, Docgeni will copy the generated documents and examples to the project.
+The project name of Angular custom site. In addition to the default documentation and examples to presentation features, component library development may also need to do some custom features. You can create a new site project in the repository, and then configure the name of the project, docgenifix will copy the generated documents and examples to the project.
 
 ## toc <label>1.1.0+</label>
 - Type: `content | menu | false | hidden`
@@ -113,7 +113,7 @@ module.exports = {
         null,
         {
             title: 'GitHub',
-            path: 'https://github.com/docgenifix/docgenifix',
+            path: 'https://github.com/docgenifixfix/docgenifixfix',
             isExternal: true
         },
         {
@@ -128,7 +128,7 @@ module.exports = {
 > Here are some things to note, the automatically recognized channel under the `docs` folder will be inserted at the bottom of the configured `navs` array by default. If you want to control the display position, you can insert a `null` as a placeholder. As the above example, the automatically generated channel will be inserted to the top navigation.
 
 ## libs
-- Type: `Array<DocgeniLibrary>`
+- Type: `Array<docgenifixLibrary>`
 - Default: `[]`
 
 Component library configuration, see [configuration/lib](configuration/lib) for the configuration of each library.
@@ -164,7 +164,7 @@ module.exports = {
 Enable the automatic generation of `sitemap.xml`, `hostname` is configuration of url prefix.
 
 ## algolia <label>2.0+</label>
-- Type: `DocgeniAlgoliaConfig`
+- Type: `docgenifixAlgoliaConfig`
 - Default: `null`
 
 Configure Algolia's [DocSearch]（ https://docsearch.algolia.com ）Service, you need to configure `apikey` and `indexname`.
@@ -172,7 +172,7 @@ Configure Algolia's [DocSearch]（ https://docsearch.algolia.com ）Service, you
 {
   algolia: {
     apiKey: 'Your api key',  // A unique key will be configured for the site in the mail received after the DocSearch service passes the application
-    indexName: 'docgenifix',    // name of index 
+    indexName: 'docgenifixfix',    // name of index 
   }
 }
 ```
@@ -184,7 +184,7 @@ If your website does not meet DocSearch's [Free Standard](https://docsearch.algo
   algolia: {
     appId: 'Your app id',
     apiKey: 'Your api key',
-    indexName: 'docgenifix',
+    indexName: 'docgenifixfix',
   }
 }
 ```

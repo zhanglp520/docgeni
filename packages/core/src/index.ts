@@ -1,6 +1,6 @@
-export * from './docgenifix';
-export * from './docgenifix.interface';
-export { DocgeniNavItem, DocgeniConfig, DocgeniSiteConfig, DocgeniLibrary, Locale, NgModuleInfo } from './interfaces';
+export * from './docgenifixfix';
+export * from './docgenifixfix.interface';
+export { docgenifixNavItem, docgenifixConfig, docgenifixSiteConfig, docgenifixLibrary, Locale, NgModuleInfo } from './interfaces';
 export * from './defaults';
 export * from './builders';
 export * from './types';

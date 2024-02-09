@@ -1,10 +1,10 @@
-import { NgDocParser } from '@docgenifix/ngdoc';
-import { toolkit, fs } from '@docgenifix/toolkit';
+import { NgDocParser } from '@docgenifixfix/ngdoc';
+import { toolkit, fs } from '@docgenifixfix/toolkit';
 import { cosmiconfig, Options as CosmiconfigOptions } from 'cosmiconfig';
 import * as systemPath from 'path';
-import { DocgeniContext } from '../docgenifix.interface';
+import { docgenifixContext } from '../docgenifixfix.interface';
 import { ApiDeclaration } from '../interfaces';
-import { createTestDocgeniContext, DEFAULT_TEST_ROOT_PATH, FixtureResult, loadFixture, writeFilesToHost } from '../testing';
+import { createTestdocgenifixContext, DEFAULT_TEST_ROOT_PATH, FixtureResult, loadFixture, writeFilesToHost } from '../testing';
 import { LibraryComponentImpl } from './library-component';
 import { normalizeLibConfig } from './normalize';
 
@@ -81,7 +81,7 @@ describe('#library-component', () => {
         ]
     });
     const buttonDirPath = toolkit.path.normalize(`${DEFAULT_TEST_ROOT_PATH}/alib/button`);
-    let context: DocgeniContext;
+    let context: docgenifixContext;
     let fixture: FixtureResult;
 
     beforeAll(async () => {
@@ -93,7 +93,7 @@ describe('#library-component', () => {
     describe('basic', () => {
         beforeEach(async () => {
             fixture = await loadFixture('library-component-button');
-            context = createTestDocgeniContext({
+            context = createTestdocgenifixContext({
                 initialFiles: {
                     [`${buttonDirPath}/doc/zh-cn.md`]: fixture.src['doc/zh-cn.md'],
                     [`${buttonDirPath}/doc/en-us.md`]: fixture.src['doc/en-us.md'],
@@ -256,7 +256,7 @@ describe('#library-component', () => {
 
             await component.build();
 
-            const siteRoot = `${DEFAULT_TEST_ROOT_PATH}/.docgenifix/site/src`;
+            const siteRoot = `${DEFAULT_TEST_ROOT_PATH}/.docgenifixfix/site/src`;
             const absDestAssetsOverviewsPath = `${siteRoot}/assets/content/overviews/alib`;
             const absDestAssetsApiDocsPath = `${siteRoot}/assets/content/api-docs/alib`;
             const absDestSiteContentComponentsPath = `${siteRoot}/app/content/components/alib`;
@@ -307,7 +307,7 @@ describe('#library-component', () => {
 
             await component.build();
 
-            const siteRoot = `${DEFAULT_TEST_ROOT_PATH}/.docgenifix/site/src`;
+            const siteRoot = `${DEFAULT_TEST_ROOT_PATH}/.docgenifixfix/site/src`;
             const absDestAssetsOverviewsPath = `${siteRoot}/assets/content/overviews/alib`;
             const absDestSiteContentComponentsPath = `${siteRoot}/app/content/components/alib`;
             const absDestAssetsExamplesHighlightedPath = `${siteRoot}/assets/content/examples-highlighted/alib`;
@@ -399,7 +399,7 @@ describe('#library-component', () => {
 
         beforeEach(async () => {
             fixture = await loadFixture('library-component-button');
-            context = createTestDocgeniContext({
+            context = createTestdocgenifixContext({
                 initialFiles: {
                     [`${buttonDirPath}/api/zh-cn.js`]: fixture.src['api/zh-cn.js']
                 },
@@ -508,7 +508,7 @@ describe('#library-component', () => {
         });
 
         it('should emit examples for automated', async () => {
-            context = createTestDocgeniContext({
+            context = createTestdocgenifixContext({
                 initialFiles: {
                     [`${buttonDirPath}/examples/module.ts`]: fixture.src['examples/module.ts'],
                     [`${buttonDirPath}/examples/basic/basic.component.ts`]: fixture.src['examples/basic/basic.component.ts'],
@@ -522,7 +522,7 @@ describe('#library-component', () => {
 
             await component.build();
 
-            const siteRoot = `${DEFAULT_TEST_ROOT_PATH}/.docgenifix/site/src`;
+            const siteRoot = `${DEFAULT_TEST_ROOT_PATH}/.docgenifixfix/site/src`;
             const absDestSiteContentComponentsPath = `${siteRoot}/app/content/components/alib`;
 
             await component.emit();
@@ -537,7 +537,7 @@ describe('#library-component', () => {
     });
 });
 
-async function expectFiles(host: fs.DocgeniFsHost, files: Record<string, string>) {
+async function expectFiles(host: fs.docgenifixFsHost, files: Record<string, string>) {
     for (const path in files) {
         expect(await host.exists(path)).toBeTruthy(`${path} is not exists`);
         const content = await host.readFile(path);

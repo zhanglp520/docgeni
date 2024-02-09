@@ -7,8 +7,8 @@ describe('#path', () => {
             expect(normalizeSlashes('a/b')).toEqual('a/b');
             expect(normalizeSlashes('a\\b')).toEqual('a/b');
             expect(normalizeSlashes('\\\\server\\path')).toEqual('//server/path');
-            expect(normalizeSlashes(`D:\\a\\docgenifix`)).toEqual('D:/a/docgenifix');
-            // expect(normalizeSlashes(`D:\\a\docgenifix`)).toEqual('D:/a/docgenifix');
+            expect(normalizeSlashes(`D:\\a\\docgenifixfix`)).toEqual('D:/a/docgenifixfix');
+            // expect(normalizeSlashes(`D:\\a\docgenifixfix`)).toEqual('D:/a/docgenifixfix');
         });
     });
 
@@ -18,7 +18,7 @@ describe('#path', () => {
             expect(normalizeSlashes('a/b')).toEqual('a/b');
             expect(normalizeSlashes('a\\b')).toEqual('a/b');
             expect(normalizeSlashes('\\\\server\\path')).toEqual('//server/path');
-            expect(normalizeSlashes(`D:\\a\\docgenifix`)).toEqual('D:/a/docgenifix');
+            expect(normalizeSlashes(`D:\\a\\docgenifixfix`)).toEqual('D:/a/docgenifixfix');
         });
     });
 

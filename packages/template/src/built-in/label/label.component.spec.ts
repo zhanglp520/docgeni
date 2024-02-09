@@ -1,13 +1,13 @@
 import { createComponentFactory, createHostFactory, Spectator } from '@ngneat/spectator';
-import { DocgeniLabelComponent, DocgeniLabelType } from './label.component';
+import { docgenifixLabelComponent, docgenifixLabelType } from './label.component';
 
 describe('#built-in-label', () => {
     describe('basic', () => {
-        let spectator: Spectator<DocgeniLabelComponent>;
+        let spectator: Spectator<docgenifixLabelComponent>;
         const createComponent = createComponentFactory({
-            component: DocgeniLabelComponent,
+            component: docgenifixLabelComponent,
             imports: [],
-            declarations: [DocgeniLabelComponent]
+            declarations: [docgenifixLabelComponent]
         });
 
         beforeEach(() => {
@@ -22,7 +22,7 @@ describe('#built-in-label', () => {
 
         it('should set type success', () => {
             ['info', 'danger', 'warning', 'primary'].forEach(type => {
-                spectator.setInput('type', type as DocgeniLabelType);
+                spectator.setInput('type', type as docgenifixLabelType);
                 expect(spectator.element.classList.contains('dg-label')).toBeTruthy();
                 expect(spectator.element.classList.contains(`dg-label-${type}`)).toBeTruthy();
             });
@@ -31,7 +31,7 @@ describe('#built-in-label', () => {
 
     describe('advance', () => {
         const createHost = createHostFactory({
-            component: DocgeniLabelComponent
+            component: docgenifixLabelComponent
         });
 
         it('should set content success', () => {

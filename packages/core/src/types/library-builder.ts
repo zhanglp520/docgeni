@@ -1,12 +1,12 @@
 import { LibraryComponent } from './library-component';
-import { CategoryItem, DocgeniLibrary } from '../interfaces';
+import { CategoryItem, docgenifixLibrary } from '../interfaces';
 import { EmitFiles } from './file';
-import { NgDocParser } from '@docgenifix/ngdoc';
+import { NgDocParser } from '@docgenifixfix/ngdoc';
 
 /**
  * 包含内部属性的定义
  */
-export interface Library extends DocgeniLibrary {
+export interface Library extends docgenifixLibrary {
     categories?: CategoryItem[];
     ngDocParser?: NgDocParser;
 }

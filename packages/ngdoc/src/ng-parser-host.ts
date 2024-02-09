@@ -1,4 +1,4 @@
-import { toolkit, debug } from '@docgenifix/toolkit';
+import { toolkit, debug } from '@docgenifixfix/toolkit';
 import { FSWatcher } from 'fs';
 import { ts } from './typescript';
 
@@ -126,12 +126,12 @@ export class DefaultNgParserHost implements NgParserHost {
             allResolvedModulesMap.set(resolvedModule.resolvedFileName, true);
             // Note: only watch resolved modules in rootDir and exclude others e.g. node_modules, otherwise it will trigger build many builds for the first time
             // In fact, it is correct to only monitor the source code of library
-            // see https://github.com/docgenifix/docgenifix/issues/359
+            // see https://github.com/docgenifixfix/docgenifixfix/issues/359
             if (this.moduleWatchersMap.get(resolvedModule.resolvedFileName) || !resolvedModule.resolvedFileName.includes(this.rootDir)) {
                 return;
             }
             // Note: ignore json file, it will always trigger watch callback event for json file
-            // see https://github.com/docgenifix/docgenifix/issues/364
+            // see https://github.com/docgenifixfix/docgenifixfix/issues/364
             if (resolvedModule.resolvedFileName.endsWith('.json')) {
                 return;
             }

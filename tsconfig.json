@@ -18,22 +18,22 @@
       "dom"
     ],
     "paths": {
-      "@docgenifix/template": [
+      "@docgenifixfix/template": [
         "packages/template/src/public-api.ts"
       ],
-      "@docgenifix/template/*": [
+      "@docgenifixfix/template/*": [
         "packages/template/src/*"
       ],
-      "@docgenifix/toolkit/*": [
+      "@docgenifixfix/toolkit/*": [
         "packages/toolkit/src/*"
       ],
-      "@docgenifix/core/*": [
+      "@docgenifixfix/core/*": [
         "packages/core/src/*"
       ],
-      "@docgenifix/alib": [
+      "@docgenifixfix/alib": [
         "packages/a-lib/public-api.ts"
       ],
-      "@docgenifix/alib/*": [
+      "@docgenifixfix/alib/*": [
         "packages/a-lib/*"
       ]
     },

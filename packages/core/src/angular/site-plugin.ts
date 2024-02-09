@@ -1,5 +1,5 @@
 import { Plugin } from '../plugins';
-import { DocgeniContext } from '../docgenifix.interface';
+import { docgenifixContext } from '../docgenifixfix.interface';
 import { SiteBuilder } from './site-builder';
 import { extractAngularCommandArgs, readNgBuildOptions, readNgServeOptions } from './utils';
 
@@ -8,7 +8,7 @@ const NAME = 'AngularSitePlugin';
 export default class AngularSitePlugin implements Plugin {
     public siteBuilder: SiteBuilder;
 
-    apply(context: DocgeniContext): void {
+    apply(context: docgenifixContext): void {
         context.hooks.beforeRun.tapPromise(NAME, async () => {
             this.siteBuilder = SiteBuilder.create(context);
             await this.siteBuilder.build();

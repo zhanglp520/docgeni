@@ -1,15 +1,15 @@
-import { DocgeniLibrary } from './../interfaces/library';
+import { docgenifixLibrary } from './../interfaces/library';
 import {
     assertExpectedFiles,
-    createTestDocgeniContext,
+    createTestdocgenifixContext,
     DEFAULT_TEST_ROOT_PATH,
     expectThrowAsync,
     FixtureResult,
     loadFixture
 } from '../testing';
 import { LibrariesBuilder } from './libraries-builder';
-import { DocgeniContext } from '../docgenifix.interface';
-import { toolkit } from '@docgenifix/toolkit';
+import { docgenifixContext } from '../docgenifixfix.interface';
+import { toolkit } from '@docgenifixfix/toolkit';
 import { normalizeLibConfig } from './normalize';
 import * as systemPath from 'path';
 import { EmitFiles, LibraryBuilder } from '../types';
@@ -96,7 +96,7 @@ describe('libraries-builder', () => {
             ]
         };
 
-        let context: DocgeniContext;
+        let context: docgenifixContext;
         let fixture: FixtureResult;
 
         beforeAll(async () => {
@@ -107,7 +107,7 @@ describe('libraries-builder', () => {
         });
 
         beforeEach(async () => {
-            context = createTestDocgeniContext({
+            context = createTestdocgenifixContext({
                 libs: library,
                 initialFiles: {
                     [`${libDirPath}/button/doc/zh-cn.md`]: fixture.src['button/doc/zh-cn.md'],
@@ -174,11 +174,11 @@ describe('libraries-builder', () => {
     describe('verify', () => {
         it('should throw error when name is undefined or null or empty', async () => {
             await expectThrowAsync(async () => {
-                const context = createTestDocgeniContext({
+                const context = createTestdocgenifixContext({
                     libs: {
                         name: toolkit.utils.sample([null, undefined, '']),
                         rootDir: './packages/mylib'
-                    } as DocgeniLibrary
+                    } as docgenifixLibrary
                 });
                 const librariesBuilder = new LibrariesBuilder(context);
                 await librariesBuilder.initialize();
@@ -187,11 +187,11 @@ describe('libraries-builder', () => {
 
         it('should throw error when rootDir is undefined or null or empty', async () => {
             await expectThrowAsync(async () => {
-                const context = createTestDocgeniContext({
+                const context = createTestdocgenifixContext({
                     libs: {
                         name: 'mylib',
                         rootDir: toolkit.utils.sample([null, undefined, ''])
-                    } as DocgeniLibrary
+                    } as docgenifixLibrary
                 });
                 const librariesBuilder = new LibrariesBuilder(context);
                 await librariesBuilder.initialize();
@@ -200,7 +200,7 @@ describe('libraries-builder', () => {
 
         it('should throw error when rootDir is not exists', async () => {
             await expectThrowAsync(async () => {
-                const context = createTestDocgeniContext({
+                const context = createTestdocgenifixContext({
                     libs: {
                         name: 'mylib',
                         rootDir: 'not-found-lib-dir'
@@ -213,7 +213,7 @@ describe('libraries-builder', () => {
 
         it('should throw error when lib category id is undefined or null or empty', async () => {
             await expectThrowAsync(async () => {
-                const context = createTestDocgeniContext({
+                const context = createTestdocgenifixContext({
                     libs: {
                         name: 'mylib',
                         abbrName: 'alib',
@@ -235,7 +235,7 @@ describe('libraries-builder', () => {
 
         it('should throw error when lib category title is undefined or null or empty', async () => {
             await expectThrowAsync(async () => {
-                const context = createTestDocgeniContext({
+                const context = createTestdocgenifixContext({
                     libs: {
                         name: 'mylib',
                         abbrName: 'alib',
@@ -258,7 +258,7 @@ describe('libraries-builder', () => {
         it('should throw error when lib category id duplicate', async () => {
             const duplicateId = toolkit.strings.generateRandomId();
             await expectThrowAsync(async () => {
-                const context = createTestDocgeniContext({
+                const context = createTestdocgenifixContext({
                     libs: {
                         name: 'mylib',
                         abbrName: 'alib',
@@ -283,7 +283,7 @@ describe('libraries-builder', () => {
         it("should throw error when lib's tsconfig.lib.json has not exist for compatible", async () => {
             const libDirPath = `${DEFAULT_TEST_ROOT_PATH}/a-lib`;
             await expectThrowAsync(async () => {
-                const context = createTestDocgeniContext({
+                const context = createTestdocgenifixContext({
                     libs: {
                         name: 'mylib',
                         abbrName: 'alib',
@@ -303,7 +303,7 @@ describe('libraries-builder', () => {
         it("should throw error when lib's tsconfig.lib.json has not exist for automatic", async () => {
             const libDirPath = `${DEFAULT_TEST_ROOT_PATH}/a-lib`;
             await expectThrowAsync(async () => {
-                const context = createTestDocgeniContext({
+                const context = createTestdocgenifixContext({
                     libs: {
                         name: 'mylib',
                         abbrName: 'alib',
@@ -322,7 +322,7 @@ describe('libraries-builder', () => {
 
         it('should build success when has tsconfig.lib.json for automatic', async () => {
             const libDirPath = `${DEFAULT_TEST_ROOT_PATH}/a-lib`;
-            const context = createTestDocgeniContext({
+            const context = createTestdocgenifixContext({
                 libs: {
                     name: 'mylib',
                     abbrName: 'alib',

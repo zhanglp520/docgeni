@@ -4,13 +4,13 @@ path: 'built-in-components'
 order: 50
 ---
 
-除了在文档中使用示例`<example name="{name}" />`组件外，Docgeni 还提供了如下内置组件作为 Markdown 语法的扩展：
+除了在文档中使用示例`<example name="{name}" />`组件外，docgenifix 还提供了如下内置组件作为 Markdown 语法的扩展：
 
 ## Label
-使用`label`可以创建一个标签: <label>Hello Docgeni</label>
+使用`label`可以创建一个标签: <label>Hello docgenifix</label>
 
 ```html
-<label>Hello Docgeni</label>
+<label>Hello docgenifix</label>
 ```
 标签提供了如下多种类型：
 
@@ -51,10 +51,10 @@ order: 50
 ## Alert
 使用`alert`创建一个提示框，type 可选 `primary`、`info`、`success`、`warning`、`danger`，默认为 `info`。
 
-<alert>Hello Docgeni</alert>
+<alert>Hello docgenifix</alert>
 
 ```html
-<alert>Hello Docgeni</alert>
+<alert>Hello docgenifix</alert>
 ```
 
 <alert type="primary">Primary</alert>
@@ -94,28 +94,28 @@ Embed 组件可以在一个 Markdown 文档中嵌入另一个 Markdown 文档的
 <embed src="/path/to/some.md#L5-L10"></embed>
 ```
 ## 自定义内置组件
-在默认的`.docgenifix/components`文件夹下创建自定义内置组件，文件结构如下：
+在默认的`.docgenifixfix/components`文件夹下创建自定义内置组件，文件结构如下：
 
 ```html
-.docgenifix
+.docgenifixfix
 └── components
     ├── color
     │   ├── color.component.ts    
     │   ├── color.component.html
     ├── module.ts
 ```
-自定义组件需要继承`DocgeniBuiltInComponent`基类并在构造函数注入`ElementRef`并通过调用`supper(elementRef)`传入父类。
+自定义组件需要继承`docgenifixBuiltInComponent`基类并在构造函数注入`ElementRef`并通过调用`supper(elementRef)`传入父类。
 <alert type="info">Markdown 中使用的渲染组件默认取文件中定义的第一个组件，使用的选择器为组件的 selector, 如需自定义，可以通过 `export default { selector: '', component: xx}` 自定义设置。</alert>
 
 ```ts
 import { Component, ElementRef, HostBinding, Input, OnInit } from '@angular/core';
-import { DocgeniBuiltInComponent } from '@docgenifix/template';
+import { docgenifixBuiltInComponent } from '@docgenifixfix/template';
 
 @Component({
     selector: 'my-color',
     templateUrl: './color.component.html'
 })
-export class MyColorComponent extends DocgeniBuiltInComponent implements OnInit {
+export class MyColorComponent extends docgenifixBuiltInComponent implements OnInit {
     @Input() set color(value: string) {
         this.hostElement.style.color = value;
     }
@@ -136,7 +136,7 @@ export default {
 ```
 展示效果：<my-color color="red">Color</my-color>
 
-内置组件配置第三方依赖，在`.docgenifix/components`文件夹中新建`module.ts`，输入如下代码即可:
+内置组件配置第三方依赖，在`.docgenifixfix/components`文件夹中新建`module.ts`，输入如下代码即可:
 
 ```ts
 import { FormsModule } from '@angular/forms';

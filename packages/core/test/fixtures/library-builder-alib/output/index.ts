@@ -3,13 +3,13 @@ import { LIB_EXAMPLE_LOADER_PROVIDER } from './example-loader';
 import { CustomComponentsModule } from './components/custom';
 import {
     CONFIG_TOKEN,
-    DOCGENI_INITIALIZER_PROVIDERS
-} from '@docgenifix/template';
+    docgenifix_INITIALIZER_PROVIDERS
+} from '@docgenifixfix/template';
 
 import './navigations.json';
 
-export const DOCGENI_SITE_PROVIDERS = [
-    ...DOCGENI_INITIALIZER_PROVIDERS,
+export const docgenifix_SITE_PROVIDERS = [
+    ...docgenifix_INITIALIZER_PROVIDERS,
     LIB_EXAMPLE_LOADER_PROVIDER,
     {
         provide: CONFIG_TOKEN,
@@ -19,4 +19,4 @@ export const DOCGENI_SITE_PROVIDERS = [
 
 export const IMPORT_MODULES = [ CustomComponentsModule ];
 
-export { RootComponent, DocgeniTemplateModule } from '@docgenifix/template';
+export { RootComponent, docgenifixTemplateModule } from '@docgenifixfix/template';

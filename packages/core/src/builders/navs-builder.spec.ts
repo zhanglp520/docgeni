@@ -1,18 +1,18 @@
-import { DocgeniContext } from '../docgenifix.interface';
+import { docgenifixContext } from '../docgenifixfix.interface';
 import {
-    createTestDocgeniContext,
-    createTestDocgeniHost,
+    createTestdocgenifixContext,
+    createTestdocgenifixHost,
     DEFAULT_TEST_ROOT_PATH,
     FixtureResult,
     loadFixture,
     updateContext
 } from '../testing';
 import { NavsBuilder } from './navs-builder';
-import { toolkit } from '@docgenifix/toolkit';
+import { toolkit } from '@docgenifixfix/toolkit';
 
 describe('#navs-builder', () => {
     for (const dir of ['', 'en-us/']) {
-        let context: DocgeniContext;
+        let context: docgenifixContext;
         let initialFiles: Record<string, string>;
         let fixture: FixtureResult;
         describe(dir, () => {
@@ -24,7 +24,7 @@ describe('#navs-builder', () => {
                     [`${DEFAULT_TEST_ROOT_PATH}/docs/${dir}guides/intro.md`]: fixture.src['guides/intro.md'],
                     [`${DEFAULT_TEST_ROOT_PATH}/docs/zh-cn/guides/intro.md`]: fixture.src['guides/intro.md']
                 };
-                context = createTestDocgeniContext({
+                context = createTestdocgenifixContext({
                     initialFiles: initialFiles
                 });
             });
@@ -140,7 +140,7 @@ describe('#navs-builder', () => {
                     expect(pattern).toEqual(`/**/*.md`);
                     return Object.keys(initialFiles);
                 });
-                const host = createTestDocgeniHost(initialFiles);
+                const host = createTestdocgenifixHost(initialFiles);
                 updateContext(context, { host: host });
                 await context.docsBuilder.run();
                 const navsBuilder = new NavsBuilder(context);

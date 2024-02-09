@@ -1,5 +1,5 @@
-import { toolkit } from '@docgenifix/toolkit';
-import { DocgeniContext } from '../src/docgenifix.interface';
+import { toolkit } from '@docgenifixfix/toolkit';
+import { docgenifixContext } from '../src/docgenifixfix.interface';
 import { DocItem } from '../src/interfaces';
 import { NavsBuilder } from './../src/builders/navs-builder';
 import { expect } from 'chai';
@@ -18,7 +18,7 @@ describe('#navs-builder', () => {
                     title: '',
                     navs: []
                 }
-            } as DocgeniContext);
+            } as docgenifixContext);
         });
 
         it('should get correct path with parent and current', () => {

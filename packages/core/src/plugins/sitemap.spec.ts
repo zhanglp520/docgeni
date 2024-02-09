@@ -1,13 +1,13 @@
-import { DocgeniContext } from '../docgenifix.interface';
-import { assertExpectedFiles, createTestDocgeniContext, DEFAULT_TEST_ROOT_PATH, FixtureResult, loadFixture } from '../testing';
-import { toolkit } from '@docgenifix/toolkit';
+import { docgenifixContext } from '../docgenifixfix.interface';
+import { assertExpectedFiles, createTestdocgenifixContext, DEFAULT_TEST_ROOT_PATH, FixtureResult, loadFixture } from '../testing';
+import { toolkit } from '@docgenifixfix/toolkit';
 import * as systemPath from 'path';
 import SitemapPlugin from './sitemap';
 
-const DEFAULT_SITE_PATH = `${DEFAULT_TEST_ROOT_PATH}/.docgenifix/site`;
+const DEFAULT_SITE_PATH = `${DEFAULT_TEST_ROOT_PATH}/.docgenifixfix/site`;
 
 describe('#sitemap-plugin', () => {
-    let context: DocgeniContext;
+    let context: docgenifixContext;
     let fixture: FixtureResult;
     let sitemapPlugin: SitemapPlugin;
 
@@ -19,7 +19,7 @@ describe('#sitemap-plugin', () => {
     });
 
     beforeEach(() => {
-        context = createTestDocgeniContext({
+        context = createTestdocgenifixContext({
             initialFiles: {}
         });
         sitemapPlugin = new SitemapPlugin();

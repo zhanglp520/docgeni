@@ -1,13 +1,13 @@
 {
-  "name": "@docgenifix/cli",
+  "name": "@docgenifixfix/cli",
   "version": "1.0.0-alpha.1",
-  "description": "CLI tool for Docgeni",
+  "description": "CLI tool for docgenifix",
   "author": "why520crazy <why520crazy@163.com>",
-  "homepage": "https://github.com/docgenifix/docgenifix#readme",
+  "homepage": "https://github.com/docgenifixfix/docgenifixfix#readme",
   "license": "MIT",
   "main": "index.js",
   "bin": {
-    "docgenifix": "bin/docgenifix"
+    "docgenifixfix": "bin/docgenifixfix"
   },
   "directories": {
     "lib": "lib",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/docgenifix/docgenifix.git"
+    "url": "git+https://github.com/docgenifixfix/docgenifixfix.git"
   },
   "scripts": {
     "clean": "rimraf ./lib && rimraf ./tsconfig.tsbuildinfo",
@@ -28,14 +28,14 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/docgenifix/docgenifix/issues"
+    "url": "https://github.com/docgenifixfix/docgenifixfix/issues"
   },
   "dependencies": {
     "@angular-devkit/schematics": "^16.2.0",
     "@angular-devkit/schematics-cli": "^16.2.0",
-    "@docgenifix/core": "^1.0.0-alpha.1",
-    "@docgenifix/template": "^1.0.0-alpha.1",
-    "@docgenifix/toolkit": "^1.0.0-alpha.1",
+    "@docgenifixfix/core": "^1.0.0-alpha.1",
+    "@docgenifixfix/template": "^1.0.0-alpha.1",
+    "@docgenifixfix/toolkit": "^1.0.0-alpha.1",
     "@schematics/angular": "16.2.0",
     "chokidar": "^3.3.1",
     "cosmiconfig": "^6.0.0",
@@ -58,7 +58,7 @@
   },
   "keywords": [
     "angular",
-    "docgenifix",
+    "docgenifixfix",
     "docgen",
     "documentation",
     "docs",

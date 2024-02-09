@@ -1,13 +1,13 @@
-import { toolkit, fs } from '@docgenifix/toolkit';
+import { toolkit, fs } from '@docgenifixfix/toolkit';
 import { of, Subject } from 'rxjs';
-import { DocgeniContext } from '../docgenifix.interface';
-import { createTestDocgeniContext, DEFAULT_TEST_ROOT_PATH, updateContext } from '../testing';
+import { docgenifixContext } from '../docgenifixfix.interface';
+import { createTestdocgenifixContext, DEFAULT_TEST_ROOT_PATH, updateContext } from '../testing';
 import { DocsBuilder } from './docs-builder';
 
 describe('#components-builder', () => {
-    let context: DocgeniContext;
+    let context: docgenifixContext;
     beforeEach(() => {
-        context = createTestDocgeniContext({
+        context = createTestdocgenifixContext({
             initialFiles: {
                 [`${DEFAULT_TEST_ROOT_PATH}/docs/index.md`]: 'index',
                 [`${DEFAULT_TEST_ROOT_PATH}/docs/guides/index.md`]: 'guides',
