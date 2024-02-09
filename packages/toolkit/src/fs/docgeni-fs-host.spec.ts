@@ -1,5 +1,5 @@
 import { PathFragment, virtualFs } from '@angular-devkit/core';
-import { DocgeniFsHost, DocgeniFsHostImpl } from './docgenifix-fs-host';
+import { DocgeniFsHost, DocgeniFsHostImpl } from './docgeni-fs-host';
 import { createTestDocgeniFsHost } from '../testing';
 
 describe('#docgenifix-host', () => {

@@ -1,8 +1,8 @@
 import { virtualFs } from '@angular-devkit/core';
-import { DocgeniScopedHost } from './docgenifix-scoped';
+import { DocgeniScopedHost } from './docgeni-scoped';
 import { normalize } from '../path';
 
-describe('#docgenifix-scoped', () => {
+describe('#docgeni-scoped', () => {
     it('should resolve success without root', async () => {
         const docgeniScopedHost = new DocgeniScopedHost(
             new virtualFs.test.TestHost({

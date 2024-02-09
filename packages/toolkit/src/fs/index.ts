@@ -1,5 +1,5 @@
-export * from './docgenifix-scoped';
+export * from './docgeni-scoped';
 export * from './node-host';
 export * from './host';
 export * from './watcher';
-export * from './docgenifix-fs-host';
+export * from './docgeni-fs-host';
